@@ -1,0 +1,29 @@
+version: '3'
+
+# Server + DB for development
+services:
+  app:
+    depends_on:
+      - db
+    build: .
+    container_name: api-server
+    restart: unless-stopped
+    ports:
+      - '8000:8000'
+    environment:
+      NODE_ENV: development
+      PORT: 8000
+      DB_URL: mongodb://db/
+    volumes:
+      - .:/usr/app
+
+  db:
+    image: mongo
+    container_name: mongo-db
+    ports:
+      - '27017:27017'
+    volumes:
+      - data:/data/db
+
+volumes:
+  data:
