@@ -1,2 +1,4 @@
 import * as dotenv from 'dotenv'
-dotenv.config()
+
+const result = dotenv.config()
+if (result.error) dotenv.config({ path: '.env.default' })
