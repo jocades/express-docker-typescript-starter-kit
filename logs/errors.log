@@ -1,0 +1,19 @@
+{
+  errno: -5,
+  code: 'EIO',
+  syscall: 'write',
+  level: 'error',
+  message: 'write EIO write EIO',
+  stack: 'Error: write EIO\n' +
+    '    at afterWriteDispatched (node:internal/stream_base_commons:160:15)\n' +
+    '    at writeGeneric (node:internal/stream_base_commons:151:3)\n' +
+    '    at WriteStream.Socket._writeGeneric (node:net:874:11)\n' +
+    '    at WriteStream.Socket._write (node:net:886:8)\n' +
+    '    at writeOrBuffer (node:internal/streams/writable:392:12)\n' +
+    '    at _write (node:internal/streams/writable:333:10)\n' +
+    '    at WriteStream.Writable.write (node:internal/streams/writable:337:10)\n' +
+    '    at console.value (node:internal/console/constructor:299:16)\n' +
+    '    at console.log (node:internal/console/constructor:376:26)\n' +
+    '    at ConsoleTransport.log (/home/j0rdi/dev/dep-tin/express-server-ts/src/lib/winston-console.ts:18:13)',
+  timestamp: '2022-12-14 02:05:58'
+}

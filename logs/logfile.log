@@ -1,0 +1,475 @@
+{
+  message: 'Listening on http://localhost:8000',
+  level: 'info',
+  timestamp: '2022-12-13 14:27:44'
+}
+{
+  message: 'Connected to MongoDB/express-ts',
+  level: 'info',
+  timestamp: '2022-12-13 14:27:44'
+}
+{
+  message: 'Keyboard interrupt, gracefully shutting down.',
+  level: 'info',
+  timestamp: '2022-12-13 14:28:13'
+}
+{
+  message: 'Listening on http://localhost:8000',
+  level: 'info',
+  timestamp: '2022-12-13 18:55:21'
+}
+{
+  message: 'Connected to MongoDB/express-ts',
+  level: 'info',
+  timestamp: '2022-12-13 18:55:21'
+}
+{
+  message: 'Listening on http://localhost:8000',
+  level: 'info',
+  timestamp: '2022-12-13 18:56:45'
+}
+{
+  message: 'Connected to MongoDB/express-ts',
+  level: 'info',
+  timestamp: '2022-12-13 18:56:45'
+}
+{
+  message: 'Listening on http://localhost:8000',
+  level: 'info',
+  timestamp: '2022-12-13 19:05:15'
+}
+{
+  message: 'Connected to MongoDB/express-ts',
+  level: 'info',
+  timestamp: '2022-12-13 19:05:15'
+}
+{
+  message: 'Listening on http://localhost:8000',
+  level: 'info',
+  timestamp: '2022-12-13 19:08:14'
+}
+{
+  message: 'Connected to MongoDB/express-ts',
+  level: 'info',
+  timestamp: '2022-12-13 19:08:14'
+}
+{
+  message: 'Listening on http://localhost:8000',
+  level: 'info',
+  timestamp: '2022-12-13 19:10:02'
+}
+{
+  message: 'Connected to MongoDB/express-ts',
+  level: 'info',
+  timestamp: '2022-12-13 19:10:02'
+}
+{
+  message: 'Listening on http://localhost:8000',
+  level: 'info',
+  timestamp: '2022-12-13 19:10:47'
+}
+{
+  message: 'Connected to MongoDB/express-ts',
+  level: 'info',
+  timestamp: '2022-12-13 19:10:47'
+}
+{
+  message: 'Listening on http://localhost:8000',
+  level: 'info',
+  timestamp: '2022-12-13 19:10:50'
+}
+{
+  message: 'Connected to MongoDB/express-ts',
+  level: 'info',
+  timestamp: '2022-12-13 19:10:50'
+}
+{
+  message: 'Listening on http://localhost:8000',
+  level: 'info',
+  timestamp: '2022-12-13 19:12:34'
+}
+{
+  message: 'Connected to MongoDB/express-ts',
+  level: 'info',
+  timestamp: '2022-12-13 19:12:34'
+}
+{
+  message: 'Listening on http://localhost:8000',
+  level: 'info',
+  timestamp: '2022-12-13 19:14:01'
+}
+{
+  message: 'Connected to MongoDB/express-ts',
+  level: 'info',
+  timestamp: '2022-12-13 19:14:01'
+}
+{
+  message: 'Listening on http://localhost:8000',
+  level: 'info',
+  timestamp: '2022-12-13 19:14:22'
+}
+{
+  message: 'Connected to MongoDB/express-ts',
+  level: 'info',
+  timestamp: '2022-12-13 19:14:22'
+}
+{
+  message: 'Listening on http://localhost:8000',
+  level: 'info',
+  timestamp: '2022-12-13 19:15:45'
+}
+{
+  message: 'Connected to MongoDB/express-ts',
+  level: 'info',
+  timestamp: '2022-12-13 19:15:45'
+}
+{
+  message: 'Listening on http://localhost:8000',
+  level: 'info',
+  timestamp: '2022-12-13 19:15:52'
+}
+{
+  message: 'Connected to MongoDB/express-ts',
+  level: 'info',
+  timestamp: '2022-12-13 19:15:52'
+}
+{
+  message: 'Listening on http://localhost:8000',
+  level: 'info',
+  timestamp: '2022-12-13 19:16:14'
+}
+{
+  message: 'Connected to MongoDB/express-ts',
+  level: 'info',
+  timestamp: '2022-12-13 19:16:14'
+}
+{
+  message: 'Listening on http://localhost:8000',
+  level: 'info',
+  timestamp: '2022-12-13 19:16:50'
+}
+{
+  message: 'Connected to MongoDB/express-ts',
+  level: 'info',
+  timestamp: '2022-12-13 19:16:50'
+}
+{
+  message: 'Listening on http://localhost:8000',
+  level: 'info',
+  timestamp: '2022-12-13 19:19:08'
+}
+{
+  message: 'Connected to MongoDB/express-ts',
+  level: 'info',
+  timestamp: '2022-12-13 19:19:08'
+}
+{
+  message: 'Listening on http://localhost:8000',
+  level: 'info',
+  timestamp: '2022-12-13 19:20:01'
+}
+{
+  message: 'Connected to MongoDB/express-ts',
+  level: 'info',
+  timestamp: '2022-12-13 19:20:01'
+}
+{
+  message: 'Listening on http://localhost:8000',
+  level: 'info',
+  timestamp: '2022-12-13 19:20:07'
+}
+{
+  message: 'Connected to MongoDB/express-ts',
+  level: 'info',
+  timestamp: '2022-12-13 19:20:07'
+}
+{
+  message: 'Listening on http://localhost:8000',
+  level: 'info',
+  timestamp: '2022-12-13 19:20:27'
+}
+{
+  message: 'Connected to MongoDB/express-ts',
+  level: 'info',
+  timestamp: '2022-12-13 19:20:27'
+}
+{
+  message: 'Listening on http://localhost:8000',
+  level: 'info',
+  timestamp: '2022-12-13 19:20:40'
+}
+{
+  message: 'Connected to MongoDB/express-ts',
+  level: 'info',
+  timestamp: '2022-12-13 19:20:40'
+}
+{
+  message: 'Listening on http://localhost:8000',
+  level: 'info',
+  timestamp: '2022-12-13 19:21:26'
+}
+{
+  message: 'Connected to MongoDB/express-ts',
+  level: 'info',
+  timestamp: '2022-12-13 19:21:26'
+}
+{
+  message: 'Listening on http://localhost:8000',
+  level: 'info',
+  timestamp: '2022-12-13 19:21:42'
+}
+{
+  message: 'Connected to MongoDB/express-ts',
+  level: 'info',
+  timestamp: '2022-12-13 19:21:42'
+}
+{
+  message: 'Listening on http://localhost:8000',
+  level: 'info',
+  timestamp: '2022-12-13 19:24:02'
+}
+{
+  message: 'Connected to MongoDB/express-ts',
+  level: 'info',
+  timestamp: '2022-12-13 19:24:02'
+}
+{
+  message: 'Keyboard interrupt, gracefully shutting down.',
+  level: 'info',
+  timestamp: '2022-12-13 19:40:32'
+}
+{
+  message: 'Listening on http://localhost:8000',
+  level: 'info',
+  timestamp: '2022-12-13 22:25:20'
+}
+{
+  message: 'Connected to MongoDB/express-ts',
+  level: 'info',
+  timestamp: '2022-12-13 22:25:20'
+}
+{
+  message: 'Listening on http://localhost:8000',
+  level: 'info',
+  timestamp: '2022-12-13 23:49:29'
+}
+{
+  message: 'Connected to MongoDB/express-ts',
+  level: 'info',
+  timestamp: '2022-12-13 23:49:29'
+}
+{
+  message: 'Keyboard interrupt, gracefully shutting down.',
+  level: 'info',
+  timestamp: '2022-12-13 23:49:32'
+}
+{
+  message: 'Listening on http://localhost:8000',
+  level: 'info',
+  timestamp: '2022-12-13 23:28:56'
+}
+{
+  message: 'Connected to MongoDB/express-ts',
+  level: 'info',
+  timestamp: '2022-12-13 23:28:56'
+}
+{
+  message: 'Listening on http://localhost:8000',
+  level: 'info',
+  timestamp: '2022-12-13 23:35:23'
+}
+{
+  message: 'Connected to MongoDB/express-ts',
+  level: 'info',
+  timestamp: '2022-12-13 23:35:23'
+}
+{
+  message: 'Listening on http://localhost:8000',
+  level: 'info',
+  timestamp: '2022-12-14 00:35:55'
+}
+{
+  message: 'Connected to MongoDB/express-ts',
+  level: 'info',
+  timestamp: '2022-12-14 00:35:55'
+}
+{
+  message: 'Keyboard interrupt, gracefully shutting down.',
+  level: 'info',
+  timestamp: '2022-12-14 00:40:40'
+}
+{
+  message: 'Listening on http://localhost:8000',
+  level: 'info',
+  timestamp: '2022-12-13 23:43:20'
+}
+{
+  message: 'Connected to MongoDB/express-ts',
+  level: 'info',
+  timestamp: '2022-12-13 23:43:20'
+}
+{
+  message: 'Listening on http://localhost:8000',
+  level: 'info',
+  timestamp: '2022-12-13 23:43:48'
+}
+{
+  message: 'Connected to MongoDB/express-ts',
+  level: 'info',
+  timestamp: '2022-12-13 23:43:48'
+}
+{
+  message: 'Listening on http://localhost:8000',
+  level: 'info',
+  timestamp: '2022-12-13 23:55:50'
+}
+{
+  message: 'Connected to MongoDB/express-ts',
+  level: 'info',
+  timestamp: '2022-12-13 23:55:50'
+}
+{
+  message: 'Listening on http://localhost:8000',
+  level: 'info',
+  timestamp: '2022-12-13 23:57:27'
+}
+{
+  message: 'Connected to MongoDB/express-ts',
+  level: 'info',
+  timestamp: '2022-12-13 23:57:27'
+}
+{
+  message: 'Listening on http://localhost:8000',
+  level: 'info',
+  timestamp: '2022-12-13 23:58:31'
+}
+{
+  message: 'Connected to MongoDB/express-ts',
+  level: 'info',
+  timestamp: '2022-12-13 23:58:31'
+}
+{
+  message: 'Listening on http://localhost:8000',
+  level: 'info',
+  timestamp: '2022-12-14 00:09:37'
+}
+{
+  message: 'Connected to MongoDB/express-ts',
+  level: 'info',
+  timestamp: '2022-12-14 00:09:37'
+}
+{
+  message: 'Listening on http://localhost:8000',
+  level: 'info',
+  timestamp: '2022-12-14 00:09:48'
+}
+{
+  message: 'Connected to MongoDB/express-ts',
+  level: 'info',
+  timestamp: '2022-12-14 00:09:48'
+}
+{
+  message: 'Listening on http://localhost:8000',
+  level: 'info',
+  timestamp: '2022-12-14 00:14:27'
+}
+{
+  message: 'Connected to MongoDB/express-ts',
+  level: 'info',
+  timestamp: '2022-12-14 00:14:27'
+}
+{
+  message: 'Listening on http://localhost:8000',
+  level: 'info',
+  timestamp: '2022-12-14 00:15:12'
+}
+{
+  message: 'Connected to MongoDB/express-ts',
+  level: 'info',
+  timestamp: '2022-12-14 00:15:12'
+}
+{
+  message: 'Listening on http://localhost:8000',
+  level: 'info',
+  timestamp: '2022-12-14 01:15:34'
+}
+{
+  message: 'Connected to MongoDB/express-ts',
+  level: 'info',
+  timestamp: '2022-12-14 01:15:34'
+}
+{
+  message: 'Keyboard interrupt, gracefully shutting down.',
+  level: 'info',
+  timestamp: '2022-12-14 01:16:05'
+}
+{
+  message: 'Listening on http://localhost:8000',
+  level: 'info',
+  timestamp: '2022-12-14 00:16:18'
+}
+{
+  message: 'Connected to MongoDB/express-ts',
+  level: 'info',
+  timestamp: '2022-12-14 00:16:18'
+}
+{
+  message: 'Listening on http://localhost:8000',
+  level: 'info',
+  timestamp: '2022-12-14 00:18:12'
+}
+{
+  message: 'Connected to MongoDB/express-ts',
+  level: 'info',
+  timestamp: '2022-12-14 00:18:12'
+}
+{
+  message: 'Listening on http://localhost:8000',
+  level: 'info',
+  timestamp: '2022-12-14 00:21:06'
+}
+{
+  message: 'Connected to MongoDB/express-ts',
+  level: 'info',
+  timestamp: '2022-12-14 00:21:06'
+}
+{
+  message: 'Listening on http://localhost:8000',
+  level: 'info',
+  timestamp: '2022-12-14 00:45:01'
+}
+{
+  message: 'Connected to MongoDB/express-ts',
+  level: 'info',
+  timestamp: '2022-12-14 00:45:02'
+}
+{
+  message: 'Listening on http://localhost:8000',
+  level: 'info',
+  timestamp: '2022-12-14 00:53:28'
+}
+{
+  message: 'Connected to MongoDB/express-ts',
+  level: 'info',
+  timestamp: '2022-12-14 00:53:28'
+}
+{
+  message: 'Listening on http://localhost:8000',
+  level: 'info',
+  timestamp: '2022-12-14 01:53:55'
+}
+{
+  message: 'Connected to MongoDB/express-ts',
+  level: 'info',
+  timestamp: '2022-12-14 01:53:55'
+}
+{
+  message: 'Listening on http://localhost:8000',
+  level: 'info',
+  timestamp: '2022-12-14 02:05:58'
+}
+{
+  message: 'Connected to MongoDB/express-ts',
+  level: 'info',
+  timestamp: '2022-12-14 02:05:58'
+}
