@@ -1,23 +1,31 @@
 version: '3'
 
-# MongoDB for development
+# Server + DB, for development 
 services:
-  mongodb:
-    image: mongo
-    container_name: mongo-dev
-    restart: always
-    networks:
-      - dev-network
+  api:
+    depends_on:
+      - db
+    build:
+      context: .
+      dockerfile: Dockerfile.dev 
+    restart: unless-stopped
+    ports:
+      - '8000:8000'
+    environment:
+      NODE_ENV: development
+      PORT: 8000
+      DB_URL: mongodb://db/
     volumes:
-      - data:/data/db
+      - .:/usr/app
+
+  db:
+    image: mongo
     ports:
       - '27017:27017'
-
-networks:
-  dev-network:
-    driver: bridge
+    volumes:
+      - data-dev:/data/db
+    logging:
+      driver: none
 
 volumes:
-  data:
-
-
+  data-dev:

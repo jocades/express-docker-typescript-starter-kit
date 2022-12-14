@@ -7,10 +7,11 @@ COPY package*.json ./
 RUN npm install
 
 COPY . .
-
-ENV MONGO_URL=mongodb://mongo:27017/test
+RUN npm run build
 
 EXPOSE 8000
 
-CMD ["npm", "run", "dev"]
+CMD ["npm", "start"]
+
+
 
