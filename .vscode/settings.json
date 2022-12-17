@@ -1,13 +1,10 @@
 {
-    "files.exclude": {
-        // Python
-        "**/__pycache__": true,
-        "**/__init__.py": true,
+  "files.exclude": {
+    "**/__pycache__": true,
+    "**/__init__.py": true,
 
-        // Node
-        "**/node_modules": true,
-        "**/package-lock.json":true
-
-    },
-    "python.analysis.typeCheckingMode": "basic"
+    "**/node_modules": true,
+    "**/package-lock.json": true
+  },
+  "python.analysis.typeCheckingMode": "basic"
 }
