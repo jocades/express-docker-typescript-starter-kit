@@ -44,8 +44,8 @@ export const loginUser: IReqHandler = async (req, res) => {
 const refreshSecret = process.env.JWT_R_SECRET as string
 
 export const logoutUser: IReqHandler = async (req, res) => {
-  const refresh = decrypt(JSON.parse(req.body.refresh))
   try {
+    const refresh = decrypt(JSON.parse(req.body.refresh))
     const decoded = jwt.verify(refresh, refreshSecret) as UserPayload
     const user = await User.findById(decoded._id)
     if (!user) return res.status(400).send('Bad request.')
@@ -59,20 +59,20 @@ export const logoutUser: IReqHandler = async (req, res) => {
 }
 
 export const refreshUser: IReqHandler = async (req, res) => {
-  const refresh = decrypt(JSON.parse(req.body.refresh))
-
-  jwt.verify(refresh, refreshSecret, async (err: any, decoded: any) => {
-    if (err) return res.status(403).send(err.message)
+  try {
+    const refresh = decrypt(JSON.parse(req.body.refresh))
+    const decoded = jwt.verify(refresh, refreshSecret) as UserPayload
 
     const user = await User.findById(decoded._id)
     if (!user) return res.status(403).send('Access denied.')
 
     user.refresh(req.body.refresh, (err, tokens) => {
       if (err) return res.status(403).send(err.message)
-
       res.send(tokens)
     })
-  })
+  } catch (err: any) {
+    res.status(403).send('Access denied.')
+  }
 }
 
 // In login and others:
