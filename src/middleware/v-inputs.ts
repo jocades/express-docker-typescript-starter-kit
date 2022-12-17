@@ -1,8 +1,25 @@
-import { Request, Response, NextFunction } from 'express'
+import { RequestHandler } from 'express'
+import { ValidationResult } from 'joi'
+import logger from '../logger'
 
-export default (validate: any) => (req: Request, res: Response, next: NextFunction) => {
-  const { error } = validate(req.body)
-  if (error) return res.status(400).send({ message: error.details[0].message })
+type Validator = (body: any) => ValidationResult
+type VInputs = (validator: Validator) => RequestHandler
 
-  next()
+const validateInputs: VInputs = (validator) => {
+  return (req, res, next) => {
+    const { error } = validator(req.body)
+
+    if (error) {
+      const message = error?.details[0].message as string
+
+      process.env.NODE_ENV?.includes('dev') &&
+        logger.debug(`${message} - ${error}`, { mw: 'v-inputs' })
+
+      return res.status(400).send({ message })
+    }
+
+    next()
+  }
 }
+
+export default validateInputs

@@ -1,6 +1,8 @@
-import { Request, Response, NextFunction } from 'express'
+import { RequestHandler } from 'express'
 
-export default (req: Request, res: Response, next: NextFunction) => {
+const admin: RequestHandler = (req, res, next) => {
   if (!req.user.isAdmin) return res.status(403).send('Access denied.')
   next()
 }
+
+export default admin

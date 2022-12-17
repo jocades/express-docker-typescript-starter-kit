@@ -1,0 +1,89 @@
+import { Response, RequestHandler } from 'express'
+import bcrypt from 'bcrypt'
+import User, { validateUser } from '../models/user'
+import _ from 'lodash'
+import jwt from 'jsonwebtoken'
+import { decrypt } from '../utils/hash'
+
+type IReqHandler = RequestHandler<{}, {}, Credentials & Tokens>
+
+const sendMsg = (res: Response, message: string) => res.status(400).send({ message })
+
+export const registerUser: IReqHandler = async (req, res) => {
+  const { email, password } = req.body
+  const { error } = validateUser(email, password)
+  if (error) return sendMsg(res, error.details[0].message)
+
+  let user = await User.findOne({ email })
+  if (user) return sendMsg(res, 'User already registered.')
+
+  const hashed = await bcrypt.hash(password, 10)
+
+  user = new User({ email, password: hashed })
+  await user.save()
+
+  res.status(201).send(_.pick(user, ['_id', 'email']))
+}
+
+export const loginUser: IReqHandler = async (req, res) => {
+  const { email, password } = req.body
+  const { error } = validateUser(email, password)
+  if (error) return sendMsg(res, error.details[0].message)
+
+  const user = await User.findOne({ email })
+  if (!user) return sendMsg(res, 'Invalid email or password.')
+
+  const v = await bcrypt.compare(password, user.password)
+  if (!v) return sendMsg(res, 'Invalid email or password.')
+
+  const tokens = await user.login()
+
+  res.send(tokens) // Remember this is for a mobile app.
+}
+
+const refreshSecret = process.env.JWT_R_SECRET as string
+
+export const logoutUser: IReqHandler = async (req, res) => {
+  const refresh = decrypt(JSON.parse(req.body.refresh))
+  try {
+    const decoded = jwt.verify(refresh, refreshSecret) as UserPayload
+    const user = await User.findById(decoded._id)
+    if (!user) return res.status(400).send('Bad request.')
+
+    await user.logout(req.body.refresh)
+
+    res.sendStatus(204)
+  } catch (err: any) {
+    res.status(400).send(err.message)
+  }
+}
+
+export const refreshUser: IReqHandler = async (req, res) => {
+  const refresh = decrypt(JSON.parse(req.body.refresh))
+
+  jwt.verify(refresh, refreshSecret, async (err: any, decoded: any) => {
+    if (err) return res.status(403).send(err.message)
+
+    const user = await User.findById(decoded._id)
+    if (!user) return res.status(403).send('Access denied.')
+
+    user.refresh(req.body.refresh, (err, tokens) => {
+      if (err) return res.status(403).send(err.message)
+
+      res.send(tokens)
+    })
+  })
+}
+
+// In login and others:
+// This would be for a cookie-based auth system typical for web browsers:
+// const { access, refresh } = await user.login()
+
+// res.cookie('refresh', refresh, {
+//   httpOnly: true,
+//   sameSite: 'none',
+//   secure: true,
+//   maxAge: 1000 * 60 * 60 * 24 * 7,
+// })
+
+// res.send({ access })

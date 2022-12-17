@@ -1,13 +1,13 @@
 import multer from 'multer'
 
-const storage = multer.diskStorage({
-  destination: (_req, _file, cb) => {
-    cb(null, 'uploads/')
-  },
-  filename: (_req, file, cb) => {
-    cb(null, file.originalname)
-  },
-})
-
+// Memory storage to upload to AWS S3 bucket
+const storage = multer.memoryStorage()
 const upload = multer({ storage })
-export default upload.single('image')
+
+const image = upload.single('image')
+const images = upload.array('images')
+
+export default {
+  image,
+  images,
+}

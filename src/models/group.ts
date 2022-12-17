@@ -2,6 +2,9 @@ import { Schema, model, Types, Model } from 'mongoose'
 const { ObjectId } = Schema.Types
 import Joi from 'joi'
 
+// Not recommended to extend from the mongoose Document interface
+// https://mongoosejs.com/docs/typescript/statics-and-methods.html
+
 enum GroupPrivacy {
   public,
   private,
@@ -14,7 +17,6 @@ interface IGroup extends BaseModel {
   members: Types.ObjectId[]
 }
 
-// string insted of Types.ObjectId for ease of use in route handlers
 interface IGroupMethods {
   addMember: (userId: string) => Promise<void>
   removeMember: (userId: string) => Promise<void>
@@ -25,7 +27,7 @@ type GroupDoc = Model<IGroup, {}, IGroupMethods>
 const groupSchema = new Schema<IGroup, GroupDoc, IGroupMethods>(
   {
     name: { type: String, required: true },
-    desc: { type: String, maxlength: 255 },
+    desc: String,
     privacy: { type: Number, enum: [0, 1] },
     members: [{ type: ObjectId, ref: 'User' }],
     location: {
@@ -50,11 +52,12 @@ methods.removeMember = async function (userId) {
 
 export default model<IGroup, GroupDoc>('Group', groupSchema)
 
-export const validate = (group: IGroup) => {
+export const validateGroup = (group: IGroup) => {
   const schema = Joi.object({
     name: Joi.string().max(255).required(),
     desc: Joi.string().max(255),
-    type: Joi.number().min(0).max(1),
+    privacy: Joi.number().min(0).max(1),
+    location: Joi.string().max(255), // comes from the client in a stringified format
   })
 
   return schema.validate(group)
