@@ -1,0 +1,14 @@
+version: '3'
+
+# Server for production
+services:
+  api-server:
+    container_name: api-server
+    build: .
+    restart: unless-stopped
+    ports:
+      - 8000:8000
+    environment:
+      NODE_ENV: production
+      PORT: 8000
+      # DB_URL: xxxxx

@@ -1,16 +1,17 @@
 version: '3'
 
-# Server + DB, for development 
+# Server + DB, for development
 services:
-  api:
+  api-dev:
+    container_name: api-dev
     depends_on:
       - db
     build:
       context: .
-      dockerfile: Dockerfile.dev 
+      dockerfile: Dockerfile.dev
     restart: unless-stopped
     ports:
-      - '8000:8000'
+      - 8000:8000
     environment:
       NODE_ENV: development
       PORT: 8000
@@ -21,11 +22,10 @@ services:
   db:
     image: mongo
     ports:
-      - '27017:27017'
+      - 27017:27017
     volumes:
       - data-dev:/data/db
-    logging:
-      driver: none
+    command: --quiet
 
 volumes:
   data-dev:

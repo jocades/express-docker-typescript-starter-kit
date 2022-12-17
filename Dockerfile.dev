@@ -4,11 +4,11 @@ RUN mkdir -p /usr/app
 WORKDIR /usr/app
 
 COPY package*.json ./
+COPY scripts/*.sh ./scripts/
+
 RUN npm install
 
 COPY . .
 
 EXPOSE 8000
-
 CMD ["npm", "run", "dev"]
-
