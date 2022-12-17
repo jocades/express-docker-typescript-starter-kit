@@ -1,6 +1,5 @@
-// !! packages not in package.json
-// usefull for uploading files to s3 bucket
-// use with ES modules
+// !! packages not in package.json !!
+// use with ES imports
 const {
   S3Client,
   GetObjectCommand,

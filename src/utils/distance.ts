@@ -1,11 +1,3 @@
-// Haversine formula - http://www.movable-type.co.uk/scripts/latlong.html
-// a = sin²(Δφ/2) + cos φ1 ⋅ cos φ2 ⋅ sin²(Δλ/2)
-// c = 2 ⋅ atan2( √a, √(1−a) )
-// d = R ⋅ c
-
-// where	φ is latitude, λ is longitude, R is earth’s radius (mean radius = 6,371km);
-// note that angles need to be in radians to pass to trig functions!
-
 const deg2rad = (deg: number) => deg * (Math.PI / 180)
 
 export const getDistanceInKm = <T extends number>(lat1: T, lon1: T, lat2: T, lon2: T) => {
@@ -21,11 +13,11 @@ export const getDistanceInKm = <T extends number>(lat1: T, lon1: T, lat2: T, lon
   return d
 }
 
-const sortByDistance = (collection: BaseModel[], lat: number, long: number) => {
+export const sortByDistance = (collection: BaseModel[], lat: number, long: number) => {
   const sorted = collection.sort((a, b) => {
-    const disA = getDistanceInKm(lat, long, a.location?.lat, a.location?.long)
-    const disB = getDistanceInKm(lat, long, b.location.lat, b.location.long)
-    return disA - disB
+    const distA = getDistanceInKm(lat, long, a.location.lat, a.location.long)
+    const distB = getDistanceInKm(lat, long, b.location.lat, b.location.long)
+    return distA - distB
   })
 
   return sorted
