@@ -1,11 +1,36 @@
 module.exports = {
   async up(db, client) {
     await db.collection('groups').insertMany([
-      { name: 'Group 1', description: 'Group 1 description', privacy: 0 },
-      { name: 'Group 2', description: 'Group 2 description', privacy: 1 },
-      { name: 'Group 3', description: 'Group 3 description', privacy: 0 },
-      { name: 'Group 4', description: 'Group 4 description', privacy: 1 },
-      { name: 'Group 5', description: 'Group 5 description', privacy: 0 },
+      {
+        name: 'Group 1',
+        description: 'Group 1 description',
+        privacy: 0,
+        createdAt: new Date(),
+      },
+      {
+        name: 'Group 2',
+        description: 'Group 2 description',
+        privacy: 1,
+        createdAt: new Date(),
+      },
+      {
+        name: 'Group 3',
+        description: 'Group 3 description',
+        privacy: 0,
+        createdAt: new Date(),
+      },
+      {
+        name: 'Group 4',
+        description: 'Group 4 description',
+        privacy: 1,
+        createdAt: new Date(),
+      },
+      {
+        name: 'Group 5',
+        description: 'Group 5 description',
+        privacy: 0,
+        createdAt: new Date(),
+      },
     ])
   },
 

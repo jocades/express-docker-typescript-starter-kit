@@ -7,25 +7,32 @@ module.exports = {
         email: 'admin@m.com',
         password: await bcrypt.hash('123456', 10),
         firstName: 'admin1',
-        lastName: 'last1',
+        lastName: 'last',
         isAdmin: true,
+        createdAt: new Date(),
       },
       {
         email: 'user1@m.com',
         password: await bcrypt.hash('123456', 10),
-        firstName: 'name2',
-        lastName: 'last2',
+        firstName: 'name1',
+        lastName: 'last1',
+        createdAt: new Date(),
       },
       {
         email: 'user2@m.com',
         password: await bcrypt.hash('123456', 10),
-        firstName: 'name3',
-        lastName: 'last3',
+        firstName: 'name2',
+        lastName: 'last2',
+        createdAt: new Date(),
       },
     ])
   },
 
   async down(db, client) {
-    db.collection('users').deleteMany({})
+    db.collection('users').deleteMany({
+      firstName: {
+        $in: ['admin1', 'name1', 'name2'],
+      },
+    })
   },
 }
