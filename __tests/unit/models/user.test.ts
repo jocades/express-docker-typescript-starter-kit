@@ -1,6 +1,7 @@
 import User from '../../../src/models/user'
 import { Types } from 'mongoose'
 import jwt from 'jsonwebtoken'
+import { decrypt } from '../../../src/utils/hash'
 
 const accessSecret = process.env.JWT_A_SECRET as string
 const refreshSecret = process.env.JWT_R_SECRET as string
@@ -21,7 +22,7 @@ describe('user.generateRefreshToken', () => {
     const payload = { _id: new Types.ObjectId() }
     const user = new User(payload)
     const token = user.genRToken()
-    const decoded = jwt.verify(token, refreshSecret)
+    const decoded = jwt.verify(decrypt(JSON.parse(token)), refreshSecret)
 
     expect(decoded).toMatchObject(payload)
   })

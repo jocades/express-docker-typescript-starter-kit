@@ -4,13 +4,13 @@ import db from '../../../src/start/db'
 // import User from '../../../src/models/user'
 
 describe('auth middleware', () => {
-  // beforeEach(async () => {
-  //   await db.connect()
-  // })
+  beforeEach(async () => {
+    await db.connect()
+  })
 
-  // afterEach(async () => {
-  //   await db.close()
-  // })
+  afterEach(async () => {
+    await db.close()
+  })
 
   let token: string
 
