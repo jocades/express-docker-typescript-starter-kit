@@ -1,6 +1,13 @@
+import './start/env'
+import './start/config'
+import db from './start/db'
 import app from './start/app'
-import { log } from './utils/debug'
+import logger from './logger'
 
-const port = process.env.PORT || 8000
+const PORT = process.env.PORT || 8000
 
-app.listen(port, () => log(`Listening on http://localhost:${port}`))
+db.safeConnect().then(() => {
+  app.listen(PORT, () => {
+    logger.info(`﬉ Listening on http://localhost:${PORT}`)
+  })
+})

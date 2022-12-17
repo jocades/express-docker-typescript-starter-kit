@@ -10,14 +10,14 @@ type UserPayload = {
   exp: number
 }
 
-type ILocation = {
-  lat: number
-  long: number
-}
-
 type Tokens = {
   access: string
   refresh: string
+}
+
+type Hash = {
+  iv: string
+  content: string
 }
 
 type Credentials = {
@@ -25,10 +25,14 @@ type Credentials = {
   password: string
 }
 
+type ILocation = {
+  lat: number
+  long: number
+}
+
 // --- Models --- //
 
 interface BaseModel {
-  readonly _id: string
   createdAt: Date
   updadetAt: Date
   location: ILocation
@@ -40,7 +44,7 @@ interface IUser extends BaseModel {
   firstName: string
   lastName: string
   isAdmin: boolean
-  auth: Tokens['refresh'][]
+  auth: Hash[]
 }
 
 interface IUserMethods {
@@ -48,8 +52,5 @@ interface IUserMethods {
   genRToken: () => Tokens['refresh']
   login: () => Promise<Tokens>
   logout: (rToken: Tokens['refresh']) => Promise<string>
-  refresh: (
-    rToken: Tokens['refresh'],
-    cb: (err: Error | undefined, tokens?: Tokens) => void
-  ) => void
+  refresh: (rToken: Tokens['refresh'], cb: (err?: Error, tokens?: Tokens) => void) => void
 }
