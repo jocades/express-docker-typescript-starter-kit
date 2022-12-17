@@ -1,21 +1,20 @@
 import request from 'supertest'
 import app from '../../../src/start/app'
 import db from '../../../src/start/db'
-import User from '../../../src/models/user'
+// import User from '../../../src/models/user'
 
-describe('Auth middleware', () => {
-  beforeEach(async () => {
-    await db.connect()
-  })
+describe('auth middleware', () => {
+  // beforeEach(async () => {
+  //   await db.connect()
+  // })
 
-  afterEach(async () => {
-    await db.close()
-  })
+  // afterEach(async () => {
+  //   await db.close()
+  // })
 
-  let token: Tokens['access']
+  let token: string
 
-  const exec = () =>
-    request(app).post('/api/groups').set('Authorization', token).send({ name: 'group1' })
+  const exec = () => request(app).get('/api/users/me').set('Authorization', token)
 
   it('should return 401 if no token is provided', async () => {
     token = ''

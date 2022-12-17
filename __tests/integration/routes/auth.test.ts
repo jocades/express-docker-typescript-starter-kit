@@ -105,7 +105,7 @@ describe(endpoint, () => {
       expect(res.body).toHaveProperty('message', 'Invalid email or password.')
     })
 
-    // Commented out because it's not working
+    // Commented out because it works when testing manually but not with Jest.
     // it('should return 200 and tokens if email and password are valid', async () => {
     //   const user = new User({ email, password })
     //   await user.save()
