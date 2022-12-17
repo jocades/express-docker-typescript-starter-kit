@@ -2,7 +2,7 @@ version: '3'
 
 # MongoDB for development
 services:
-  mongodb:
+  db:
     image: mongo
     container_name: mongo-dev
     restart: always
@@ -19,7 +19,3 @@ networks:
 
 volumes:
   data-dev:
-
-
-
-

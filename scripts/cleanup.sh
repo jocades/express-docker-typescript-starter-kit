@@ -14,3 +14,10 @@ if [ -d "./logs" ]; then
 else
   echo -e "\e[31m logs folder does not exist \e[0m"
 fi
+
+if [ -d "./coverage" ]; then
+  rm -rf ./coverage
+  echo -e "\e[32m coverage folder deleted \e[0m"
+else
+  echo -e "\e[31m coverage folder does not exist \e[0m"
+fi

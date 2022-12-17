@@ -9,5 +9,9 @@ function clean() {
 
 trap clean SIGINT EXIT
 
-# Run the container
-docker-compose -f docker-compose.dev.yml up
+if ! hash docker-compose 2>/dev/null; then
+	echo -e '\033[0;31mPlease install docker-compose\033[0m'
+	exit 1
+fi
+
+docker-compose -f docker-compose.dev.yml up --force-recreate
