@@ -17,7 +17,7 @@ if ! hash docker-compose 2>/dev/null; then
 fi
 
 # Create dev network if it doesn't exist
-if [ -z '$(docker network ls -qf name=^entropic$)' ]; then
+if [ -z "$(docker network ls -qf name=^entropic$)" ]; then
 	echo 'Creating network'
 	docker network create entropic >/dev/null
 fi

@@ -2,9 +2,9 @@
 set -e
 
 function clean() {
-    docker-compose -f docker-compose.dev.yml down
-    trap '' EXIT INT TERM
-    exit $err
+	docker-compose -f docker-compose.dev.yml down
+	trap '' EXIT INT TERM
+	exit $err
 }
 
 trap clean SIGINT EXIT
