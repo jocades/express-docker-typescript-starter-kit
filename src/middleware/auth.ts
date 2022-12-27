@@ -1,4 +1,4 @@
-import { NextFunction, Request, RequestHandler, Response } from 'express'
+import { RequestHandler } from 'express'
 import jwt from 'jsonwebtoken'
 
 const accessSecret = process.env.JWT_A_SECRET as string

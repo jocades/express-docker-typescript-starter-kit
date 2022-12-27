@@ -11,10 +11,8 @@ const validateInputs: VInputs = (validator) => {
 
     if (error) {
       const message = error?.details[0].message as string
-
       process.env.NODE_ENV?.includes('dev') &&
         logger.debug(`${message} - ${error}`, { mw: 'v-inputs' })
-
       return res.status(400).send({ message })
     }
 

@@ -1,15 +1,15 @@
 import { Response, RequestHandler } from 'express'
 import bcrypt from 'bcrypt'
-import User, { validateUser } from '../models/user'
-import _ from 'lodash'
 import jwt from 'jsonwebtoken'
+import _ from 'lodash'
 import { decrypt } from '../utils/hash'
+import User, { validateUser } from '../models/user'
 
-type IReqHandler = RequestHandler<{}, {}, Credentials & Tokens>
+type ReqHandler = RequestHandler<{}, {}, Credentials & Tokens>
 
 const sendMsg = (res: Response, message: string) => res.status(400).send({ message })
 
-export const registerUser: IReqHandler = async (req, res) => {
+export const registerUser: ReqHandler = async (req, res) => {
   const { email, password } = req.body
   const { error } = validateUser(email, password)
   if (error) return sendMsg(res, error.details[0].message)
@@ -25,7 +25,7 @@ export const registerUser: IReqHandler = async (req, res) => {
   res.status(201).send(_.pick(user, ['_id', 'email']))
 }
 
-export const loginUser: IReqHandler = async (req, res) => {
+export const loginUser: ReqHandler = async (req, res) => {
   const { email, password } = req.body
   const { error } = validateUser(email, password)
   if (error) return sendMsg(res, error.details[0].message)
@@ -43,7 +43,7 @@ export const loginUser: IReqHandler = async (req, res) => {
 
 const refreshSecret = process.env.JWT_R_SECRET as string
 
-export const logoutUser: IReqHandler = async (req, res) => {
+export const logoutUser: ReqHandler = async (req, res) => {
   try {
     const refresh = decrypt(JSON.parse(req.body.refresh))
     const decoded = jwt.verify(refresh, refreshSecret) as UserPayload
@@ -58,7 +58,7 @@ export const logoutUser: IReqHandler = async (req, res) => {
   }
 }
 
-export const refreshUser: IReqHandler = async (req, res) => {
+export const refreshUser: ReqHandler = async (req, res) => {
   try {
     const refresh = decrypt(JSON.parse(req.body.refresh))
     const decoded = jwt.verify(refresh, refreshSecret) as UserPayload
