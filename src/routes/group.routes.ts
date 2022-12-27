@@ -1,14 +1,14 @@
 import { Router } from 'express'
 import Group, { validateGroup } from '../models/group'
 import { auth, v, vId } from '../middleware'
-import handler from '../controllers/req-handlers'
-import { joinGroup, leaveGroup } from '../controllers/groups.ctrl'
+import handler from '../controllers/factory'
+import { joinGroup, leaveGroup, listGroups, createGroup } from '../controllers/groups.ctrl'
 
 const router = Router()
 
 router.route('/')
-  .get(handler.list(Group))
-  .post(v(validateGroup), handler.createOne(Group))
+  .get(listGroups)
+  .post(v(validateGroup), createGroup)
 
 router.route('/:id')
   .get(vId, handler.getOne(Group))

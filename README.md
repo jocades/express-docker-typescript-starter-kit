@@ -10,34 +10,34 @@ A curated starter kit for backend Node.js development. REST API with Typescript,
 - **MongoDB** object modeling with `mongoose`.
 - `Migrate-mongo` for database migrations.
 - `AWS S3` integration for file uploads.
-- `Authentication` management system for mobile devices with access and refresh JWTs.
+- `Authentication` management system with **access** and **refresh** **JWTs**. Following the **OAuth 2.0** standard with refresh token **encryption** and **blacklisting**.
 - `Private` and `public` endpoints.
-- **Error handling** inside routes with `express-async-errors`.
+- **Error handling** inside and outside the **express** middleware chain with `express-async-errors`.
 - **Logging** with `winston`.
 
 ## Table of Contents
 
 1. [Installation](#1-installation)
-   1. [Clone the repository](#11-clone-the-repository)
-   2. [Install dependencies](#12-install-dependencies)
+   <!-- 1. [Clone the repository](#11-clone-the-repository)
+   2. [Install dependencies](#12-install-dependencies) -->
 2. [Configuration](#2-configuration)
-   1. [NPM scripts](#21-npm-scripts)
+   <!-- 1. [NPM scripts](#21-npm-scripts)
    2. [Environment variables](#22-environment-variables)
-3. [Development](#3-development)
-   1. [Hybrid mode](#31-hybrid-mode)
+3. [Development](#3-development) -->
+   <!-- 1. [Hybrid mode](#31-hybrid-mode)
    2. [Immersive mode](#32-immersive-mode)
    3. [Common](#33-common)
-   4. [Testing](#34-testing)
+   4. [Testing](#34-testing) -->
 4. [Deployment](#4-deployment)
-   1. [Compile and run locally](#41-compile-and-run-locally)
-   2. [Build and run with Docker](#42-build-and-run-with-docker)
+   <!-- 1. [Compile and run locally](#41-compile-and-run-locally)
+   2. [Build and run with Docker](#42-build-and-run-with-docker) -->
 5. [The Project](#5-the-project)
-   1. [Models](#51-models)
+   <!-- 1. [Models](#51-models)
    2. [Routes](#52-routes)
    3. [Testing](#53-testing)
    4. [Utilities](#54-utilities)
    5. [Docker](#55-docker)
-   6. [Scripts](#56-scripts)
+   6. [Scripts](#56-scripts) -->
 6. [Contributing](#6-contributing)
 
 ## 1. Installation
@@ -67,12 +67,6 @@ Configured in `package.json`. Big focus on **automation** for a **productive** d
 npm run
 ```
 
-To be able to run the commands, grant execution permissions to the script files.
-
-```sh
-chmod +x scripts/*.sh
-```
-
 ### 2.2. Environment variables
 
 Stored in `.env.default`. Rename it to .env and update the values as needed.
@@ -82,7 +76,7 @@ Stored in `.env.default`. Rename it to .env and update the values as needed.
 
 ### 3.1. Hybrid mode
 
-Run **MongoDB** as a service in a **docker** container and **start** the server **locally**. **Data persistance** enabled. Refer to the scripts folder, see `db.sh`.
+Run **MongoDB** as a service in a **docker** container and **start** the server **locally**. **Data persistance** enabled. Refer to the scripts folder, see [db.sh](scripts/db.sh) and its respective [compose file](docker/docker-compose.db.yml).
 
 ```sh
 npm run dev:db
@@ -92,27 +86,27 @@ You can also **just** run the **server** locally as usual. Make sure to provide 
 
 ### 3.2. Immersive mode
 
-Run both the **server** and **MongoDB** in **Docker** containers. **Data persistance** with **hot reload** enabled.
-Refer to the scripts folder, see `docker-dev.sh`.
+Run both the **server** and **MongoDB** in **docker** containers. **Data persistance** with **hot reload** enabled.
+Refer to the scripts folder, see [docker-dev.sh](scripts/docker-dev.sh) and its respective [compose file](docker-compose.dev.yml).
 
 ```sh
 npm run dev:docker
 ```
-
-If you use **VSCode**, I recommend trying the **devcontainer** feature.
 
 ### 3.3. Common
 
 Run **database migrations** to populate the database.
 
 ```sh
-npm run migrate
+npm run db:up
 ```
 
 **Both hybrid and immersive modes will result in**:
 
-- Server running on `http://localhost:8000`
+![](src/public/init.png)
+
 - MongoDB running on `mongodb://localhost:27017`
+- Server running on `http://localhost:8000`
 
 ### 3.4. Testing
 
@@ -142,7 +136,7 @@ Make sure to provide **environment variables** when building with Docker. Either
 From the **command line**.
 
 ```sh
-docker build -t api -f Dockerfile.prod .
+docker build -t api .
 
 docker run -t -i -p 8000:8000 \
     --env NODE_ENV=production \
@@ -151,10 +145,10 @@ docker run -t -i -p 8000:8000 \
     api
 ```
 
-With **docker-compose**, remember to **gitignore** the `docker-compose.prod.yml` file.
+With **docker-compose**:
 
 ```sh
-docker-compose -f docker-compose.prod.yml up
+docker-compose up --build
 ```
 
 <br/>
@@ -166,7 +160,7 @@ You can find a lot of useful stuff in this project. Here are some of them.
 ### 5.1. Models
 
 - Mongoose modelling with proper typing for a nice development experience.
-- Note that type definitions are in `src/types.d.ts`, no need to import them.
+- Note that type definitions are in [types.d.ts](src/types.d.ts), no need to import them.
 - Two defined models: **User** and **Group**.
 - Model instance methods for authentication and CRUD operations.
 - Operations with related collections.
@@ -177,6 +171,7 @@ You can find a lot of useful stuff in this project. Here are some of them.
 - `NOTE`: This api is ment for a **mobile device**, so on the **client** the refresh token is saved in the **secure-storage** of the device. If this was for a **web app**, the refresh token would be sent and saved in a **http-only cookie**.
 - Authentication and authorization middlewares for protected endpoints.
 - Other usefull middlewares to upload files, validate requests, etc.
+- A route **handler factory** for common CRUD endpoints. See [factory.ts](src/controllers/factory.ts).
 - **No** wrapping your routes in **try/catch** blocks, **express-async-errors** monkey-patches the route handlers to catch errors and pass them to the next middleware.
 
 ### 5.3. Testing
@@ -199,7 +194,7 @@ You can find a lot of useful stuff in this project. Here are some of them.
 
 ### 5.6. Logging
 
-- Logging with **winston**. See `src/start/logger.ts`.
+- Logging with **winston**. See [logger.ts](src/logger.ts).
 - Logging to **console** with prettefied output during development.
 - Logging to `./logs` with **timestamps** and **readable** output.
 
@@ -213,7 +208,9 @@ You can find a lot of useful stuff in this project. Here are some of them.
 - `test` - Run the test suites.
 - `test:watch` - Run the test suites in watch mode.
 - `test:coverage` - Run the test suites and generate a coverage report.
-- `migrate` - Run database migrations.
+- `db:up` - Run database migrations.
+- `db:down` - Rollback database migrations.
+- `db:reset` - Rollback and run database migrations.
 - `cleanup` - Remove logs, coverage reports and compiled code.
   <br/>
 
