@@ -22,22 +22,20 @@ const userSchema = new Schema<IUser, UserDoc, IUserMethods>(
 const accessSecret = process.env.JWT_A_SECRET as string
 const refreshSecret = process.env.JWT_R_SECRET as string
 
-const { methods } = userSchema
-
-methods.genAToken = function () {
+userSchema.methods.genAToken = function () {
   return jwt.sign({ _id: this._id, isAdmin: this.isAdmin }, accessSecret, {
     expiresIn: '5m',
   })
 }
 
-methods.genRToken = function () {
+userSchema.methods.genRToken = function () {
   const refreshToken = jwt.sign({ _id: this._id }, refreshSecret, {
     expiresIn: '30d',
   })
   return JSON.stringify(encrypt(refreshToken))
 }
 
-methods.login = async function () {
+userSchema.methods.login = async function () {
   const user = this
   const access = user.genAToken()
   const refresh = user.genRToken()
@@ -48,7 +46,7 @@ methods.login = async function () {
   return { access, refresh }
 }
 
-methods.logout = async function (rToken) {
+userSchema.methods.logout = async function (rToken) {
   const user = this
   const i = user.auth.indexOf(rToken)
   if (i === -1) throw new Error('Invalid refresh token.')
@@ -58,7 +56,7 @@ methods.logout = async function (rToken) {
 }
 
 // callback, just for fun
-methods.refresh = async function (rToken, cb) {
+userSchema.methods.refresh = async function (rToken, cb) {
   const user = this
   const i = user.auth.indexOf(rToken)
   if (i === -1) return cb(new Error('Invalid refresh token.'))

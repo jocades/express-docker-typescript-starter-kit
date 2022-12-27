@@ -35,7 +35,7 @@ type ILocation = {
 interface BaseModel {
   createdAt: Date
   updadetAt: Date
-  location: ILocation
+  location: any
 }
 
 interface IUser extends BaseModel {

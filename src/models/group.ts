@@ -5,16 +5,12 @@ import Joi from 'joi'
 // Not recommended to extend from the mongoose Document interface
 // https://mongoosejs.com/docs/typescript/statics-and-methods.html
 
-enum GroupPrivacy {
-  public,
-  private,
-}
-
-interface IGroup extends BaseModel {
+export interface IGroup extends BaseModel {
   name: string
   desc: string
-  privacy: GroupPrivacy
+  privacy: 'public' | 'private'
   members: Types.ObjectId[]
+  location: { type: 'Point'; coordinates: [number, number] }
 }
 
 interface IGroupMethods {
@@ -28,24 +24,25 @@ const groupSchema = new Schema<IGroup, GroupDoc, IGroupMethods>(
   {
     name: { type: String, required: true },
     desc: String,
-    privacy: { type: Number, enum: [0, 1] },
+    privacy: { type: String, enum: ['public', 'private'], default: 'public' },
     members: [{ type: ObjectId, ref: 'User' }],
     location: {
-      lat: Number,
-      long: Number,
+      type: { type: String, enum: ['Point'] },
+      coordinates: { type: [Number] },
     },
   },
   { timestamps: true }
 )
 
-const { methods } = groupSchema
+// https://docs.mongodb.com/manual/geospatial-queries/
+groupSchema.index({ location: '2dsphere' })
 
-methods.addMember = async function (userId) {
+groupSchema.methods.addMember = async function (userId) {
   this.members.push(userId)
   await this.save()
 }
 
-methods.removeMember = async function (userId) {
+groupSchema.methods.removeMember = async function (userId) {
   this.members.pull(userId)
   await this.save()
 }
@@ -56,8 +53,8 @@ export const validateGroup = (group: IGroup) => {
   const schema = Joi.object({
     name: Joi.string().max(255).required(),
     desc: Joi.string().max(255),
-    privacy: Joi.number().min(0).max(1),
-    location: Joi.string().max(255), // comes from the client in a stringified format
+    privacy: Joi.string().valid('public', 'private'),
+    location: Joi.array().items(Joi.number()).length(2),
   })
 
   return schema.validate(group)
