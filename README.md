@@ -45,8 +45,8 @@ A curated starter kit for backend Node.js development. REST API with Typescript,
 ### 1.1. Clone the repository
 
 ```sh
-git clone ... <app-name>
-cd <app-name>
+git clone https://github.com/j0rdiC/express-docker-typescript-starter-kit.git app_name
+cd app_name
 ```
 
 ### 1.2. Install dependencies
@@ -131,7 +131,7 @@ npm run build && npm start
 
 ### 4.2. Build and run with Docker
 
-Make sure to provide **environment variables** when building with Docker. Either in the `docker-compose.prod` file or **CLI**.<br/>
+Make sure to provide **environment variables** when building with Docker. Either in the `docker-compose` file or **CLI**.<br/>
 
 From the **command line**.
 
