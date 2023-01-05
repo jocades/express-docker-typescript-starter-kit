@@ -46,12 +46,12 @@ A curated starter kit for backend Node.js development. REST API with Typescript,
 
 ```sh
 git clone https://github.com/j0rdiC/express-docker-typescript-starter-kit.git app_name
-cd app_name
 ```
 
 ### 1.2. Install dependencies
 
 ```sh
+cd app_name
 npm install
 ```
 
