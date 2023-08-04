@@ -14,7 +14,7 @@ const userSchema = new Schema<IUser, UserDoc, IUserMethods>(
     lastName: String,
 
     isAdmin: { type: Boolean, default: false },
-    auth: [{ type: String, default: [] }],
+    // auth: [{ type: String, default: [] }],
   },
   { timestamps: true }
 )
@@ -23,9 +23,7 @@ const accessSecret = process.env.JWT_A_SECRET as string
 const refreshSecret = process.env.JWT_R_SECRET as string
 
 userSchema.methods.genAToken = function () {
-  return jwt.sign({ _id: this._id, isAdmin: this.isAdmin }, accessSecret, {
-    expiresIn: '5m',
-  })
+  return jwt.sign({ _id: this._id, isAdmin: this.isAdmin }, accessSecret)
 }
 
 userSchema.methods.genRToken = function () {
@@ -38,12 +36,12 @@ userSchema.methods.genRToken = function () {
 userSchema.methods.login = async function () {
   const user = this
   const access = user.genAToken()
-  const refresh = user.genRToken()
+  // const refresh = user.genRToken()
   // token rotation
-  if (user.auth.length >= 5) user.auth.shift()
+  /* if (user.auth.length >= 5) user.auth.shift()
   user.auth.push(refresh)
-  await user.save()
-  return { access, refresh }
+  await user.save() */
+  return { access }
 }
 
 userSchema.methods.logout = async function (rToken) {

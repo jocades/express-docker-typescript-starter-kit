@@ -25,7 +25,9 @@ export const listGroups: RequestHandler = async (req, res) => {
 }
 
 export const createGroup: RequestHandler = async (req, res) => {
-  const location = req.body.location ? { type: 'Point', coordinates: req.body.location } : undefined
+  const location = req.body.location
+    ? { type: 'Point', coordinates: req.body.location }
+    : undefined
 
   const group = new Group({ ...req.body, location })
   await group.save()
@@ -37,16 +39,16 @@ export const joinGroup: RequestHandler = async (req, res) => {
   const group = await Group.findById(req.params.id)
   if (!group) return notFound(res, 'group')
 
-  await group.addMember(req.user._id)
+  const message = await group.addMember(req.user._id)
 
-  res.send({ message: `Joined group ${group.name}` })
+  res.send({ message })
 }
 
 export const leaveGroup: RequestHandler = async (req, res) => {
   const group = await Group.findById(req.params.id)
   if (!group) return notFound(res, 'group')
 
-  await group.removeMember(req.user._id)
+  const message = await group.removeMember(req.user._id)
 
-  res.send({ message: `Left group ${group.name}` })
+  res.send({ message })
 }

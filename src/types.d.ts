@@ -50,7 +50,7 @@ interface IUser extends BaseModel {
 interface IUserMethods {
   genAToken: () => Tokens['access']
   genRToken: () => Tokens['refresh']
-  login: () => Promise<Tokens>
+  login: () => Promise<{ access: string }>
   logout: (rToken: Tokens['refresh']) => Promise<string>
   refresh: (rToken: Tokens['refresh'], cb: (err?: Error, tokens?: Tokens) => void) => void
 }

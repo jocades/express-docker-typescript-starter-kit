@@ -8,6 +8,7 @@ module.exports = {
         // longitute, latitude of palma de mallorca
         location: { type: 'Point', coordinates: [2.6496, 39.5696] },
         createdAt: new Date(),
+        updatedAt: new Date(),
       },
       {
         name: 'Group 2',
@@ -16,6 +17,7 @@ module.exports = {
         // longitute, latitude of andratx, mallorca
         location: { type: 'Point', coordinates: [2.4933, 39.6017] },
         createdAt: new Date(),
+        updatedAt: new Date(),
       },
       {
         name: 'Group 3',
@@ -25,6 +27,7 @@ module.exports = {
         // longitute, latitude of pollenca, mallorca
         location: { type: 'Point', coordinates: [3.0375, 39.8561] },
         createdAt: new Date(),
+        updatedAt: new Date(),
       },
       {
         name: 'Group 4',
@@ -33,6 +36,7 @@ module.exports = {
         // longitute, latitude of inca, mallorca
         location: { type: 'Point', coordinates: [2.8197, 39.5696] },
         createdAt: new Date(),
+        updatedAt: new Date(),
       },
       {
         name: 'Group 5',
@@ -41,6 +45,7 @@ module.exports = {
         location: { type: 'Point', coordinates: [2.7333, 39.7333] },
         privacy: 'public',
         createdAt: new Date(),
+        updatedAt: new Date(),
       },
     ])
   },

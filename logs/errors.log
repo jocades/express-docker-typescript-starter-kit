@@ -1,0 +1,3514 @@
+{
+  message: 'Failed connecting to MongoDB',
+  cause: MongoNetworkError
+      at connectionFailureError (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/node_modules/mongodb/src/cmap/connect.ts:514:14)
+      at Socket.<anonymous> (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/node_modules/mongodb/src/cmap/connect.ts:416:16)
+      at Object.onceWrapper (node:events:626:26)
+      at Socket.emit (node:events:511:28)
+      at Socket.emit (node:domain:489:12)
+      at emitErrorNT (node:internal/streams/destroy:151:8)
+      at emitErrorCloseNT (node:internal/streams/destroy:116:3)
+      at processTicksAndRejections (node:internal/process/task_queues:82:21) {
+    cause: AggregateError
+        at internalConnectMultiple (node:net:1102:18)
+        at afterConnectMultiple (node:net:1620:5) {
+      code: 'ECONNREFUSED',
+      [errors]: [
+        Error: connect ECONNREFUSED ::1:27017
+            at afterConnectMultiple (node:net:1607:16) {
+          errno: -61,
+          code: 'ECONNREFUSED',
+          syscall: 'connect',
+          address: '::1',
+          port: 27017
+        },
+        Error: connect ECONNREFUSED 127.0.0.1:27017
+            at afterConnectMultiple (node:net:1607:16) {
+          errno: -61,
+          code: 'ECONNREFUSED',
+          syscall: 'connect',
+          address: '127.0.0.1',
+          port: 27017
+        }
+      ]
+    },
+    [Symbol(errorLabels)]: Set(1) { 'ResetPool' }
+  },
+  reason: TopologyDescription {
+    type: 'Unknown',
+    servers: Map(1) {
+      'localhost:27017' => ServerDescription {
+        address: 'localhost:27017',
+        type: 'Unknown',
+        hosts: [],
+        passives: [],
+        arbiters: [],
+        tags: {},
+        minWireVersion: 0,
+        maxWireVersion: 0,
+        roundTripTime: -1,
+        lastUpdateTime: 1143568327,
+        lastWriteDate: 0,
+        error: MongoNetworkError
+            at connectionFailureError (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/node_modules/mongodb/src/cmap/connect.ts:514:14)
+            at Socket.<anonymous> (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/node_modules/mongodb/src/cmap/connect.ts:416:16)
+            at Object.onceWrapper (node:events:626:26)
+            at Socket.emit (node:events:511:28)
+            at Socket.emit (node:domain:489:12)
+            at emitErrorNT (node:internal/streams/destroy:151:8)
+            at emitErrorCloseNT (node:internal/streams/destroy:116:3)
+            at processTicksAndRejections (node:internal/process/task_queues:82:21) {
+          cause: AggregateError
+              at internalConnectMultiple (node:net:1102:18)
+              at afterConnectMultiple (node:net:1620:5) {
+            code: 'ECONNREFUSED',
+            [errors]: [
+              Error: connect ECONNREFUSED ::1:27017
+                  at afterConnectMultiple (node:net:1607:16) {
+                errno: -61,
+                code: 'ECONNREFUSED',
+                syscall: 'connect',
+                address: '::1',
+                port: 27017
+              },
+              Error: connect ECONNREFUSED 127.0.0.1:27017
+                  at afterConnectMultiple (node:net:1607:16) {
+                errno: -61,
+                code: 'ECONNREFUSED',
+                syscall: 'connect',
+                address: '127.0.0.1',
+                port: 27017
+              }
+            ]
+          },
+          [Symbol(errorLabels)]: Set(1) { 'ResetPool' }
+        },
+        topologyVersion: null,
+        setName: null,
+        setVersion: null,
+        electionId: null,
+        logicalSessionTimeoutMinutes: null,
+        primary: null,
+        me: null,
+        '$clusterTime': null
+      }
+    },
+    stale: false,
+    compatible: true,
+    heartbeatFrequencyMS: 10000,
+    localThresholdMS: 15,
+    setName: null,
+    maxElectionId: null,
+    maxSetVersion: null,
+    commonWireVersion: 0,
+    logicalSessionTimeoutMinutes: null
+  },
+  code: undefined,
+  level: 'error',
+  stack: 'MongooseServerSelectionError\n' +
+    '    at NativeConnection.Connection.openUri (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/lib/connection.js:825:32)\n' +
+    '    at /Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/lib/index.js:414:10\n' +
+    '    at /Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/lib/helpers/promiseOrCallback.js:41:5\n' +
+    '    at new Promise (<anonymous>)\n' +
+    '    at promiseOrCallback (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/lib/helpers/promiseOrCallback.js:40:10)\n' +
+    '    at Mongoose._promiseOrCallback (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/lib/index.js:1288:10)\n' +
+    '    at Mongoose.connect (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/lib/index.js:413:20)\n' +
+    '    at /Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/src/start/db.ts:10:29\n' +
+    '    at Generator.next (<anonymous>)\n' +
+    '    at /Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/src/start/db.ts:8:71',
+  timestamp: '2023-08-03 01:59:15'
+}
+{
+  message: 'Failed connecting to MongoDB',
+  cause: MongoNetworkError
+      at connectionFailureError (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/node_modules/mongodb/src/cmap/connect.ts:514:14)
+      at Socket.<anonymous> (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/node_modules/mongodb/src/cmap/connect.ts:416:16)
+      at Object.onceWrapper (node:events:626:26)
+      at Socket.emit (node:events:511:28)
+      at Socket.emit (node:domain:489:12)
+      at emitErrorNT (node:internal/streams/destroy:151:8)
+      at emitErrorCloseNT (node:internal/streams/destroy:116:3)
+      at processTicksAndRejections (node:internal/process/task_queues:82:21) {
+    cause: AggregateError
+        at internalConnectMultiple (node:net:1102:18)
+        at afterConnectMultiple (node:net:1620:5) {
+      code: 'ECONNREFUSED',
+      [errors]: [
+        Error: connect ECONNREFUSED ::1:27017
+            at afterConnectMultiple (node:net:1607:16) {
+          errno: -61,
+          code: 'ECONNREFUSED',
+          syscall: 'connect',
+          address: '::1',
+          port: 27017
+        },
+        Error: connect ECONNREFUSED 127.0.0.1:27017
+            at afterConnectMultiple (node:net:1607:16) {
+          errno: -61,
+          code: 'ECONNREFUSED',
+          syscall: 'connect',
+          address: '127.0.0.1',
+          port: 27017
+        }
+      ]
+    },
+    [Symbol(errorLabels)]: Set(1) { 'ResetPool' }
+  },
+  reason: TopologyDescription {
+    type: 'Unknown',
+    servers: Map(1) {
+      'localhost:27017' => ServerDescription {
+        address: 'localhost:27017',
+        type: 'Unknown',
+        hosts: [],
+        passives: [],
+        arbiters: [],
+        tags: {},
+        minWireVersion: 0,
+        maxWireVersion: 0,
+        roundTripTime: -1,
+        lastUpdateTime: 1143626601,
+        lastWriteDate: 0,
+        error: MongoNetworkError
+            at connectionFailureError (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/node_modules/mongodb/src/cmap/connect.ts:514:14)
+            at Socket.<anonymous> (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/node_modules/mongodb/src/cmap/connect.ts:416:16)
+            at Object.onceWrapper (node:events:626:26)
+            at Socket.emit (node:events:511:28)
+            at Socket.emit (node:domain:489:12)
+            at emitErrorNT (node:internal/streams/destroy:151:8)
+            at emitErrorCloseNT (node:internal/streams/destroy:116:3)
+            at processTicksAndRejections (node:internal/process/task_queues:82:21) {
+          cause: AggregateError
+              at internalConnectMultiple (node:net:1102:18)
+              at afterConnectMultiple (node:net:1620:5) {
+            code: 'ECONNREFUSED',
+            [errors]: [
+              Error: connect ECONNREFUSED ::1:27017
+                  at afterConnectMultiple (node:net:1607:16) {
+                errno: -61,
+                code: 'ECONNREFUSED',
+                syscall: 'connect',
+                address: '::1',
+                port: 27017
+              },
+              Error: connect ECONNREFUSED 127.0.0.1:27017
+                  at afterConnectMultiple (node:net:1607:16) {
+                errno: -61,
+                code: 'ECONNREFUSED',
+                syscall: 'connect',
+                address: '127.0.0.1',
+                port: 27017
+              }
+            ]
+          },
+          [Symbol(errorLabels)]: Set(1) { 'ResetPool' }
+        },
+        topologyVersion: null,
+        setName: null,
+        setVersion: null,
+        electionId: null,
+        logicalSessionTimeoutMinutes: null,
+        primary: null,
+        me: null,
+        '$clusterTime': null
+      }
+    },
+    stale: false,
+    compatible: true,
+    heartbeatFrequencyMS: 10000,
+    localThresholdMS: 15,
+    setName: null,
+    maxElectionId: null,
+    maxSetVersion: null,
+    commonWireVersion: 0,
+    logicalSessionTimeoutMinutes: null
+  },
+  code: undefined,
+  level: 'error',
+  stack: 'MongooseServerSelectionError\n' +
+    '    at NativeConnection.Connection.openUri (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/lib/connection.js:825:32)\n' +
+    '    at /Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/lib/index.js:414:10\n' +
+    '    at /Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/lib/helpers/promiseOrCallback.js:41:5\n' +
+    '    at new Promise (<anonymous>)\n' +
+    '    at promiseOrCallback (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/lib/helpers/promiseOrCallback.js:40:10)\n' +
+    '    at Mongoose._promiseOrCallback (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/lib/index.js:1288:10)\n' +
+    '    at Mongoose.connect (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/lib/index.js:413:20)\n' +
+    '    at /Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/src/start/db.ts:10:29\n' +
+    '    at Generator.next (<anonymous>)\n' +
+    '    at /Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/src/start/db.ts:8:71',
+  timestamp: '2023-08-03 02:00:13'
+}
+{
+  message: 'Failed connecting to MongoDB',
+  cause: MongoNetworkError
+      at connectionFailureError (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/node_modules/mongodb/src/cmap/connect.ts:514:14)
+      at Socket.<anonymous> (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/node_modules/mongodb/src/cmap/connect.ts:416:16)
+      at Object.onceWrapper (node:events:626:26)
+      at Socket.emit (node:events:511:28)
+      at Socket.emit (node:domain:489:12)
+      at emitErrorNT (node:internal/streams/destroy:151:8)
+      at emitErrorCloseNT (node:internal/streams/destroy:116:3)
+      at processTicksAndRejections (node:internal/process/task_queues:82:21) {
+    cause: AggregateError
+        at internalConnectMultiple (node:net:1102:18)
+        at afterConnectMultiple (node:net:1620:5) {
+      code: 'ECONNREFUSED',
+      [errors]: [
+        Error: connect ECONNREFUSED ::1:27017
+            at afterConnectMultiple (node:net:1607:16) {
+          errno: -61,
+          code: 'ECONNREFUSED',
+          syscall: 'connect',
+          address: '::1',
+          port: 27017
+        },
+        Error: connect ECONNREFUSED 127.0.0.1:27017
+            at afterConnectMultiple (node:net:1607:16) {
+          errno: -61,
+          code: 'ECONNREFUSED',
+          syscall: 'connect',
+          address: '127.0.0.1',
+          port: 27017
+        }
+      ]
+    },
+    [Symbol(errorLabels)]: Set(1) { 'ResetPool' }
+  },
+  reason: TopologyDescription {
+    type: 'Unknown',
+    servers: Map(1) {
+      'localhost:27017' => ServerDescription {
+        address: 'localhost:27017',
+        type: 'Unknown',
+        hosts: [],
+        passives: [],
+        arbiters: [],
+        tags: {},
+        minWireVersion: 0,
+        maxWireVersion: 0,
+        roundTripTime: -1,
+        lastUpdateTime: 1144334661,
+        lastWriteDate: 0,
+        error: MongoNetworkError
+            at connectionFailureError (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/node_modules/mongodb/src/cmap/connect.ts:514:14)
+            at Socket.<anonymous> (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/node_modules/mongodb/src/cmap/connect.ts:416:16)
+            at Object.onceWrapper (node:events:626:26)
+            at Socket.emit (node:events:511:28)
+            at Socket.emit (node:domain:489:12)
+            at emitErrorNT (node:internal/streams/destroy:151:8)
+            at emitErrorCloseNT (node:internal/streams/destroy:116:3)
+            at processTicksAndRejections (node:internal/process/task_queues:82:21) {
+          cause: AggregateError
+              at internalConnectMultiple (node:net:1102:18)
+              at afterConnectMultiple (node:net:1620:5) {
+            code: 'ECONNREFUSED',
+            [errors]: [
+              Error: connect ECONNREFUSED ::1:27017
+                  at afterConnectMultiple (node:net:1607:16) {
+                errno: -61,
+                code: 'ECONNREFUSED',
+                syscall: 'connect',
+                address: '::1',
+                port: 27017
+              },
+              Error: connect ECONNREFUSED 127.0.0.1:27017
+                  at afterConnectMultiple (node:net:1607:16) {
+                errno: -61,
+                code: 'ECONNREFUSED',
+                syscall: 'connect',
+                address: '127.0.0.1',
+                port: 27017
+              }
+            ]
+          },
+          [Symbol(errorLabels)]: Set(1) { 'ResetPool' }
+        },
+        topologyVersion: null,
+        setName: null,
+        setVersion: null,
+        electionId: null,
+        logicalSessionTimeoutMinutes: null,
+        primary: null,
+        me: null,
+        '$clusterTime': null
+      }
+    },
+    stale: false,
+    compatible: true,
+    heartbeatFrequencyMS: 10000,
+    localThresholdMS: 15,
+    setName: null,
+    maxElectionId: null,
+    maxSetVersion: null,
+    commonWireVersion: 0,
+    logicalSessionTimeoutMinutes: null
+  },
+  code: undefined,
+  level: 'error',
+  stack: 'MongooseServerSelectionError\n' +
+    '    at NativeConnection.Connection.openUri (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/lib/connection.js:825:32)\n' +
+    '    at /Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/lib/index.js:414:10\n' +
+    '    at /Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/lib/helpers/promiseOrCallback.js:41:5\n' +
+    '    at new Promise (<anonymous>)\n' +
+    '    at promiseOrCallback (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/lib/helpers/promiseOrCallback.js:40:10)\n' +
+    '    at Mongoose._promiseOrCallback (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/lib/index.js:1288:10)\n' +
+    '    at Mongoose.connect (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/lib/index.js:413:20)\n' +
+    '    at /Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/src/start/db.ts:10:29\n' +
+    '    at Generator.next (<anonymous>)\n' +
+    '    at /Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/src/start/db.ts:8:71',
+  timestamp: '2023-08-03 02:12:01'
+}
+{
+  message: 'Failed connecting to MongoDB getaddrinfo ENOTFOUND a5245d4013ae',
+  reason: TopologyDescription {
+    type: 'ReplicaSetNoPrimary',
+    servers: Map(1) {
+      'a5245d4013ae:27017' => ServerDescription {
+        address: 'a5245d4013ae:27017',
+        type: 'Unknown',
+        hosts: [],
+        passives: [],
+        arbiters: [],
+        tags: {},
+        minWireVersion: 0,
+        maxWireVersion: 0,
+        roundTripTime: -1,
+        lastUpdateTime: 1144369419,
+        lastWriteDate: 0,
+        error: MongoNetworkError: getaddrinfo ENOTFOUND a5245d4013ae
+            at connectionFailureError (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/node_modules/mongodb/src/cmap/connect.ts:514:14)
+            at Socket.<anonymous> (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/node_modules/mongodb/src/cmap/connect.ts:416:16)
+            at Object.onceWrapper (node:events:626:26)
+            at Socket.emit (node:events:511:28)
+            at Socket.emit (node:domain:489:12)
+            at emitErrorNT (node:internal/streams/destroy:151:8)
+            at emitErrorCloseNT (node:internal/streams/destroy:116:3)
+            at processTicksAndRejections (node:internal/process/task_queues:82:21) {
+          cause: Error: getaddrinfo ENOTFOUND a5245d4013ae
+              at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:118:26) {
+            errno: -3008,
+            code: 'ENOTFOUND',
+            syscall: 'getaddrinfo',
+            hostname: 'a5245d4013ae'
+          },
+          [Symbol(errorLabels)]: Set(1) { 'ResetPool' }
+        },
+        topologyVersion: null,
+        setName: null,
+        setVersion: null,
+        electionId: null,
+        logicalSessionTimeoutMinutes: null,
+        primary: null,
+        me: null,
+        '$clusterTime': null
+      }
+    },
+    stale: false,
+    compatible: true,
+    heartbeatFrequencyMS: 10000,
+    localThresholdMS: 15,
+    setName: 'rs0',
+    maxElectionId: null,
+    maxSetVersion: null,
+    commonWireVersion: 0,
+    logicalSessionTimeoutMinutes: null
+  },
+  code: undefined,
+  level: 'error',
+  stack: 'MongooseServerSelectionError: getaddrinfo ENOTFOUND a5245d4013ae\n' +
+    '    at NativeConnection.Connection.openUri (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/lib/connection.js:825:32)\n' +
+    '    at /Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/lib/index.js:414:10\n' +
+    '    at /Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/lib/helpers/promiseOrCallback.js:41:5\n' +
+    '    at new Promise (<anonymous>)\n' +
+    '    at promiseOrCallback (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/lib/helpers/promiseOrCallback.js:40:10)\n' +
+    '    at Mongoose._promiseOrCallback (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/lib/index.js:1288:10)\n' +
+    '    at Mongoose.connect (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/lib/index.js:413:20)\n' +
+    '    at /Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/src/start/db.ts:10:29\n' +
+    '    at Generator.next (<anonymous>)\n' +
+    '    at /Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/src/start/db.ts:8:71',
+  timestamp: '2023-08-03 02:12:36'
+}
+{
+  message: 'Failed connecting to MongoDB Server selection timed out after 30000 ms',
+  reason: TopologyDescription {
+    type: 'Unknown',
+    servers: Map(1) {
+      'localhost:27017' => ServerDescription {
+        address: 'localhost:27017',
+        type: 'RSGhost',
+        hosts: [],
+        passives: [],
+        arbiters: [],
+        tags: {},
+        minWireVersion: 0,
+        maxWireVersion: 17,
+        roundTripTime: 7.080000000000001,
+        lastUpdateTime: 1144468344,
+        lastWriteDate: 0,
+        error: null,
+        topologyVersion: {
+          processId: new ObjectId("64caf140eef43851be4e9e91"),
+          counter: 1
+        },
+        setName: null,
+        setVersion: null,
+        electionId: null,
+        logicalSessionTimeoutMinutes: 30,
+        primary: null,
+        me: null,
+        '$clusterTime': null
+      }
+    },
+    stale: false,
+    compatible: true,
+    heartbeatFrequencyMS: 10000,
+    localThresholdMS: 15,
+    setName: null,
+    maxElectionId: null,
+    maxSetVersion: null,
+    commonWireVersion: 0,
+    logicalSessionTimeoutMinutes: null
+  },
+  code: undefined,
+  level: 'error',
+  stack: 'MongooseServerSelectionError: Server selection timed out after 30000 ms\n' +
+    '    at NativeConnection.Connection.openUri (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/lib/connection.js:825:32)\n' +
+    '    at /Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/lib/index.js:414:10\n' +
+    '    at /Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/lib/helpers/promiseOrCallback.js:41:5\n' +
+    '    at new Promise (<anonymous>)\n' +
+    '    at promiseOrCallback (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/lib/helpers/promiseOrCallback.js:40:10)\n' +
+    '    at Mongoose._promiseOrCallback (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/lib/index.js:1288:10)\n' +
+    '    at Mongoose.connect (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/lib/index.js:413:20)\n' +
+    '    at /Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/src/start/db.ts:10:29\n' +
+    '    at Generator.next (<anonymous>)\n' +
+    '    at /Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/src/start/db.ts:8:71',
+  timestamp: '2023-08-03 02:14:24'
+}
+{
+  message: 'Failed connecting to MongoDB Server selection timed out after 30000 ms',
+  reason: TopologyDescription {
+    type: 'Unknown',
+    servers: Map(1) {
+      'localhost:27017' => ServerDescription {
+        address: 'localhost:27017',
+        type: 'RSGhost',
+        hosts: [],
+        passives: [],
+        arbiters: [],
+        tags: {},
+        minWireVersion: 0,
+        maxWireVersion: 17,
+        roundTripTime: 7.5200000000000005,
+        lastUpdateTime: 1144516786,
+        lastWriteDate: 0,
+        error: null,
+        topologyVersion: {
+          processId: new ObjectId("64caf171860bee5bb7044ebc"),
+          counter: 1
+        },
+        setName: null,
+        setVersion: null,
+        electionId: null,
+        logicalSessionTimeoutMinutes: 30,
+        primary: null,
+        me: null,
+        '$clusterTime': null
+      }
+    },
+    stale: false,
+    compatible: true,
+    heartbeatFrequencyMS: 10000,
+    localThresholdMS: 15,
+    setName: null,
+    maxElectionId: null,
+    maxSetVersion: null,
+    commonWireVersion: 0,
+    logicalSessionTimeoutMinutes: null
+  },
+  code: undefined,
+  level: 'error',
+  stack: 'MongooseServerSelectionError: Server selection timed out after 30000 ms\n' +
+    '    at NativeConnection.Connection.openUri (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/lib/connection.js:825:32)\n' +
+    '    at /Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/lib/index.js:414:10\n' +
+    '    at /Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/lib/helpers/promiseOrCallback.js:41:5\n' +
+    '    at new Promise (<anonymous>)\n' +
+    '    at promiseOrCallback (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/lib/helpers/promiseOrCallback.js:40:10)\n' +
+    '    at Mongoose._promiseOrCallback (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/lib/index.js:1288:10)\n' +
+    '    at Mongoose.connect (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/lib/index.js:413:20)\n' +
+    '    at /Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/src/start/db.ts:10:29\n' +
+    '    at Generator.next (<anonymous>)\n' +
+    '    at /Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/src/start/db.ts:8:71',
+  timestamp: '2023-08-03 02:15:12'
+}
+{
+  message: 'Failed connecting to MongoDB Server selection timed out after 30000 ms',
+  reason: TopologyDescription {
+    type: 'Unknown',
+    servers: Map(1) {
+      'localhost:27017' => ServerDescription {
+        address: 'localhost:27017',
+        type: 'RSGhost',
+        hosts: [],
+        passives: [],
+        arbiters: [],
+        tags: {},
+        minWireVersion: 0,
+        maxWireVersion: 17,
+        roundTripTime: 8.760000000000002,
+        lastUpdateTime: 1144574632,
+        lastWriteDate: 0,
+        error: null,
+        topologyVersion: {
+          processId: new ObjectId("64caf1aa23c7dd67da6fdfcf"),
+          counter: 1
+        },
+        setName: null,
+        setVersion: null,
+        electionId: null,
+        logicalSessionTimeoutMinutes: 30,
+        primary: null,
+        me: null,
+        '$clusterTime': null
+      }
+    },
+    stale: false,
+    compatible: true,
+    heartbeatFrequencyMS: 10000,
+    localThresholdMS: 15,
+    setName: null,
+    maxElectionId: null,
+    maxSetVersion: null,
+    commonWireVersion: 0,
+    logicalSessionTimeoutMinutes: null
+  },
+  code: undefined,
+  level: 'error',
+  stack: 'MongooseServerSelectionError: Server selection timed out after 30000 ms\n' +
+    '    at NativeConnection.Connection.openUri (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/lib/connection.js:825:32)\n' +
+    '    at /Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/lib/index.js:414:10\n' +
+    '    at /Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/lib/helpers/promiseOrCallback.js:41:5\n' +
+    '    at new Promise (<anonymous>)\n' +
+    '    at promiseOrCallback (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/lib/helpers/promiseOrCallback.js:40:10)\n' +
+    '    at Mongoose._promiseOrCallback (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/lib/index.js:1288:10)\n' +
+    '    at Mongoose.connect (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/lib/index.js:413:20)\n' +
+    '    at /Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/src/start/db.ts:10:29\n' +
+    '    at Generator.next (<anonymous>)\n' +
+    '    at /Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/src/start/db.ts:8:71',
+  timestamp: '2023-08-03 02:16:10'
+}
+{
+  message: 'Failed connecting to MongoDB Server selection timed out after 30000 ms',
+  reason: TopologyDescription {
+    type: 'Unknown',
+    servers: Map(1) {
+      'localhost:27017' => ServerDescription {
+        address: 'localhost:27017',
+        type: 'RSGhost',
+        hosts: [],
+        passives: [],
+        arbiters: [],
+        tags: {},
+        minWireVersion: 0,
+        maxWireVersion: 17,
+        roundTripTime: 2.4000000000000004,
+        lastUpdateTime: 1145302164,
+        lastWriteDate: 0,
+        error: null,
+        topologyVersion: {
+          processId: new ObjectId("64caf48d7e87c321a4b96aa7"),
+          counter: 1
+        },
+        setName: null,
+        setVersion: null,
+        electionId: null,
+        logicalSessionTimeoutMinutes: 30,
+        primary: null,
+        me: null,
+        '$clusterTime': null
+      }
+    },
+    stale: false,
+    compatible: true,
+    heartbeatFrequencyMS: 10000,
+    localThresholdMS: 15,
+    setName: null,
+    maxElectionId: null,
+    maxSetVersion: null,
+    commonWireVersion: 0,
+    logicalSessionTimeoutMinutes: null
+  },
+  code: undefined,
+  level: 'error',
+  stack: 'MongooseServerSelectionError: Server selection timed out after 30000 ms\n' +
+    '    at NativeConnection.Connection.openUri (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/lib/connection.js:825:32)\n' +
+    '    at /Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/lib/index.js:414:10\n' +
+    '    at /Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/lib/helpers/promiseOrCallback.js:41:5\n' +
+    '    at new Promise (<anonymous>)\n' +
+    '    at promiseOrCallback (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/lib/helpers/promiseOrCallback.js:40:10)\n' +
+    '    at Mongoose._promiseOrCallback (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/lib/index.js:1288:10)\n' +
+    '    at Mongoose.connect (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/lib/index.js:413:20)\n' +
+    '    at /Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/src/start/db.ts:10:29\n' +
+    '    at Generator.next (<anonymous>)\n' +
+    '    at /Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/src/start/db.ts:8:71',
+  timestamp: '2023-08-03 02:28:13'
+}
+{
+  message: 'Failed connecting to MongoDB',
+  cause: MongoNetworkError
+      at connectionFailureError (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/node_modules/mongodb/src/cmap/connect.ts:514:14)
+      at Socket.<anonymous> (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/node_modules/mongodb/src/cmap/connect.ts:416:16)
+      at Object.onceWrapper (node:events:626:26)
+      at Socket.emit (node:events:511:28)
+      at Socket.emit (node:domain:489:12)
+      at emitErrorNT (node:internal/streams/destroy:151:8)
+      at emitErrorCloseNT (node:internal/streams/destroy:116:3)
+      at processTicksAndRejections (node:internal/process/task_queues:82:21) {
+    cause: AggregateError
+        at internalConnectMultiple (node:net:1102:18)
+        at afterConnectMultiple (node:net:1620:5) {
+      code: 'ECONNREFUSED',
+      [errors]: [
+        Error: connect ECONNREFUSED ::1:27017
+            at afterConnectMultiple (node:net:1607:16) {
+          errno: -61,
+          code: 'ECONNREFUSED',
+          syscall: 'connect',
+          address: '::1',
+          port: 27017
+        },
+        Error: connect ECONNREFUSED 127.0.0.1:27017
+            at afterConnectMultiple (node:net:1607:16) {
+          errno: -61,
+          code: 'ECONNREFUSED',
+          syscall: 'connect',
+          address: '127.0.0.1',
+          port: 27017
+        }
+      ]
+    },
+    [Symbol(errorLabels)]: Set(1) { 'ResetPool' }
+  },
+  reason: TopologyDescription {
+    type: 'Unknown',
+    servers: Map(1) {
+      'localhost:27017' => ServerDescription {
+        address: 'localhost:27017',
+        type: 'Unknown',
+        hosts: [],
+        passives: [],
+        arbiters: [],
+        tags: {},
+        minWireVersion: 0,
+        maxWireVersion: 0,
+        roundTripTime: -1,
+        lastUpdateTime: 1145322114,
+        lastWriteDate: 0,
+        error: MongoNetworkError
+            at connectionFailureError (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/node_modules/mongodb/src/cmap/connect.ts:514:14)
+            at Socket.<anonymous> (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/node_modules/mongodb/src/cmap/connect.ts:416:16)
+            at Object.onceWrapper (node:events:626:26)
+            at Socket.emit (node:events:511:28)
+            at Socket.emit (node:domain:489:12)
+            at emitErrorNT (node:internal/streams/destroy:151:8)
+            at emitErrorCloseNT (node:internal/streams/destroy:116:3)
+            at processTicksAndRejections (node:internal/process/task_queues:82:21) {
+          cause: AggregateError
+              at internalConnectMultiple (node:net:1102:18)
+              at afterConnectMultiple (node:net:1620:5) {
+            code: 'ECONNREFUSED',
+            [errors]: [
+              Error: connect ECONNREFUSED ::1:27017
+                  at afterConnectMultiple (node:net:1607:16) {
+                errno: -61,
+                code: 'ECONNREFUSED',
+                syscall: 'connect',
+                address: '::1',
+                port: 27017
+              },
+              Error: connect ECONNREFUSED 127.0.0.1:27017
+                  at afterConnectMultiple (node:net:1607:16) {
+                errno: -61,
+                code: 'ECONNREFUSED',
+                syscall: 'connect',
+                address: '127.0.0.1',
+                port: 27017
+              }
+            ]
+          },
+          [Symbol(errorLabels)]: Set(1) { 'ResetPool' }
+        },
+        topologyVersion: null,
+        setName: null,
+        setVersion: null,
+        electionId: null,
+        logicalSessionTimeoutMinutes: null,
+        primary: null,
+        me: null,
+        '$clusterTime': null
+      }
+    },
+    stale: false,
+    compatible: true,
+    heartbeatFrequencyMS: 10000,
+    localThresholdMS: 15,
+    setName: null,
+    maxElectionId: null,
+    maxSetVersion: null,
+    commonWireVersion: 0,
+    logicalSessionTimeoutMinutes: null
+  },
+  code: undefined,
+  level: 'error',
+  stack: 'MongooseServerSelectionError\n' +
+    '    at NativeConnection.Connection.openUri (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/lib/connection.js:825:32)\n' +
+    '    at /Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/lib/index.js:414:10\n' +
+    '    at /Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/lib/helpers/promiseOrCallback.js:41:5\n' +
+    '    at new Promise (<anonymous>)\n' +
+    '    at promiseOrCallback (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/lib/helpers/promiseOrCallback.js:40:10)\n' +
+    '    at Mongoose._promiseOrCallback (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/lib/index.js:1288:10)\n' +
+    '    at Mongoose.connect (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/lib/index.js:413:20)\n' +
+    '    at /Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/src/start/db.ts:10:29\n' +
+    '    at Generator.next (<anonymous>)\n' +
+    '    at /Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/src/start/db.ts:8:71',
+  timestamp: '2023-08-03 02:28:28'
+}
+{
+  message: 'Failed connecting to MongoDB',
+  cause: MongoNetworkError
+      at connectionFailureError (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/node_modules/mongodb/src/cmap/connect.ts:514:14)
+      at Socket.<anonymous> (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/node_modules/mongodb/src/cmap/connect.ts:416:16)
+      at Object.onceWrapper (node:events:626:26)
+      at Socket.emit (node:events:511:28)
+      at Socket.emit (node:domain:489:12)
+      at emitErrorNT (node:internal/streams/destroy:151:8)
+      at emitErrorCloseNT (node:internal/streams/destroy:116:3)
+      at processTicksAndRejections (node:internal/process/task_queues:82:21) {
+    cause: AggregateError
+        at internalConnectMultiple (node:net:1102:18)
+        at afterConnectMultiple (node:net:1620:5) {
+      code: 'ECONNREFUSED',
+      [errors]: [
+        Error: connect ECONNREFUSED ::1:27017
+            at afterConnectMultiple (node:net:1607:16) {
+          errno: -61,
+          code: 'ECONNREFUSED',
+          syscall: 'connect',
+          address: '::1',
+          port: 27017
+        },
+        Error: connect ECONNREFUSED 127.0.0.1:27017
+            at afterConnectMultiple (node:net:1607:16) {
+          errno: -61,
+          code: 'ECONNREFUSED',
+          syscall: 'connect',
+          address: '127.0.0.1',
+          port: 27017
+        }
+      ]
+    },
+    [Symbol(errorLabels)]: Set(1) { 'ResetPool' }
+  },
+  reason: TopologyDescription {
+    type: 'Unknown',
+    servers: Map(1) {
+      'localhost:27017' => ServerDescription {
+        address: 'localhost:27017',
+        type: 'Unknown',
+        hosts: [],
+        passives: [],
+        arbiters: [],
+        tags: {},
+        minWireVersion: 0,
+        maxWireVersion: 0,
+        roundTripTime: -1,
+        lastUpdateTime: 1145470607,
+        lastWriteDate: 0,
+        error: MongoNetworkError
+            at connectionFailureError (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/node_modules/mongodb/src/cmap/connect.ts:514:14)
+            at Socket.<anonymous> (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/node_modules/mongodb/src/cmap/connect.ts:416:16)
+            at Object.onceWrapper (node:events:626:26)
+            at Socket.emit (node:events:511:28)
+            at Socket.emit (node:domain:489:12)
+            at emitErrorNT (node:internal/streams/destroy:151:8)
+            at emitErrorCloseNT (node:internal/streams/destroy:116:3)
+            at processTicksAndRejections (node:internal/process/task_queues:82:21) {
+          cause: AggregateError
+              at internalConnectMultiple (node:net:1102:18)
+              at afterConnectMultiple (node:net:1620:5) {
+            code: 'ECONNREFUSED',
+            [errors]: [
+              Error: connect ECONNREFUSED ::1:27017
+                  at afterConnectMultiple (node:net:1607:16) {
+                errno: -61,
+                code: 'ECONNREFUSED',
+                syscall: 'connect',
+                address: '::1',
+                port: 27017
+              },
+              Error: connect ECONNREFUSED 127.0.0.1:27017
+                  at afterConnectMultiple (node:net:1607:16) {
+                errno: -61,
+                code: 'ECONNREFUSED',
+                syscall: 'connect',
+                address: '127.0.0.1',
+                port: 27017
+              }
+            ]
+          },
+          [Symbol(errorLabels)]: Set(1) { 'ResetPool' }
+        },
+        topologyVersion: null,
+        setName: null,
+        setVersion: null,
+        electionId: null,
+        logicalSessionTimeoutMinutes: null,
+        primary: null,
+        me: null,
+        '$clusterTime': null
+      }
+    },
+    stale: false,
+    compatible: true,
+    heartbeatFrequencyMS: 10000,
+    localThresholdMS: 15,
+    setName: null,
+    maxElectionId: null,
+    maxSetVersion: null,
+    commonWireVersion: 0,
+    logicalSessionTimeoutMinutes: null
+  },
+  code: undefined,
+  level: 'error',
+  stack: 'MongooseServerSelectionError\n' +
+    '    at NativeConnection.Connection.openUri (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/lib/connection.js:825:32)\n' +
+    '    at /Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/lib/index.js:414:10\n' +
+    '    at /Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/lib/helpers/promiseOrCallback.js:41:5\n' +
+    '    at new Promise (<anonymous>)\n' +
+    '    at promiseOrCallback (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/lib/helpers/promiseOrCallback.js:40:10)\n' +
+    '    at Mongoose._promiseOrCallback (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/lib/index.js:1288:10)\n' +
+    '    at Mongoose.connect (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/lib/index.js:413:20)\n' +
+    '    at /Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/src/start/db.ts:10:29\n' +
+    '    at Generator.next (<anonymous>)\n' +
+    '    at /Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/src/start/db.ts:8:71',
+  timestamp: '2023-08-03 02:30:57'
+}
+{
+  message: 'Failed connecting to MongoDB connection <monitor> to [::1]:27017 closed',
+  reason: TopologyDescription {
+    type: 'Unknown',
+    servers: Map(1) {
+      'localhost:27017' => ServerDescription {
+        address: 'localhost:27017',
+        type: 'Unknown',
+        hosts: [],
+        passives: [],
+        arbiters: [],
+        tags: {},
+        minWireVersion: 0,
+        maxWireVersion: 0,
+        roundTripTime: -1,
+        lastUpdateTime: 1145526042,
+        lastWriteDate: 0,
+        error: MongoNetworkError: connection <monitor> to [::1]:27017 closed
+            at Connection.onClose (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/node_modules/mongodb/src/cmap/connection.ts:338:13)
+            at Socket.<anonymous> (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/node_modules/mongodb/src/cmap/connection.ts:243:42)
+            at Socket.emit (node:events:511:28)
+            at Socket.emit (node:domain:489:12)
+            at TCP.<anonymous> (node:net:334:12) {
+          [Symbol(errorLabels)]: Set(1) { 'ResetPool' }
+        },
+        topologyVersion: null,
+        setName: null,
+        setVersion: null,
+        electionId: null,
+        logicalSessionTimeoutMinutes: null,
+        primary: null,
+        me: null,
+        '$clusterTime': null
+      }
+    },
+    stale: false,
+    compatible: true,
+    heartbeatFrequencyMS: 10000,
+    localThresholdMS: 15,
+    setName: null,
+    maxElectionId: null,
+    maxSetVersion: null,
+    commonWireVersion: 0,
+    logicalSessionTimeoutMinutes: null
+  },
+  code: undefined,
+  level: 'error',
+  stack: 'MongooseServerSelectionError: connection <monitor> to [::1]:27017 closed\n' +
+    '    at NativeConnection.Connection.openUri (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/lib/connection.js:825:32)\n' +
+    '    at /Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/lib/index.js:414:10\n' +
+    '    at /Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/lib/helpers/promiseOrCallback.js:41:5\n' +
+    '    at new Promise (<anonymous>)\n' +
+    '    at promiseOrCallback (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/lib/helpers/promiseOrCallback.js:40:10)\n' +
+    '    at Mongoose._promiseOrCallback (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/lib/index.js:1288:10)\n' +
+    '    at Mongoose.connect (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/lib/index.js:413:20)\n' +
+    '    at /Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/src/start/db.ts:10:29\n' +
+    '    at Generator.next (<anonymous>)\n' +
+    '    at /Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/src/start/db.ts:8:71',
+  timestamp: '2023-08-03 02:31:52'
+}
+{
+  message: 'Failed connecting to MongoDB',
+  cause: MongoNetworkError
+      at connectionFailureError (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/node_modules/mongodb/src/cmap/connect.ts:514:14)
+      at Socket.<anonymous> (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/node_modules/mongodb/src/cmap/connect.ts:416:16)
+      at Object.onceWrapper (node:events:626:26)
+      at Socket.emit (node:events:511:28)
+      at Socket.emit (node:domain:489:12)
+      at emitErrorNT (node:internal/streams/destroy:151:8)
+      at emitErrorCloseNT (node:internal/streams/destroy:116:3)
+      at processTicksAndRejections (node:internal/process/task_queues:82:21) {
+    cause: AggregateError
+        at internalConnectMultiple (node:net:1102:18)
+        at afterConnectMultiple (node:net:1620:5) {
+      code: 'ECONNREFUSED',
+      [errors]: [
+        Error: connect ECONNREFUSED ::1:27017
+            at afterConnectMultiple (node:net:1607:16) {
+          errno: -61,
+          code: 'ECONNREFUSED',
+          syscall: 'connect',
+          address: '::1',
+          port: 27017
+        },
+        Error: connect ECONNREFUSED 127.0.0.1:27017
+            at afterConnectMultiple (node:net:1607:16) {
+          errno: -61,
+          code: 'ECONNREFUSED',
+          syscall: 'connect',
+          address: '127.0.0.1',
+          port: 27017
+        }
+      ]
+    },
+    [Symbol(errorLabels)]: Set(1) { 'ResetPool' }
+  },
+  reason: TopologyDescription {
+    type: 'Unknown',
+    servers: Map(1) {
+      'localhost:27017' => ServerDescription {
+        address: 'localhost:27017',
+        type: 'Unknown',
+        hosts: [],
+        passives: [],
+        arbiters: [],
+        tags: {},
+        minWireVersion: 0,
+        maxWireVersion: 0,
+        roundTripTime: -1,
+        lastUpdateTime: 1145531604,
+        lastWriteDate: 0,
+        error: MongoNetworkError
+            at connectionFailureError (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/node_modules/mongodb/src/cmap/connect.ts:514:14)
+            at Socket.<anonymous> (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/node_modules/mongodb/src/cmap/connect.ts:416:16)
+            at Object.onceWrapper (node:events:626:26)
+            at Socket.emit (node:events:511:28)
+            at Socket.emit (node:domain:489:12)
+            at emitErrorNT (node:internal/streams/destroy:151:8)
+            at emitErrorCloseNT (node:internal/streams/destroy:116:3)
+            at processTicksAndRejections (node:internal/process/task_queues:82:21) {
+          cause: AggregateError
+              at internalConnectMultiple (node:net:1102:18)
+              at afterConnectMultiple (node:net:1620:5) {
+            code: 'ECONNREFUSED',
+            [errors]: [
+              Error: connect ECONNREFUSED ::1:27017
+                  at afterConnectMultiple (node:net:1607:16) {
+                errno: -61,
+                code: 'ECONNREFUSED',
+                syscall: 'connect',
+                address: '::1',
+                port: 27017
+              },
+              Error: connect ECONNREFUSED 127.0.0.1:27017
+                  at afterConnectMultiple (node:net:1607:16) {
+                errno: -61,
+                code: 'ECONNREFUSED',
+                syscall: 'connect',
+                address: '127.0.0.1',
+                port: 27017
+              }
+            ]
+          },
+          [Symbol(errorLabels)]: Set(1) { 'ResetPool' }
+        },
+        topologyVersion: null,
+        setName: null,
+        setVersion: null,
+        electionId: null,
+        logicalSessionTimeoutMinutes: null,
+        primary: null,
+        me: null,
+        '$clusterTime': null
+      }
+    },
+    stale: false,
+    compatible: true,
+    heartbeatFrequencyMS: 10000,
+    localThresholdMS: 15,
+    setName: null,
+    maxElectionId: null,
+    maxSetVersion: null,
+    commonWireVersion: 0,
+    logicalSessionTimeoutMinutes: null
+  },
+  code: undefined,
+  level: 'error',
+  stack: 'MongooseServerSelectionError\n' +
+    '    at NativeConnection.Connection.openUri (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/lib/connection.js:825:32)\n' +
+    '    at /Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/lib/index.js:414:10\n' +
+    '    at /Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/lib/helpers/promiseOrCallback.js:41:5\n' +
+    '    at new Promise (<anonymous>)\n' +
+    '    at promiseOrCallback (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/lib/helpers/promiseOrCallback.js:40:10)\n' +
+    '    at Mongoose._promiseOrCallback (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/lib/index.js:1288:10)\n' +
+    '    at Mongoose.connect (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/lib/index.js:413:20)\n' +
+    '    at /Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/src/start/db.ts:10:29\n' +
+    '    at Generator.next (<anonymous>)\n' +
+    '    at /Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/src/start/db.ts:8:71',
+  timestamp: '2023-08-03 02:31:58'
+}
+{
+  message: 'Failed connecting to MongoDB',
+  cause: MongoNetworkError
+      at connectionFailureError (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/node_modules/mongodb/src/cmap/connect.ts:514:14)
+      at Socket.<anonymous> (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/node_modules/mongodb/src/cmap/connect.ts:416:16)
+      at Object.onceWrapper (node:events:626:26)
+      at Socket.emit (node:events:511:28)
+      at Socket.emit (node:domain:489:12)
+      at emitErrorNT (node:internal/streams/destroy:151:8)
+      at emitErrorCloseNT (node:internal/streams/destroy:116:3)
+      at processTicksAndRejections (node:internal/process/task_queues:82:21) {
+    cause: AggregateError
+        at internalConnectMultiple (node:net:1102:18)
+        at afterConnectMultiple (node:net:1620:5) {
+      code: 'ECONNREFUSED',
+      [errors]: [
+        Error: connect ECONNREFUSED ::1:27017
+            at afterConnectMultiple (node:net:1607:16) {
+          errno: -61,
+          code: 'ECONNREFUSED',
+          syscall: 'connect',
+          address: '::1',
+          port: 27017
+        },
+        Error: connect ECONNREFUSED 127.0.0.1:27017
+            at afterConnectMultiple (node:net:1607:16) {
+          errno: -61,
+          code: 'ECONNREFUSED',
+          syscall: 'connect',
+          address: '127.0.0.1',
+          port: 27017
+        }
+      ]
+    },
+    [Symbol(errorLabels)]: Set(1) { 'ResetPool' }
+  },
+  reason: TopologyDescription {
+    type: 'Unknown',
+    servers: Map(1) {
+      'localhost:27017' => ServerDescription {
+        address: 'localhost:27017',
+        type: 'Unknown',
+        hosts: [],
+        passives: [],
+        arbiters: [],
+        tags: {},
+        minWireVersion: 0,
+        maxWireVersion: 0,
+        roundTripTime: -1,
+        lastUpdateTime: 1145643326,
+        lastWriteDate: 0,
+        error: MongoNetworkError
+            at connectionFailureError (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/node_modules/mongodb/src/cmap/connect.ts:514:14)
+            at Socket.<anonymous> (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/node_modules/mongodb/src/cmap/connect.ts:416:16)
+            at Object.onceWrapper (node:events:626:26)
+            at Socket.emit (node:events:511:28)
+            at Socket.emit (node:domain:489:12)
+            at emitErrorNT (node:internal/streams/destroy:151:8)
+            at emitErrorCloseNT (node:internal/streams/destroy:116:3)
+            at processTicksAndRejections (node:internal/process/task_queues:82:21) {
+          cause: AggregateError
+              at internalConnectMultiple (node:net:1102:18)
+              at afterConnectMultiple (node:net:1620:5) {
+            code: 'ECONNREFUSED',
+            [errors]: [
+              Error: connect ECONNREFUSED ::1:27017
+                  at afterConnectMultiple (node:net:1607:16) {
+                errno: -61,
+                code: 'ECONNREFUSED',
+                syscall: 'connect',
+                address: '::1',
+                port: 27017
+              },
+              Error: connect ECONNREFUSED 127.0.0.1:27017
+                  at afterConnectMultiple (node:net:1607:16) {
+                errno: -61,
+                code: 'ECONNREFUSED',
+                syscall: 'connect',
+                address: '127.0.0.1',
+                port: 27017
+              }
+            ]
+          },
+          [Symbol(errorLabels)]: Set(1) { 'ResetPool' }
+        },
+        topologyVersion: null,
+        setName: null,
+        setVersion: null,
+        electionId: null,
+        logicalSessionTimeoutMinutes: null,
+        primary: null,
+        me: null,
+        '$clusterTime': null
+      }
+    },
+    stale: false,
+    compatible: true,
+    heartbeatFrequencyMS: 10000,
+    localThresholdMS: 15,
+    setName: null,
+    maxElectionId: null,
+    maxSetVersion: null,
+    commonWireVersion: 0,
+    logicalSessionTimeoutMinutes: null
+  },
+  code: undefined,
+  level: 'error',
+  stack: 'MongooseServerSelectionError\n' +
+    '    at NativeConnection.Connection.openUri (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/lib/connection.js:825:32)\n' +
+    '    at /Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/lib/index.js:414:10\n' +
+    '    at /Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/lib/helpers/promiseOrCallback.js:41:5\n' +
+    '    at new Promise (<anonymous>)\n' +
+    '    at promiseOrCallback (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/lib/helpers/promiseOrCallback.js:40:10)\n' +
+    '    at Mongoose._promiseOrCallback (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/lib/index.js:1288:10)\n' +
+    '    at Mongoose.connect (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/lib/index.js:413:20)\n' +
+    '    at /Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/src/start/db.ts:10:29\n' +
+    '    at Generator.next (<anonymous>)\n' +
+    '    at /Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/src/start/db.ts:8:71',
+  timestamp: '2023-08-03 02:33:50'
+}
+{
+  message: 'Failed connecting to MongoDB',
+  cause: MongoNetworkError
+      at connectionFailureError (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/node_modules/mongodb/src/cmap/connect.ts:514:14)
+      at Socket.<anonymous> (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/node_modules/mongodb/src/cmap/connect.ts:416:16)
+      at Object.onceWrapper (node:events:626:26)
+      at Socket.emit (node:events:511:28)
+      at Socket.emit (node:domain:489:12)
+      at emitErrorNT (node:internal/streams/destroy:151:8)
+      at emitErrorCloseNT (node:internal/streams/destroy:116:3)
+      at processTicksAndRejections (node:internal/process/task_queues:82:21) {
+    cause: AggregateError
+        at internalConnectMultiple (node:net:1102:18)
+        at afterConnectMultiple (node:net:1620:5) {
+      code: 'ECONNREFUSED',
+      [errors]: [
+        Error: connect ECONNREFUSED ::1:27017
+            at afterConnectMultiple (node:net:1607:16) {
+          errno: -61,
+          code: 'ECONNREFUSED',
+          syscall: 'connect',
+          address: '::1',
+          port: 27017
+        },
+        Error: connect ECONNREFUSED 127.0.0.1:27017
+            at afterConnectMultiple (node:net:1607:16) {
+          errno: -61,
+          code: 'ECONNREFUSED',
+          syscall: 'connect',
+          address: '127.0.0.1',
+          port: 27017
+        }
+      ]
+    },
+    [Symbol(errorLabels)]: Set(1) { 'ResetPool' }
+  },
+  reason: TopologyDescription {
+    type: 'Unknown',
+    servers: Map(1) {
+      'localhost:27017' => ServerDescription {
+        address: 'localhost:27017',
+        type: 'Unknown',
+        hosts: [],
+        passives: [],
+        arbiters: [],
+        tags: {},
+        minWireVersion: 0,
+        maxWireVersion: 0,
+        roundTripTime: -1,
+        lastUpdateTime: 1145769610,
+        lastWriteDate: 0,
+        error: MongoNetworkError
+            at connectionFailureError (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/node_modules/mongodb/src/cmap/connect.ts:514:14)
+            at Socket.<anonymous> (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/node_modules/mongodb/src/cmap/connect.ts:416:16)
+            at Object.onceWrapper (node:events:626:26)
+            at Socket.emit (node:events:511:28)
+            at Socket.emit (node:domain:489:12)
+            at emitErrorNT (node:internal/streams/destroy:151:8)
+            at emitErrorCloseNT (node:internal/streams/destroy:116:3)
+            at processTicksAndRejections (node:internal/process/task_queues:82:21) {
+          cause: AggregateError
+              at internalConnectMultiple (node:net:1102:18)
+              at afterConnectMultiple (node:net:1620:5) {
+            code: 'ECONNREFUSED',
+            [errors]: [
+              Error: connect ECONNREFUSED ::1:27017
+                  at afterConnectMultiple (node:net:1607:16) {
+                errno: -61,
+                code: 'ECONNREFUSED',
+                syscall: 'connect',
+                address: '::1',
+                port: 27017
+              },
+              Error: connect ECONNREFUSED 127.0.0.1:27017
+                  at afterConnectMultiple (node:net:1607:16) {
+                errno: -61,
+                code: 'ECONNREFUSED',
+                syscall: 'connect',
+                address: '127.0.0.1',
+                port: 27017
+              }
+            ]
+          },
+          [Symbol(errorLabels)]: Set(1) { 'ResetPool' }
+        },
+        topologyVersion: null,
+        setName: null,
+        setVersion: null,
+        electionId: null,
+        logicalSessionTimeoutMinutes: null,
+        primary: null,
+        me: null,
+        '$clusterTime': null
+      }
+    },
+    stale: false,
+    compatible: true,
+    heartbeatFrequencyMS: 10000,
+    localThresholdMS: 15,
+    setName: null,
+    maxElectionId: null,
+    maxSetVersion: null,
+    commonWireVersion: 0,
+    logicalSessionTimeoutMinutes: null
+  },
+  code: undefined,
+  level: 'error',
+  stack: 'MongooseServerSelectionError\n' +
+    '    at NativeConnection.Connection.openUri (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/lib/connection.js:825:32)\n' +
+    '    at /Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/lib/index.js:414:10\n' +
+    '    at /Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/lib/helpers/promiseOrCallback.js:41:5\n' +
+    '    at new Promise (<anonymous>)\n' +
+    '    at promiseOrCallback (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/lib/helpers/promiseOrCallback.js:40:10)\n' +
+    '    at Mongoose._promiseOrCallback (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/lib/index.js:1288:10)\n' +
+    '    at Mongoose.connect (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/lib/index.js:413:20)\n' +
+    '    at /Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/src/start/db.ts:10:29\n' +
+    '    at Generator.next (<anonymous>)\n' +
+    '    at /Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/src/start/db.ts:8:71',
+  timestamp: '2023-08-03 02:35:56'
+}
+{
+  message: 'Failed connecting to MongoDB',
+  cause: MongoNetworkError
+      at connectionFailureError (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/node_modules/mongodb/src/cmap/connect.ts:514:14)
+      at Socket.<anonymous> (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/node_modules/mongodb/src/cmap/connect.ts:416:16)
+      at Object.onceWrapper (node:events:626:26)
+      at Socket.emit (node:events:511:28)
+      at Socket.emit (node:domain:489:12)
+      at emitErrorNT (node:internal/streams/destroy:151:8)
+      at emitErrorCloseNT (node:internal/streams/destroy:116:3)
+      at processTicksAndRejections (node:internal/process/task_queues:82:21) {
+    cause: AggregateError
+        at internalConnectMultiple (node:net:1102:18)
+        at afterConnectMultiple (node:net:1620:5) {
+      code: 'ECONNREFUSED',
+      [errors]: [
+        Error: connect ECONNREFUSED ::1:27017
+            at afterConnectMultiple (node:net:1607:16) {
+          errno: -61,
+          code: 'ECONNREFUSED',
+          syscall: 'connect',
+          address: '::1',
+          port: 27017
+        },
+        Error: connect ECONNREFUSED 127.0.0.1:27017
+            at afterConnectMultiple (node:net:1607:16) {
+          errno: -61,
+          code: 'ECONNREFUSED',
+          syscall: 'connect',
+          address: '127.0.0.1',
+          port: 27017
+        }
+      ]
+    },
+    [Symbol(errorLabels)]: Set(1) { 'ResetPool' }
+  },
+  reason: TopologyDescription {
+    type: 'Unknown',
+    servers: Map(1) {
+      'localhost:27017' => ServerDescription {
+        address: 'localhost:27017',
+        type: 'Unknown',
+        hosts: [],
+        passives: [],
+        arbiters: [],
+        tags: {},
+        minWireVersion: 0,
+        maxWireVersion: 0,
+        roundTripTime: -1,
+        lastUpdateTime: 1145895269,
+        lastWriteDate: 0,
+        error: MongoNetworkError
+            at connectionFailureError (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/node_modules/mongodb/src/cmap/connect.ts:514:14)
+            at Socket.<anonymous> (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/node_modules/mongodb/src/cmap/connect.ts:416:16)
+            at Object.onceWrapper (node:events:626:26)
+            at Socket.emit (node:events:511:28)
+            at Socket.emit (node:domain:489:12)
+            at emitErrorNT (node:internal/streams/destroy:151:8)
+            at emitErrorCloseNT (node:internal/streams/destroy:116:3)
+            at processTicksAndRejections (node:internal/process/task_queues:82:21) {
+          cause: AggregateError
+              at internalConnectMultiple (node:net:1102:18)
+              at afterConnectMultiple (node:net:1620:5) {
+            code: 'ECONNREFUSED',
+            [errors]: [
+              Error: connect ECONNREFUSED ::1:27017
+                  at afterConnectMultiple (node:net:1607:16) {
+                errno: -61,
+                code: 'ECONNREFUSED',
+                syscall: 'connect',
+                address: '::1',
+                port: 27017
+              },
+              Error: connect ECONNREFUSED 127.0.0.1:27017
+                  at afterConnectMultiple (node:net:1607:16) {
+                errno: -61,
+                code: 'ECONNREFUSED',
+                syscall: 'connect',
+                address: '127.0.0.1',
+                port: 27017
+              }
+            ]
+          },
+          [Symbol(errorLabels)]: Set(1) { 'ResetPool' }
+        },
+        topologyVersion: null,
+        setName: null,
+        setVersion: null,
+        electionId: null,
+        logicalSessionTimeoutMinutes: null,
+        primary: null,
+        me: null,
+        '$clusterTime': null
+      }
+    },
+    stale: false,
+    compatible: true,
+    heartbeatFrequencyMS: 10000,
+    localThresholdMS: 15,
+    setName: null,
+    maxElectionId: null,
+    maxSetVersion: null,
+    commonWireVersion: 0,
+    logicalSessionTimeoutMinutes: null
+  },
+  code: undefined,
+  level: 'error',
+  stack: 'MongooseServerSelectionError\n' +
+    '    at NativeConnection.Connection.openUri (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/lib/connection.js:825:32)\n' +
+    '    at /Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/lib/index.js:414:10\n' +
+    '    at /Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/lib/helpers/promiseOrCallback.js:41:5\n' +
+    '    at new Promise (<anonymous>)\n' +
+    '    at promiseOrCallback (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/lib/helpers/promiseOrCallback.js:40:10)\n' +
+    '    at Mongoose._promiseOrCallback (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/lib/index.js:1288:10)\n' +
+    '    at Mongoose.connect (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/lib/index.js:413:20)\n' +
+    '    at /Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/src/start/db.ts:10:29\n' +
+    '    at Generator.next (<anonymous>)\n' +
+    '    at /Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/src/start/db.ts:8:71',
+  timestamp: '2023-08-03 02:38:02'
+}
+{
+  message: 'Failed connecting to MongoDB',
+  cause: MongoNetworkError
+      at connectionFailureError (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/node_modules/mongodb/src/cmap/connect.ts:514:14)
+      at Socket.<anonymous> (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/node_modules/mongodb/src/cmap/connect.ts:416:16)
+      at Object.onceWrapper (node:events:626:26)
+      at Socket.emit (node:events:511:28)
+      at Socket.emit (node:domain:489:12)
+      at emitErrorNT (node:internal/streams/destroy:151:8)
+      at emitErrorCloseNT (node:internal/streams/destroy:116:3)
+      at processTicksAndRejections (node:internal/process/task_queues:82:21) {
+    cause: AggregateError
+        at internalConnectMultiple (node:net:1102:18)
+        at afterConnectMultiple (node:net:1620:5) {
+      code: 'ECONNREFUSED',
+      [errors]: [
+        Error: connect ECONNREFUSED ::1:27017
+            at afterConnectMultiple (node:net:1607:16) {
+          errno: -61,
+          code: 'ECONNREFUSED',
+          syscall: 'connect',
+          address: '::1',
+          port: 27017
+        },
+        Error: connect ECONNREFUSED 127.0.0.1:27017
+            at afterConnectMultiple (node:net:1607:16) {
+          errno: -61,
+          code: 'ECONNREFUSED',
+          syscall: 'connect',
+          address: '127.0.0.1',
+          port: 27017
+        }
+      ]
+    },
+    [Symbol(errorLabels)]: Set(1) { 'ResetPool' }
+  },
+  reason: TopologyDescription {
+    type: 'Unknown',
+    servers: Map(1) {
+      'localhost:27017' => ServerDescription {
+        address: 'localhost:27017',
+        type: 'Unknown',
+        hosts: [],
+        passives: [],
+        arbiters: [],
+        tags: {},
+        minWireVersion: 0,
+        maxWireVersion: 0,
+        roundTripTime: -1,
+        lastUpdateTime: 1146242088,
+        lastWriteDate: 0,
+        error: MongoNetworkError
+            at connectionFailureError (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/node_modules/mongodb/src/cmap/connect.ts:514:14)
+            at Socket.<anonymous> (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/node_modules/mongodb/src/cmap/connect.ts:416:16)
+            at Object.onceWrapper (node:events:626:26)
+            at Socket.emit (node:events:511:28)
+            at Socket.emit (node:domain:489:12)
+            at emitErrorNT (node:internal/streams/destroy:151:8)
+            at emitErrorCloseNT (node:internal/streams/destroy:116:3)
+            at processTicksAndRejections (node:internal/process/task_queues:82:21) {
+          cause: AggregateError
+              at internalConnectMultiple (node:net:1102:18)
+              at afterConnectMultiple (node:net:1620:5) {
+            code: 'ECONNREFUSED',
+            [errors]: [
+              Error: connect ECONNREFUSED ::1:27017
+                  at afterConnectMultiple (node:net:1607:16) {
+                errno: -61,
+                code: 'ECONNREFUSED',
+                syscall: 'connect',
+                address: '::1',
+                port: 27017
+              },
+              Error: connect ECONNREFUSED 127.0.0.1:27017
+                  at afterConnectMultiple (node:net:1607:16) {
+                errno: -61,
+                code: 'ECONNREFUSED',
+                syscall: 'connect',
+                address: '127.0.0.1',
+                port: 27017
+              }
+            ]
+          },
+          [Symbol(errorLabels)]: Set(1) { 'ResetPool' }
+        },
+        topologyVersion: null,
+        setName: null,
+        setVersion: null,
+        electionId: null,
+        logicalSessionTimeoutMinutes: null,
+        primary: null,
+        me: null,
+        '$clusterTime': null
+      }
+    },
+    stale: false,
+    compatible: true,
+    heartbeatFrequencyMS: 10000,
+    localThresholdMS: 15,
+    setName: null,
+    maxElectionId: null,
+    maxSetVersion: null,
+    commonWireVersion: 0,
+    logicalSessionTimeoutMinutes: null
+  },
+  code: undefined,
+  level: 'error',
+  stack: 'MongooseServerSelectionError\n' +
+    '    at NativeConnection.Connection.openUri (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/lib/connection.js:825:32)\n' +
+    '    at /Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/lib/index.js:414:10\n' +
+    '    at /Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/lib/helpers/promiseOrCallback.js:41:5\n' +
+    '    at new Promise (<anonymous>)\n' +
+    '    at promiseOrCallback (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/lib/helpers/promiseOrCallback.js:40:10)\n' +
+    '    at Mongoose._promiseOrCallback (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/lib/index.js:1288:10)\n' +
+    '    at Mongoose.connect (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/lib/index.js:413:20)\n' +
+    '    at /Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/src/start/db.ts:10:29\n' +
+    '    at Generator.next (<anonymous>)\n' +
+    '    at /Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/src/start/db.ts:8:71',
+  timestamp: '2023-08-03 02:43:48'
+}
+{
+  message: 'Failed connecting to MongoDB',
+  cause: MongoNetworkError
+      at connectionFailureError (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/node_modules/mongodb/src/cmap/connect.ts:514:14)
+      at Socket.<anonymous> (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/node_modules/mongodb/src/cmap/connect.ts:416:16)
+      at Object.onceWrapper (node:events:626:26)
+      at Socket.emit (node:events:511:28)
+      at Socket.emit (node:domain:489:12)
+      at emitErrorNT (node:internal/streams/destroy:151:8)
+      at emitErrorCloseNT (node:internal/streams/destroy:116:3)
+      at processTicksAndRejections (node:internal/process/task_queues:82:21) {
+    cause: AggregateError
+        at internalConnectMultiple (node:net:1102:18)
+        at afterConnectMultiple (node:net:1620:5) {
+      code: 'ECONNREFUSED',
+      [errors]: [
+        Error: connect ECONNREFUSED ::1:27017
+            at afterConnectMultiple (node:net:1607:16) {
+          errno: -61,
+          code: 'ECONNREFUSED',
+          syscall: 'connect',
+          address: '::1',
+          port: 27017
+        },
+        Error: connect ECONNREFUSED 127.0.0.1:27017
+            at afterConnectMultiple (node:net:1607:16) {
+          errno: -61,
+          code: 'ECONNREFUSED',
+          syscall: 'connect',
+          address: '127.0.0.1',
+          port: 27017
+        }
+      ]
+    },
+    [Symbol(errorLabels)]: Set(1) { 'ResetPool' }
+  },
+  reason: TopologyDescription {
+    type: 'Unknown',
+    servers: Map(1) {
+      'localhost:27017' => ServerDescription {
+        address: 'localhost:27017',
+        type: 'Unknown',
+        hosts: [],
+        passives: [],
+        arbiters: [],
+        tags: {},
+        minWireVersion: 0,
+        maxWireVersion: 0,
+        roundTripTime: -1,
+        lastUpdateTime: 1146399141,
+        lastWriteDate: 0,
+        error: MongoNetworkError
+            at connectionFailureError (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/node_modules/mongodb/src/cmap/connect.ts:514:14)
+            at Socket.<anonymous> (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/node_modules/mongodb/src/cmap/connect.ts:416:16)
+            at Object.onceWrapper (node:events:626:26)
+            at Socket.emit (node:events:511:28)
+            at Socket.emit (node:domain:489:12)
+            at emitErrorNT (node:internal/streams/destroy:151:8)
+            at emitErrorCloseNT (node:internal/streams/destroy:116:3)
+            at processTicksAndRejections (node:internal/process/task_queues:82:21) {
+          cause: AggregateError
+              at internalConnectMultiple (node:net:1102:18)
+              at afterConnectMultiple (node:net:1620:5) {
+            code: 'ECONNREFUSED',
+            [errors]: [
+              Error: connect ECONNREFUSED ::1:27017
+                  at afterConnectMultiple (node:net:1607:16) {
+                errno: -61,
+                code: 'ECONNREFUSED',
+                syscall: 'connect',
+                address: '::1',
+                port: 27017
+              },
+              Error: connect ECONNREFUSED 127.0.0.1:27017
+                  at afterConnectMultiple (node:net:1607:16) {
+                errno: -61,
+                code: 'ECONNREFUSED',
+                syscall: 'connect',
+                address: '127.0.0.1',
+                port: 27017
+              }
+            ]
+          },
+          [Symbol(errorLabels)]: Set(1) { 'ResetPool' }
+        },
+        topologyVersion: null,
+        setName: null,
+        setVersion: null,
+        electionId: null,
+        logicalSessionTimeoutMinutes: null,
+        primary: null,
+        me: null,
+        '$clusterTime': null
+      }
+    },
+    stale: false,
+    compatible: true,
+    heartbeatFrequencyMS: 10000,
+    localThresholdMS: 15,
+    setName: null,
+    maxElectionId: null,
+    maxSetVersion: null,
+    commonWireVersion: 0,
+    logicalSessionTimeoutMinutes: null
+  },
+  code: undefined,
+  level: 'error',
+  stack: 'MongooseServerSelectionError\n' +
+    '    at NativeConnection.Connection.openUri (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/lib/connection.js:825:32)\n' +
+    '    at /Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/lib/index.js:414:10\n' +
+    '    at /Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/lib/helpers/promiseOrCallback.js:41:5\n' +
+    '    at new Promise (<anonymous>)\n' +
+    '    at promiseOrCallback (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/lib/helpers/promiseOrCallback.js:40:10)\n' +
+    '    at Mongoose._promiseOrCallback (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/lib/index.js:1288:10)\n' +
+    '    at Mongoose.connect (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/lib/index.js:413:20)\n' +
+    '    at /Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/src/start/db.ts:10:29\n' +
+    '    at Generator.next (<anonymous>)\n' +
+    '    at /Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/src/start/db.ts:8:71',
+  timestamp: '2023-08-03 02:46:25'
+}
+{
+  message: 'Failed connecting to MongoDB',
+  cause: MongoNetworkError
+      at connectionFailureError (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/node_modules/mongodb/src/cmap/connect.ts:514:14)
+      at Socket.<anonymous> (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/node_modules/mongodb/src/cmap/connect.ts:416:16)
+      at Object.onceWrapper (node:events:626:26)
+      at Socket.emit (node:events:511:28)
+      at Socket.emit (node:domain:489:12)
+      at emitErrorNT (node:internal/streams/destroy:151:8)
+      at emitErrorCloseNT (node:internal/streams/destroy:116:3)
+      at processTicksAndRejections (node:internal/process/task_queues:82:21) {
+    cause: AggregateError
+        at internalConnectMultiple (node:net:1102:18)
+        at afterConnectMultiple (node:net:1620:5) {
+      code: 'ECONNREFUSED',
+      [errors]: [
+        Error: connect ECONNREFUSED ::1:27017
+            at afterConnectMultiple (node:net:1607:16) {
+          errno: -61,
+          code: 'ECONNREFUSED',
+          syscall: 'connect',
+          address: '::1',
+          port: 27017
+        },
+        Error: connect ECONNREFUSED 127.0.0.1:27017
+            at afterConnectMultiple (node:net:1607:16) {
+          errno: -61,
+          code: 'ECONNREFUSED',
+          syscall: 'connect',
+          address: '127.0.0.1',
+          port: 27017
+        }
+      ]
+    },
+    [Symbol(errorLabels)]: Set(1) { 'ResetPool' }
+  },
+  reason: TopologyDescription {
+    type: 'Unknown',
+    servers: Map(1) {
+      'localhost:27017' => ServerDescription {
+        address: 'localhost:27017',
+        type: 'Unknown',
+        hosts: [],
+        passives: [],
+        arbiters: [],
+        tags: {},
+        minWireVersion: 0,
+        maxWireVersion: 0,
+        roundTripTime: -1,
+        lastUpdateTime: 1146430979,
+        lastWriteDate: 0,
+        error: MongoNetworkError
+            at connectionFailureError (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/node_modules/mongodb/src/cmap/connect.ts:514:14)
+            at Socket.<anonymous> (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/node_modules/mongodb/src/cmap/connect.ts:416:16)
+            at Object.onceWrapper (node:events:626:26)
+            at Socket.emit (node:events:511:28)
+            at Socket.emit (node:domain:489:12)
+            at emitErrorNT (node:internal/streams/destroy:151:8)
+            at emitErrorCloseNT (node:internal/streams/destroy:116:3)
+            at processTicksAndRejections (node:internal/process/task_queues:82:21) {
+          cause: AggregateError
+              at internalConnectMultiple (node:net:1102:18)
+              at afterConnectMultiple (node:net:1620:5) {
+            code: 'ECONNREFUSED',
+            [errors]: [
+              Error: connect ECONNREFUSED ::1:27017
+                  at afterConnectMultiple (node:net:1607:16) {
+                errno: -61,
+                code: 'ECONNREFUSED',
+                syscall: 'connect',
+                address: '::1',
+                port: 27017
+              },
+              Error: connect ECONNREFUSED 127.0.0.1:27017
+                  at afterConnectMultiple (node:net:1607:16) {
+                errno: -61,
+                code: 'ECONNREFUSED',
+                syscall: 'connect',
+                address: '127.0.0.1',
+                port: 27017
+              }
+            ]
+          },
+          [Symbol(errorLabels)]: Set(1) { 'ResetPool' }
+        },
+        topologyVersion: null,
+        setName: null,
+        setVersion: null,
+        electionId: null,
+        logicalSessionTimeoutMinutes: null,
+        primary: null,
+        me: null,
+        '$clusterTime': null
+      }
+    },
+    stale: false,
+    compatible: true,
+    heartbeatFrequencyMS: 10000,
+    localThresholdMS: 15,
+    setName: null,
+    maxElectionId: null,
+    maxSetVersion: null,
+    commonWireVersion: 0,
+    logicalSessionTimeoutMinutes: null
+  },
+  code: undefined,
+  level: 'error',
+  stack: 'MongooseServerSelectionError\n' +
+    '    at NativeConnection.Connection.openUri (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/lib/connection.js:825:32)\n' +
+    '    at /Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/lib/index.js:414:10\n' +
+    '    at /Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/lib/helpers/promiseOrCallback.js:41:5\n' +
+    '    at new Promise (<anonymous>)\n' +
+    '    at promiseOrCallback (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/lib/helpers/promiseOrCallback.js:40:10)\n' +
+    '    at Mongoose._promiseOrCallback (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/lib/index.js:1288:10)\n' +
+    '    at Mongoose.connect (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/lib/index.js:413:20)\n' +
+    '    at /Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/src/start/db.ts:10:29\n' +
+    '    at Generator.next (<anonymous>)\n' +
+    '    at /Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/src/start/db.ts:8:71',
+  timestamp: '2023-08-03 02:46:57'
+}
+{
+  message: 'Failed connecting to MongoDB Server selection timed out after 30000 ms',
+  reason: TopologyDescription {
+    type: 'Unknown',
+    servers: Map(1) {
+      'localhost:27017' => ServerDescription {
+        address: 'localhost:27017',
+        type: 'RSGhost',
+        hosts: [],
+        passives: [],
+        arbiters: [],
+        tags: {},
+        minWireVersion: 0,
+        maxWireVersion: 17,
+        roundTripTime: 7.040000000000001,
+        lastUpdateTime: 1146679068,
+        lastWriteDate: 0,
+        error: null,
+        topologyVersion: {
+          processId: new ObjectId("64caf9e3c25713363879fec4"),
+          counter: 0
+        },
+        setName: null,
+        setVersion: null,
+        electionId: null,
+        logicalSessionTimeoutMinutes: 30,
+        primary: null,
+        me: null,
+        '$clusterTime': null
+      }
+    },
+    stale: false,
+    compatible: true,
+    heartbeatFrequencyMS: 10000,
+    localThresholdMS: 15,
+    setName: null,
+    maxElectionId: null,
+    maxSetVersion: null,
+    commonWireVersion: 0,
+    logicalSessionTimeoutMinutes: null
+  },
+  code: undefined,
+  level: 'error',
+  stack: 'MongooseServerSelectionError: Server selection timed out after 30000 ms\n' +
+    '    at NativeConnection.Connection.openUri (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/lib/connection.js:825:32)\n' +
+    '    at /Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/lib/index.js:414:10\n' +
+    '    at /Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/lib/helpers/promiseOrCallback.js:41:5\n' +
+    '    at new Promise (<anonymous>)\n' +
+    '    at promiseOrCallback (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/lib/helpers/promiseOrCallback.js:40:10)\n' +
+    '    at Mongoose._promiseOrCallback (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/lib/index.js:1288:10)\n' +
+    '    at Mongoose.connect (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/lib/index.js:413:20)\n' +
+    '    at /Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/src/start/db.ts:10:29\n' +
+    '    at Generator.next (<anonymous>)\n' +
+    '    at /Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/src/start/db.ts:8:71',
+  timestamp: '2023-08-03 02:51:15'
+}
+{
+  message: 'Failed connecting to MongoDB Server selection timed out after 30000 ms',
+  reason: TopologyDescription {
+    type: 'Unknown',
+    servers: Map(1) {
+      'localhost:27017' => ServerDescription {
+        address: 'localhost:27017',
+        type: 'RSGhost',
+        hosts: [],
+        passives: [],
+        arbiters: [],
+        tags: {},
+        minWireVersion: 0,
+        maxWireVersion: 17,
+        roundTripTime: 6.120000000000001,
+        lastUpdateTime: 1147113147,
+        lastWriteDate: 0,
+        error: null,
+        topologyVersion: {
+          processId: new ObjectId("64cafb9533cc0fdcbc5dd96f"),
+          counter: 0
+        },
+        setName: null,
+        setVersion: null,
+        electionId: null,
+        logicalSessionTimeoutMinutes: 30,
+        primary: null,
+        me: null,
+        '$clusterTime': null
+      }
+    },
+    stale: false,
+    compatible: true,
+    heartbeatFrequencyMS: 10000,
+    localThresholdMS: 15,
+    setName: null,
+    maxElectionId: null,
+    maxSetVersion: null,
+    commonWireVersion: 0,
+    logicalSessionTimeoutMinutes: null
+  },
+  code: undefined,
+  level: 'error',
+  stack: 'MongooseServerSelectionError: Server selection timed out after 30000 ms\n' +
+    '    at NativeConnection.Connection.openUri (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/lib/connection.js:825:32)\n' +
+    '    at /Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/lib/index.js:414:10\n' +
+    '    at /Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/lib/helpers/promiseOrCallback.js:41:5\n' +
+    '    at new Promise (<anonymous>)\n' +
+    '    at promiseOrCallback (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/lib/helpers/promiseOrCallback.js:40:10)\n' +
+    '    at Mongoose._promiseOrCallback (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/lib/index.js:1288:10)\n' +
+    '    at Mongoose.connect (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/lib/index.js:413:20)\n' +
+    '    at /Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/src/start/db.ts:10:29\n' +
+    '    at Generator.next (<anonymous>)\n' +
+    '    at /Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/src/start/db.ts:8:71',
+  timestamp: '2023-08-03 02:58:29'
+}
+{
+  message: 'Failed connecting to MongoDB Server selection timed out after 30000 ms',
+  reason: TopologyDescription {
+    type: 'Unknown',
+    servers: Map(1) {
+      'localhost:27017' => ServerDescription {
+        address: 'localhost:27017',
+        type: 'RSGhost',
+        hosts: [],
+        passives: [],
+        arbiters: [],
+        tags: {},
+        minWireVersion: 0,
+        maxWireVersion: 17,
+        roundTripTime: 8.72,
+        lastUpdateTime: 1147228684,
+        lastWriteDate: 0,
+        error: null,
+        topologyVersion: {
+          processId: new ObjectId("64cafc096fe5846077515cdb"),
+          counter: 0
+        },
+        setName: null,
+        setVersion: null,
+        electionId: null,
+        logicalSessionTimeoutMinutes: 30,
+        primary: null,
+        me: null,
+        '$clusterTime': null
+      }
+    },
+    stale: false,
+    compatible: true,
+    heartbeatFrequencyMS: 10000,
+    localThresholdMS: 15,
+    setName: null,
+    maxElectionId: null,
+    maxSetVersion: null,
+    commonWireVersion: 0,
+    logicalSessionTimeoutMinutes: null
+  },
+  code: undefined,
+  level: 'error',
+  stack: 'MongooseServerSelectionError: Server selection timed out after 30000 ms\n' +
+    '    at NativeConnection.Connection.openUri (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/lib/connection.js:825:32)\n' +
+    '    at /Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/lib/index.js:414:10\n' +
+    '    at /Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/lib/helpers/promiseOrCallback.js:41:5\n' +
+    '    at new Promise (<anonymous>)\n' +
+    '    at promiseOrCallback (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/lib/helpers/promiseOrCallback.js:40:10)\n' +
+    '    at Mongoose._promiseOrCallback (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/lib/index.js:1288:10)\n' +
+    '    at Mongoose.connect (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/lib/index.js:413:20)\n' +
+    '    at /Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/src/start/db.ts:10:29\n' +
+    '    at Generator.next (<anonymous>)\n' +
+    '    at /Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/src/start/db.ts:8:71',
+  timestamp: '2023-08-03 03:00:24'
+}
+{
+  message: 'Failed connecting to MongoDB Server selection timed out after 30000 ms',
+  reason: TopologyDescription {
+    type: 'Unknown',
+    servers: Map(1) {
+      'localhost:27017' => ServerDescription {
+        address: 'localhost:27017',
+        type: 'RSGhost',
+        hosts: [],
+        passives: [],
+        arbiters: [],
+        tags: {},
+        minWireVersion: 0,
+        maxWireVersion: 17,
+        roundTripTime: 5.240000000000001,
+        lastUpdateTime: 1147550370,
+        lastWriteDate: 0,
+        error: null,
+        topologyVersion: {
+          processId: new ObjectId("64cafd4a3f9f8a673ace0981"),
+          counter: 1
+        },
+        setName: null,
+        setVersion: null,
+        electionId: null,
+        logicalSessionTimeoutMinutes: 30,
+        primary: null,
+        me: null,
+        '$clusterTime': null
+      }
+    },
+    stale: false,
+    compatible: true,
+    heartbeatFrequencyMS: 10000,
+    localThresholdMS: 15,
+    setName: null,
+    maxElectionId: null,
+    maxSetVersion: null,
+    commonWireVersion: 0,
+    logicalSessionTimeoutMinutes: null
+  },
+  code: undefined,
+  level: 'error',
+  stack: 'MongooseServerSelectionError: Server selection timed out after 30000 ms\n' +
+    '    at NativeConnection.Connection.openUri (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/lib/connection.js:825:32)\n' +
+    '    at /Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/lib/index.js:414:10\n' +
+    '    at /Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/lib/helpers/promiseOrCallback.js:41:5\n' +
+    '    at new Promise (<anonymous>)\n' +
+    '    at promiseOrCallback (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/lib/helpers/promiseOrCallback.js:40:10)\n' +
+    '    at Mongoose._promiseOrCallback (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/lib/index.js:1288:10)\n' +
+    '    at Mongoose.connect (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/lib/index.js:413:20)\n' +
+    '    at /Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/src/start/db.ts:10:29\n' +
+    '    at Generator.next (<anonymous>)\n' +
+    '    at /Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/src/start/db.ts:8:71',
+  timestamp: '2023-08-03 03:05:46'
+}
+{
+  message: 'Failed connecting to MongoDB',
+  cause: MongoNetworkError
+      at connectionFailureError (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/node_modules/mongodb/src/cmap/connect.ts:514:14)
+      at Socket.<anonymous> (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/node_modules/mongodb/src/cmap/connect.ts:416:16)
+      at Object.onceWrapper (node:events:626:26)
+      at Socket.emit (node:events:511:28)
+      at Socket.emit (node:domain:489:12)
+      at emitErrorNT (node:internal/streams/destroy:151:8)
+      at emitErrorCloseNT (node:internal/streams/destroy:116:3)
+      at processTicksAndRejections (node:internal/process/task_queues:82:21) {
+    cause: AggregateError
+        at internalConnectMultiple (node:net:1102:18)
+        at afterConnectMultiple (node:net:1620:5) {
+      code: 'ECONNREFUSED',
+      [errors]: [
+        Error: connect ECONNREFUSED ::1:27017
+            at afterConnectMultiple (node:net:1607:16) {
+          errno: -61,
+          code: 'ECONNREFUSED',
+          syscall: 'connect',
+          address: '::1',
+          port: 27017
+        },
+        Error: connect ECONNREFUSED 127.0.0.1:27017
+            at afterConnectMultiple (node:net:1607:16) {
+          errno: -61,
+          code: 'ECONNREFUSED',
+          syscall: 'connect',
+          address: '127.0.0.1',
+          port: 27017
+        }
+      ]
+    },
+    [Symbol(errorLabels)]: Set(1) { 'ResetPool' }
+  },
+  reason: TopologyDescription {
+    type: 'Unknown',
+    servers: Map(1) {
+      'localhost:27017' => ServerDescription {
+        address: 'localhost:27017',
+        type: 'Unknown',
+        hosts: [],
+        passives: [],
+        arbiters: [],
+        tags: {},
+        minWireVersion: 0,
+        maxWireVersion: 0,
+        roundTripTime: -1,
+        lastUpdateTime: 1148010289,
+        lastWriteDate: 0,
+        error: MongoNetworkError
+            at connectionFailureError (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/node_modules/mongodb/src/cmap/connect.ts:514:14)
+            at Socket.<anonymous> (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/node_modules/mongodb/src/cmap/connect.ts:416:16)
+            at Object.onceWrapper (node:events:626:26)
+            at Socket.emit (node:events:511:28)
+            at Socket.emit (node:domain:489:12)
+            at emitErrorNT (node:internal/streams/destroy:151:8)
+            at emitErrorCloseNT (node:internal/streams/destroy:116:3)
+            at processTicksAndRejections (node:internal/process/task_queues:82:21) {
+          cause: AggregateError
+              at internalConnectMultiple (node:net:1102:18)
+              at afterConnectMultiple (node:net:1620:5) {
+            code: 'ECONNREFUSED',
+            [errors]: [
+              Error: connect ECONNREFUSED ::1:27017
+                  at afterConnectMultiple (node:net:1607:16) {
+                errno: -61,
+                code: 'ECONNREFUSED',
+                syscall: 'connect',
+                address: '::1',
+                port: 27017
+              },
+              Error: connect ECONNREFUSED 127.0.0.1:27017
+                  at afterConnectMultiple (node:net:1607:16) {
+                errno: -61,
+                code: 'ECONNREFUSED',
+                syscall: 'connect',
+                address: '127.0.0.1',
+                port: 27017
+              }
+            ]
+          },
+          [Symbol(errorLabels)]: Set(1) { 'ResetPool' }
+        },
+        topologyVersion: null,
+        setName: null,
+        setVersion: null,
+        electionId: null,
+        logicalSessionTimeoutMinutes: null,
+        primary: null,
+        me: null,
+        '$clusterTime': null
+      }
+    },
+    stale: false,
+    compatible: true,
+    heartbeatFrequencyMS: 10000,
+    localThresholdMS: 15,
+    setName: null,
+    maxElectionId: null,
+    maxSetVersion: null,
+    commonWireVersion: 0,
+    logicalSessionTimeoutMinutes: null
+  },
+  code: undefined,
+  level: 'error',
+  stack: 'MongooseServerSelectionError\n' +
+    '    at NativeConnection.Connection.openUri (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/lib/connection.js:825:32)\n' +
+    '    at /Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/lib/index.js:414:10\n' +
+    '    at /Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/lib/helpers/promiseOrCallback.js:41:5\n' +
+    '    at new Promise (<anonymous>)\n' +
+    '    at promiseOrCallback (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/lib/helpers/promiseOrCallback.js:40:10)\n' +
+    '    at Mongoose._promiseOrCallback (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/lib/index.js:1288:10)\n' +
+    '    at Mongoose.connect (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/lib/index.js:413:20)\n' +
+    '    at /Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/src/start/db.ts:10:29\n' +
+    '    at Generator.next (<anonymous>)\n' +
+    '    at /Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/src/start/db.ts:8:71',
+  timestamp: '2023-08-03 03:13:16'
+}
+{
+  message: 'Failed connecting to MongoDB Server selection timed out after 30000 ms',
+  reason: TopologyDescription {
+    type: 'Unknown',
+    servers: Map(1) {
+      'localhost:27017' => ServerDescription {
+        address: 'localhost:27017',
+        type: 'RSGhost',
+        hosts: [],
+        passives: [],
+        arbiters: [],
+        tags: {},
+        minWireVersion: 0,
+        maxWireVersion: 17,
+        roundTripTime: 2,
+        lastUpdateTime: 1148496456,
+        lastWriteDate: 0,
+        error: null,
+        topologyVersion: {
+          processId: new ObjectId("64cb0112aaf88e78bcb11054"),
+          counter: 1
+        },
+        setName: null,
+        setVersion: null,
+        electionId: null,
+        logicalSessionTimeoutMinutes: 30,
+        primary: null,
+        me: null,
+        '$clusterTime': null
+      }
+    },
+    stale: false,
+    compatible: true,
+    heartbeatFrequencyMS: 10000,
+    localThresholdMS: 15,
+    setName: null,
+    maxElectionId: null,
+    maxSetVersion: null,
+    commonWireVersion: 0,
+    logicalSessionTimeoutMinutes: null
+  },
+  code: undefined,
+  level: 'error',
+  stack: 'MongooseServerSelectionError: Server selection timed out after 30000 ms\n' +
+    '    at NativeConnection.Connection.openUri (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/lib/connection.js:825:32)\n' +
+    '    at /Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/lib/index.js:414:10\n' +
+    '    at /Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/lib/helpers/promiseOrCallback.js:41:5\n' +
+    '    at new Promise (<anonymous>)\n' +
+    '    at promiseOrCallback (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/lib/helpers/promiseOrCallback.js:40:10)\n' +
+    '    at Mongoose._promiseOrCallback (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/lib/index.js:1288:10)\n' +
+    '    at Mongoose.connect (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/lib/index.js:413:20)\n' +
+    '    at /Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/src/start/db.ts:10:29\n' +
+    '    at Generator.next (<anonymous>)\n' +
+    '    at /Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/src/start/db.ts:8:71',
+  timestamp: '2023-08-03 03:21:31'
+}
+{
+  message: 'Failed connecting to MongoDB Server selection timed out after 30000 ms',
+  reason: TopologyDescription {
+    type: 'Unknown',
+    servers: Map(1) {
+      'localhost:27017' => ServerDescription {
+        address: 'localhost:27017',
+        type: 'RSGhost',
+        hosts: [],
+        passives: [],
+        arbiters: [],
+        tags: {},
+        minWireVersion: 0,
+        maxWireVersion: 17,
+        roundTripTime: 7.080000000000001,
+        lastUpdateTime: 1148517690,
+        lastWriteDate: 0,
+        error: null,
+        topologyVersion: {
+          processId: new ObjectId("64cb0112aaf88e78bcb11054"),
+          counter: 1
+        },
+        setName: null,
+        setVersion: null,
+        electionId: null,
+        logicalSessionTimeoutMinutes: 30,
+        primary: null,
+        me: null,
+        '$clusterTime': null
+      }
+    },
+    stale: false,
+    compatible: true,
+    heartbeatFrequencyMS: 10000,
+    localThresholdMS: 15,
+    setName: null,
+    maxElectionId: null,
+    maxSetVersion: null,
+    commonWireVersion: 0,
+    logicalSessionTimeoutMinutes: null
+  },
+  code: undefined,
+  level: 'error',
+  stack: 'MongooseServerSelectionError: Server selection timed out after 30000 ms\n' +
+    '    at NativeConnection.Connection.openUri (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/lib/connection.js:825:32)\n' +
+    '    at /Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/lib/index.js:414:10\n' +
+    '    at /Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/lib/helpers/promiseOrCallback.js:41:5\n' +
+    '    at new Promise (<anonymous>)\n' +
+    '    at promiseOrCallback (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/lib/helpers/promiseOrCallback.js:40:10)\n' +
+    '    at Mongoose._promiseOrCallback (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/lib/index.js:1288:10)\n' +
+    '    at Mongoose.connect (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/lib/index.js:413:20)\n' +
+    '    at /Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/src/start/db.ts:10:29\n' +
+    '    at Generator.next (<anonymous>)\n' +
+    '    at /Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/src/start/db.ts:8:71',
+  timestamp: '2023-08-03 03:21:53'
+}
+{
+  message: 'Failed connecting to MongoDB',
+  cause: MongoNetworkError
+      at connectionFailureError (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/node_modules/mongodb/src/cmap/connect.ts:514:14)
+      at Socket.<anonymous> (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/node_modules/mongodb/src/cmap/connect.ts:416:16)
+      at Object.onceWrapper (node:events:626:26)
+      at Socket.emit (node:events:511:28)
+      at Socket.emit (node:domain:489:12)
+      at emitErrorNT (node:internal/streams/destroy:151:8)
+      at emitErrorCloseNT (node:internal/streams/destroy:116:3)
+      at processTicksAndRejections (node:internal/process/task_queues:82:21) {
+    cause: AggregateError
+        at internalConnectMultiple (node:net:1102:18)
+        at afterConnectMultiple (node:net:1620:5) {
+      code: 'ECONNREFUSED',
+      [errors]: [
+        Error: connect ECONNREFUSED ::1:27017
+            at afterConnectMultiple (node:net:1607:16) {
+          errno: -61,
+          code: 'ECONNREFUSED',
+          syscall: 'connect',
+          address: '::1',
+          port: 27017
+        },
+        Error: connect ECONNREFUSED 127.0.0.1:27017
+            at afterConnectMultiple (node:net:1607:16) {
+          errno: -61,
+          code: 'ECONNREFUSED',
+          syscall: 'connect',
+          address: '127.0.0.1',
+          port: 27017
+        }
+      ]
+    },
+    [Symbol(errorLabels)]: Set(1) { 'ResetPool' }
+  },
+  reason: TopologyDescription {
+    type: 'Unknown',
+    servers: Map(1) {
+      'localhost:27017' => ServerDescription {
+        address: 'localhost:27017',
+        type: 'Unknown',
+        hosts: [],
+        passives: [],
+        arbiters: [],
+        tags: {},
+        minWireVersion: 0,
+        maxWireVersion: 0,
+        roundTripTime: -1,
+        lastUpdateTime: 1205537084,
+        lastWriteDate: 0,
+        error: MongoNetworkError
+            at connectionFailureError (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/node_modules/mongodb/src/cmap/connect.ts:514:14)
+            at Socket.<anonymous> (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/node_modules/mongodb/src/cmap/connect.ts:416:16)
+            at Object.onceWrapper (node:events:626:26)
+            at Socket.emit (node:events:511:28)
+            at Socket.emit (node:domain:489:12)
+            at emitErrorNT (node:internal/streams/destroy:151:8)
+            at emitErrorCloseNT (node:internal/streams/destroy:116:3)
+            at processTicksAndRejections (node:internal/process/task_queues:82:21) {
+          cause: AggregateError
+              at internalConnectMultiple (node:net:1102:18)
+              at afterConnectMultiple (node:net:1620:5) {
+            code: 'ECONNREFUSED',
+            [errors]: [
+              Error: connect ECONNREFUSED ::1:27017
+                  at afterConnectMultiple (node:net:1607:16) {
+                errno: -61,
+                code: 'ECONNREFUSED',
+                syscall: 'connect',
+                address: '::1',
+                port: 27017
+              },
+              Error: connect ECONNREFUSED 127.0.0.1:27017
+                  at afterConnectMultiple (node:net:1607:16) {
+                errno: -61,
+                code: 'ECONNREFUSED',
+                syscall: 'connect',
+                address: '127.0.0.1',
+                port: 27017
+              }
+            ]
+          },
+          [Symbol(errorLabels)]: Set(1) { 'ResetPool' }
+        },
+        topologyVersion: null,
+        setName: null,
+        setVersion: null,
+        electionId: null,
+        logicalSessionTimeoutMinutes: null,
+        primary: null,
+        me: null,
+        '$clusterTime': null
+      }
+    },
+    stale: false,
+    compatible: true,
+    heartbeatFrequencyMS: 10000,
+    localThresholdMS: 15,
+    setName: null,
+    maxElectionId: null,
+    maxSetVersion: null,
+    commonWireVersion: 0,
+    logicalSessionTimeoutMinutes: null
+  },
+  code: undefined,
+  level: 'error',
+  stack: 'MongooseServerSelectionError\n' +
+    '    at NativeConnection.Connection.openUri (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/lib/connection.js:825:32)\n' +
+    '    at /Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/lib/index.js:414:10\n' +
+    '    at /Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/lib/helpers/promiseOrCallback.js:41:5\n' +
+    '    at new Promise (<anonymous>)\n' +
+    '    at promiseOrCallback (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/lib/helpers/promiseOrCallback.js:40:10)\n' +
+    '    at Mongoose._promiseOrCallback (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/lib/index.js:1288:10)\n' +
+    '    at Mongoose.connect (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/lib/index.js:413:20)\n' +
+    '    at /Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/src/start/db.ts:10:29\n' +
+    '    at Generator.next (<anonymous>)\n' +
+    '    at /Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/src/start/db.ts:8:71',
+  timestamp: '2023-08-03 19:12:03'
+}
+{
+  message: 'Failed connecting to MongoDB',
+  cause: MongoNetworkError
+      at connectionFailureError (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/node_modules/mongodb/src/cmap/connect.ts:514:14)
+      at Socket.<anonymous> (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/node_modules/mongodb/src/cmap/connect.ts:416:16)
+      at Object.onceWrapper (node:events:626:26)
+      at Socket.emit (node:events:511:28)
+      at Socket.emit (node:domain:489:12)
+      at emitErrorNT (node:internal/streams/destroy:151:8)
+      at emitErrorCloseNT (node:internal/streams/destroy:116:3)
+      at processTicksAndRejections (node:internal/process/task_queues:82:21) {
+    cause: AggregateError
+        at internalConnectMultiple (node:net:1102:18)
+        at afterConnectMultiple (node:net:1620:5) {
+      code: 'ECONNREFUSED',
+      [errors]: [
+        Error: connect ECONNREFUSED ::1:27017
+            at afterConnectMultiple (node:net:1607:16) {
+          errno: -61,
+          code: 'ECONNREFUSED',
+          syscall: 'connect',
+          address: '::1',
+          port: 27017
+        },
+        Error: connect ECONNREFUSED 127.0.0.1:27017
+            at afterConnectMultiple (node:net:1607:16) {
+          errno: -61,
+          code: 'ECONNREFUSED',
+          syscall: 'connect',
+          address: '127.0.0.1',
+          port: 27017
+        }
+      ]
+    },
+    [Symbol(errorLabels)]: Set(1) { 'ResetPool' }
+  },
+  reason: TopologyDescription {
+    type: 'Unknown',
+    servers: Map(1) {
+      'localhost:27017' => ServerDescription {
+        address: 'localhost:27017',
+        type: 'Unknown',
+        hosts: [],
+        passives: [],
+        arbiters: [],
+        tags: {},
+        minWireVersion: 0,
+        maxWireVersion: 0,
+        roundTripTime: -1,
+        lastUpdateTime: 1231070092,
+        lastWriteDate: 0,
+        error: MongoNetworkError
+            at connectionFailureError (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/node_modules/mongodb/src/cmap/connect.ts:514:14)
+            at Socket.<anonymous> (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/node_modules/mongodb/src/cmap/connect.ts:416:16)
+            at Object.onceWrapper (node:events:626:26)
+            at Socket.emit (node:events:511:28)
+            at Socket.emit (node:domain:489:12)
+            at emitErrorNT (node:internal/streams/destroy:151:8)
+            at emitErrorCloseNT (node:internal/streams/destroy:116:3)
+            at processTicksAndRejections (node:internal/process/task_queues:82:21) {
+          cause: AggregateError
+              at internalConnectMultiple (node:net:1102:18)
+              at afterConnectMultiple (node:net:1620:5) {
+            code: 'ECONNREFUSED',
+            [errors]: [
+              Error: connect ECONNREFUSED ::1:27017
+                  at afterConnectMultiple (node:net:1607:16) {
+                errno: -61,
+                code: 'ECONNREFUSED',
+                syscall: 'connect',
+                address: '::1',
+                port: 27017
+              },
+              Error: connect ECONNREFUSED 127.0.0.1:27017
+                  at afterConnectMultiple (node:net:1607:16) {
+                errno: -61,
+                code: 'ECONNREFUSED',
+                syscall: 'connect',
+                address: '127.0.0.1',
+                port: 27017
+              }
+            ]
+          },
+          [Symbol(errorLabels)]: Set(1) { 'ResetPool' }
+        },
+        topologyVersion: null,
+        setName: null,
+        setVersion: null,
+        electionId: null,
+        logicalSessionTimeoutMinutes: null,
+        primary: null,
+        me: null,
+        '$clusterTime': null
+      }
+    },
+    stale: false,
+    compatible: true,
+    heartbeatFrequencyMS: 10000,
+    localThresholdMS: 15,
+    setName: null,
+    maxElectionId: null,
+    maxSetVersion: null,
+    commonWireVersion: 0,
+    logicalSessionTimeoutMinutes: null
+  },
+  code: undefined,
+  level: 'error',
+  stack: 'MongooseServerSelectionError\n' +
+    '    at NativeConnection.Connection.openUri (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/lib/connection.js:825:32)\n' +
+    '    at /Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/lib/index.js:414:10\n' +
+    '    at /Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/lib/helpers/promiseOrCallback.js:41:5\n' +
+    '    at new Promise (<anonymous>)\n' +
+    '    at promiseOrCallback (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/lib/helpers/promiseOrCallback.js:40:10)\n' +
+    '    at Mongoose._promiseOrCallback (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/lib/index.js:1288:10)\n' +
+    '    at Mongoose.connect (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/lib/index.js:413:20)\n' +
+    '    at /Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/src/start/db.ts:10:29\n' +
+    '    at Generator.next (<anonymous>)\n' +
+    '    at /Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/src/start/db.ts:8:71',
+  timestamp: '2023-08-04 02:17:36'
+}
+{
+  message: 'Failed connecting to MongoDB Server selection timed out after 30000 ms',
+  reason: TopologyDescription {
+    type: 'Unknown',
+    servers: Map(1) {
+      'localhost:27017' => ServerDescription {
+        address: 'localhost:27017',
+        type: 'RSGhost',
+        hosts: [],
+        passives: [],
+        arbiters: [],
+        tags: {},
+        minWireVersion: 0,
+        maxWireVersion: 17,
+        roundTripTime: 6.16,
+        lastUpdateTime: 1260020882,
+        lastWriteDate: 0,
+        error: null,
+        topologyVersion: {
+          processId: new ObjectId("64ccb4a051d2ebb143686257"),
+          counter: 1
+        },
+        setName: null,
+        setVersion: null,
+        electionId: null,
+        logicalSessionTimeoutMinutes: 30,
+        primary: null,
+        me: null,
+        '$clusterTime': null
+      }
+    },
+    stale: false,
+    compatible: true,
+    heartbeatFrequencyMS: 10000,
+    localThresholdMS: 15,
+    setName: null,
+    maxElectionId: null,
+    maxSetVersion: null,
+    commonWireVersion: 0,
+    logicalSessionTimeoutMinutes: null
+  },
+  code: undefined,
+  level: 'error',
+  stack: 'MongooseServerSelectionError: Server selection timed out after 30000 ms\n' +
+    '    at NativeConnection.Connection.openUri (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/lib/connection.js:825:32)\n' +
+    '    at /Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/lib/index.js:414:10\n' +
+    '    at /Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/lib/helpers/promiseOrCallback.js:41:5\n' +
+    '    at new Promise (<anonymous>)\n' +
+    '    at promiseOrCallback (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/lib/helpers/promiseOrCallback.js:40:10)\n' +
+    '    at Mongoose._promiseOrCallback (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/lib/index.js:1288:10)\n' +
+    '    at Mongoose.connect (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/lib/index.js:413:20)\n' +
+    '    at /Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/src/start/db.ts:10:29\n' +
+    '    at Generator.next (<anonymous>)\n' +
+    '    at /Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/src/start/db.ts:8:71',
+  timestamp: '2023-08-04 10:20:16'
+}
+{
+  message: 'Failed connecting to MongoDB Server selection timed out after 30000 ms',
+  reason: TopologyDescription {
+    type: 'Unknown',
+    servers: Map(1) {
+      'localhost:27017' => ServerDescription {
+        address: 'localhost:27017',
+        type: 'RSGhost',
+        hosts: [],
+        passives: [],
+        arbiters: [],
+        tags: {},
+        minWireVersion: 0,
+        maxWireVersion: 17,
+        roundTripTime: 1.6,
+        lastUpdateTime: 1260135778,
+        lastWriteDate: 0,
+        error: null,
+        topologyVersion: {
+          processId: new ObjectId("64ccb51e7f28b79bf20afedc"),
+          counter: 1
+        },
+        setName: null,
+        setVersion: null,
+        electionId: null,
+        logicalSessionTimeoutMinutes: 30,
+        primary: null,
+        me: null,
+        '$clusterTime': null
+      }
+    },
+    stale: false,
+    compatible: true,
+    heartbeatFrequencyMS: 10000,
+    localThresholdMS: 15,
+    setName: null,
+    maxElectionId: null,
+    maxSetVersion: null,
+    commonWireVersion: 0,
+    logicalSessionTimeoutMinutes: null
+  },
+  code: undefined,
+  level: 'error',
+  stack: 'MongooseServerSelectionError: Server selection timed out after 30000 ms\n' +
+    '    at NativeConnection.Connection.openUri (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/lib/connection.js:825:32)\n' +
+    '    at /Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/lib/index.js:414:10\n' +
+    '    at /Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/lib/helpers/promiseOrCallback.js:41:5\n' +
+    '    at new Promise (<anonymous>)\n' +
+    '    at promiseOrCallback (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/lib/helpers/promiseOrCallback.js:40:10)\n' +
+    '    at Mongoose._promiseOrCallback (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/lib/index.js:1288:10)\n' +
+    '    at Mongoose.connect (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/lib/index.js:413:20)\n' +
+    '    at /Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/src/start/db.ts:10:29\n' +
+    '    at Generator.next (<anonymous>)\n' +
+    '    at /Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/src/start/db.ts:8:71',
+  timestamp: '2023-08-04 10:22:05'
+}
+{
+  message: 'Failed connecting to MongoDB Server selection timed out after 30000 ms',
+  reason: TopologyDescription {
+    type: 'Unknown',
+    servers: Map(1) {
+      'localhost:27017' => ServerDescription {
+        address: 'localhost:27017',
+        type: 'RSGhost',
+        hosts: [],
+        passives: [],
+        arbiters: [],
+        tags: {},
+        minWireVersion: 0,
+        maxWireVersion: 17,
+        roundTripTime: 5.880000000000001,
+        lastUpdateTime: 1260146651,
+        lastWriteDate: 0,
+        error: null,
+        topologyVersion: {
+          processId: new ObjectId("64ccb51e7f28b79bf20afedc"),
+          counter: 1
+        },
+        setName: null,
+        setVersion: null,
+        electionId: null,
+        logicalSessionTimeoutMinutes: 30,
+        primary: null,
+        me: null,
+        '$clusterTime': null
+      }
+    },
+    stale: false,
+    compatible: true,
+    heartbeatFrequencyMS: 10000,
+    localThresholdMS: 15,
+    setName: null,
+    maxElectionId: null,
+    maxSetVersion: null,
+    commonWireVersion: 0,
+    logicalSessionTimeoutMinutes: null
+  },
+  code: undefined,
+  level: 'error',
+  stack: 'MongooseServerSelectionError: Server selection timed out after 30000 ms\n' +
+    '    at NativeConnection.Connection.openUri (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/lib/connection.js:825:32)\n' +
+    '    at /Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/lib/index.js:414:10\n' +
+    '    at /Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/lib/helpers/promiseOrCallback.js:41:5\n' +
+    '    at new Promise (<anonymous>)\n' +
+    '    at promiseOrCallback (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/lib/helpers/promiseOrCallback.js:40:10)\n' +
+    '    at Mongoose._promiseOrCallback (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/lib/index.js:1288:10)\n' +
+    '    at Mongoose.connect (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/lib/index.js:413:20)\n' +
+    '    at /Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/src/start/db.ts:10:29\n' +
+    '    at Generator.next (<anonymous>)\n' +
+    '    at /Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/src/start/db.ts:8:71',
+  timestamp: '2023-08-04 10:22:22'
+}
+{
+  message: 'Failed connecting to MongoDB',
+  cause: MongoNetworkError
+      at connectionFailureError (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/node_modules/mongodb/src/cmap/connect.ts:514:14)
+      at Socket.<anonymous> (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/node_modules/mongodb/src/cmap/connect.ts:416:16)
+      at Object.onceWrapper (node:events:626:26)
+      at Socket.emit (node:events:511:28)
+      at Socket.emit (node:domain:489:12)
+      at emitErrorNT (node:internal/streams/destroy:151:8)
+      at emitErrorCloseNT (node:internal/streams/destroy:116:3)
+      at processTicksAndRejections (node:internal/process/task_queues:82:21) {
+    cause: AggregateError
+        at internalConnectMultiple (node:net:1102:18)
+        at afterConnectMultiple (node:net:1620:5) {
+      code: 'ECONNREFUSED',
+      [errors]: [
+        Error: connect ECONNREFUSED ::1:27017
+            at afterConnectMultiple (node:net:1607:16) {
+          errno: -61,
+          code: 'ECONNREFUSED',
+          syscall: 'connect',
+          address: '::1',
+          port: 27017
+        },
+        Error: connect ECONNREFUSED 127.0.0.1:27017
+            at afterConnectMultiple (node:net:1607:16) {
+          errno: -61,
+          code: 'ECONNREFUSED',
+          syscall: 'connect',
+          address: '127.0.0.1',
+          port: 27017
+        }
+      ]
+    },
+    [Symbol(errorLabels)]: Set(1) { 'ResetPool' }
+  },
+  reason: TopologyDescription {
+    type: 'Unknown',
+    servers: Map(1) {
+      'localhost:27017' => ServerDescription {
+        address: 'localhost:27017',
+        type: 'Unknown',
+        hosts: [],
+        passives: [],
+        arbiters: [],
+        tags: {},
+        minWireVersion: 0,
+        maxWireVersion: 0,
+        roundTripTime: -1,
+        lastUpdateTime: 1260194070,
+        lastWriteDate: 0,
+        error: MongoNetworkError
+            at connectionFailureError (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/node_modules/mongodb/src/cmap/connect.ts:514:14)
+            at Socket.<anonymous> (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/node_modules/mongodb/src/cmap/connect.ts:416:16)
+            at Object.onceWrapper (node:events:626:26)
+            at Socket.emit (node:events:511:28)
+            at Socket.emit (node:domain:489:12)
+            at emitErrorNT (node:internal/streams/destroy:151:8)
+            at emitErrorCloseNT (node:internal/streams/destroy:116:3)
+            at processTicksAndRejections (node:internal/process/task_queues:82:21) {
+          cause: AggregateError
+              at internalConnectMultiple (node:net:1102:18)
+              at afterConnectMultiple (node:net:1620:5) {
+            code: 'ECONNREFUSED',
+            [errors]: [
+              Error: connect ECONNREFUSED ::1:27017
+                  at afterConnectMultiple (node:net:1607:16) {
+                errno: -61,
+                code: 'ECONNREFUSED',
+                syscall: 'connect',
+                address: '::1',
+                port: 27017
+              },
+              Error: connect ECONNREFUSED 127.0.0.1:27017
+                  at afterConnectMultiple (node:net:1607:16) {
+                errno: -61,
+                code: 'ECONNREFUSED',
+                syscall: 'connect',
+                address: '127.0.0.1',
+                port: 27017
+              }
+            ]
+          },
+          [Symbol(errorLabels)]: Set(1) { 'ResetPool' }
+        },
+        topologyVersion: null,
+        setName: null,
+        setVersion: null,
+        electionId: null,
+        logicalSessionTimeoutMinutes: null,
+        primary: null,
+        me: null,
+        '$clusterTime': null
+      }
+    },
+    stale: false,
+    compatible: true,
+    heartbeatFrequencyMS: 10000,
+    localThresholdMS: 15,
+    setName: null,
+    maxElectionId: null,
+    maxSetVersion: null,
+    commonWireVersion: 0,
+    logicalSessionTimeoutMinutes: null
+  },
+  code: undefined,
+  level: 'error',
+  stack: 'MongooseServerSelectionError\n' +
+    '    at NativeConnection.Connection.openUri (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/lib/connection.js:825:32)\n' +
+    '    at /Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/lib/index.js:414:10\n' +
+    '    at /Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/lib/helpers/promiseOrCallback.js:41:5\n' +
+    '    at new Promise (<anonymous>)\n' +
+    '    at promiseOrCallback (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/lib/helpers/promiseOrCallback.js:40:10)\n' +
+    '    at Mongoose._promiseOrCallback (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/lib/index.js:1288:10)\n' +
+    '    at Mongoose.connect (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/lib/index.js:413:20)\n' +
+    '    at /Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/src/start/db.ts:10:29\n' +
+    '    at Generator.next (<anonymous>)\n' +
+    '    at /Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/src/start/db.ts:8:71',
+  timestamp: '2023-08-04 10:23:00'
+}
+{
+  message: 'Failed connecting to MongoDB',
+  cause: MongoNetworkError
+      at connectionFailureError (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/node_modules/mongodb/src/cmap/connect.ts:514:14)
+      at Socket.<anonymous> (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/node_modules/mongodb/src/cmap/connect.ts:416:16)
+      at Object.onceWrapper (node:events:626:26)
+      at Socket.emit (node:events:511:28)
+      at Socket.emit (node:domain:489:12)
+      at emitErrorNT (node:internal/streams/destroy:151:8)
+      at emitErrorCloseNT (node:internal/streams/destroy:116:3)
+      at processTicksAndRejections (node:internal/process/task_queues:82:21) {
+    cause: AggregateError
+        at internalConnectMultiple (node:net:1102:18)
+        at afterConnectMultiple (node:net:1620:5) {
+      code: 'ECONNREFUSED',
+      [errors]: [
+        Error: connect ECONNREFUSED ::1:27017
+            at afterConnectMultiple (node:net:1607:16) {
+          errno: -61,
+          code: 'ECONNREFUSED',
+          syscall: 'connect',
+          address: '::1',
+          port: 27017
+        },
+        Error: connect ECONNREFUSED 127.0.0.1:27017
+            at afterConnectMultiple (node:net:1607:16) {
+          errno: -61,
+          code: 'ECONNREFUSED',
+          syscall: 'connect',
+          address: '127.0.0.1',
+          port: 27017
+        }
+      ]
+    },
+    [Symbol(errorLabels)]: Set(1) { 'ResetPool' }
+  },
+  reason: TopologyDescription {
+    type: 'Unknown',
+    servers: Map(1) {
+      'localhost:27017' => ServerDescription {
+        address: 'localhost:27017',
+        type: 'Unknown',
+        hosts: [],
+        passives: [],
+        arbiters: [],
+        tags: {},
+        minWireVersion: 0,
+        maxWireVersion: 0,
+        roundTripTime: -1,
+        lastUpdateTime: 1260501929,
+        lastWriteDate: 0,
+        error: MongoNetworkError
+            at connectionFailureError (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/node_modules/mongodb/src/cmap/connect.ts:514:14)
+            at Socket.<anonymous> (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/node_modules/mongodb/src/cmap/connect.ts:416:16)
+            at Object.onceWrapper (node:events:626:26)
+            at Socket.emit (node:events:511:28)
+            at Socket.emit (node:domain:489:12)
+            at emitErrorNT (node:internal/streams/destroy:151:8)
+            at emitErrorCloseNT (node:internal/streams/destroy:116:3)
+            at processTicksAndRejections (node:internal/process/task_queues:82:21) {
+          cause: AggregateError
+              at internalConnectMultiple (node:net:1102:18)
+              at afterConnectMultiple (node:net:1620:5) {
+            code: 'ECONNREFUSED',
+            [errors]: [
+              Error: connect ECONNREFUSED ::1:27017
+                  at afterConnectMultiple (node:net:1607:16) {
+                errno: -61,
+                code: 'ECONNREFUSED',
+                syscall: 'connect',
+                address: '::1',
+                port: 27017
+              },
+              Error: connect ECONNREFUSED 127.0.0.1:27017
+                  at afterConnectMultiple (node:net:1607:16) {
+                errno: -61,
+                code: 'ECONNREFUSED',
+                syscall: 'connect',
+                address: '127.0.0.1',
+                port: 27017
+              }
+            ]
+          },
+          [Symbol(errorLabels)]: Set(1) { 'ResetPool' }
+        },
+        topologyVersion: null,
+        setName: null,
+        setVersion: null,
+        electionId: null,
+        logicalSessionTimeoutMinutes: null,
+        primary: null,
+        me: null,
+        '$clusterTime': null
+      }
+    },
+    stale: false,
+    compatible: true,
+    heartbeatFrequencyMS: 10000,
+    localThresholdMS: 15,
+    setName: null,
+    maxElectionId: null,
+    maxSetVersion: null,
+    commonWireVersion: 0,
+    logicalSessionTimeoutMinutes: null
+  },
+  code: undefined,
+  level: 'error',
+  stack: 'MongooseServerSelectionError\n' +
+    '    at NativeConnection.Connection.openUri (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/lib/connection.js:825:32)\n' +
+    '    at /Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/lib/index.js:414:10\n' +
+    '    at /Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/lib/helpers/promiseOrCallback.js:41:5\n' +
+    '    at new Promise (<anonymous>)\n' +
+    '    at promiseOrCallback (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/lib/helpers/promiseOrCallback.js:40:10)\n' +
+    '    at Mongoose._promiseOrCallback (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/lib/index.js:1288:10)\n' +
+    '    at Mongoose.connect (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/lib/index.js:413:20)\n' +
+    '    at /Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/src/start/db.ts:10:29\n' +
+    '    at Generator.next (<anonymous>)\n' +
+    '    at /Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/src/start/db.ts:8:71',
+  timestamp: '2023-08-04 10:28:08'
+}
+{
+  message: 'Failed connecting to MongoDB',
+  cause: MongoNetworkError
+      at connectionFailureError (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/node_modules/mongodb/src/cmap/connect.ts:514:14)
+      at Socket.<anonymous> (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/node_modules/mongodb/src/cmap/connect.ts:416:16)
+      at Object.onceWrapper (node:events:626:26)
+      at Socket.emit (node:events:511:28)
+      at Socket.emit (node:domain:489:12)
+      at emitErrorNT (node:internal/streams/destroy:151:8)
+      at emitErrorCloseNT (node:internal/streams/destroy:116:3)
+      at processTicksAndRejections (node:internal/process/task_queues:82:21) {
+    cause: AggregateError
+        at internalConnectMultiple (node:net:1102:18)
+        at afterConnectMultiple (node:net:1620:5) {
+      code: 'ECONNREFUSED',
+      [errors]: [
+        Error: connect ECONNREFUSED ::1:27017
+            at afterConnectMultiple (node:net:1607:16) {
+          errno: -61,
+          code: 'ECONNREFUSED',
+          syscall: 'connect',
+          address: '::1',
+          port: 27017
+        },
+        Error: connect ECONNREFUSED 127.0.0.1:27017
+            at afterConnectMultiple (node:net:1607:16) {
+          errno: -61,
+          code: 'ECONNREFUSED',
+          syscall: 'connect',
+          address: '127.0.0.1',
+          port: 27017
+        }
+      ]
+    },
+    [Symbol(errorLabels)]: Set(1) { 'ResetPool' }
+  },
+  reason: TopologyDescription {
+    type: 'Unknown',
+    servers: Map(1) {
+      'localhost:27017' => ServerDescription {
+        address: 'localhost:27017',
+        type: 'Unknown',
+        hosts: [],
+        passives: [],
+        arbiters: [],
+        tags: {},
+        minWireVersion: 0,
+        maxWireVersion: 0,
+        roundTripTime: -1,
+        lastUpdateTime: 1260540655,
+        lastWriteDate: 0,
+        error: MongoNetworkError
+            at connectionFailureError (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/node_modules/mongodb/src/cmap/connect.ts:514:14)
+            at Socket.<anonymous> (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/node_modules/mongodb/src/cmap/connect.ts:416:16)
+            at Object.onceWrapper (node:events:626:26)
+            at Socket.emit (node:events:511:28)
+            at Socket.emit (node:domain:489:12)
+            at emitErrorNT (node:internal/streams/destroy:151:8)
+            at emitErrorCloseNT (node:internal/streams/destroy:116:3)
+            at processTicksAndRejections (node:internal/process/task_queues:82:21) {
+          cause: AggregateError
+              at internalConnectMultiple (node:net:1102:18)
+              at afterConnectMultiple (node:net:1620:5) {
+            code: 'ECONNREFUSED',
+            [errors]: [
+              Error: connect ECONNREFUSED ::1:27017
+                  at afterConnectMultiple (node:net:1607:16) {
+                errno: -61,
+                code: 'ECONNREFUSED',
+                syscall: 'connect',
+                address: '::1',
+                port: 27017
+              },
+              Error: connect ECONNREFUSED 127.0.0.1:27017
+                  at afterConnectMultiple (node:net:1607:16) {
+                errno: -61,
+                code: 'ECONNREFUSED',
+                syscall: 'connect',
+                address: '127.0.0.1',
+                port: 27017
+              }
+            ]
+          },
+          [Symbol(errorLabels)]: Set(1) { 'ResetPool' }
+        },
+        topologyVersion: null,
+        setName: null,
+        setVersion: null,
+        electionId: null,
+        logicalSessionTimeoutMinutes: null,
+        primary: null,
+        me: null,
+        '$clusterTime': null
+      }
+    },
+    stale: false,
+    compatible: true,
+    heartbeatFrequencyMS: 10000,
+    localThresholdMS: 15,
+    setName: null,
+    maxElectionId: null,
+    maxSetVersion: null,
+    commonWireVersion: 0,
+    logicalSessionTimeoutMinutes: null
+  },
+  code: undefined,
+  level: 'error',
+  stack: 'MongooseServerSelectionError\n' +
+    '    at NativeConnection.Connection.openUri (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/lib/connection.js:825:32)\n' +
+    '    at /Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/lib/index.js:414:10\n' +
+    '    at /Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/lib/helpers/promiseOrCallback.js:41:5\n' +
+    '    at new Promise (<anonymous>)\n' +
+    '    at promiseOrCallback (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/lib/helpers/promiseOrCallback.js:40:10)\n' +
+    '    at Mongoose._promiseOrCallback (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/lib/index.js:1288:10)\n' +
+    '    at Mongoose.connect (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/lib/index.js:413:20)\n' +
+    '    at /Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/src/start/db.ts:10:29\n' +
+    '    at Generator.next (<anonymous>)\n' +
+    '    at /Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/src/start/db.ts:8:71',
+  timestamp: '2023-08-04 10:28:47'
+}
+{
+  message: 'Failed connecting to MongoDB',
+  cause: MongoNetworkError
+      at connectionFailureError (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/node_modules/mongodb/src/cmap/connect.ts:514:14)
+      at Socket.<anonymous> (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/node_modules/mongodb/src/cmap/connect.ts:416:16)
+      at Object.onceWrapper (node:events:626:26)
+      at Socket.emit (node:events:511:28)
+      at Socket.emit (node:domain:489:12)
+      at emitErrorNT (node:internal/streams/destroy:151:8)
+      at emitErrorCloseNT (node:internal/streams/destroy:116:3)
+      at processTicksAndRejections (node:internal/process/task_queues:82:21) {
+    cause: AggregateError
+        at internalConnectMultiple (node:net:1102:18)
+        at afterConnectMultiple (node:net:1620:5) {
+      code: 'ECONNREFUSED',
+      [errors]: [
+        Error: connect ECONNREFUSED ::1:27017
+            at afterConnectMultiple (node:net:1607:16) {
+          errno: -61,
+          code: 'ECONNREFUSED',
+          syscall: 'connect',
+          address: '::1',
+          port: 27017
+        },
+        Error: connect ECONNREFUSED 127.0.0.1:27017
+            at afterConnectMultiple (node:net:1607:16) {
+          errno: -61,
+          code: 'ECONNREFUSED',
+          syscall: 'connect',
+          address: '127.0.0.1',
+          port: 27017
+        }
+      ]
+    },
+    [Symbol(errorLabels)]: Set(1) { 'ResetPool' }
+  },
+  reason: TopologyDescription {
+    type: 'Unknown',
+    servers: Map(1) {
+      'localhost:27017' => ServerDescription {
+        address: 'localhost:27017',
+        type: 'Unknown',
+        hosts: [],
+        passives: [],
+        arbiters: [],
+        tags: {},
+        minWireVersion: 0,
+        maxWireVersion: 0,
+        roundTripTime: -1,
+        lastUpdateTime: 1260665562,
+        lastWriteDate: 0,
+        error: MongoNetworkError
+            at connectionFailureError (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/node_modules/mongodb/src/cmap/connect.ts:514:14)
+            at Socket.<anonymous> (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/node_modules/mongodb/src/cmap/connect.ts:416:16)
+            at Object.onceWrapper (node:events:626:26)
+            at Socket.emit (node:events:511:28)
+            at Socket.emit (node:domain:489:12)
+            at emitErrorNT (node:internal/streams/destroy:151:8)
+            at emitErrorCloseNT (node:internal/streams/destroy:116:3)
+            at processTicksAndRejections (node:internal/process/task_queues:82:21) {
+          cause: AggregateError
+              at internalConnectMultiple (node:net:1102:18)
+              at afterConnectMultiple (node:net:1620:5) {
+            code: 'ECONNREFUSED',
+            [errors]: [
+              Error: connect ECONNREFUSED ::1:27017
+                  at afterConnectMultiple (node:net:1607:16) {
+                errno: -61,
+                code: 'ECONNREFUSED',
+                syscall: 'connect',
+                address: '::1',
+                port: 27017
+              },
+              Error: connect ECONNREFUSED 127.0.0.1:27017
+                  at afterConnectMultiple (node:net:1607:16) {
+                errno: -61,
+                code: 'ECONNREFUSED',
+                syscall: 'connect',
+                address: '127.0.0.1',
+                port: 27017
+              }
+            ]
+          },
+          [Symbol(errorLabels)]: Set(1) { 'ResetPool' }
+        },
+        topologyVersion: null,
+        setName: null,
+        setVersion: null,
+        electionId: null,
+        logicalSessionTimeoutMinutes: null,
+        primary: null,
+        me: null,
+        '$clusterTime': null
+      }
+    },
+    stale: false,
+    compatible: true,
+    heartbeatFrequencyMS: 10000,
+    localThresholdMS: 15,
+    setName: null,
+    maxElectionId: null,
+    maxSetVersion: null,
+    commonWireVersion: 0,
+    logicalSessionTimeoutMinutes: null
+  },
+  code: undefined,
+  level: 'error',
+  stack: 'MongooseServerSelectionError\n' +
+    '    at NativeConnection.Connection.openUri (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/lib/connection.js:825:32)\n' +
+    '    at /Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/lib/index.js:414:10\n' +
+    '    at /Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/lib/helpers/promiseOrCallback.js:41:5\n' +
+    '    at new Promise (<anonymous>)\n' +
+    '    at promiseOrCallback (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/lib/helpers/promiseOrCallback.js:40:10)\n' +
+    '    at Mongoose._promiseOrCallback (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/lib/index.js:1288:10)\n' +
+    '    at Mongoose.connect (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/lib/index.js:413:20)\n' +
+    '    at /Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/src/start/db.ts:10:29\n' +
+    '    at Generator.next (<anonymous>)\n' +
+    '    at /Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/src/start/db.ts:8:71',
+  timestamp: '2023-08-04 10:30:52'
+}
+{
+  message: 'Failed connecting to MongoDB',
+  cause: MongoNetworkError
+      at connectionFailureError (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/node_modules/mongodb/src/cmap/connect.ts:514:14)
+      at Socket.<anonymous> (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/node_modules/mongodb/src/cmap/connect.ts:416:16)
+      at Object.onceWrapper (node:events:626:26)
+      at Socket.emit (node:events:511:28)
+      at Socket.emit (node:domain:489:12)
+      at emitErrorNT (node:internal/streams/destroy:151:8)
+      at emitErrorCloseNT (node:internal/streams/destroy:116:3)
+      at processTicksAndRejections (node:internal/process/task_queues:82:21) {
+    cause: AggregateError
+        at internalConnectMultiple (node:net:1102:18)
+        at afterConnectMultiple (node:net:1620:5) {
+      code: 'ECONNREFUSED',
+      [errors]: [
+        Error: connect ECONNREFUSED ::1:27017
+            at afterConnectMultiple (node:net:1607:16) {
+          errno: -61,
+          code: 'ECONNREFUSED',
+          syscall: 'connect',
+          address: '::1',
+          port: 27017
+        },
+        Error: connect ECONNREFUSED 127.0.0.1:27017
+            at afterConnectMultiple (node:net:1607:16) {
+          errno: -61,
+          code: 'ECONNREFUSED',
+          syscall: 'connect',
+          address: '127.0.0.1',
+          port: 27017
+        }
+      ]
+    },
+    [Symbol(errorLabels)]: Set(1) { 'ResetPool' }
+  },
+  reason: TopologyDescription {
+    type: 'Unknown',
+    servers: Map(1) {
+      'localhost:27017' => ServerDescription {
+        address: 'localhost:27017',
+        type: 'Unknown',
+        hosts: [],
+        passives: [],
+        arbiters: [],
+        tags: {},
+        minWireVersion: 0,
+        maxWireVersion: 0,
+        roundTripTime: -1,
+        lastUpdateTime: 1260693773,
+        lastWriteDate: 0,
+        error: MongoNetworkError
+            at connectionFailureError (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/node_modules/mongodb/src/cmap/connect.ts:514:14)
+            at Socket.<anonymous> (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/node_modules/mongodb/src/cmap/connect.ts:416:16)
+            at Object.onceWrapper (node:events:626:26)
+            at Socket.emit (node:events:511:28)
+            at Socket.emit (node:domain:489:12)
+            at emitErrorNT (node:internal/streams/destroy:151:8)
+            at emitErrorCloseNT (node:internal/streams/destroy:116:3)
+            at processTicksAndRejections (node:internal/process/task_queues:82:21) {
+          cause: AggregateError
+              at internalConnectMultiple (node:net:1102:18)
+              at afterConnectMultiple (node:net:1620:5) {
+            code: 'ECONNREFUSED',
+            [errors]: [
+              Error: connect ECONNREFUSED ::1:27017
+                  at afterConnectMultiple (node:net:1607:16) {
+                errno: -61,
+                code: 'ECONNREFUSED',
+                syscall: 'connect',
+                address: '::1',
+                port: 27017
+              },
+              Error: connect ECONNREFUSED 127.0.0.1:27017
+                  at afterConnectMultiple (node:net:1607:16) {
+                errno: -61,
+                code: 'ECONNREFUSED',
+                syscall: 'connect',
+                address: '127.0.0.1',
+                port: 27017
+              }
+            ]
+          },
+          [Symbol(errorLabels)]: Set(1) { 'ResetPool' }
+        },
+        topologyVersion: null,
+        setName: null,
+        setVersion: null,
+        electionId: null,
+        logicalSessionTimeoutMinutes: null,
+        primary: null,
+        me: null,
+        '$clusterTime': null
+      }
+    },
+    stale: false,
+    compatible: true,
+    heartbeatFrequencyMS: 10000,
+    localThresholdMS: 15,
+    setName: null,
+    maxElectionId: null,
+    maxSetVersion: null,
+    commonWireVersion: 0,
+    logicalSessionTimeoutMinutes: null
+  },
+  code: undefined,
+  level: 'error',
+  stack: 'MongooseServerSelectionError\n' +
+    '    at NativeConnection.Connection.openUri (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/lib/connection.js:825:32)\n' +
+    '    at /Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/lib/index.js:414:10\n' +
+    '    at /Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/lib/helpers/promiseOrCallback.js:41:5\n' +
+    '    at new Promise (<anonymous>)\n' +
+    '    at promiseOrCallback (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/lib/helpers/promiseOrCallback.js:40:10)\n' +
+    '    at Mongoose._promiseOrCallback (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/lib/index.js:1288:10)\n' +
+    '    at Mongoose.connect (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/lib/index.js:413:20)\n' +
+    '    at /Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/src/start/db.ts:10:29\n' +
+    '    at Generator.next (<anonymous>)\n' +
+    '    at /Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/src/start/db.ts:8:71',
+  timestamp: '2023-08-04 10:31:20'
+}
+{
+  message: 'Failed connecting to MongoDB',
+  cause: MongoNetworkError
+      at connectionFailureError (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/node_modules/mongodb/src/cmap/connect.ts:514:14)
+      at Socket.<anonymous> (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/node_modules/mongodb/src/cmap/connect.ts:416:16)
+      at Object.onceWrapper (node:events:626:26)
+      at Socket.emit (node:events:511:28)
+      at Socket.emit (node:domain:489:12)
+      at emitErrorNT (node:internal/streams/destroy:151:8)
+      at emitErrorCloseNT (node:internal/streams/destroy:116:3)
+      at processTicksAndRejections (node:internal/process/task_queues:82:21) {
+    cause: AggregateError
+        at internalConnectMultiple (node:net:1102:18)
+        at afterConnectMultiple (node:net:1620:5) {
+      code: 'ECONNREFUSED',
+      [errors]: [
+        Error: connect ECONNREFUSED ::1:27017
+            at afterConnectMultiple (node:net:1607:16) {
+          errno: -61,
+          code: 'ECONNREFUSED',
+          syscall: 'connect',
+          address: '::1',
+          port: 27017
+        },
+        Error: connect ECONNREFUSED 127.0.0.1:27017
+            at afterConnectMultiple (node:net:1607:16) {
+          errno: -61,
+          code: 'ECONNREFUSED',
+          syscall: 'connect',
+          address: '127.0.0.1',
+          port: 27017
+        }
+      ]
+    },
+    [Symbol(errorLabels)]: Set(1) { 'ResetPool' }
+  },
+  reason: TopologyDescription {
+    type: 'Unknown',
+    servers: Map(1) {
+      'localhost:27017' => ServerDescription {
+        address: 'localhost:27017',
+        type: 'Unknown',
+        hosts: [],
+        passives: [],
+        arbiters: [],
+        tags: {},
+        minWireVersion: 0,
+        maxWireVersion: 0,
+        roundTripTime: -1,
+        lastUpdateTime: 1260708307,
+        lastWriteDate: 0,
+        error: MongoNetworkError
+            at connectionFailureError (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/node_modules/mongodb/src/cmap/connect.ts:514:14)
+            at Socket.<anonymous> (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/node_modules/mongodb/src/cmap/connect.ts:416:16)
+            at Object.onceWrapper (node:events:626:26)
+            at Socket.emit (node:events:511:28)
+            at Socket.emit (node:domain:489:12)
+            at emitErrorNT (node:internal/streams/destroy:151:8)
+            at emitErrorCloseNT (node:internal/streams/destroy:116:3)
+            at processTicksAndRejections (node:internal/process/task_queues:82:21) {
+          cause: AggregateError
+              at internalConnectMultiple (node:net:1102:18)
+              at afterConnectMultiple (node:net:1620:5) {
+            code: 'ECONNREFUSED',
+            [errors]: [
+              Error: connect ECONNREFUSED ::1:27017
+                  at afterConnectMultiple (node:net:1607:16) {
+                errno: -61,
+                code: 'ECONNREFUSED',
+                syscall: 'connect',
+                address: '::1',
+                port: 27017
+              },
+              Error: connect ECONNREFUSED 127.0.0.1:27017
+                  at afterConnectMultiple (node:net:1607:16) {
+                errno: -61,
+                code: 'ECONNREFUSED',
+                syscall: 'connect',
+                address: '127.0.0.1',
+                port: 27017
+              }
+            ]
+          },
+          [Symbol(errorLabels)]: Set(1) { 'ResetPool' }
+        },
+        topologyVersion: null,
+        setName: null,
+        setVersion: null,
+        electionId: null,
+        logicalSessionTimeoutMinutes: null,
+        primary: null,
+        me: null,
+        '$clusterTime': null
+      }
+    },
+    stale: false,
+    compatible: true,
+    heartbeatFrequencyMS: 10000,
+    localThresholdMS: 15,
+    setName: null,
+    maxElectionId: null,
+    maxSetVersion: null,
+    commonWireVersion: 0,
+    logicalSessionTimeoutMinutes: null
+  },
+  code: undefined,
+  level: 'error',
+  stack: 'MongooseServerSelectionError\n' +
+    '    at NativeConnection.Connection.openUri (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/lib/connection.js:825:32)\n' +
+    '    at /Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/lib/index.js:414:10\n' +
+    '    at /Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/lib/helpers/promiseOrCallback.js:41:5\n' +
+    '    at new Promise (<anonymous>)\n' +
+    '    at promiseOrCallback (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/lib/helpers/promiseOrCallback.js:40:10)\n' +
+    '    at Mongoose._promiseOrCallback (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/lib/index.js:1288:10)\n' +
+    '    at Mongoose.connect (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/lib/index.js:413:20)\n' +
+    '    at /Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/src/start/db.ts:10:29\n' +
+    '    at Generator.next (<anonymous>)\n' +
+    '    at /Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/src/start/db.ts:8:71',
+  timestamp: '2023-08-04 10:31:35'
+}
+{
+  message: 'Failed connecting to MongoDB',
+  cause: MongoNetworkError
+      at connectionFailureError (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/node_modules/mongodb/src/cmap/connect.ts:514:14)
+      at Socket.<anonymous> (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/node_modules/mongodb/src/cmap/connect.ts:416:16)
+      at Object.onceWrapper (node:events:626:26)
+      at Socket.emit (node:events:511:28)
+      at Socket.emit (node:domain:489:12)
+      at emitErrorNT (node:internal/streams/destroy:151:8)
+      at emitErrorCloseNT (node:internal/streams/destroy:116:3)
+      at processTicksAndRejections (node:internal/process/task_queues:82:21) {
+    cause: AggregateError
+        at internalConnectMultiple (node:net:1102:18)
+        at afterConnectMultiple (node:net:1620:5) {
+      code: 'ECONNREFUSED',
+      [errors]: [
+        Error: connect ECONNREFUSED ::1:27017
+            at afterConnectMultiple (node:net:1607:16) {
+          errno: -61,
+          code: 'ECONNREFUSED',
+          syscall: 'connect',
+          address: '::1',
+          port: 27017
+        },
+        Error: connect ECONNREFUSED 127.0.0.1:27017
+            at afterConnectMultiple (node:net:1607:16) {
+          errno: -61,
+          code: 'ECONNREFUSED',
+          syscall: 'connect',
+          address: '127.0.0.1',
+          port: 27017
+        }
+      ]
+    },
+    [Symbol(errorLabels)]: Set(1) { 'ResetPool' }
+  },
+  reason: TopologyDescription {
+    type: 'Unknown',
+    servers: Map(1) {
+      'localhost:27017' => ServerDescription {
+        address: 'localhost:27017',
+        type: 'Unknown',
+        hosts: [],
+        passives: [],
+        arbiters: [],
+        tags: {},
+        minWireVersion: 0,
+        maxWireVersion: 0,
+        roundTripTime: -1,
+        lastUpdateTime: 1260936469,
+        lastWriteDate: 0,
+        error: MongoNetworkError
+            at connectionFailureError (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/node_modules/mongodb/src/cmap/connect.ts:514:14)
+            at Socket.<anonymous> (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/node_modules/mongodb/src/cmap/connect.ts:416:16)
+            at Object.onceWrapper (node:events:626:26)
+            at Socket.emit (node:events:511:28)
+            at Socket.emit (node:domain:489:12)
+            at emitErrorNT (node:internal/streams/destroy:151:8)
+            at emitErrorCloseNT (node:internal/streams/destroy:116:3)
+            at processTicksAndRejections (node:internal/process/task_queues:82:21) {
+          cause: AggregateError
+              at internalConnectMultiple (node:net:1102:18)
+              at afterConnectMultiple (node:net:1620:5) {
+            code: 'ECONNREFUSED',
+            [errors]: [
+              Error: connect ECONNREFUSED ::1:27017
+                  at afterConnectMultiple (node:net:1607:16) {
+                errno: -61,
+                code: 'ECONNREFUSED',
+                syscall: 'connect',
+                address: '::1',
+                port: 27017
+              },
+              Error: connect ECONNREFUSED 127.0.0.1:27017
+                  at afterConnectMultiple (node:net:1607:16) {
+                errno: -61,
+                code: 'ECONNREFUSED',
+                syscall: 'connect',
+                address: '127.0.0.1',
+                port: 27017
+              }
+            ]
+          },
+          [Symbol(errorLabels)]: Set(1) { 'ResetPool' }
+        },
+        topologyVersion: null,
+        setName: null,
+        setVersion: null,
+        electionId: null,
+        logicalSessionTimeoutMinutes: null,
+        primary: null,
+        me: null,
+        '$clusterTime': null
+      }
+    },
+    stale: false,
+    compatible: true,
+    heartbeatFrequencyMS: 10000,
+    localThresholdMS: 15,
+    setName: null,
+    maxElectionId: null,
+    maxSetVersion: null,
+    commonWireVersion: 0,
+    logicalSessionTimeoutMinutes: null
+  },
+  code: undefined,
+  level: 'error',
+  stack: 'MongooseServerSelectionError\n' +
+    '    at NativeConnection.Connection.openUri (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/lib/connection.js:825:32)\n' +
+    '    at /Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/lib/index.js:414:10\n' +
+    '    at /Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/lib/helpers/promiseOrCallback.js:41:5\n' +
+    '    at new Promise (<anonymous>)\n' +
+    '    at promiseOrCallback (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/lib/helpers/promiseOrCallback.js:40:10)\n' +
+    '    at Mongoose._promiseOrCallback (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/lib/index.js:1288:10)\n' +
+    '    at Mongoose.connect (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongoose/lib/index.js:413:20)\n' +
+    '    at /Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/src/start/db.ts:10:29\n' +
+    '    at Generator.next (<anonymous>)\n' +
+    '    at /Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/src/start/db.ts:8:71',
+  timestamp: '2023-08-04 10:35:23'
+}
+{
+  level: 'error',
+  message: "Internal server error Cannot read properties of undefined (reading '_id')",
+  stack: "TypeError: Cannot read properties of undefined (reading '_id')\n" +
+    '    at /Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/src/controllers/groups.ctrl.ts:33:34\n' +
+    '    at Generator.next (<anonymous>)\n' +
+    '    at /Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/src/controllers/groups.ctrl.ts:8:71\n' +
+    '    at new Promise (<anonymous>)\n' +
+    '    at __awaiter (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/src/controllers/groups.ctrl.ts:4:12)\n' +
+    '    at createGroup (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/src/controllers/groups.ctrl.ts:27:63)\n' +
+    '    at newFn (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/express-async-errors/index.js:16:20)\n' +
+    '    at Layer.handle [as handle_request] (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/express/lib/router/layer.js:95:5)\n' +
+    '    at next (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/express/lib/router/route.js:144:13)\n' +
+    '    at /Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/src/middleware/validation.ts:15:5',
+  timestamp: '2023-08-04 12:20:08'
+}

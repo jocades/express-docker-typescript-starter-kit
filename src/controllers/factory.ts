@@ -1,11 +1,18 @@
 import { Response, RequestHandler } from 'express'
 import { Model } from 'mongoose'
 
-type IResponse = (res: Response, query: object | object[] | null, props?: object) => Response
+type IResponse = (
+  res: Response,
+  query: object | object[] | null,
+  props?: object
+) => Response
+
 type ReqHandler = (Model: Model<any, {}, any>) => RequestHandler
 
 export const notFound = (res: Response, doc?: string) => {
-  return res.status(404).send({ message: `No ${doc ?? 'object'} found with the given ID.` })
+  return res
+    .status(404)
+    .send({ message: `No ${doc ?? 'object'} found with the given ID.` })
 }
 
 export const response: IResponse = (res, query, props) => {

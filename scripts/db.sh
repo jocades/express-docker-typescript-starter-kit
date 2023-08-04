@@ -1,29 +1,16 @@
 #!/usr/bin/env bash
 set -e
 
-# Remove container on exit
 function clean() {
-	docker-compose -f docker/docker-compose.db.yml down
-	trap '' EXIT INT TERM
-	exit $err
+    docker stop mongo
+    trap '' EXIT INT TERM
+    exit $err
 }
 
 trap clean SIGINT EXIT
 
-# Make sure docker-compose is installed
-if ! hash docker-compose 2>/dev/null; then
-	echo -e '\033[0;31mPlease install docker-compose\033[0m'
-	exit 1
-fi
+docker run --rm -d -p 27017:27017 -h $(hostname) -v $(pwd)/data:/data/db --name mongo mongo:5.0.3 --replSet=test &&
+    sleep 4 &&
+    docker exec mongo mongo --eval "rs.initiate();"
 
-# Create dev network if it doesn't exist
-if [ -z "$(docker network ls -qf name=^entropic$)" ]; then
-	echo 'Creating network'
-	docker network create entropic >/dev/null
-fi
-
-# Run mongo container
-COMPOSE_HTTP_TIMEOUT=120 docker-compose -f docker/docker-compose.db.yml up -d --force-recreate
-
-# Run server locally
 npm run dev
