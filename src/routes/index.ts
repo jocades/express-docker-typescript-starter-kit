@@ -1,4 +1,4 @@
-export { default as authR } from './auth.routes'
-export { default as userR } from './user.routes'
-export { default as groupR } from './group.routes'
-export { default as contactR } from './contact.routes'
+export { default as authRouter } from './auth.route'
+export { default as usersRouter } from './users.route'
+export { default as groupsRouter } from './groups.route'
+export { default as contactsRouter } from './contacts.route'

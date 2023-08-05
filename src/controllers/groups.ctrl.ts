@@ -1,5 +1,5 @@
 import { RequestHandler } from 'express'
-import Group from '../models/group'
+import Group from '../models/group.model'
 import { notFound } from './factory'
 
 interface Query {

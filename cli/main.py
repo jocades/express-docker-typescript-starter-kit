@@ -15,10 +15,11 @@ cwd = Path.cwd()
 def route(
     name: str,
     methods: Annotated[Optional[list[str]], typer.Argument(help="Add specific http methods")] = None,
+    model: Annotated[bool, typer.Option('-m', '--model', help="Create a model")] = False,
 ):
     print(name, methods)
     writer = Writer(name)
-    writer.write(methods)
+    writer.write(methods, model)
     typer.echo(f"Created controller: {writer.controller_path}")
 
 

@@ -1,5 +1,5 @@
 import { RequestHandler } from 'express'
-import User from '../models/user'
+import User from '../models/user.model'
 import { notFound, response } from './factory'
 
 export const getUser: RequestHandler = async (req, res) => {

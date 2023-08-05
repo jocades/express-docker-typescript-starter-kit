@@ -1,7 +1,7 @@
 import request from 'supertest'
 import app from '../../../src/start/app'
 import db from '../../../src/start/db'
-import User from '../../../src/models/user'
+import User from '../../../src/models/user.model'
 
 const endpoint = '/api/auth'
 
@@ -24,7 +24,8 @@ describe(endpoint, () => {
       password = '123456'
     })
 
-    const exec = () => request(app).post(`${endpoint}/register`).send({ email, password })
+    const exec = () =>
+      request(app).post(`${endpoint}/register`).send({ email, password })
 
     it('should create the user if the email and password are valid', async () => {
       await exec()
@@ -129,7 +130,9 @@ describe(endpoint, () => {
       const user = new User({ email, password, auth: rToken })
       await user.save()
 
-      const res = await request(app).post(`${endpoint}/refresh`).send({ refresh: 'x' })
+      const res = await request(app)
+        .post(`${endpoint}/refresh`)
+        .send({ refresh: 'x' })
 
       expect(res.status).toBe(403)
     })

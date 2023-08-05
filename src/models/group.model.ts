@@ -1,6 +1,5 @@
 import { Schema, model, Types, Model } from 'mongoose'
 const { ObjectId } = Schema.Types
-import Joi from 'joi'
 import { z } from 'zod'
 
 // Not recommended to extend from the mongoose Document interface
