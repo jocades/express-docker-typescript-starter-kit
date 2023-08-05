@@ -2,8 +2,18 @@ import { RequestHandler } from 'express'
 import Group from '../models/group'
 import { notFound } from './factory'
 
-export const listGroups: RequestHandler = async (req, res) => {
-  const { lat, long, maxDistance } = req.query
+interface Query {
+  lat?: number
+  long?: number
+  maxDistance?: number
+  order?: 'created' | 'updated'
+}
+
+export const listGroups: RequestHandler<{}, {}, {}, Query> = async (
+  req,
+  res
+) => {
+  const { lat, long, maxDistance, order } = req.query
 
   if (lat && long) {
     const groups = await Group.find({
@@ -18,6 +28,18 @@ export const listGroups: RequestHandler = async (req, res) => {
       },
     })
     return res.send(groups)
+  }
+
+  if (order) {
+    if (order === 'created') {
+      const groups = await Group.find().sort({ createdAt: -1 })
+      return res.send(groups)
+    }
+
+    if (order === 'updated') {
+      const groups = await Group.find().sort({ updatedAt: -1 })
+      return res.send(groups)
+    }
   }
 
   const groups = await Group.find().select('-location')

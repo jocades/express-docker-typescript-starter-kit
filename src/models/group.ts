@@ -57,6 +57,6 @@ export default model<IGroup, GroupDoc>('Group', groupSchema)
 export const groupBody = z.object({
   name: z.string().max(255),
   description: z.string().max(255),
-  privacy: z.enum(['public', 'private']),
+  privacy: z.enum(['public', 'private']).optional(),
   location: z.array(z.number()).length(2).optional(),
 })

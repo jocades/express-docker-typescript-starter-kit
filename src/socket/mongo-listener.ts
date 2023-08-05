@@ -16,7 +16,7 @@ export async function mongoDBListener(io: SocketServer) {
     const changeStream = groups.watch([], { fullDocument: 'updateLookup' })
 
     changeStream.on('change', (change) => {
-      console.log('Change occured in DB:', change)
+      // console.log('Change occured in DB:', change)
       io.emit('groups:change', change)
     })
   } catch (err) {

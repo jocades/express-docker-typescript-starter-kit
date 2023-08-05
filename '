@@ -1,0 +1,56 @@
+from pathlib import Path
+
+
+cwd = Path.cwd()
+src = cwd / 'src'
+
+actions = {
+    'list': 'list',
+    'get': 'get',
+    'put': 'update',
+    'post': 'create',
+    'delete': 'delete'
+}
+
+
+class Writer:
+    def __init__(self, name: str):
+        self.name = name
+        self.controller_path = src / 'controllers' / f"{name.lower()}s.ctrl.ts"
+        self.route_path = src / 'routes' / f"{name.lower()}s.route.ts"
+        self.model_path = src / 'models' / f"{name.lower()}.model.ts"
+        self.app_path = src / 'start' / 'app.ts'
+
+    def write(self, methods: list[str] = []):
+        if not methods:
+            methods = 'list post get put delete'.split()
+        else:
+            methods = [method.lower() for method in methods]
+
+        self.controller_path.write_text(self.controller_template(methods))
+        # self.route_path.write_text(self.route_template())
+
+    def controller_template(self, methods: list[str]):
+        template = "import { RequestHandler } from 'express'\n"
+        for method in methods:
+            action = actions[method]
+            controller = f"{action}{self.name.capitalize()}{'s' if action == 'list' else None}"
+
+            template += f"""
+export const {controller}: RequestHandler = (req, res) => {{
+  res.send('{method.upper()} {self.name}')
+}}
+"""
+        return template
+
+    def route_template(self):
+
+        return f"""import {{ Router }} from 'express'
+import {{ list{self.name.capitalize()}s }} from '../controllers/{self.name.lower()}s.ctrl'
+
+const router = Router()
+
+router.get('/', list{self.name.capitalize()}s)
+
+export default router
+"""
