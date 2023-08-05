@@ -1,7 +1,6 @@
 import { RequestHandler } from 'express'
 import Contact from '../models/contact.model'
 
-
 export const listContacts: RequestHandler = (req, res) => {
   res.send('LIST contact')
 }

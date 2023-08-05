@@ -1,3 +1,4 @@
+import re
 from pathlib import Path
 
 
@@ -49,6 +50,7 @@ class Writer:
             self.model_path.write_text(self.model_template())
 
         self.append_to_index()
+        self.append_to_app()
 
     def controller_template(self, methods: list[str], model: bool):
         template = "import { RequestHandler } from 'express'\n"
@@ -108,49 +110,20 @@ export const {self.name}Body = z.object({{
 
     def append_to_index(self):
         content = self.routes_index.read_text()
-        content += f"export {{ default as {self.name}Routes }} from './{self.name.lower()}s.route'\n"
+        content += f"export {{ default as {self.name}sRouter }} from './{self.name.lower()}s.route'\n"
         self.routes_index.write_text(content)
 
-
-# import express from 'express'
-# import cors from 'cors'
-# import helmet from 'helmet'
-# import morgan from 'morgan'
-#
-# import { error } from '../middleware'
-# import { authRouter, usersRouter, groupsRouter } from '../routes'
-#
-# const app = express()
-#
-# // Middleware
-# app.use(cors())
-# app.use(helmet())
-# app.use(express.json())
-# app.use(express.static('src/public'))
-# app.use(express.urlencoded({ extended: true }))
-# app.get('env').includes('dev') && app.use(morgan('dev'))
-#
-# // Routes
-# app.get('/api/ping', (_, res) => res.send('pong'))
-# app.use('/api/auth', authRouter)
-# app.use('/api/users', usersRouter)
-# app.use('/api/groups', groupsRouter)
-#
-# app.use(error)
-#
-# export default app
-
-
     def append_to_app(self):
-        # add it after the last app.use(..., router)
-        with self.app_path.open() as f:
-            lines = f.readlines()
+        content = self.app_path.read_text()
+        content = re.sub(r"import { (.*) } from '../routes'",
+                         r"import { \1, " + self.name + r"sRouter } from '../routes'", content)
+        content_lines = content.splitlines(keepends=True)
 
         i = 0
-        for i, line in enumerate(lines):
+        for i, line in enumerate(content_lines):
             if line.startswith('app.use(error)'):
                 break
 
-        lines.insert(i, f"app.use('/api/{self.name.lower()}s', {self.name}Routes)\n")
+        content_lines.insert(i - 1, f"app.use('/api/{self.name.lower()}s', {self.name}sRouter)\n")
 
-        self.app_path.write_text(''.join(lines))
+        self.app_path.write_text(''.join(content_lines))

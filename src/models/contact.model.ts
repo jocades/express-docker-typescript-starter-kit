@@ -2,7 +2,6 @@ import { Schema, model, Types, Model } from 'mongoose'
 const { ObjectId } = Types
 import { z } from 'zod'
 
-
 export interface IContact extends BaseModel {
   name: string
 }

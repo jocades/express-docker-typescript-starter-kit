@@ -3,11 +3,12 @@ import bcrypt from 'bcrypt'
 import jwt from 'jsonwebtoken'
 import _ from 'lodash'
 import { decrypt } from '../utils/hash'
-import User, { validateUser } from '../models/user'
+import User, { validateUser } from '../models/user.model'
 
 type ReqHandler = RequestHandler<{}, {}, Credentials & Tokens>
 
-const sendMsg = (res: Response, message: string) => res.status(400).send({ message })
+const sendMsg = (res: Response, message: string) =>
+  res.status(400).send({ message })
 
 export const registerUser: ReqHandler = async (req, res) => {
   const { email, password } = req.body
