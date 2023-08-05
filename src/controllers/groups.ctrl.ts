@@ -1,50 +1,60 @@
 import { RequestHandler } from 'express'
+import { z } from 'zod'
 import Group from '../models/group.model'
 import { notFound } from './factory'
+import { parseQuery } from '../middleware'
 
-interface Query {
-  lat?: number
-  long?: number
-  maxDistance?: number
-  order?: 'created' | 'updated'
-}
+const coord = z
+  .string()
+  .regex(/^[-+]?([1-8]?\d(\.\d+)?|90(\.0+)?)$/)
+  .transform(Number)
+  .optional()
 
-export const listGroups: RequestHandler<{}, {}, {}, Query> = async (
-  req,
-  res
-) => {
-  const { lat, long, maxDistance, order } = req.query
+const querySchema = z.object({
+  lat: coord,
+  long: coord,
+  maxDistance: z.string().regex(/^\d+$/).transform(Number).optional(),
+  order: z.enum(['created', 'updated']).optional(),
+})
 
-  if (lat && long) {
-    const groups = await Group.find({
-      location: {
-        $near: {
-          $geometry: {
-            type: 'Point',
-            coordinates: [long, lat],
+export const listGroups: RequestHandler[] = [
+  parseQuery(querySchema),
+  async (req, res) => {
+    const { lat, long, maxDistance, order } = req.query
+
+    console.log(req.query)
+
+    if (lat && long) {
+      const groups = await Group.find({
+        location: {
+          $near: {
+            $geometry: {
+              type: 'Point',
+              coordinates: [long, lat],
+            },
+            $maxDistance: maxDistance || 100000, // in meters
           },
-          $maxDistance: maxDistance || 100000, // in meters
         },
-      },
-    })
-    return res.send(groups)
-  }
-
-  if (order) {
-    if (order === 'created') {
-      const groups = await Group.find().sort({ createdAt: -1 })
+      })
       return res.send(groups)
     }
 
-    if (order === 'updated') {
-      const groups = await Group.find().sort({ updatedAt: -1 })
-      return res.send(groups)
-    }
-  }
+    if (order) {
+      if (order === 'created') {
+        const groups = await Group.find().sort({ createdAt: -1 })
+        return res.send(groups)
+      }
 
-  const groups = await Group.find().select('-location')
-  res.send(groups)
-}
+      if (order === 'updated') {
+        const groups = await Group.find().sort({ updatedAt: -1 })
+        return res.send(groups)
+      }
+    }
+
+    const groups = await Group.find().select('-location')
+    res.send(groups)
+  },
+]
 
 export const createGroup: RequestHandler = async (req, res) => {
   const location = req.body.location

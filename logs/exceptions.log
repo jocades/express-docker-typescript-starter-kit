@@ -5048,3 +5048,651 @@
   ],
   timestamp: '2023-08-04 12:39:05'
 }
+{
+  error: [96msrc/routes/users.route.ts[0m:[93m2[0m:[93m18[0m - [91merror[0m[90m TS2307: [0mCannot find module '../models/user' or its corresponding type declarations.
+  
+  [7m2[0m import User from '../models/user'
+  [7m [0m [91m                 ~~~~~~~~~~~~~~~~[0m
+  ,
+  level: 'error',
+  message: 'uncaughtException: ⨯ Unable to compile TypeScript:\n' +
+    "\x1B[96msrc/routes/users.route.ts\x1B[0m:\x1B[93m2\x1B[0m:\x1B[93m18\x1B[0m - \x1B[91merror\x1B[0m\x1B[90m TS2307: \x1B[0mCannot find module '../models/user' or its corresponding type declarations.\n" +
+    '\n' +
+    "\x1B[7m2\x1B[0m import User from '../models/user'\n" +
+    '\x1B[7m \x1B[0m \x1B[91m                 ~~~~~~~~~~~~~~~~\x1B[0m\n' +
+    '\n' +
+    'TSError: ⨯ Unable to compile TypeScript:\n' +
+    "\x1B[96msrc/routes/users.route.ts\x1B[0m:\x1B[93m2\x1B[0m:\x1B[93m18\x1B[0m - \x1B[91merror\x1B[0m\x1B[90m TS2307: \x1B[0mCannot find module '../models/user' or its corresponding type declarations.\n" +
+    '\n' +
+    "\x1B[7m2\x1B[0m import User from '../models/user'\n" +
+    '\x1B[7m \x1B[0m \x1B[91m                 ~~~~~~~~~~~~~~~~\x1B[0m\n' +
+    '\n' +
+    '    at createTSError (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts:859:12)\n' +
+    '    at reportTSError (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts:863:19)\n' +
+    '    at getOutput (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts:1077:36)\n' +
+    '    at Object.compile (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts:1433:41)\n' +
+    '    at Module.m._compile (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts:1617:30)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1309:10)\n' +
+    '    at Object.require.extensions.<computed> [as .ts] (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts:1621:12)\n' +
+    '    at Module.load (node:internal/modules/cjs/loader:1113:32)\n' +
+    '    at Function.Module._load (node:internal/modules/cjs/loader:960:12)\n' +
+    '    at Module.require (node:internal/modules/cjs/loader:1137:19)',
+  stack: 'TSError: ⨯ Unable to compile TypeScript:\n' +
+    "\x1B[96msrc/routes/users.route.ts\x1B[0m:\x1B[93m2\x1B[0m:\x1B[93m18\x1B[0m - \x1B[91merror\x1B[0m\x1B[90m TS2307: \x1B[0mCannot find module '../models/user' or its corresponding type declarations.\n" +
+    '\n' +
+    "\x1B[7m2\x1B[0m import User from '../models/user'\n" +
+    '\x1B[7m \x1B[0m \x1B[91m                 ~~~~~~~~~~~~~~~~\x1B[0m\n' +
+    '\n' +
+    '    at createTSError (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts:859:12)\n' +
+    '    at reportTSError (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts:863:19)\n' +
+    '    at getOutput (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts:1077:36)\n' +
+    '    at Object.compile (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts:1433:41)\n' +
+    '    at Module.m._compile (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts:1617:30)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1309:10)\n' +
+    '    at Object.require.extensions.<computed> [as .ts] (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts:1621:12)\n' +
+    '    at Module.load (node:internal/modules/cjs/loader:1113:32)\n' +
+    '    at Function.Module._load (node:internal/modules/cjs/loader:960:12)\n' +
+    '    at Module.require (node:internal/modules/cjs/loader:1137:19)',
+  exception: true,
+  date: 'Sat Aug 05 2023 15:19:26 GMT+0200 (Central European Summer Time)',
+  process: {
+    pid: 83497,
+    uid: 501,
+    gid: 20,
+    cwd: '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit',
+    execPath: '/opt/homebrew/Cellar/node/20.3.0/bin/node',
+    version: 'v20.3.0',
+    argv: [
+      '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/.bin/ts-node',
+      '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/src/server.ts'
+    ],
+    memoryUsage: {
+      rss: 356614144,
+      heapTotal: 246038528,
+      heapUsed: 222385024,
+      external: 25890333,
+      arrayBuffers: 23069404
+    }
+  },
+  os: {
+    loadavg: [ 1.61376953125, 1.4443359375, 1.4814453125 ],
+    uptime: 1364374
+  },
+  trace: [
+    {
+      column: 12,
+      file: '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts',
+      function: 'createTSError',
+      line: 859,
+      method: null,
+      native: false
+    },
+    {
+      column: 19,
+      file: '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts',
+      function: 'reportTSError',
+      line: 863,
+      method: null,
+      native: false
+    },
+    {
+      column: 36,
+      file: '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts',
+      function: 'getOutput',
+      line: 1077,
+      method: null,
+      native: false
+    },
+    {
+      column: 41,
+      file: '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts',
+      function: 'Object.compile',
+      line: 1433,
+      method: 'compile',
+      native: false
+    },
+    {
+      column: 30,
+      file: '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts',
+      function: 'Module.m._compile',
+      line: 1617,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 10,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._extensions..js',
+      line: 1309,
+      method: '.js',
+      native: false
+    },
+    {
+      column: 12,
+      file: '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts',
+      function: 'Object.require.extensions.<computed> [as .ts]',
+      line: 1621,
+      method: 'ts]',
+      native: false
+    },
+    {
+      column: 32,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module.load',
+      line: 1113,
+      method: 'load',
+      native: false
+    },
+    {
+      column: 12,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._load',
+      line: 960,
+      method: '_load',
+      native: false
+    },
+    {
+      column: 19,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module.require',
+      line: 1137,
+      method: 'require',
+      native: false
+    }
+  ],
+  timestamp: '2023-08-05 15:19:26'
+}
+{
+  error: [96msrc/routes/users.route.ts[0m:[93m2[0m:[93m18[0m - [91merror[0m[90m TS2307: [0mCannot find module '../models/user' or its corresponding type declarations.
+  
+  [7m2[0m import User from '../models/user'
+  [7m [0m [91m                 ~~~~~~~~~~~~~~~~[0m
+  ,
+  level: 'error',
+  message: 'uncaughtException: ⨯ Unable to compile TypeScript:\n' +
+    "\x1B[96msrc/routes/users.route.ts\x1B[0m:\x1B[93m2\x1B[0m:\x1B[93m18\x1B[0m - \x1B[91merror\x1B[0m\x1B[90m TS2307: \x1B[0mCannot find module '../models/user' or its corresponding type declarations.\n" +
+    '\n' +
+    "\x1B[7m2\x1B[0m import User from '../models/user'\n" +
+    '\x1B[7m \x1B[0m \x1B[91m                 ~~~~~~~~~~~~~~~~\x1B[0m\n' +
+    '\n' +
+    'TSError: ⨯ Unable to compile TypeScript:\n' +
+    "\x1B[96msrc/routes/users.route.ts\x1B[0m:\x1B[93m2\x1B[0m:\x1B[93m18\x1B[0m - \x1B[91merror\x1B[0m\x1B[90m TS2307: \x1B[0mCannot find module '../models/user' or its corresponding type declarations.\n" +
+    '\n' +
+    "\x1B[7m2\x1B[0m import User from '../models/user'\n" +
+    '\x1B[7m \x1B[0m \x1B[91m                 ~~~~~~~~~~~~~~~~\x1B[0m\n' +
+    '\n' +
+    '    at createTSError (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts:859:12)\n' +
+    '    at reportTSError (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts:863:19)\n' +
+    '    at getOutput (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts:1077:36)\n' +
+    '    at Object.compile (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts:1433:41)\n' +
+    '    at Module.m._compile (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts:1617:30)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1309:10)\n' +
+    '    at Object.require.extensions.<computed> [as .ts] (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts:1621:12)\n' +
+    '    at Module.load (node:internal/modules/cjs/loader:1113:32)\n' +
+    '    at Function.Module._load (node:internal/modules/cjs/loader:960:12)\n' +
+    '    at Module.require (node:internal/modules/cjs/loader:1137:19)',
+  stack: 'TSError: ⨯ Unable to compile TypeScript:\n' +
+    "\x1B[96msrc/routes/users.route.ts\x1B[0m:\x1B[93m2\x1B[0m:\x1B[93m18\x1B[0m - \x1B[91merror\x1B[0m\x1B[90m TS2307: \x1B[0mCannot find module '../models/user' or its corresponding type declarations.\n" +
+    '\n' +
+    "\x1B[7m2\x1B[0m import User from '../models/user'\n" +
+    '\x1B[7m \x1B[0m \x1B[91m                 ~~~~~~~~~~~~~~~~\x1B[0m\n' +
+    '\n' +
+    '    at createTSError (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts:859:12)\n' +
+    '    at reportTSError (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts:863:19)\n' +
+    '    at getOutput (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts:1077:36)\n' +
+    '    at Object.compile (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts:1433:41)\n' +
+    '    at Module.m._compile (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts:1617:30)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1309:10)\n' +
+    '    at Object.require.extensions.<computed> [as .ts] (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts:1621:12)\n' +
+    '    at Module.load (node:internal/modules/cjs/loader:1113:32)\n' +
+    '    at Function.Module._load (node:internal/modules/cjs/loader:960:12)\n' +
+    '    at Module.require (node:internal/modules/cjs/loader:1137:19)',
+  exception: true,
+  date: 'Sat Aug 05 2023 15:19:26 GMT+0200 (Central European Summer Time)',
+  process: {
+    pid: 83497,
+    uid: 501,
+    gid: 20,
+    cwd: '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit',
+    execPath: '/opt/homebrew/Cellar/node/20.3.0/bin/node',
+    version: 'v20.3.0',
+    argv: [
+      '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/.bin/ts-node',
+      '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/src/server.ts'
+    ],
+    memoryUsage: {
+      rss: 356614144,
+      heapTotal: 246038528,
+      heapUsed: 222385024,
+      external: 25890333,
+      arrayBuffers: 23069404
+    }
+  },
+  os: {
+    loadavg: [ 1.61376953125, 1.4443359375, 1.4814453125 ],
+    uptime: 1364374
+  },
+  trace: [
+    {
+      column: 12,
+      file: '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts',
+      function: 'createTSError',
+      line: 859,
+      method: null,
+      native: false
+    },
+    {
+      column: 19,
+      file: '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts',
+      function: 'reportTSError',
+      line: 863,
+      method: null,
+      native: false
+    },
+    {
+      column: 36,
+      file: '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts',
+      function: 'getOutput',
+      line: 1077,
+      method: null,
+      native: false
+    },
+    {
+      column: 41,
+      file: '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts',
+      function: 'Object.compile',
+      line: 1433,
+      method: 'compile',
+      native: false
+    },
+    {
+      column: 30,
+      file: '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts',
+      function: 'Module.m._compile',
+      line: 1617,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 10,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._extensions..js',
+      line: 1309,
+      method: '.js',
+      native: false
+    },
+    {
+      column: 12,
+      file: '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts',
+      function: 'Object.require.extensions.<computed> [as .ts]',
+      line: 1621,
+      method: 'ts]',
+      native: false
+    },
+    {
+      column: 32,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module.load',
+      line: 1113,
+      method: 'load',
+      native: false
+    },
+    {
+      column: 12,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._load',
+      line: 960,
+      method: '_load',
+      native: false
+    },
+    {
+      column: 19,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module.require',
+      line: 1137,
+      method: 'require',
+      native: false
+    }
+  ],
+  timestamp: '2023-08-05 15:19:26'
+}
+{
+  error: [96msrc/start/app.ts[0m:[93m7[0m:[93m49[0m - [91merror[0m[90m TS2305: [0mModule '"../routes"' has no exported member 'contactsRouter'.
+  
+  [7m7[0m import { authRouter, usersRouter, groupsRouter, contactsRouter, booksRouter } from '../routes'
+  [7m [0m [91m                                                ~~~~~~~~~~~~~~[0m
+  [96msrc/start/app.ts[0m:[93m7[0m:[93m65[0m - [91merror[0m[90m TS2305: [0mModule '"../routes"' has no exported member 'booksRouter'.
+  
+  [7m7[0m import { authRouter, usersRouter, groupsRouter, contactsRouter, booksRouter } from '../routes'
+  [7m [0m [91m                                                                ~~~~~~~~~~~[0m
+  ,
+  level: 'error',
+  message: 'uncaughtException: ⨯ Unable to compile TypeScript:\n' +
+    `\x1B[96msrc/start/app.ts\x1B[0m:\x1B[93m7\x1B[0m:\x1B[93m49\x1B[0m - \x1B[91merror\x1B[0m\x1B[90m TS2305: \x1B[0mModule '"../routes"' has no exported member 'contactsRouter'.\n` +
+    '\n' +
+    "\x1B[7m7\x1B[0m import { authRouter, usersRouter, groupsRouter, contactsRouter, booksRouter } from '../routes'\n" +
+    '\x1B[7m \x1B[0m \x1B[91m                                                ~~~~~~~~~~~~~~\x1B[0m\n' +
+    `\x1B[96msrc/start/app.ts\x1B[0m:\x1B[93m7\x1B[0m:\x1B[93m65\x1B[0m - \x1B[91merror\x1B[0m\x1B[90m TS2305: \x1B[0mModule '"../routes"' has no exported member 'booksRouter'.\n` +
+    '\n' +
+    "\x1B[7m7\x1B[0m import { authRouter, usersRouter, groupsRouter, contactsRouter, booksRouter } from '../routes'\n" +
+    '\x1B[7m \x1B[0m \x1B[91m                                                                ~~~~~~~~~~~\x1B[0m\n' +
+    '\n' +
+    'TSError: ⨯ Unable to compile TypeScript:\n' +
+    `\x1B[96msrc/start/app.ts\x1B[0m:\x1B[93m7\x1B[0m:\x1B[93m49\x1B[0m - \x1B[91merror\x1B[0m\x1B[90m TS2305: \x1B[0mModule '"../routes"' has no exported member 'contactsRouter'.\n` +
+    '\n' +
+    "\x1B[7m7\x1B[0m import { authRouter, usersRouter, groupsRouter, contactsRouter, booksRouter } from '../routes'\n" +
+    '\x1B[7m \x1B[0m \x1B[91m                                                ~~~~~~~~~~~~~~\x1B[0m\n' +
+    `\x1B[96msrc/start/app.ts\x1B[0m:\x1B[93m7\x1B[0m:\x1B[93m65\x1B[0m - \x1B[91merror\x1B[0m\x1B[90m TS2305: \x1B[0mModule '"../routes"' has no exported member 'booksRouter'.\n` +
+    '\n' +
+    "\x1B[7m7\x1B[0m import { authRouter, usersRouter, groupsRouter, contactsRouter, booksRouter } from '../routes'\n" +
+    '\x1B[7m \x1B[0m \x1B[91m                                                                ~~~~~~~~~~~\x1B[0m\n' +
+    '\n' +
+    '    at createTSError (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts:859:12)\n' +
+    '    at reportTSError (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts:863:19)\n' +
+    '    at getOutput (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts:1077:36)\n' +
+    '    at Object.compile (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts:1433:41)\n' +
+    '    at Module.m._compile (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts:1617:30)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1309:10)\n' +
+    '    at Object.require.extensions.<computed> [as .ts] (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts:1621:12)\n' +
+    '    at Module.load (node:internal/modules/cjs/loader:1113:32)\n' +
+    '    at Function.Module._load (node:internal/modules/cjs/loader:960:12)\n' +
+    '    at Module.require (node:internal/modules/cjs/loader:1137:19)',
+  stack: 'TSError: ⨯ Unable to compile TypeScript:\n' +
+    `\x1B[96msrc/start/app.ts\x1B[0m:\x1B[93m7\x1B[0m:\x1B[93m49\x1B[0m - \x1B[91merror\x1B[0m\x1B[90m TS2305: \x1B[0mModule '"../routes"' has no exported member 'contactsRouter'.\n` +
+    '\n' +
+    "\x1B[7m7\x1B[0m import { authRouter, usersRouter, groupsRouter, contactsRouter, booksRouter } from '../routes'\n" +
+    '\x1B[7m \x1B[0m \x1B[91m                                                ~~~~~~~~~~~~~~\x1B[0m\n' +
+    `\x1B[96msrc/start/app.ts\x1B[0m:\x1B[93m7\x1B[0m:\x1B[93m65\x1B[0m - \x1B[91merror\x1B[0m\x1B[90m TS2305: \x1B[0mModule '"../routes"' has no exported member 'booksRouter'.\n` +
+    '\n' +
+    "\x1B[7m7\x1B[0m import { authRouter, usersRouter, groupsRouter, contactsRouter, booksRouter } from '../routes'\n" +
+    '\x1B[7m \x1B[0m \x1B[91m                                                                ~~~~~~~~~~~\x1B[0m\n' +
+    '\n' +
+    '    at createTSError (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts:859:12)\n' +
+    '    at reportTSError (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts:863:19)\n' +
+    '    at getOutput (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts:1077:36)\n' +
+    '    at Object.compile (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts:1433:41)\n' +
+    '    at Module.m._compile (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts:1617:30)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1309:10)\n' +
+    '    at Object.require.extensions.<computed> [as .ts] (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts:1621:12)\n' +
+    '    at Module.load (node:internal/modules/cjs/loader:1113:32)\n' +
+    '    at Function.Module._load (node:internal/modules/cjs/loader:960:12)\n' +
+    '    at Module.require (node:internal/modules/cjs/loader:1137:19)',
+  exception: true,
+  date: 'Sat Aug 05 2023 21:09:55 GMT+0200 (Central European Summer Time)',
+  process: {
+    pid: 89229,
+    uid: 501,
+    gid: 20,
+    cwd: '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit',
+    execPath: '/opt/homebrew/Cellar/node/20.3.0/bin/node',
+    version: 'v20.3.0',
+    argv: [
+      '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/.bin/ts-node',
+      '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/src/server.ts'
+    ],
+    memoryUsage: {
+      rss: 336510976,
+      heapTotal: 224247808,
+      heapUsed: 195436016,
+      external: 25731795,
+      arrayBuffers: 22910866
+    }
+  },
+  os: {
+    loadavg: [ 1.6455078125, 1.57568359375, 1.60595703125 ],
+    uptime: 1385403
+  },
+  trace: [
+    {
+      column: 12,
+      file: '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts',
+      function: 'createTSError',
+      line: 859,
+      method: null,
+      native: false
+    },
+    {
+      column: 19,
+      file: '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts',
+      function: 'reportTSError',
+      line: 863,
+      method: null,
+      native: false
+    },
+    {
+      column: 36,
+      file: '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts',
+      function: 'getOutput',
+      line: 1077,
+      method: null,
+      native: false
+    },
+    {
+      column: 41,
+      file: '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts',
+      function: 'Object.compile',
+      line: 1433,
+      method: 'compile',
+      native: false
+    },
+    {
+      column: 30,
+      file: '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts',
+      function: 'Module.m._compile',
+      line: 1617,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 10,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._extensions..js',
+      line: 1309,
+      method: '.js',
+      native: false
+    },
+    {
+      column: 12,
+      file: '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts',
+      function: 'Object.require.extensions.<computed> [as .ts]',
+      line: 1621,
+      method: 'ts]',
+      native: false
+    },
+    {
+      column: 32,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module.load',
+      line: 1113,
+      method: 'load',
+      native: false
+    },
+    {
+      column: 12,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._load',
+      line: 960,
+      method: '_load',
+      native: false
+    },
+    {
+      column: 19,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module.require',
+      line: 1137,
+      method: 'require',
+      native: false
+    }
+  ],
+  timestamp: '2023-08-05 21:09:55'
+}
+{
+  error: [96msrc/start/app.ts[0m:[93m7[0m:[93m49[0m - [91merror[0m[90m TS2305: [0mModule '"../routes"' has no exported member 'contactsRouter'.
+  
+  [7m7[0m import { authRouter, usersRouter, groupsRouter, contactsRouter, booksRouter } from '../routes'
+  [7m [0m [91m                                                ~~~~~~~~~~~~~~[0m
+  [96msrc/start/app.ts[0m:[93m7[0m:[93m65[0m - [91merror[0m[90m TS2305: [0mModule '"../routes"' has no exported member 'booksRouter'.
+  
+  [7m7[0m import { authRouter, usersRouter, groupsRouter, contactsRouter, booksRouter } from '../routes'
+  [7m [0m [91m                                                                ~~~~~~~~~~~[0m
+  ,
+  level: 'error',
+  message: 'uncaughtException: ⨯ Unable to compile TypeScript:\n' +
+    `\x1B[96msrc/start/app.ts\x1B[0m:\x1B[93m7\x1B[0m:\x1B[93m49\x1B[0m - \x1B[91merror\x1B[0m\x1B[90m TS2305: \x1B[0mModule '"../routes"' has no exported member 'contactsRouter'.\n` +
+    '\n' +
+    "\x1B[7m7\x1B[0m import { authRouter, usersRouter, groupsRouter, contactsRouter, booksRouter } from '../routes'\n" +
+    '\x1B[7m \x1B[0m \x1B[91m                                                ~~~~~~~~~~~~~~\x1B[0m\n' +
+    `\x1B[96msrc/start/app.ts\x1B[0m:\x1B[93m7\x1B[0m:\x1B[93m65\x1B[0m - \x1B[91merror\x1B[0m\x1B[90m TS2305: \x1B[0mModule '"../routes"' has no exported member 'booksRouter'.\n` +
+    '\n' +
+    "\x1B[7m7\x1B[0m import { authRouter, usersRouter, groupsRouter, contactsRouter, booksRouter } from '../routes'\n" +
+    '\x1B[7m \x1B[0m \x1B[91m                                                                ~~~~~~~~~~~\x1B[0m\n' +
+    '\n' +
+    'TSError: ⨯ Unable to compile TypeScript:\n' +
+    `\x1B[96msrc/start/app.ts\x1B[0m:\x1B[93m7\x1B[0m:\x1B[93m49\x1B[0m - \x1B[91merror\x1B[0m\x1B[90m TS2305: \x1B[0mModule '"../routes"' has no exported member 'contactsRouter'.\n` +
+    '\n' +
+    "\x1B[7m7\x1B[0m import { authRouter, usersRouter, groupsRouter, contactsRouter, booksRouter } from '../routes'\n" +
+    '\x1B[7m \x1B[0m \x1B[91m                                                ~~~~~~~~~~~~~~\x1B[0m\n' +
+    `\x1B[96msrc/start/app.ts\x1B[0m:\x1B[93m7\x1B[0m:\x1B[93m65\x1B[0m - \x1B[91merror\x1B[0m\x1B[90m TS2305: \x1B[0mModule '"../routes"' has no exported member 'booksRouter'.\n` +
+    '\n' +
+    "\x1B[7m7\x1B[0m import { authRouter, usersRouter, groupsRouter, contactsRouter, booksRouter } from '../routes'\n" +
+    '\x1B[7m \x1B[0m \x1B[91m                                                                ~~~~~~~~~~~\x1B[0m\n' +
+    '\n' +
+    '    at createTSError (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts:859:12)\n' +
+    '    at reportTSError (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts:863:19)\n' +
+    '    at getOutput (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts:1077:36)\n' +
+    '    at Object.compile (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts:1433:41)\n' +
+    '    at Module.m._compile (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts:1617:30)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1309:10)\n' +
+    '    at Object.require.extensions.<computed> [as .ts] (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts:1621:12)\n' +
+    '    at Module.load (node:internal/modules/cjs/loader:1113:32)\n' +
+    '    at Function.Module._load (node:internal/modules/cjs/loader:960:12)\n' +
+    '    at Module.require (node:internal/modules/cjs/loader:1137:19)',
+  stack: 'TSError: ⨯ Unable to compile TypeScript:\n' +
+    `\x1B[96msrc/start/app.ts\x1B[0m:\x1B[93m7\x1B[0m:\x1B[93m49\x1B[0m - \x1B[91merror\x1B[0m\x1B[90m TS2305: \x1B[0mModule '"../routes"' has no exported member 'contactsRouter'.\n` +
+    '\n' +
+    "\x1B[7m7\x1B[0m import { authRouter, usersRouter, groupsRouter, contactsRouter, booksRouter } from '../routes'\n" +
+    '\x1B[7m \x1B[0m \x1B[91m                                                ~~~~~~~~~~~~~~\x1B[0m\n' +
+    `\x1B[96msrc/start/app.ts\x1B[0m:\x1B[93m7\x1B[0m:\x1B[93m65\x1B[0m - \x1B[91merror\x1B[0m\x1B[90m TS2305: \x1B[0mModule '"../routes"' has no exported member 'booksRouter'.\n` +
+    '\n' +
+    "\x1B[7m7\x1B[0m import { authRouter, usersRouter, groupsRouter, contactsRouter, booksRouter } from '../routes'\n" +
+    '\x1B[7m \x1B[0m \x1B[91m                                                                ~~~~~~~~~~~\x1B[0m\n' +
+    '\n' +
+    '    at createTSError (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts:859:12)\n' +
+    '    at reportTSError (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts:863:19)\n' +
+    '    at getOutput (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts:1077:36)\n' +
+    '    at Object.compile (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts:1433:41)\n' +
+    '    at Module.m._compile (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts:1617:30)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1309:10)\n' +
+    '    at Object.require.extensions.<computed> [as .ts] (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts:1621:12)\n' +
+    '    at Module.load (node:internal/modules/cjs/loader:1113:32)\n' +
+    '    at Function.Module._load (node:internal/modules/cjs/loader:960:12)\n' +
+    '    at Module.require (node:internal/modules/cjs/loader:1137:19)',
+  exception: true,
+  date: 'Sat Aug 05 2023 21:09:55 GMT+0200 (Central European Summer Time)',
+  process: {
+    pid: 89229,
+    uid: 501,
+    gid: 20,
+    cwd: '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit',
+    execPath: '/opt/homebrew/Cellar/node/20.3.0/bin/node',
+    version: 'v20.3.0',
+    argv: [
+      '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/.bin/ts-node',
+      '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/src/server.ts'
+    ],
+    memoryUsage: {
+      rss: 336510976,
+      heapTotal: 224247808,
+      heapUsed: 195436016,
+      external: 25731795,
+      arrayBuffers: 22910866
+    }
+  },
+  os: {
+    loadavg: [ 1.6455078125, 1.57568359375, 1.60595703125 ],
+    uptime: 1385403
+  },
+  trace: [
+    {
+      column: 12,
+      file: '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts',
+      function: 'createTSError',
+      line: 859,
+      method: null,
+      native: false
+    },
+    {
+      column: 19,
+      file: '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts',
+      function: 'reportTSError',
+      line: 863,
+      method: null,
+      native: false
+    },
+    {
+      column: 36,
+      file: '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts',
+      function: 'getOutput',
+      line: 1077,
+      method: null,
+      native: false
+    },
+    {
+      column: 41,
+      file: '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts',
+      function: 'Object.compile',
+      line: 1433,
+      method: 'compile',
+      native: false
+    },
+    {
+      column: 30,
+      file: '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts',
+      function: 'Module.m._compile',
+      line: 1617,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 10,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._extensions..js',
+      line: 1309,
+      method: '.js',
+      native: false
+    },
+    {
+      column: 12,
+      file: '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts',
+      function: 'Object.require.extensions.<computed> [as .ts]',
+      line: 1621,
+      method: 'ts]',
+      native: false
+    },
+    {
+      column: 32,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module.load',
+      line: 1113,
+      method: 'load',
+      native: false
+    },
+    {
+      column: 12,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._load',
+      line: 960,
+      method: '_load',
+      native: false
+    },
+    {
+      column: 19,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module.require',
+      line: 1137,
+      method: 'require',
+      native: false
+    }
+  ],
+  timestamp: '2023-08-05 21:09:55'
+}

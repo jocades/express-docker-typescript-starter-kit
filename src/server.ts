@@ -8,7 +8,6 @@ import { initializeSocket } from './socket/setup'
 import { mongoDBListener } from './socket/mongo-listener'
 
 const server = http.createServer(app)
-
 const PORT = process.env.PORT || 8000
 
 db.safeConnect().then(() => {

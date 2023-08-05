@@ -4,7 +4,7 @@ import helmet from 'helmet'
 import morgan from 'morgan'
 
 import { error } from '../middleware'
-import { authRouter, usersRouter, groupsRouter, contactsRouter } from '../routes'
+import { authRouter, usersRouter, groupsRouter } from '../routes'
 
 const app = express()
 
@@ -21,7 +21,6 @@ app.get('/api/ping', (_, res) => res.send('pong'))
 app.use('/api/auth', authRouter)
 app.use('/api/users', usersRouter)
 app.use('/api/groups', groupsRouter)
-app.use('/api/contacts', contactsRouter)
 
 app.use(error)
 

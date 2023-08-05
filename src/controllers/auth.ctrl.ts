@@ -34,8 +34,8 @@ export const loginUser: ReqHandler = async (req, res) => {
   const user = await User.findOne({ email })
   if (!user) return sendMsg(res, 'Invalid email or password.')
 
-  const v = await bcrypt.compare(password, user.password)
-  if (!v) return sendMsg(res, 'Invalid email or password.')
+  const valid = await bcrypt.compare(password, user.password)
+  if (!valid) return sendMsg(res, 'Invalid email or password.')
 
   const tokens = await user.login()
 
