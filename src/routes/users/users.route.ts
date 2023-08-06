@@ -1,8 +1,8 @@
 import { Router } from 'express'
-import User from '../models/user.model'
-import { auth, admin } from '../middleware'
-import handler from '../controllers/factory'
-import { getUser, updateUser, deleteUser } from '../controllers/users.ctrl'
+import User from '../../models/user.model'
+import { auth, admin } from '../../middleware'
+import handler from '../../lib/controller-factory'
+import { getUser, updateUser, deleteUser } from './users.controller'
 
 const router = Router()
 

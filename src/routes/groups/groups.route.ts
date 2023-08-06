@@ -1,13 +1,13 @@
 import { Router } from 'express'
-import Group, { groupBody } from '../models/group.model'
-import { auth, validate, validateId } from '../middleware'
-import handler from '../controllers/factory'
+import Group, { groupBody } from '../../models/group.model'
+import { auth, validate, validateId } from '../../middleware'
+import handler from '../../lib/controller-factory'
 import {
   joinGroup,
   leaveGroup,
   listGroups,
   createGroup,
-} from '../controllers/groups.ctrl'
+} from './groups.controller'
 
 const router = Router()
 
@@ -25,7 +25,7 @@ router.put('/:id/leave', [validateId, auth], leaveGroup)
 
 export default router
 
-import { app } from '../framework/app'
+import { app } from '../../framework/app'
 
 app.route('/groups', {
   list: listGroups,

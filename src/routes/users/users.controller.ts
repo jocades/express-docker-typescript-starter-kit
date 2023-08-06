@@ -1,6 +1,6 @@
 import { RequestHandler } from 'express'
-import User from '../models/user.model'
-import { notFound, response } from './factory'
+import User from '../../models/user.model'
+import { notFound, response } from '../../lib/controller-factory'
 
 export const getUser: RequestHandler = async (req, res) => {
   const user = await User.findById(req.user._id).select('-password -auth')

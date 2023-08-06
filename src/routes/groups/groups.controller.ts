@@ -1,8 +1,8 @@
 import { RequestHandler } from 'express'
 import { z } from 'zod'
-import Group from '../models/group.model'
-import { notFound } from './factory'
-import { parseQuery } from '../middleware'
+import Group from '../../models/group.model'
+import { notFound } from '../../lib/controller-factory'
+import { parseQuery } from '../../middleware'
 
 const coord = z
   .string()

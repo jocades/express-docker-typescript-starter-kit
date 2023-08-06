@@ -3,10 +3,12 @@ import cors from 'cors'
 import helmet from 'helmet'
 import morgan from 'morgan'
 import { z, AnyZodObject } from 'zod'
+import { Model } from 'mongoose'
+import handler from '../lib/controller-factory'
 
 import { auth, error, validate, validateId } from '../middleware'
 
-interface Handler<T> {
+interface Handlers<T> {
   list?: RequestHandler | RequestHandler[]
   post?: RequestHandler<{}, {}, T> | RequestHandler<{}, {}, T>[]
   get?: RequestHandler<{ id: string }> | RequestHandler<{ id: string }>[]
@@ -17,9 +19,15 @@ interface Handler<T> {
   delete?: RequestHandler<{ id: string }> | RequestHandler<{ id: string }>[]
 }
 
+type RouteHandler = Handlers<any>
+// & Partial<Record<string, RequestHandler | RequestHandler[]>>
+
+type CustomMethod = 'list' | 'post' | 'get' | 'put' | 'patch' | 'delete'
+
 interface HandlerOptions {
   middleware?: RequestHandler | RequestHandler[]
   validator?: AnyZodObject
+  model?: Model<any>
 }
 
 class App {
@@ -60,7 +68,7 @@ class App {
 
   route<T = any>(
     endpoint: string,
-    handler: Handler<T>,
+    routeHandler: RouteHandler,
     options: HandlerOptions = {}
   ) {
     const router = Router()
@@ -71,54 +79,72 @@ class App {
 
     router.use(endpoint, options.middleware)
 
-    if (handler.list) {
-      router.get(endpoint, handler.list)
+    if (routeHandler.list) {
+      router.get(endpoint, routeHandler.list)
+    } else {
+      if (!options.model) {
+        throw new Error('Model is required for list route')
+      }
+      router.get(endpoint, handler.list(options.model))
     }
 
-    if (handler.post) {
+    if (routeHandler.post) {
       if (!options.validator) {
-        router.post(endpoint, handler.post)
+        router.post(endpoint, routeHandler.post)
       } else {
         router.post(
           `${endpoint}/:id`,
           validate(options.validator),
-          handler.post
+          routeHandler.post
+        )
+      }
+    } else {
+      if (!options.model) {
+        throw new Error('Model is required for post route')
+      }
+      if (!options.validator) {
+        router.post(endpoint, handler.createOne(options.model))
+      } else {
+        router.post(
+          `${endpoint}/:id`,
+          validate(options.validator),
+          handler.createOne(options.model)
         )
       }
     }
 
-    if (handler.get) {
-      router.get(`${endpoint}/:id`, validateId, handler.get)
+    if (routeHandler.get) {
+      router.get(`${endpoint}/:id`, validateId, routeHandler.get)
     }
 
-    if (handler.put) {
+    if (routeHandler.put) {
       if (!options.validator) {
-        router.put(`${endpoint}/:id`, handler.put)
+        router.put(`${endpoint}/:id`, routeHandler.put)
       } else {
         router.put(
           `${endpoint}/:id`,
           validateId,
           validate(options.validator),
-          handler.put
+          routeHandler.put
         )
       }
     }
 
-    if (handler.patch) {
+    if (routeHandler.patch) {
       if (!options.validator) {
-        router.patch(`${endpoint}/:id`, handler.patch)
+        router.patch(`${endpoint}/:id`, routeHandler.patch)
       } else {
         router.patch(
           `${endpoint}/:id`,
           validateId,
           validate(options.validator),
-          handler.patch
+          routeHandler.patch
         )
       }
     }
 
-    if (handler.delete) {
-      router.delete(`${endpoint}/:id`, validateId, handler.delete)
+    if (routeHandler.delete) {
+      router.delete(`${endpoint}/:id`, validateId, routeHandler.delete)
     }
 
     this._routers.push(router)

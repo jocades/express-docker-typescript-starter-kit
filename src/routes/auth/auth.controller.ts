@@ -2,8 +2,8 @@ import { Response, RequestHandler } from 'express'
 import bcrypt from 'bcrypt'
 import jwt from 'jsonwebtoken'
 import _ from 'lodash'
-import { decrypt } from '../utils/hash'
-import User, { validateUser } from '../models/user.model'
+import { decrypt } from '../../utils/hash'
+import User, { validateUser } from '../../models/user.model'
 
 type ReqHandler = RequestHandler<{}, {}, Credentials & Tokens>
 
