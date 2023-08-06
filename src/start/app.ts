@@ -8,7 +8,7 @@ import { authRouter, usersRouter, groupsRouter } from '../routes'
 
 const app = express()
 
-// Middleware
+// // Middleware
 app.use(cors())
 app.use(helmet())
 app.use(express.json())
@@ -16,7 +16,7 @@ app.use(express.static('src/public'))
 app.use(express.urlencoded({ extended: true }))
 app.get('env').includes('dev') && app.use(morgan('dev'))
 
-// Routes
+// // Routes
 app.get('/api/ping', (_, res) => res.send('pong'))
 app.use('/api/auth', authRouter)
 app.use('/api/users', usersRouter)

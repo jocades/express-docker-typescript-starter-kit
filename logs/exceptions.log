@@ -5696,3 +5696,3003 @@
   ],
   timestamp: '2023-08-05 21:09:55'
 }
+{
+  error: [96msrc/start/app.ts[0m:[93m58[0m:[93m37[0m - [91merror[0m[90m TS1110: [0mType expected.
+  
+  [7m58[0m   route(endpoint: string, handlers: ) {}
+  [7m  [0m [91m                                    ~[0m
+  ,
+  level: 'error',
+  message: 'uncaughtException: ⨯ Unable to compile TypeScript:\n' +
+    '\x1B[96msrc/start/app.ts\x1B[0m:\x1B[93m58\x1B[0m:\x1B[93m37\x1B[0m - \x1B[91merror\x1B[0m\x1B[90m TS1110: \x1B[0mType expected.\n' +
+    '\n' +
+    '\x1B[7m58\x1B[0m   route(endpoint: string, handlers: ) {}\n' +
+    '\x1B[7m  \x1B[0m \x1B[91m                                    ~\x1B[0m\n' +
+    '\n' +
+    'TSError: ⨯ Unable to compile TypeScript:\n' +
+    '\x1B[96msrc/start/app.ts\x1B[0m:\x1B[93m58\x1B[0m:\x1B[93m37\x1B[0m - \x1B[91merror\x1B[0m\x1B[90m TS1110: \x1B[0mType expected.\n' +
+    '\n' +
+    '\x1B[7m58\x1B[0m   route(endpoint: string, handlers: ) {}\n' +
+    '\x1B[7m  \x1B[0m \x1B[91m                                    ~\x1B[0m\n' +
+    '\n' +
+    '    at createTSError (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts:859:12)\n' +
+    '    at reportTSError (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts:863:19)\n' +
+    '    at getOutput (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts:1077:36)\n' +
+    '    at Object.compile (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts:1433:41)\n' +
+    '    at Module.m._compile (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts:1617:30)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1309:10)\n' +
+    '    at Object.require.extensions.<computed> [as .ts] (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts:1621:12)\n' +
+    '    at Module.load (node:internal/modules/cjs/loader:1113:32)\n' +
+    '    at Function.Module._load (node:internal/modules/cjs/loader:960:12)\n' +
+    '    at Module.require (node:internal/modules/cjs/loader:1137:19)',
+  stack: 'TSError: ⨯ Unable to compile TypeScript:\n' +
+    '\x1B[96msrc/start/app.ts\x1B[0m:\x1B[93m58\x1B[0m:\x1B[93m37\x1B[0m - \x1B[91merror\x1B[0m\x1B[90m TS1110: \x1B[0mType expected.\n' +
+    '\n' +
+    '\x1B[7m58\x1B[0m   route(endpoint: string, handlers: ) {}\n' +
+    '\x1B[7m  \x1B[0m \x1B[91m                                    ~\x1B[0m\n' +
+    '\n' +
+    '    at createTSError (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts:859:12)\n' +
+    '    at reportTSError (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts:863:19)\n' +
+    '    at getOutput (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts:1077:36)\n' +
+    '    at Object.compile (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts:1433:41)\n' +
+    '    at Module.m._compile (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts:1617:30)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1309:10)\n' +
+    '    at Object.require.extensions.<computed> [as .ts] (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts:1621:12)\n' +
+    '    at Module.load (node:internal/modules/cjs/loader:1113:32)\n' +
+    '    at Function.Module._load (node:internal/modules/cjs/loader:960:12)\n' +
+    '    at Module.require (node:internal/modules/cjs/loader:1137:19)',
+  exception: true,
+  date: 'Sun Aug 06 2023 03:36:00 GMT+0200 (Central European Summer Time)',
+  process: {
+    pid: 3659,
+    uid: 501,
+    gid: 20,
+    cwd: '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit',
+    execPath: '/opt/homebrew/Cellar/node/20.3.0/bin/node',
+    version: 'v20.3.0',
+    argv: [
+      '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/.bin/ts-node',
+      '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/src/server.ts'
+    ],
+    memoryUsage: {
+      rss: 331595776,
+      heapTotal: 224247808,
+      heapUsed: 198477440,
+      external: 25731683,
+      arrayBuffers: 22910754
+    }
+  },
+  os: {
+    loadavg: [ 1.89013671875, 1.47216796875, 1.54443359375 ],
+    uptime: 1408568
+  },
+  trace: [
+    {
+      column: 12,
+      file: '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts',
+      function: 'createTSError',
+      line: 859,
+      method: null,
+      native: false
+    },
+    {
+      column: 19,
+      file: '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts',
+      function: 'reportTSError',
+      line: 863,
+      method: null,
+      native: false
+    },
+    {
+      column: 36,
+      file: '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts',
+      function: 'getOutput',
+      line: 1077,
+      method: null,
+      native: false
+    },
+    {
+      column: 41,
+      file: '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts',
+      function: 'Object.compile',
+      line: 1433,
+      method: 'compile',
+      native: false
+    },
+    {
+      column: 30,
+      file: '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts',
+      function: 'Module.m._compile',
+      line: 1617,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 10,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._extensions..js',
+      line: 1309,
+      method: '.js',
+      native: false
+    },
+    {
+      column: 12,
+      file: '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts',
+      function: 'Object.require.extensions.<computed> [as .ts]',
+      line: 1621,
+      method: 'ts]',
+      native: false
+    },
+    {
+      column: 32,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module.load',
+      line: 1113,
+      method: 'load',
+      native: false
+    },
+    {
+      column: 12,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._load',
+      line: 960,
+      method: '_load',
+      native: false
+    },
+    {
+      column: 19,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module.require',
+      line: 1137,
+      method: 'require',
+      native: false
+    }
+  ],
+  timestamp: '2023-08-06 03:36:00'
+}
+{
+  error: [96msrc/start/app.ts[0m:[93m58[0m:[93m37[0m - [91merror[0m[90m TS1110: [0mType expected.
+  
+  [7m58[0m   route(endpoint: string, handlers: ) {}
+  [7m  [0m [91m                                    ~[0m
+  ,
+  level: 'error',
+  message: 'uncaughtException: ⨯ Unable to compile TypeScript:\n' +
+    '\x1B[96msrc/start/app.ts\x1B[0m:\x1B[93m58\x1B[0m:\x1B[93m37\x1B[0m - \x1B[91merror\x1B[0m\x1B[90m TS1110: \x1B[0mType expected.\n' +
+    '\n' +
+    '\x1B[7m58\x1B[0m   route(endpoint: string, handlers: ) {}\n' +
+    '\x1B[7m  \x1B[0m \x1B[91m                                    ~\x1B[0m\n' +
+    '\n' +
+    'TSError: ⨯ Unable to compile TypeScript:\n' +
+    '\x1B[96msrc/start/app.ts\x1B[0m:\x1B[93m58\x1B[0m:\x1B[93m37\x1B[0m - \x1B[91merror\x1B[0m\x1B[90m TS1110: \x1B[0mType expected.\n' +
+    '\n' +
+    '\x1B[7m58\x1B[0m   route(endpoint: string, handlers: ) {}\n' +
+    '\x1B[7m  \x1B[0m \x1B[91m                                    ~\x1B[0m\n' +
+    '\n' +
+    '    at createTSError (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts:859:12)\n' +
+    '    at reportTSError (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts:863:19)\n' +
+    '    at getOutput (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts:1077:36)\n' +
+    '    at Object.compile (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts:1433:41)\n' +
+    '    at Module.m._compile (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts:1617:30)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1309:10)\n' +
+    '    at Object.require.extensions.<computed> [as .ts] (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts:1621:12)\n' +
+    '    at Module.load (node:internal/modules/cjs/loader:1113:32)\n' +
+    '    at Function.Module._load (node:internal/modules/cjs/loader:960:12)\n' +
+    '    at Module.require (node:internal/modules/cjs/loader:1137:19)',
+  stack: 'TSError: ⨯ Unable to compile TypeScript:\n' +
+    '\x1B[96msrc/start/app.ts\x1B[0m:\x1B[93m58\x1B[0m:\x1B[93m37\x1B[0m - \x1B[91merror\x1B[0m\x1B[90m TS1110: \x1B[0mType expected.\n' +
+    '\n' +
+    '\x1B[7m58\x1B[0m   route(endpoint: string, handlers: ) {}\n' +
+    '\x1B[7m  \x1B[0m \x1B[91m                                    ~\x1B[0m\n' +
+    '\n' +
+    '    at createTSError (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts:859:12)\n' +
+    '    at reportTSError (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts:863:19)\n' +
+    '    at getOutput (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts:1077:36)\n' +
+    '    at Object.compile (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts:1433:41)\n' +
+    '    at Module.m._compile (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts:1617:30)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1309:10)\n' +
+    '    at Object.require.extensions.<computed> [as .ts] (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts:1621:12)\n' +
+    '    at Module.load (node:internal/modules/cjs/loader:1113:32)\n' +
+    '    at Function.Module._load (node:internal/modules/cjs/loader:960:12)\n' +
+    '    at Module.require (node:internal/modules/cjs/loader:1137:19)',
+  exception: true,
+  date: 'Sun Aug 06 2023 03:36:00 GMT+0200 (Central European Summer Time)',
+  process: {
+    pid: 3659,
+    uid: 501,
+    gid: 20,
+    cwd: '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit',
+    execPath: '/opt/homebrew/Cellar/node/20.3.0/bin/node',
+    version: 'v20.3.0',
+    argv: [
+      '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/.bin/ts-node',
+      '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/src/server.ts'
+    ],
+    memoryUsage: {
+      rss: 331595776,
+      heapTotal: 224247808,
+      heapUsed: 198477440,
+      external: 25731683,
+      arrayBuffers: 22910754
+    }
+  },
+  os: {
+    loadavg: [ 1.89013671875, 1.47216796875, 1.54443359375 ],
+    uptime: 1408568
+  },
+  trace: [
+    {
+      column: 12,
+      file: '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts',
+      function: 'createTSError',
+      line: 859,
+      method: null,
+      native: false
+    },
+    {
+      column: 19,
+      file: '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts',
+      function: 'reportTSError',
+      line: 863,
+      method: null,
+      native: false
+    },
+    {
+      column: 36,
+      file: '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts',
+      function: 'getOutput',
+      line: 1077,
+      method: null,
+      native: false
+    },
+    {
+      column: 41,
+      file: '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts',
+      function: 'Object.compile',
+      line: 1433,
+      method: 'compile',
+      native: false
+    },
+    {
+      column: 30,
+      file: '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts',
+      function: 'Module.m._compile',
+      line: 1617,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 10,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._extensions..js',
+      line: 1309,
+      method: '.js',
+      native: false
+    },
+    {
+      column: 12,
+      file: '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts',
+      function: 'Object.require.extensions.<computed> [as .ts]',
+      line: 1621,
+      method: 'ts]',
+      native: false
+    },
+    {
+      column: 32,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module.load',
+      line: 1113,
+      method: 'load',
+      native: false
+    },
+    {
+      column: 12,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._load',
+      line: 960,
+      method: '_load',
+      native: false
+    },
+    {
+      column: 19,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module.require',
+      line: 1137,
+      method: 'require',
+      native: false
+    }
+  ],
+  timestamp: '2023-08-06 03:36:00'
+}
+{
+  error: TypeError: app.use() requires a middleware function
+      at Function.use (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/express/lib/application.js:217:11)
+      at new App (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/src/start/app.ts:57:14)
+      at Object.<anonymous> (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/src/start/app.ts:95:13)
+      at Module._compile (node:internal/modules/cjs/loader:1255:14)
+      at Module.m._compile (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts:1618:23)
+      at Module._extensions..js (node:internal/modules/cjs/loader:1309:10)
+      at Object.require.extensions.<computed> [as .ts] (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts:1621:12)
+      at Module.load (node:internal/modules/cjs/loader:1113:32)
+      at Function.Module._load (node:internal/modules/cjs/loader:960:12)
+      at Module.require (node:internal/modules/cjs/loader:1137:19),
+  level: 'error',
+  message: 'uncaughtException: app.use() requires a middleware function\n' +
+    'TypeError: app.use() requires a middleware function\n' +
+    '    at Function.use (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/express/lib/application.js:217:11)\n' +
+    '    at new App (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/src/start/app.ts:57:14)\n' +
+    '    at Object.<anonymous> (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/src/start/app.ts:95:13)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1255:14)\n' +
+    '    at Module.m._compile (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts:1618:23)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1309:10)\n' +
+    '    at Object.require.extensions.<computed> [as .ts] (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts:1621:12)\n' +
+    '    at Module.load (node:internal/modules/cjs/loader:1113:32)\n' +
+    '    at Function.Module._load (node:internal/modules/cjs/loader:960:12)\n' +
+    '    at Module.require (node:internal/modules/cjs/loader:1137:19)',
+  stack: 'TypeError: app.use() requires a middleware function\n' +
+    '    at Function.use (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/express/lib/application.js:217:11)\n' +
+    '    at new App (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/src/start/app.ts:57:14)\n' +
+    '    at Object.<anonymous> (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/src/start/app.ts:95:13)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1255:14)\n' +
+    '    at Module.m._compile (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts:1618:23)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1309:10)\n' +
+    '    at Object.require.extensions.<computed> [as .ts] (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts:1621:12)\n' +
+    '    at Module.load (node:internal/modules/cjs/loader:1113:32)\n' +
+    '    at Function.Module._load (node:internal/modules/cjs/loader:960:12)\n' +
+    '    at Module.require (node:internal/modules/cjs/loader:1137:19)',
+  exception: true,
+  date: 'Sun Aug 06 2023 04:19:40 GMT+0200 (Central European Summer Time)',
+  process: {
+    pid: 5505,
+    uid: 501,
+    gid: 20,
+    cwd: '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit',
+    execPath: '/opt/homebrew/Cellar/node/20.3.0/bin/node',
+    version: 'v20.3.0',
+    argv: [
+      '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/.bin/ts-node',
+      '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/src/server.ts'
+    ],
+    memoryUsage: {
+      rss: 344915968,
+      heapTotal: 229687296,
+      heapUsed: 207071992,
+      external: 26721829,
+      arrayBuffers: 23900900
+    }
+  },
+  os: {
+    loadavg: [ 1.9501953125, 1.796875, 1.5908203125 ],
+    uptime: 1411188
+  },
+  trace: [
+    {
+      column: 11,
+      file: '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/express/lib/application.js',
+      function: 'Function.use',
+      line: 217,
+      method: 'use',
+      native: false
+    },
+    {
+      column: 14,
+      file: '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/src/start/app.ts',
+      function: 'new App',
+      line: 57,
+      method: null,
+      native: false
+    },
+    {
+      column: 13,
+      file: '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/src/start/app.ts',
+      function: null,
+      line: 95,
+      method: null,
+      native: false
+    },
+    {
+      column: 14,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._compile',
+      line: 1255,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 23,
+      file: '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts',
+      function: 'Module.m._compile',
+      line: 1618,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 10,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._extensions..js',
+      line: 1309,
+      method: '.js',
+      native: false
+    },
+    {
+      column: 12,
+      file: '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts',
+      function: 'Object.require.extensions.<computed> [as .ts]',
+      line: 1621,
+      method: 'ts]',
+      native: false
+    },
+    {
+      column: 32,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module.load',
+      line: 1113,
+      method: 'load',
+      native: false
+    },
+    {
+      column: 12,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._load',
+      line: 960,
+      method: '_load',
+      native: false
+    },
+    {
+      column: 19,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module.require',
+      line: 1137,
+      method: 'require',
+      native: false
+    }
+  ],
+  timestamp: '2023-08-06 04:19:40'
+}
+{
+  error: TypeError: app.use() requires a middleware function
+      at Function.use (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/express/lib/application.js:217:11)
+      at new App (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/src/start/app.ts:57:14)
+      at Object.<anonymous> (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/src/start/app.ts:95:13)
+      at Module._compile (node:internal/modules/cjs/loader:1255:14)
+      at Module.m._compile (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts:1618:23)
+      at Module._extensions..js (node:internal/modules/cjs/loader:1309:10)
+      at Object.require.extensions.<computed> [as .ts] (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts:1621:12)
+      at Module.load (node:internal/modules/cjs/loader:1113:32)
+      at Function.Module._load (node:internal/modules/cjs/loader:960:12)
+      at Module.require (node:internal/modules/cjs/loader:1137:19),
+  level: 'error',
+  message: 'uncaughtException: app.use() requires a middleware function\n' +
+    'TypeError: app.use() requires a middleware function\n' +
+    '    at Function.use (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/express/lib/application.js:217:11)\n' +
+    '    at new App (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/src/start/app.ts:57:14)\n' +
+    '    at Object.<anonymous> (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/src/start/app.ts:95:13)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1255:14)\n' +
+    '    at Module.m._compile (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts:1618:23)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1309:10)\n' +
+    '    at Object.require.extensions.<computed> [as .ts] (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts:1621:12)\n' +
+    '    at Module.load (node:internal/modules/cjs/loader:1113:32)\n' +
+    '    at Function.Module._load (node:internal/modules/cjs/loader:960:12)\n' +
+    '    at Module.require (node:internal/modules/cjs/loader:1137:19)',
+  stack: 'TypeError: app.use() requires a middleware function\n' +
+    '    at Function.use (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/express/lib/application.js:217:11)\n' +
+    '    at new App (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/src/start/app.ts:57:14)\n' +
+    '    at Object.<anonymous> (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/src/start/app.ts:95:13)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1255:14)\n' +
+    '    at Module.m._compile (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts:1618:23)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1309:10)\n' +
+    '    at Object.require.extensions.<computed> [as .ts] (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts:1621:12)\n' +
+    '    at Module.load (node:internal/modules/cjs/loader:1113:32)\n' +
+    '    at Function.Module._load (node:internal/modules/cjs/loader:960:12)\n' +
+    '    at Module.require (node:internal/modules/cjs/loader:1137:19)',
+  exception: true,
+  date: 'Sun Aug 06 2023 04:19:40 GMT+0200 (Central European Summer Time)',
+  process: {
+    pid: 5505,
+    uid: 501,
+    gid: 20,
+    cwd: '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit',
+    execPath: '/opt/homebrew/Cellar/node/20.3.0/bin/node',
+    version: 'v20.3.0',
+    argv: [
+      '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/.bin/ts-node',
+      '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/src/server.ts'
+    ],
+    memoryUsage: {
+      rss: 344915968,
+      heapTotal: 229687296,
+      heapUsed: 207071992,
+      external: 26721829,
+      arrayBuffers: 23900900
+    }
+  },
+  os: {
+    loadavg: [ 1.9501953125, 1.796875, 1.5908203125 ],
+    uptime: 1411188
+  },
+  trace: [
+    {
+      column: 11,
+      file: '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/express/lib/application.js',
+      function: 'Function.use',
+      line: 217,
+      method: 'use',
+      native: false
+    },
+    {
+      column: 14,
+      file: '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/src/start/app.ts',
+      function: 'new App',
+      line: 57,
+      method: null,
+      native: false
+    },
+    {
+      column: 13,
+      file: '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/src/start/app.ts',
+      function: null,
+      line: 95,
+      method: null,
+      native: false
+    },
+    {
+      column: 14,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._compile',
+      line: 1255,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 23,
+      file: '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts',
+      function: 'Module.m._compile',
+      line: 1618,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 10,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._extensions..js',
+      line: 1309,
+      method: '.js',
+      native: false
+    },
+    {
+      column: 12,
+      file: '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts',
+      function: 'Object.require.extensions.<computed> [as .ts]',
+      line: 1621,
+      method: 'ts]',
+      native: false
+    },
+    {
+      column: 32,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module.load',
+      line: 1113,
+      method: 'load',
+      native: false
+    },
+    {
+      column: 12,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._load',
+      line: 960,
+      method: '_load',
+      native: false
+    },
+    {
+      column: 19,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module.require',
+      line: 1137,
+      method: 'require',
+      native: false
+    }
+  ],
+  timestamp: '2023-08-06 04:19:40'
+}
+{
+  error: TypeError: app.use() requires a middleware function
+      at Function.use (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/express/lib/application.js:217:11)
+      at new App (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/src/start/app.ts:57:14)
+      at Object.<anonymous> (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/src/start/app.ts:95:13)
+      at Module._compile (node:internal/modules/cjs/loader:1255:14)
+      at Module.m._compile (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts:1618:23)
+      at Module._extensions..js (node:internal/modules/cjs/loader:1309:10)
+      at Object.require.extensions.<computed> [as .ts] (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts:1621:12)
+      at Module.load (node:internal/modules/cjs/loader:1113:32)
+      at Function.Module._load (node:internal/modules/cjs/loader:960:12)
+      at Module.require (node:internal/modules/cjs/loader:1137:19),
+  level: 'error',
+  message: 'uncaughtException: app.use() requires a middleware function\n' +
+    'TypeError: app.use() requires a middleware function\n' +
+    '    at Function.use (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/express/lib/application.js:217:11)\n' +
+    '    at new App (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/src/start/app.ts:57:14)\n' +
+    '    at Object.<anonymous> (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/src/start/app.ts:95:13)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1255:14)\n' +
+    '    at Module.m._compile (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts:1618:23)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1309:10)\n' +
+    '    at Object.require.extensions.<computed> [as .ts] (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts:1621:12)\n' +
+    '    at Module.load (node:internal/modules/cjs/loader:1113:32)\n' +
+    '    at Function.Module._load (node:internal/modules/cjs/loader:960:12)\n' +
+    '    at Module.require (node:internal/modules/cjs/loader:1137:19)',
+  stack: 'TypeError: app.use() requires a middleware function\n' +
+    '    at Function.use (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/express/lib/application.js:217:11)\n' +
+    '    at new App (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/src/start/app.ts:57:14)\n' +
+    '    at Object.<anonymous> (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/src/start/app.ts:95:13)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1255:14)\n' +
+    '    at Module.m._compile (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts:1618:23)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1309:10)\n' +
+    '    at Object.require.extensions.<computed> [as .ts] (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts:1621:12)\n' +
+    '    at Module.load (node:internal/modules/cjs/loader:1113:32)\n' +
+    '    at Function.Module._load (node:internal/modules/cjs/loader:960:12)\n' +
+    '    at Module.require (node:internal/modules/cjs/loader:1137:19)',
+  exception: true,
+  date: 'Sun Aug 06 2023 04:20:33 GMT+0200 (Central European Summer Time)',
+  process: {
+    pid: 5527,
+    uid: 501,
+    gid: 20,
+    cwd: '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit',
+    execPath: '/opt/homebrew/Cellar/node/20.3.0/bin/node',
+    version: 'v20.3.0',
+    argv: [
+      '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/.bin/ts-node',
+      '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/src/server.ts'
+    ],
+    memoryUsage: {
+      rss: 342507520,
+      heapTotal: 229949440,
+      heapUsed: 206900072,
+      external: 26794526,
+      arrayBuffers: 23973597
+    }
+  },
+  os: {
+    loadavg: [ 1.4013671875, 1.67041015625, 1.5556640625 ],
+    uptime: 1411241
+  },
+  trace: [
+    {
+      column: 11,
+      file: '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/express/lib/application.js',
+      function: 'Function.use',
+      line: 217,
+      method: 'use',
+      native: false
+    },
+    {
+      column: 14,
+      file: '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/src/start/app.ts',
+      function: 'new App',
+      line: 57,
+      method: null,
+      native: false
+    },
+    {
+      column: 13,
+      file: '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/src/start/app.ts',
+      function: null,
+      line: 95,
+      method: null,
+      native: false
+    },
+    {
+      column: 14,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._compile',
+      line: 1255,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 23,
+      file: '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts',
+      function: 'Module.m._compile',
+      line: 1618,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 10,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._extensions..js',
+      line: 1309,
+      method: '.js',
+      native: false
+    },
+    {
+      column: 12,
+      file: '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts',
+      function: 'Object.require.extensions.<computed> [as .ts]',
+      line: 1621,
+      method: 'ts]',
+      native: false
+    },
+    {
+      column: 32,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module.load',
+      line: 1113,
+      method: 'load',
+      native: false
+    },
+    {
+      column: 12,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._load',
+      line: 960,
+      method: '_load',
+      native: false
+    },
+    {
+      column: 19,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module.require',
+      line: 1137,
+      method: 'require',
+      native: false
+    }
+  ],
+  timestamp: '2023-08-06 04:20:33'
+}
+{
+  error: TypeError: app.use() requires a middleware function
+      at Function.use (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/express/lib/application.js:217:11)
+      at new App (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/src/start/app.ts:57:14)
+      at Object.<anonymous> (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/src/start/app.ts:95:13)
+      at Module._compile (node:internal/modules/cjs/loader:1255:14)
+      at Module.m._compile (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts:1618:23)
+      at Module._extensions..js (node:internal/modules/cjs/loader:1309:10)
+      at Object.require.extensions.<computed> [as .ts] (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts:1621:12)
+      at Module.load (node:internal/modules/cjs/loader:1113:32)
+      at Function.Module._load (node:internal/modules/cjs/loader:960:12)
+      at Module.require (node:internal/modules/cjs/loader:1137:19),
+  level: 'error',
+  message: 'uncaughtException: app.use() requires a middleware function\n' +
+    'TypeError: app.use() requires a middleware function\n' +
+    '    at Function.use (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/express/lib/application.js:217:11)\n' +
+    '    at new App (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/src/start/app.ts:57:14)\n' +
+    '    at Object.<anonymous> (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/src/start/app.ts:95:13)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1255:14)\n' +
+    '    at Module.m._compile (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts:1618:23)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1309:10)\n' +
+    '    at Object.require.extensions.<computed> [as .ts] (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts:1621:12)\n' +
+    '    at Module.load (node:internal/modules/cjs/loader:1113:32)\n' +
+    '    at Function.Module._load (node:internal/modules/cjs/loader:960:12)\n' +
+    '    at Module.require (node:internal/modules/cjs/loader:1137:19)',
+  stack: 'TypeError: app.use() requires a middleware function\n' +
+    '    at Function.use (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/express/lib/application.js:217:11)\n' +
+    '    at new App (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/src/start/app.ts:57:14)\n' +
+    '    at Object.<anonymous> (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/src/start/app.ts:95:13)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1255:14)\n' +
+    '    at Module.m._compile (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts:1618:23)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1309:10)\n' +
+    '    at Object.require.extensions.<computed> [as .ts] (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts:1621:12)\n' +
+    '    at Module.load (node:internal/modules/cjs/loader:1113:32)\n' +
+    '    at Function.Module._load (node:internal/modules/cjs/loader:960:12)\n' +
+    '    at Module.require (node:internal/modules/cjs/loader:1137:19)',
+  exception: true,
+  date: 'Sun Aug 06 2023 04:20:33 GMT+0200 (Central European Summer Time)',
+  process: {
+    pid: 5527,
+    uid: 501,
+    gid: 20,
+    cwd: '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit',
+    execPath: '/opt/homebrew/Cellar/node/20.3.0/bin/node',
+    version: 'v20.3.0',
+    argv: [
+      '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/.bin/ts-node',
+      '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/src/server.ts'
+    ],
+    memoryUsage: {
+      rss: 342507520,
+      heapTotal: 229949440,
+      heapUsed: 206900072,
+      external: 26794526,
+      arrayBuffers: 23973597
+    }
+  },
+  os: {
+    loadavg: [ 1.4013671875, 1.67041015625, 1.5556640625 ],
+    uptime: 1411241
+  },
+  trace: [
+    {
+      column: 11,
+      file: '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/express/lib/application.js',
+      function: 'Function.use',
+      line: 217,
+      method: 'use',
+      native: false
+    },
+    {
+      column: 14,
+      file: '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/src/start/app.ts',
+      function: 'new App',
+      line: 57,
+      method: null,
+      native: false
+    },
+    {
+      column: 13,
+      file: '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/src/start/app.ts',
+      function: null,
+      line: 95,
+      method: null,
+      native: false
+    },
+    {
+      column: 14,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._compile',
+      line: 1255,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 23,
+      file: '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts',
+      function: 'Module.m._compile',
+      line: 1618,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 10,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._extensions..js',
+      line: 1309,
+      method: '.js',
+      native: false
+    },
+    {
+      column: 12,
+      file: '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts',
+      function: 'Object.require.extensions.<computed> [as .ts]',
+      line: 1621,
+      method: 'ts]',
+      native: false
+    },
+    {
+      column: 32,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module.load',
+      line: 1113,
+      method: 'load',
+      native: false
+    },
+    {
+      column: 12,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._load',
+      line: 960,
+      method: '_load',
+      native: false
+    },
+    {
+      column: 19,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module.require',
+      line: 1137,
+      method: 'require',
+      native: false
+    }
+  ],
+  timestamp: '2023-08-06 04:20:33'
+}
+{
+  error: [96msrc/start/app.ts[0m:[93m128[0m:[93m3[0m - [91merror[0m[90m TS2345: [0mArgument of type '{ validator: any; }' is not assignable to parameter of type 'HandlerOptions'.
+    Property 'middleware' is missing in type '{ validator: any; }' but required in type 'HandlerOptions'.
+  
+  [7m128[0m   {
+  [7m   [0m [91m  ~[0m
+  [7m129[0m     validator: z.object({
+  [7m   [0m [91m~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+  [7m...[0m 
+  [7m131[0m     }),
+  [7m   [0m [91m~~~~~~~[0m
+  [7m132[0m   }
+  [7m   [0m [91m~~~[0m
+  
+    [96msrc/start/app.ts[0m:[93m46[0m:[93m3[0m
+      [7m46[0m   middleware: RequestHandler | RequestHandler[]
+      [7m  [0m [96m  ~~~~~~~~~~[0m
+      'middleware' is declared here.
+  [96msrc/start/app.ts[0m:[93m129[0m:[93m16[0m - [91merror[0m[90m TS2304: [0mCannot find name 'z'.
+  
+  [7m129[0m     validator: z.object({
+  [7m   [0m [91m               ~[0m
+  [96msrc/start/app.ts[0m:[93m130[0m:[93m13[0m - [91merror[0m[90m TS2304: [0mCannot find name 'z'.
+  
+  [7m130[0m       name: z.string().min(3).max(255),
+  [7m   [0m [91m            ~[0m
+  ,
+  level: 'error',
+  message: 'uncaughtException: ⨯ Unable to compile TypeScript:\n' +
+    "\x1B[96msrc/start/app.ts\x1B[0m:\x1B[93m128\x1B[0m:\x1B[93m3\x1B[0m - \x1B[91merror\x1B[0m\x1B[90m TS2345: \x1B[0mArgument of type '{ validator: any; }' is not assignable to parameter of type 'HandlerOptions'.\n" +
+    "  Property 'middleware' is missing in type '{ validator: any; }' but required in type 'HandlerOptions'.\n" +
+    '\n' +
+    '\x1B[7m128\x1B[0m   {\n' +
+    '\x1B[7m   \x1B[0m \x1B[91m  ~\x1B[0m\n' +
+    '\x1B[7m129\x1B[0m     validator: z.object({\n' +
+    '\x1B[7m   \x1B[0m \x1B[91m~~~~~~~~~~~~~~~~~~~~~~~~~\x1B[0m\n' +
+    '\x1B[7m...\x1B[0m \n' +
+    '\x1B[7m131\x1B[0m     }),\n' +
+    '\x1B[7m   \x1B[0m \x1B[91m~~~~~~~\x1B[0m\n' +
+    '\x1B[7m132\x1B[0m   }\n' +
+    '\x1B[7m   \x1B[0m \x1B[91m~~~\x1B[0m\n' +
+    '\n' +
+    '  \x1B[96msrc/start/app.ts\x1B[0m:\x1B[93m46\x1B[0m:\x1B[93m3\x1B[0m\n' +
+    '    \x1B[7m46\x1B[0m   middleware: RequestHandler | RequestHandler[]\n' +
+    '    \x1B[7m  \x1B[0m \x1B[96m  ~~~~~~~~~~\x1B[0m\n' +
+    "    'middleware' is declared here.\n" +
+    "\x1B[96msrc/start/app.ts\x1B[0m:\x1B[93m129\x1B[0m:\x1B[93m16\x1B[0m - \x1B[91merror\x1B[0m\x1B[90m TS2304: \x1B[0mCannot find name 'z'.\n" +
+    '\n' +
+    '\x1B[7m129\x1B[0m     validator: z.object({\n' +
+    '\x1B[7m   \x1B[0m \x1B[91m               ~\x1B[0m\n' +
+    "\x1B[96msrc/start/app.ts\x1B[0m:\x1B[93m130\x1B[0m:\x1B[93m13\x1B[0m - \x1B[91merror\x1B[0m\x1B[90m TS2304: \x1B[0mCannot find name 'z'.\n" +
+    '\n' +
+    '\x1B[7m130\x1B[0m       name: z.string().min(3).max(255),\n' +
+    '\x1B[7m   \x1B[0m \x1B[91m            ~\x1B[0m\n' +
+    '\n' +
+    'TSError: ⨯ Unable to compile TypeScript:\n' +
+    "\x1B[96msrc/start/app.ts\x1B[0m:\x1B[93m128\x1B[0m:\x1B[93m3\x1B[0m - \x1B[91merror\x1B[0m\x1B[90m TS2345: \x1B[0mArgument of type '{ validator: any; }' is not assignable to parameter of type 'HandlerOptions'.\n" +
+    "  Property 'middleware' is missing in type '{ validator: any; }' but required in type 'HandlerOptions'.\n" +
+    '\n' +
+    '\x1B[7m128\x1B[0m   {\n' +
+    '\x1B[7m   \x1B[0m \x1B[91m  ~\x1B[0m\n' +
+    '\x1B[7m129\x1B[0m     validator: z.object({\n' +
+    '\x1B[7m   \x1B[0m \x1B[91m~~~~~~~~~~~~~~~~~~~~~~~~~\x1B[0m\n' +
+    '\x1B[7m...\x1B[0m \n' +
+    '\x1B[7m131\x1B[0m     }),\n' +
+    '\x1B[7m   \x1B[0m \x1B[91m~~~~~~~\x1B[0m\n' +
+    '\x1B[7m132\x1B[0m   }\n' +
+    '\x1B[7m   \x1B[0m \x1B[91m~~~\x1B[0m\n' +
+    '\n' +
+    '  \x1B[96msrc/start/app.ts\x1B[0m:\x1B[93m46\x1B[0m:\x1B[93m3\x1B[0m\n' +
+    '    \x1B[7m46\x1B[0m   middleware: RequestHandler | RequestHandler[]\n' +
+    '    \x1B[7m  \x1B[0m \x1B[96m  ~~~~~~~~~~\x1B[0m\n' +
+    "    'middleware' is declared here.\n" +
+    "\x1B[96msrc/start/app.ts\x1B[0m:\x1B[93m129\x1B[0m:\x1B[93m16\x1B[0m - \x1B[91merror\x1B[0m\x1B[90m TS2304: \x1B[0mCannot find name 'z'.\n" +
+    '\n' +
+    '\x1B[7m129\x1B[0m     validator: z.object({\n' +
+    '\x1B[7m   \x1B[0m \x1B[91m               ~\x1B[0m\n' +
+    "\x1B[96msrc/start/app.ts\x1B[0m:\x1B[93m130\x1B[0m:\x1B[93m13\x1B[0m - \x1B[91merror\x1B[0m\x1B[90m TS2304: \x1B[0mCannot find name 'z'.\n" +
+    '\n' +
+    '\x1B[7m130\x1B[0m       name: z.string().min(3).max(255),\n' +
+    '\x1B[7m   \x1B[0m \x1B[91m            ~\x1B[0m\n' +
+    '\n' +
+    '    at createTSError (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts:859:12)\n' +
+    '    at reportTSError (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts:863:19)\n' +
+    '    at getOutput (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts:1077:36)\n' +
+    '    at Object.compile (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts:1433:41)\n' +
+    '    at Module.m._compile (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts:1617:30)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1309:10)\n' +
+    '    at Object.require.extensions.<computed> [as .ts] (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts:1621:12)\n' +
+    '    at Module.load (node:internal/modules/cjs/loader:1113:32)\n' +
+    '    at Function.Module._load (node:internal/modules/cjs/loader:960:12)\n' +
+    '    at Module.require (node:internal/modules/cjs/loader:1137:19)',
+  stack: 'TSError: ⨯ Unable to compile TypeScript:\n' +
+    "\x1B[96msrc/start/app.ts\x1B[0m:\x1B[93m128\x1B[0m:\x1B[93m3\x1B[0m - \x1B[91merror\x1B[0m\x1B[90m TS2345: \x1B[0mArgument of type '{ validator: any; }' is not assignable to parameter of type 'HandlerOptions'.\n" +
+    "  Property 'middleware' is missing in type '{ validator: any; }' but required in type 'HandlerOptions'.\n" +
+    '\n' +
+    '\x1B[7m128\x1B[0m   {\n' +
+    '\x1B[7m   \x1B[0m \x1B[91m  ~\x1B[0m\n' +
+    '\x1B[7m129\x1B[0m     validator: z.object({\n' +
+    '\x1B[7m   \x1B[0m \x1B[91m~~~~~~~~~~~~~~~~~~~~~~~~~\x1B[0m\n' +
+    '\x1B[7m...\x1B[0m \n' +
+    '\x1B[7m131\x1B[0m     }),\n' +
+    '\x1B[7m   \x1B[0m \x1B[91m~~~~~~~\x1B[0m\n' +
+    '\x1B[7m132\x1B[0m   }\n' +
+    '\x1B[7m   \x1B[0m \x1B[91m~~~\x1B[0m\n' +
+    '\n' +
+    '  \x1B[96msrc/start/app.ts\x1B[0m:\x1B[93m46\x1B[0m:\x1B[93m3\x1B[0m\n' +
+    '    \x1B[7m46\x1B[0m   middleware: RequestHandler | RequestHandler[]\n' +
+    '    \x1B[7m  \x1B[0m \x1B[96m  ~~~~~~~~~~\x1B[0m\n' +
+    "    'middleware' is declared here.\n" +
+    "\x1B[96msrc/start/app.ts\x1B[0m:\x1B[93m129\x1B[0m:\x1B[93m16\x1B[0m - \x1B[91merror\x1B[0m\x1B[90m TS2304: \x1B[0mCannot find name 'z'.\n" +
+    '\n' +
+    '\x1B[7m129\x1B[0m     validator: z.object({\n' +
+    '\x1B[7m   \x1B[0m \x1B[91m               ~\x1B[0m\n' +
+    "\x1B[96msrc/start/app.ts\x1B[0m:\x1B[93m130\x1B[0m:\x1B[93m13\x1B[0m - \x1B[91merror\x1B[0m\x1B[90m TS2304: \x1B[0mCannot find name 'z'.\n" +
+    '\n' +
+    '\x1B[7m130\x1B[0m       name: z.string().min(3).max(255),\n' +
+    '\x1B[7m   \x1B[0m \x1B[91m            ~\x1B[0m\n' +
+    '\n' +
+    '    at createTSError (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts:859:12)\n' +
+    '    at reportTSError (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts:863:19)\n' +
+    '    at getOutput (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts:1077:36)\n' +
+    '    at Object.compile (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts:1433:41)\n' +
+    '    at Module.m._compile (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts:1617:30)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1309:10)\n' +
+    '    at Object.require.extensions.<computed> [as .ts] (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts:1621:12)\n' +
+    '    at Module.load (node:internal/modules/cjs/loader:1113:32)\n' +
+    '    at Function.Module._load (node:internal/modules/cjs/loader:960:12)\n' +
+    '    at Module.require (node:internal/modules/cjs/loader:1137:19)',
+  exception: true,
+  date: 'Sun Aug 06 2023 04:29:48 GMT+0200 (Central European Summer Time)',
+  process: {
+    pid: 5990,
+    uid: 501,
+    gid: 20,
+    cwd: '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit',
+    execPath: '/opt/homebrew/Cellar/node/20.3.0/bin/node',
+    version: 'v20.3.0',
+    argv: [
+      '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/.bin/ts-node',
+      '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/src/server.ts'
+    ],
+    memoryUsage: {
+      rss: 333807616,
+      heapTotal: 227917824,
+      heapUsed: 194125728,
+      external: 25840824,
+      arrayBuffers: 23019895
+    }
+  },
+  os: {
+    loadavg: [ 1.1572265625, 1.28662109375, 1.38671875 ],
+    uptime: 1411796
+  },
+  trace: [
+    {
+      column: 12,
+      file: '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts',
+      function: 'createTSError',
+      line: 859,
+      method: null,
+      native: false
+    },
+    {
+      column: 19,
+      file: '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts',
+      function: 'reportTSError',
+      line: 863,
+      method: null,
+      native: false
+    },
+    {
+      column: 36,
+      file: '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts',
+      function: 'getOutput',
+      line: 1077,
+      method: null,
+      native: false
+    },
+    {
+      column: 41,
+      file: '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts',
+      function: 'Object.compile',
+      line: 1433,
+      method: 'compile',
+      native: false
+    },
+    {
+      column: 30,
+      file: '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts',
+      function: 'Module.m._compile',
+      line: 1617,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 10,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._extensions..js',
+      line: 1309,
+      method: '.js',
+      native: false
+    },
+    {
+      column: 12,
+      file: '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts',
+      function: 'Object.require.extensions.<computed> [as .ts]',
+      line: 1621,
+      method: 'ts]',
+      native: false
+    },
+    {
+      column: 32,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module.load',
+      line: 1113,
+      method: 'load',
+      native: false
+    },
+    {
+      column: 12,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._load',
+      line: 960,
+      method: '_load',
+      native: false
+    },
+    {
+      column: 19,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module.require',
+      line: 1137,
+      method: 'require',
+      native: false
+    }
+  ],
+  timestamp: '2023-08-06 04:29:48'
+}
+{
+  error: [96msrc/start/app.ts[0m:[93m128[0m:[93m3[0m - [91merror[0m[90m TS2345: [0mArgument of type '{ validator: any; }' is not assignable to parameter of type 'HandlerOptions'.
+    Property 'middleware' is missing in type '{ validator: any; }' but required in type 'HandlerOptions'.
+  
+  [7m128[0m   {
+  [7m   [0m [91m  ~[0m
+  [7m129[0m     validator: z.object({
+  [7m   [0m [91m~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+  [7m...[0m 
+  [7m131[0m     }),
+  [7m   [0m [91m~~~~~~~[0m
+  [7m132[0m   }
+  [7m   [0m [91m~~~[0m
+  
+    [96msrc/start/app.ts[0m:[93m46[0m:[93m3[0m
+      [7m46[0m   middleware: RequestHandler | RequestHandler[]
+      [7m  [0m [96m  ~~~~~~~~~~[0m
+      'middleware' is declared here.
+  [96msrc/start/app.ts[0m:[93m129[0m:[93m16[0m - [91merror[0m[90m TS2304: [0mCannot find name 'z'.
+  
+  [7m129[0m     validator: z.object({
+  [7m   [0m [91m               ~[0m
+  [96msrc/start/app.ts[0m:[93m130[0m:[93m13[0m - [91merror[0m[90m TS2304: [0mCannot find name 'z'.
+  
+  [7m130[0m       name: z.string().min(3).max(255),
+  [7m   [0m [91m            ~[0m
+  ,
+  level: 'error',
+  message: 'uncaughtException: ⨯ Unable to compile TypeScript:\n' +
+    "\x1B[96msrc/start/app.ts\x1B[0m:\x1B[93m128\x1B[0m:\x1B[93m3\x1B[0m - \x1B[91merror\x1B[0m\x1B[90m TS2345: \x1B[0mArgument of type '{ validator: any; }' is not assignable to parameter of type 'HandlerOptions'.\n" +
+    "  Property 'middleware' is missing in type '{ validator: any; }' but required in type 'HandlerOptions'.\n" +
+    '\n' +
+    '\x1B[7m128\x1B[0m   {\n' +
+    '\x1B[7m   \x1B[0m \x1B[91m  ~\x1B[0m\n' +
+    '\x1B[7m129\x1B[0m     validator: z.object({\n' +
+    '\x1B[7m   \x1B[0m \x1B[91m~~~~~~~~~~~~~~~~~~~~~~~~~\x1B[0m\n' +
+    '\x1B[7m...\x1B[0m \n' +
+    '\x1B[7m131\x1B[0m     }),\n' +
+    '\x1B[7m   \x1B[0m \x1B[91m~~~~~~~\x1B[0m\n' +
+    '\x1B[7m132\x1B[0m   }\n' +
+    '\x1B[7m   \x1B[0m \x1B[91m~~~\x1B[0m\n' +
+    '\n' +
+    '  \x1B[96msrc/start/app.ts\x1B[0m:\x1B[93m46\x1B[0m:\x1B[93m3\x1B[0m\n' +
+    '    \x1B[7m46\x1B[0m   middleware: RequestHandler | RequestHandler[]\n' +
+    '    \x1B[7m  \x1B[0m \x1B[96m  ~~~~~~~~~~\x1B[0m\n' +
+    "    'middleware' is declared here.\n" +
+    "\x1B[96msrc/start/app.ts\x1B[0m:\x1B[93m129\x1B[0m:\x1B[93m16\x1B[0m - \x1B[91merror\x1B[0m\x1B[90m TS2304: \x1B[0mCannot find name 'z'.\n" +
+    '\n' +
+    '\x1B[7m129\x1B[0m     validator: z.object({\n' +
+    '\x1B[7m   \x1B[0m \x1B[91m               ~\x1B[0m\n' +
+    "\x1B[96msrc/start/app.ts\x1B[0m:\x1B[93m130\x1B[0m:\x1B[93m13\x1B[0m - \x1B[91merror\x1B[0m\x1B[90m TS2304: \x1B[0mCannot find name 'z'.\n" +
+    '\n' +
+    '\x1B[7m130\x1B[0m       name: z.string().min(3).max(255),\n' +
+    '\x1B[7m   \x1B[0m \x1B[91m            ~\x1B[0m\n' +
+    '\n' +
+    'TSError: ⨯ Unable to compile TypeScript:\n' +
+    "\x1B[96msrc/start/app.ts\x1B[0m:\x1B[93m128\x1B[0m:\x1B[93m3\x1B[0m - \x1B[91merror\x1B[0m\x1B[90m TS2345: \x1B[0mArgument of type '{ validator: any; }' is not assignable to parameter of type 'HandlerOptions'.\n" +
+    "  Property 'middleware' is missing in type '{ validator: any; }' but required in type 'HandlerOptions'.\n" +
+    '\n' +
+    '\x1B[7m128\x1B[0m   {\n' +
+    '\x1B[7m   \x1B[0m \x1B[91m  ~\x1B[0m\n' +
+    '\x1B[7m129\x1B[0m     validator: z.object({\n' +
+    '\x1B[7m   \x1B[0m \x1B[91m~~~~~~~~~~~~~~~~~~~~~~~~~\x1B[0m\n' +
+    '\x1B[7m...\x1B[0m \n' +
+    '\x1B[7m131\x1B[0m     }),\n' +
+    '\x1B[7m   \x1B[0m \x1B[91m~~~~~~~\x1B[0m\n' +
+    '\x1B[7m132\x1B[0m   }\n' +
+    '\x1B[7m   \x1B[0m \x1B[91m~~~\x1B[0m\n' +
+    '\n' +
+    '  \x1B[96msrc/start/app.ts\x1B[0m:\x1B[93m46\x1B[0m:\x1B[93m3\x1B[0m\n' +
+    '    \x1B[7m46\x1B[0m   middleware: RequestHandler | RequestHandler[]\n' +
+    '    \x1B[7m  \x1B[0m \x1B[96m  ~~~~~~~~~~\x1B[0m\n' +
+    "    'middleware' is declared here.\n" +
+    "\x1B[96msrc/start/app.ts\x1B[0m:\x1B[93m129\x1B[0m:\x1B[93m16\x1B[0m - \x1B[91merror\x1B[0m\x1B[90m TS2304: \x1B[0mCannot find name 'z'.\n" +
+    '\n' +
+    '\x1B[7m129\x1B[0m     validator: z.object({\n' +
+    '\x1B[7m   \x1B[0m \x1B[91m               ~\x1B[0m\n' +
+    "\x1B[96msrc/start/app.ts\x1B[0m:\x1B[93m130\x1B[0m:\x1B[93m13\x1B[0m - \x1B[91merror\x1B[0m\x1B[90m TS2304: \x1B[0mCannot find name 'z'.\n" +
+    '\n' +
+    '\x1B[7m130\x1B[0m       name: z.string().min(3).max(255),\n' +
+    '\x1B[7m   \x1B[0m \x1B[91m            ~\x1B[0m\n' +
+    '\n' +
+    '    at createTSError (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts:859:12)\n' +
+    '    at reportTSError (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts:863:19)\n' +
+    '    at getOutput (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts:1077:36)\n' +
+    '    at Object.compile (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts:1433:41)\n' +
+    '    at Module.m._compile (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts:1617:30)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1309:10)\n' +
+    '    at Object.require.extensions.<computed> [as .ts] (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts:1621:12)\n' +
+    '    at Module.load (node:internal/modules/cjs/loader:1113:32)\n' +
+    '    at Function.Module._load (node:internal/modules/cjs/loader:960:12)\n' +
+    '    at Module.require (node:internal/modules/cjs/loader:1137:19)',
+  stack: 'TSError: ⨯ Unable to compile TypeScript:\n' +
+    "\x1B[96msrc/start/app.ts\x1B[0m:\x1B[93m128\x1B[0m:\x1B[93m3\x1B[0m - \x1B[91merror\x1B[0m\x1B[90m TS2345: \x1B[0mArgument of type '{ validator: any; }' is not assignable to parameter of type 'HandlerOptions'.\n" +
+    "  Property 'middleware' is missing in type '{ validator: any; }' but required in type 'HandlerOptions'.\n" +
+    '\n' +
+    '\x1B[7m128\x1B[0m   {\n' +
+    '\x1B[7m   \x1B[0m \x1B[91m  ~\x1B[0m\n' +
+    '\x1B[7m129\x1B[0m     validator: z.object({\n' +
+    '\x1B[7m   \x1B[0m \x1B[91m~~~~~~~~~~~~~~~~~~~~~~~~~\x1B[0m\n' +
+    '\x1B[7m...\x1B[0m \n' +
+    '\x1B[7m131\x1B[0m     }),\n' +
+    '\x1B[7m   \x1B[0m \x1B[91m~~~~~~~\x1B[0m\n' +
+    '\x1B[7m132\x1B[0m   }\n' +
+    '\x1B[7m   \x1B[0m \x1B[91m~~~\x1B[0m\n' +
+    '\n' +
+    '  \x1B[96msrc/start/app.ts\x1B[0m:\x1B[93m46\x1B[0m:\x1B[93m3\x1B[0m\n' +
+    '    \x1B[7m46\x1B[0m   middleware: RequestHandler | RequestHandler[]\n' +
+    '    \x1B[7m  \x1B[0m \x1B[96m  ~~~~~~~~~~\x1B[0m\n' +
+    "    'middleware' is declared here.\n" +
+    "\x1B[96msrc/start/app.ts\x1B[0m:\x1B[93m129\x1B[0m:\x1B[93m16\x1B[0m - \x1B[91merror\x1B[0m\x1B[90m TS2304: \x1B[0mCannot find name 'z'.\n" +
+    '\n' +
+    '\x1B[7m129\x1B[0m     validator: z.object({\n' +
+    '\x1B[7m   \x1B[0m \x1B[91m               ~\x1B[0m\n' +
+    "\x1B[96msrc/start/app.ts\x1B[0m:\x1B[93m130\x1B[0m:\x1B[93m13\x1B[0m - \x1B[91merror\x1B[0m\x1B[90m TS2304: \x1B[0mCannot find name 'z'.\n" +
+    '\n' +
+    '\x1B[7m130\x1B[0m       name: z.string().min(3).max(255),\n' +
+    '\x1B[7m   \x1B[0m \x1B[91m            ~\x1B[0m\n' +
+    '\n' +
+    '    at createTSError (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts:859:12)\n' +
+    '    at reportTSError (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts:863:19)\n' +
+    '    at getOutput (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts:1077:36)\n' +
+    '    at Object.compile (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts:1433:41)\n' +
+    '    at Module.m._compile (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts:1617:30)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1309:10)\n' +
+    '    at Object.require.extensions.<computed> [as .ts] (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts:1621:12)\n' +
+    '    at Module.load (node:internal/modules/cjs/loader:1113:32)\n' +
+    '    at Function.Module._load (node:internal/modules/cjs/loader:960:12)\n' +
+    '    at Module.require (node:internal/modules/cjs/loader:1137:19)',
+  exception: true,
+  date: 'Sun Aug 06 2023 04:29:48 GMT+0200 (Central European Summer Time)',
+  process: {
+    pid: 5990,
+    uid: 501,
+    gid: 20,
+    cwd: '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit',
+    execPath: '/opt/homebrew/Cellar/node/20.3.0/bin/node',
+    version: 'v20.3.0',
+    argv: [
+      '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/.bin/ts-node',
+      '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/src/server.ts'
+    ],
+    memoryUsage: {
+      rss: 333807616,
+      heapTotal: 227917824,
+      heapUsed: 194125728,
+      external: 25840824,
+      arrayBuffers: 23019895
+    }
+  },
+  os: {
+    loadavg: [ 1.1572265625, 1.28662109375, 1.38671875 ],
+    uptime: 1411796
+  },
+  trace: [
+    {
+      column: 12,
+      file: '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts',
+      function: 'createTSError',
+      line: 859,
+      method: null,
+      native: false
+    },
+    {
+      column: 19,
+      file: '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts',
+      function: 'reportTSError',
+      line: 863,
+      method: null,
+      native: false
+    },
+    {
+      column: 36,
+      file: '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts',
+      function: 'getOutput',
+      line: 1077,
+      method: null,
+      native: false
+    },
+    {
+      column: 41,
+      file: '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts',
+      function: 'Object.compile',
+      line: 1433,
+      method: 'compile',
+      native: false
+    },
+    {
+      column: 30,
+      file: '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts',
+      function: 'Module.m._compile',
+      line: 1617,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 10,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._extensions..js',
+      line: 1309,
+      method: '.js',
+      native: false
+    },
+    {
+      column: 12,
+      file: '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts',
+      function: 'Object.require.extensions.<computed> [as .ts]',
+      line: 1621,
+      method: 'ts]',
+      native: false
+    },
+    {
+      column: 32,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module.load',
+      line: 1113,
+      method: 'load',
+      native: false
+    },
+    {
+      column: 12,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._load',
+      line: 960,
+      method: '_load',
+      native: false
+    },
+    {
+      column: 19,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module.require',
+      line: 1137,
+      method: 'require',
+      native: false
+    }
+  ],
+  timestamp: '2023-08-06 04:29:48'
+}
+{
+  error: TypeError: Router.use() requires a middleware function but got a undefined
+      at Function.use (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/express/lib/router/index.js:469:13)
+      at App.route (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/src/start/app.ts:85:12)
+      at Object.<anonymous> (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/src/start/app.ts:109:5)
+      at Module._compile (node:internal/modules/cjs/loader:1255:14)
+      at Module.m._compile (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts:1618:23)
+      at Module._extensions..js (node:internal/modules/cjs/loader:1309:10)
+      at Object.require.extensions.<computed> [as .ts] (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts:1621:12)
+      at Module.load (node:internal/modules/cjs/loader:1113:32)
+      at Function.Module._load (node:internal/modules/cjs/loader:960:12)
+      at Module.require (node:internal/modules/cjs/loader:1137:19),
+  level: 'error',
+  message: 'uncaughtException: Router.use() requires a middleware function but got a undefined\n' +
+    'TypeError: Router.use() requires a middleware function but got a undefined\n' +
+    '    at Function.use (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/express/lib/router/index.js:469:13)\n' +
+    '    at App.route (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/src/start/app.ts:85:12)\n' +
+    '    at Object.<anonymous> (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/src/start/app.ts:109:5)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1255:14)\n' +
+    '    at Module.m._compile (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts:1618:23)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1309:10)\n' +
+    '    at Object.require.extensions.<computed> [as .ts] (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts:1621:12)\n' +
+    '    at Module.load (node:internal/modules/cjs/loader:1113:32)\n' +
+    '    at Function.Module._load (node:internal/modules/cjs/loader:960:12)\n' +
+    '    at Module.require (node:internal/modules/cjs/loader:1137:19)',
+  stack: 'TypeError: Router.use() requires a middleware function but got a undefined\n' +
+    '    at Function.use (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/express/lib/router/index.js:469:13)\n' +
+    '    at App.route (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/src/start/app.ts:85:12)\n' +
+    '    at Object.<anonymous> (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/src/start/app.ts:109:5)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1255:14)\n' +
+    '    at Module.m._compile (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts:1618:23)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1309:10)\n' +
+    '    at Object.require.extensions.<computed> [as .ts] (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts:1621:12)\n' +
+    '    at Module.load (node:internal/modules/cjs/loader:1113:32)\n' +
+    '    at Function.Module._load (node:internal/modules/cjs/loader:960:12)\n' +
+    '    at Module.require (node:internal/modules/cjs/loader:1137:19)',
+  exception: true,
+  date: 'Sun Aug 06 2023 04:31:17 GMT+0200 (Central European Summer Time)',
+  process: {
+    pid: 6015,
+    uid: 501,
+    gid: 20,
+    cwd: '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit',
+    execPath: '/opt/homebrew/Cellar/node/20.3.0/bin/node',
+    version: 'v20.3.0',
+    argv: [
+      '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/.bin/ts-node',
+      '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/src/server.ts'
+    ],
+    memoryUsage: {
+      rss: 362119168,
+      heapTotal: 246726656,
+      heapUsed: 222097496,
+      external: 26669843,
+      arrayBuffers: 23848914
+    }
+  },
+  os: {
+    loadavg: [ 1.29443359375, 1.2958984375, 1.3779296875 ],
+    uptime: 1411885
+  },
+  trace: [
+    {
+      column: 13,
+      file: '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/express/lib/router/index.js',
+      function: 'Function.use',
+      line: 469,
+      method: 'use',
+      native: false
+    },
+    {
+      column: 12,
+      file: '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/src/start/app.ts',
+      function: 'App.route',
+      line: 85,
+      method: 'route',
+      native: false
+    },
+    {
+      column: 5,
+      file: '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/src/start/app.ts',
+      function: null,
+      line: 109,
+      method: null,
+      native: false
+    },
+    {
+      column: 14,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._compile',
+      line: 1255,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 23,
+      file: '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts',
+      function: 'Module.m._compile',
+      line: 1618,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 10,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._extensions..js',
+      line: 1309,
+      method: '.js',
+      native: false
+    },
+    {
+      column: 12,
+      file: '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts',
+      function: 'Object.require.extensions.<computed> [as .ts]',
+      line: 1621,
+      method: 'ts]',
+      native: false
+    },
+    {
+      column: 32,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module.load',
+      line: 1113,
+      method: 'load',
+      native: false
+    },
+    {
+      column: 12,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._load',
+      line: 960,
+      method: '_load',
+      native: false
+    },
+    {
+      column: 19,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module.require',
+      line: 1137,
+      method: 'require',
+      native: false
+    }
+  ],
+  timestamp: '2023-08-06 04:31:17'
+}
+{
+  error: TypeError: Router.use() requires a middleware function but got a undefined
+      at Function.use (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/express/lib/router/index.js:469:13)
+      at App.route (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/src/start/app.ts:85:12)
+      at Object.<anonymous> (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/src/start/app.ts:109:5)
+      at Module._compile (node:internal/modules/cjs/loader:1255:14)
+      at Module.m._compile (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts:1618:23)
+      at Module._extensions..js (node:internal/modules/cjs/loader:1309:10)
+      at Object.require.extensions.<computed> [as .ts] (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts:1621:12)
+      at Module.load (node:internal/modules/cjs/loader:1113:32)
+      at Function.Module._load (node:internal/modules/cjs/loader:960:12)
+      at Module.require (node:internal/modules/cjs/loader:1137:19),
+  level: 'error',
+  message: 'uncaughtException: Router.use() requires a middleware function but got a undefined\n' +
+    'TypeError: Router.use() requires a middleware function but got a undefined\n' +
+    '    at Function.use (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/express/lib/router/index.js:469:13)\n' +
+    '    at App.route (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/src/start/app.ts:85:12)\n' +
+    '    at Object.<anonymous> (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/src/start/app.ts:109:5)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1255:14)\n' +
+    '    at Module.m._compile (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts:1618:23)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1309:10)\n' +
+    '    at Object.require.extensions.<computed> [as .ts] (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts:1621:12)\n' +
+    '    at Module.load (node:internal/modules/cjs/loader:1113:32)\n' +
+    '    at Function.Module._load (node:internal/modules/cjs/loader:960:12)\n' +
+    '    at Module.require (node:internal/modules/cjs/loader:1137:19)',
+  stack: 'TypeError: Router.use() requires a middleware function but got a undefined\n' +
+    '    at Function.use (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/express/lib/router/index.js:469:13)\n' +
+    '    at App.route (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/src/start/app.ts:85:12)\n' +
+    '    at Object.<anonymous> (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/src/start/app.ts:109:5)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1255:14)\n' +
+    '    at Module.m._compile (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts:1618:23)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1309:10)\n' +
+    '    at Object.require.extensions.<computed> [as .ts] (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts:1621:12)\n' +
+    '    at Module.load (node:internal/modules/cjs/loader:1113:32)\n' +
+    '    at Function.Module._load (node:internal/modules/cjs/loader:960:12)\n' +
+    '    at Module.require (node:internal/modules/cjs/loader:1137:19)',
+  exception: true,
+  date: 'Sun Aug 06 2023 04:31:17 GMT+0200 (Central European Summer Time)',
+  process: {
+    pid: 6015,
+    uid: 501,
+    gid: 20,
+    cwd: '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit',
+    execPath: '/opt/homebrew/Cellar/node/20.3.0/bin/node',
+    version: 'v20.3.0',
+    argv: [
+      '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/.bin/ts-node',
+      '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/src/server.ts'
+    ],
+    memoryUsage: {
+      rss: 362119168,
+      heapTotal: 246726656,
+      heapUsed: 222097496,
+      external: 26669843,
+      arrayBuffers: 23848914
+    }
+  },
+  os: {
+    loadavg: [ 1.29443359375, 1.2958984375, 1.3779296875 ],
+    uptime: 1411885
+  },
+  trace: [
+    {
+      column: 13,
+      file: '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/express/lib/router/index.js',
+      function: 'Function.use',
+      line: 469,
+      method: 'use',
+      native: false
+    },
+    {
+      column: 12,
+      file: '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/src/start/app.ts',
+      function: 'App.route',
+      line: 85,
+      method: 'route',
+      native: false
+    },
+    {
+      column: 5,
+      file: '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/src/start/app.ts',
+      function: null,
+      line: 109,
+      method: null,
+      native: false
+    },
+    {
+      column: 14,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._compile',
+      line: 1255,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 23,
+      file: '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts',
+      function: 'Module.m._compile',
+      line: 1618,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 10,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._extensions..js',
+      line: 1309,
+      method: '.js',
+      native: false
+    },
+    {
+      column: 12,
+      file: '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts',
+      function: 'Object.require.extensions.<computed> [as .ts]',
+      line: 1621,
+      method: 'ts]',
+      native: false
+    },
+    {
+      column: 32,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module.load',
+      line: 1113,
+      method: 'load',
+      native: false
+    },
+    {
+      column: 12,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._load',
+      line: 960,
+      method: '_load',
+      native: false
+    },
+    {
+      column: 19,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module.require',
+      line: 1137,
+      method: 'require',
+      native: false
+    }
+  ],
+  timestamp: '2023-08-06 04:31:17'
+}
+{
+  error: TypeError: Router.use() requires a middleware function but got a undefined
+      at Function.use (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/express/lib/router/index.js:469:13)
+      at App.route (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/src/start/app.ts:85:12)
+      at Object.<anonymous> (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/src/start/app.ts:109:5)
+      at Module._compile (node:internal/modules/cjs/loader:1255:14)
+      at Module.m._compile (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts:1618:23)
+      at Module._extensions..js (node:internal/modules/cjs/loader:1309:10)
+      at Object.require.extensions.<computed> [as .ts] (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts:1621:12)
+      at Module.load (node:internal/modules/cjs/loader:1113:32)
+      at Function.Module._load (node:internal/modules/cjs/loader:960:12)
+      at Module.require (node:internal/modules/cjs/loader:1137:19),
+  level: 'error',
+  message: 'uncaughtException: Router.use() requires a middleware function but got a undefined\n' +
+    'TypeError: Router.use() requires a middleware function but got a undefined\n' +
+    '    at Function.use (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/express/lib/router/index.js:469:13)\n' +
+    '    at App.route (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/src/start/app.ts:85:12)\n' +
+    '    at Object.<anonymous> (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/src/start/app.ts:109:5)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1255:14)\n' +
+    '    at Module.m._compile (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts:1618:23)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1309:10)\n' +
+    '    at Object.require.extensions.<computed> [as .ts] (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts:1621:12)\n' +
+    '    at Module.load (node:internal/modules/cjs/loader:1113:32)\n' +
+    '    at Function.Module._load (node:internal/modules/cjs/loader:960:12)\n' +
+    '    at Module.require (node:internal/modules/cjs/loader:1137:19)',
+  stack: 'TypeError: Router.use() requires a middleware function but got a undefined\n' +
+    '    at Function.use (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/express/lib/router/index.js:469:13)\n' +
+    '    at App.route (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/src/start/app.ts:85:12)\n' +
+    '    at Object.<anonymous> (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/src/start/app.ts:109:5)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1255:14)\n' +
+    '    at Module.m._compile (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts:1618:23)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1309:10)\n' +
+    '    at Object.require.extensions.<computed> [as .ts] (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts:1621:12)\n' +
+    '    at Module.load (node:internal/modules/cjs/loader:1113:32)\n' +
+    '    at Function.Module._load (node:internal/modules/cjs/loader:960:12)\n' +
+    '    at Module.require (node:internal/modules/cjs/loader:1137:19)',
+  exception: true,
+  date: 'Sun Aug 06 2023 04:31:20 GMT+0200 (Central European Summer Time)',
+  process: {
+    pid: 6060,
+    uid: 501,
+    gid: 20,
+    cwd: '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit',
+    execPath: '/opt/homebrew/Cellar/node/20.3.0/bin/node',
+    version: 'v20.3.0',
+    argv: [
+      '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/.bin/ts-node',
+      '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/src/server.ts'
+    ],
+    memoryUsage: {
+      rss: 362053632,
+      heapTotal: 246202368,
+      heapUsed: 222836808,
+      external: 26827127,
+      arrayBuffers: 24006198
+    }
+  },
+  os: {
+    loadavg: [ 1.29443359375, 1.2958984375, 1.3779296875 ],
+    uptime: 1411888
+  },
+  trace: [
+    {
+      column: 13,
+      file: '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/express/lib/router/index.js',
+      function: 'Function.use',
+      line: 469,
+      method: 'use',
+      native: false
+    },
+    {
+      column: 12,
+      file: '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/src/start/app.ts',
+      function: 'App.route',
+      line: 85,
+      method: 'route',
+      native: false
+    },
+    {
+      column: 5,
+      file: '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/src/start/app.ts',
+      function: null,
+      line: 109,
+      method: null,
+      native: false
+    },
+    {
+      column: 14,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._compile',
+      line: 1255,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 23,
+      file: '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts',
+      function: 'Module.m._compile',
+      line: 1618,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 10,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._extensions..js',
+      line: 1309,
+      method: '.js',
+      native: false
+    },
+    {
+      column: 12,
+      file: '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts',
+      function: 'Object.require.extensions.<computed> [as .ts]',
+      line: 1621,
+      method: 'ts]',
+      native: false
+    },
+    {
+      column: 32,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module.load',
+      line: 1113,
+      method: 'load',
+      native: false
+    },
+    {
+      column: 12,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._load',
+      line: 960,
+      method: '_load',
+      native: false
+    },
+    {
+      column: 19,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module.require',
+      line: 1137,
+      method: 'require',
+      native: false
+    }
+  ],
+  timestamp: '2023-08-06 04:31:20'
+}
+{
+  error: TypeError: Router.use() requires a middleware function but got a undefined
+      at Function.use (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/express/lib/router/index.js:469:13)
+      at App.route (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/src/start/app.ts:85:12)
+      at Object.<anonymous> (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/src/start/app.ts:109:5)
+      at Module._compile (node:internal/modules/cjs/loader:1255:14)
+      at Module.m._compile (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts:1618:23)
+      at Module._extensions..js (node:internal/modules/cjs/loader:1309:10)
+      at Object.require.extensions.<computed> [as .ts] (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts:1621:12)
+      at Module.load (node:internal/modules/cjs/loader:1113:32)
+      at Function.Module._load (node:internal/modules/cjs/loader:960:12)
+      at Module.require (node:internal/modules/cjs/loader:1137:19),
+  level: 'error',
+  message: 'uncaughtException: Router.use() requires a middleware function but got a undefined\n' +
+    'TypeError: Router.use() requires a middleware function but got a undefined\n' +
+    '    at Function.use (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/express/lib/router/index.js:469:13)\n' +
+    '    at App.route (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/src/start/app.ts:85:12)\n' +
+    '    at Object.<anonymous> (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/src/start/app.ts:109:5)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1255:14)\n' +
+    '    at Module.m._compile (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts:1618:23)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1309:10)\n' +
+    '    at Object.require.extensions.<computed> [as .ts] (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts:1621:12)\n' +
+    '    at Module.load (node:internal/modules/cjs/loader:1113:32)\n' +
+    '    at Function.Module._load (node:internal/modules/cjs/loader:960:12)\n' +
+    '    at Module.require (node:internal/modules/cjs/loader:1137:19)',
+  stack: 'TypeError: Router.use() requires a middleware function but got a undefined\n' +
+    '    at Function.use (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/express/lib/router/index.js:469:13)\n' +
+    '    at App.route (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/src/start/app.ts:85:12)\n' +
+    '    at Object.<anonymous> (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/src/start/app.ts:109:5)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1255:14)\n' +
+    '    at Module.m._compile (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts:1618:23)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1309:10)\n' +
+    '    at Object.require.extensions.<computed> [as .ts] (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts:1621:12)\n' +
+    '    at Module.load (node:internal/modules/cjs/loader:1113:32)\n' +
+    '    at Function.Module._load (node:internal/modules/cjs/loader:960:12)\n' +
+    '    at Module.require (node:internal/modules/cjs/loader:1137:19)',
+  exception: true,
+  date: 'Sun Aug 06 2023 04:31:20 GMT+0200 (Central European Summer Time)',
+  process: {
+    pid: 6060,
+    uid: 501,
+    gid: 20,
+    cwd: '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit',
+    execPath: '/opt/homebrew/Cellar/node/20.3.0/bin/node',
+    version: 'v20.3.0',
+    argv: [
+      '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/.bin/ts-node',
+      '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/src/server.ts'
+    ],
+    memoryUsage: {
+      rss: 362053632,
+      heapTotal: 246202368,
+      heapUsed: 222836808,
+      external: 26827127,
+      arrayBuffers: 24006198
+    }
+  },
+  os: {
+    loadavg: [ 1.29443359375, 1.2958984375, 1.3779296875 ],
+    uptime: 1411888
+  },
+  trace: [
+    {
+      column: 13,
+      file: '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/express/lib/router/index.js',
+      function: 'Function.use',
+      line: 469,
+      method: 'use',
+      native: false
+    },
+    {
+      column: 12,
+      file: '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/src/start/app.ts',
+      function: 'App.route',
+      line: 85,
+      method: 'route',
+      native: false
+    },
+    {
+      column: 5,
+      file: '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/src/start/app.ts',
+      function: null,
+      line: 109,
+      method: null,
+      native: false
+    },
+    {
+      column: 14,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._compile',
+      line: 1255,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 23,
+      file: '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts',
+      function: 'Module.m._compile',
+      line: 1618,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 10,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._extensions..js',
+      line: 1309,
+      method: '.js',
+      native: false
+    },
+    {
+      column: 12,
+      file: '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts',
+      function: 'Object.require.extensions.<computed> [as .ts]',
+      line: 1621,
+      method: 'ts]',
+      native: false
+    },
+    {
+      column: 32,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module.load',
+      line: 1113,
+      method: 'load',
+      native: false
+    },
+    {
+      column: 12,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._load',
+      line: 960,
+      method: '_load',
+      native: false
+    },
+    {
+      column: 19,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module.require',
+      line: 1137,
+      method: 'require',
+      native: false
+    }
+  ],
+  timestamp: '2023-08-06 04:31:20'
+}
+{
+  error: [96msrc/start/app.ts[0m:[93m88[0m:[93m3[0m - [91merror[0m[90m TS2391: [0mFunction implementation is missing or not immediately following the declaration.
+  
+  [7m88[0m   route<T = any>(
+  [7m  [0m [91m  ~~~~~[0m
+  [96msrc/start/app.ts[0m:[93m146[0m:[93m1[0m - [91merror[0m[90m TS2300: [0mDuplicate identifier 'app'.
+  
+  [7m146[0m app.route<z.infer<typeof validator>>(
+  [7m   [0m [91m~~~[0m
+  [96msrc/start/app.ts[0m:[93m146[0m:[93m1[0m - [91merror[0m[90m TS2564: [0mProperty 'app' has no initializer and is not definitely assigned in the constructor.
+  
+  [7m146[0m app.route<z.infer<typeof validator>>(
+  [7m   [0m [91m~~~[0m
+  [96msrc/start/app.ts[0m:[93m146[0m:[93m1[0m - [91merror[0m[90m TS2717: [0mSubsequent property declarations must have the same type.  Property 'app' must be of type 'App', but here has type 'any'.
+  
+  [7m146[0m app.route<z.infer<typeof validator>>(
+  [7m   [0m [91m~~~[0m
+  
+    [96msrc/start/app.ts[0m:[93m142[0m:[93m7[0m
+      [7m142[0m const app = new App()
+      [7m   [0m [96m      ~~~[0m
+      'app' was also declared here.
+  [96msrc/start/app.ts[0m:[93m146[0m:[93m5[0m - [91merror[0m[90m TS2394: [0mThis overload signature is not compatible with its implementation signature.
+  
+  [7m146[0m app.route<z.infer<typeof validator>>(
+  [7m   [0m [91m    ~~~~~[0m
+  
+    [96msrc/start/app.ts[0m:[93m88[0m:[93m3[0m
+      [7m88[0m   route<T = any>(
+      [7m  [0m [96m  ~~~~~[0m
+      The implementation signature is declared here.
+  [96msrc/start/app.ts[0m:[93m146[0m:[93m5[0m - [91merror[0m[90m TS7010: [0m'route', which lacks return-type annotation, implicitly has an 'any' return type.
+  
+  [7m146[0m app.route<z.infer<typeof validator>>(
+  [7m   [0m [91m    ~~~~~[0m
+  [96msrc/start/app.ts[0m:[93m146[0m:[93m26[0m - [91merror[0m[90m TS2552: [0mCannot find name 'validator'. Did you mean 'validate'?
+  
+  [7m146[0m app.route<z.infer<typeof validator>>(
+  [7m   [0m [91m                         ~~~~~~~~~[0m
+  [96msrc/start/app.ts[0m:[93m149[0m:[93m12[0m - [91merror[0m[90m TS7006: [0mParameter 'req' implicitly has an 'any' type.
+  
+  [7m149[0m     list: (req, res) => {
+  [7m   [0m [91m           ~~~[0m
+  [96msrc/start/app.ts[0m:[93m149[0m:[93m17[0m - [91merror[0m[90m TS7006: [0mParameter 'res' implicitly has an 'any' type.
+  
+  [7m149[0m     list: (req, res) => {
+  [7m   [0m [91m                ~~~[0m
+  [96msrc/start/app.ts[0m:[93m155[0m:[93m12[0m - [91merror[0m[90m TS7006: [0mParameter 'req' implicitly has an 'any' type.
+  
+  [7m155[0m     post: (req, res) => {
+  [7m   [0m [91m           ~~~[0m
+  [96msrc/start/app.ts[0m:[93m155[0m:[93m17[0m - [91merror[0m[90m TS7006: [0mParameter 'res' implicitly has an 'any' type.
+  
+  [7m155[0m     post: (req, res) => {
+  [7m   [0m [91m                ~~~[0m
+  [96msrc/start/app.ts[0m:[93m162[0m:[93m11[0m - [91merror[0m[90m TS7006: [0mParameter 'req' implicitly has an 'any' type.
+  
+  [7m162[0m     get: (req, res) => {
+  [7m   [0m [91m          ~~~[0m
+  [96msrc/start/app.ts[0m:[93m162[0m:[93m16[0m - [91merror[0m[90m TS7006: [0mParameter 'res' implicitly has an 'any' type.
+  
+  [7m162[0m     get: (req, res) => {
+  [7m   [0m [91m               ~~~[0m
+  [96msrc/start/app.ts[0m:[93m169[0m:[93m11[0m - [91merror[0m[90m TS7006: [0mParameter 'req' implicitly has an 'any' type.
+  
+  [7m169[0m     put: (req, res) => {
+  [7m   [0m [91m          ~~~[0m
+  [96msrc/start/app.ts[0m:[93m169[0m:[93m16[0m - [91merror[0m[90m TS7006: [0mParameter 'res' implicitly has an 'any' type.
+  
+  [7m169[0m     put: (req, res) => {
+  [7m   [0m [91m               ~~~[0m
+  [96msrc/start/app.ts[0m:[93m177[0m:[93m14[0m - [91merror[0m[90m TS7006: [0mParameter 'req' implicitly has an 'any' type.
+  
+  [7m177[0m     delete: (req, res) => {
+  [7m   [0m [91m             ~~~[0m
+  [96msrc/start/app.ts[0m:[93m177[0m:[93m19[0m - [91merror[0m[90m TS7006: [0mParameter 'res' implicitly has an 'any' type.
+  
+  [7m177[0m     delete: (req, res) => {
+  [7m   [0m [91m                  ~~~[0m
+  [96msrc/start/app.ts[0m:[93m186[0m:[93m5[0m - [91merror[0m[90m TS2552: [0mCannot find name 'validator'. Did you mean 'validate'?
+  
+  [7m186[0m     validator,
+  [7m   [0m [91m    ~~~~~~~~~[0m
+  [96msrc/start/app.ts[0m:[93m190[0m:[93m16[0m - [91merror[0m[90m TS2552: [0mCannot find name 'app'. Did you mean 'App'?
+  
+  [7m190[0m export default app.init()
+  [7m   [0m [91m               ~~~[0m
+  [96msrc/start/app.ts[0m:[93m146[0m:[93m1[0m - [91merror[0m[90m TS1434: [0mUnexpected keyword or identifier.
+  
+  [7m146[0m app.route<z.infer<typeof validator>>(
+  [7m   [0m [91m~~~[0m
+  [96msrc/start/app.ts[0m:[93m146[0m:[93m4[0m - [91merror[0m[90m TS1068: [0mUnexpected token. A constructor, method, accessor, or property was expected.
+  
+  [7m146[0m app.route<z.infer<typeof validator>>(
+  [7m   [0m [91m   ~[0m
+  [96msrc/start/app.ts[0m:[93m146[0m:[93m12[0m - [91merror[0m[90m TS1005: [0m',' expected.
+  
+  [7m146[0m app.route<z.infer<typeof validator>>(
+  [7m   [0m [91m           ~[0m
+  [96msrc/start/app.ts[0m:[93m146[0m:[93m18[0m - [91merror[0m[90m TS1005: [0m',' expected.
+  
+  [7m146[0m app.route<z.infer<typeof validator>>(
+  [7m   [0m [91m                 ~[0m
+  [96msrc/start/app.ts[0m:[93m146[0m:[93m36[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+  
+  [7m146[0m app.route<z.infer<typeof validator>>(
+  [7m   [0m [91m                                   ~[0m
+  ,
+  level: 'error',
+  message: 'uncaughtException: ⨯ Unable to compile TypeScript:\n' +
+    '\x1B[96msrc/start/app.ts\x1B[0m:\x1B[93m88\x1B[0m:\x1B[93m3\x1B[0m - \x1B[91merror\x1B[0m\x1B[90m TS2391: \x1B[0mFunction implementation is missing or not immediately following the declaration.\n' +
+    '\n' +
+    '\x1B[7m88\x1B[0m   route<T = any>(\n' +
+    '\x1B[7m  \x1B[0m \x1B[91m  ~~~~~\x1B[0m\n' +
+    "\x1B[96msrc/start/app.ts\x1B[0m:\x1B[93m146\x1B[0m:\x1B[93m1\x1B[0m - \x1B[91merror\x1B[0m\x1B[90m TS2300: \x1B[0mDuplicate identifier 'app'.\n" +
+    '\n' +
+    '\x1B[7m146\x1B[0m app.route<z.infer<typeof validator>>(\n' +
+    '\x1B[7m   \x1B[0m \x1B[91m~~~\x1B[0m\n' +
+    "\x1B[96msrc/start/app.ts\x1B[0m:\x1B[93m146\x1B[0m:\x1B[93m1\x1B[0m - \x1B[91merror\x1B[0m\x1B[90m TS2564: \x1B[0mProperty 'app' has no initializer and is not definitely assigned in the constructor.\n" +
+    '\n' +
+    '\x1B[7m146\x1B[0m app.route<z.infer<typeof validator>>(\n' +
+    '\x1B[7m   \x1B[0m \x1B[91m~~~\x1B[0m\n' +
+    "\x1B[96msrc/start/app.ts\x1B[0m:\x1B[93m146\x1B[0m:\x1B[93m1\x1B[0m - \x1B[91merror\x1B[0m\x1B[90m TS2717: \x1B[0mSubsequent property declarations must have the same type.  Property 'app' must be of type 'App', but here has type 'any'.\n" +
+    '\n' +
+    '\x1B[7m146\x1B[0m app.route<z.infer<typeof validator>>(\n' +
+    '\x1B[7m   \x1B[0m \x1B[91m~~~\x1B[0m\n' +
+    '\n' +
+    '  \x1B[96msrc/start/app.ts\x1B[0m:\x1B[93m142\x1B[0m:\x1B[93m7\x1B[0m\n' +
+    '    \x1B[7m142\x1B[0m const app = new App()\n' +
+    '    \x1B[7m   \x1B[0m \x1B[96m      ~~~\x1B[0m\n' +
+    "    'app' was also declared here.\n" +
+    '\x1B[96msrc/start/app.ts\x1B[0m:\x1B[93m146\x1B[0m:\x1B[93m5\x1B[0m - \x1B[91merror\x1B[0m\x1B[90m TS2394: \x1B[0mThis overload signature is not compatible with its implementation signature.\n' +
+    '\n' +
+    '\x1B[7m146\x1B[0m app.route<z.infer<typeof validator>>(\n' +
+    '\x1B[7m   \x1B[0m \x1B[91m    ~~~~~\x1B[0m\n' +
+    '\n' +
+    '  \x1B[96msrc/start/app.ts\x1B[0m:\x1B[93m88\x1B[0m:\x1B[93m3\x1B[0m\n' +
+    '    \x1B[7m88\x1B[0m   route<T = any>(\n' +
+    '    \x1B[7m  \x1B[0m \x1B[96m  ~~~~~\x1B[0m\n' +
+    '    The implementation signature is declared here.\n' +
+    "\x1B[96msrc/start/app.ts\x1B[0m:\x1B[93m146\x1B[0m:\x1B[93m5\x1B[0m - \x1B[91merror\x1B[0m\x1B[90m TS7010: \x1B[0m'route', which lacks return-type annotation, implicitly has an 'any' return type.\n" +
+    '\n' +
+    '\x1B[7m146\x1B[0m app.route<z.infer<typeof validator>>(\n' +
+    '\x1B[7m   \x1B[0m \x1B[91m    ~~~~~\x1B[0m\n' +
+    "\x1B[96msrc/start/app.ts\x1B[0m:\x1B[93m146\x1B[0m:\x1B[93m26\x1B[0m - \x1B[91merror\x1B[0m\x1B[90m TS2552: \x1B[0mCannot find name 'validator'. Did you mean 'validate'?\n" +
+    '\n' +
+    '\x1B[7m146\x1B[0m app.route<z.infer<typeof validator>>(\n' +
+    '\x1B[7m   \x1B[0m \x1B[91m                         ~~~~~~~~~\x1B[0m\n' +
+    "\x1B[96msrc/start/app.ts\x1B[0m:\x1B[93m149\x1B[0m:\x1B[93m12\x1B[0m - \x1B[91merror\x1B[0m\x1B[90m TS7006: \x1B[0mParameter 'req' implicitly has an 'any' type.\n" +
+    '\n' +
+    '\x1B[7m149\x1B[0m     list: (req, res) => {\n' +
+    '\x1B[7m   \x1B[0m \x1B[91m           ~~~\x1B[0m\n' +
+    "\x1B[96msrc/start/app.ts\x1B[0m:\x1B[93m149\x1B[0m:\x1B[93m17\x1B[0m - \x1B[91merror\x1B[0m\x1B[90m TS7006: \x1B[0mParameter 'res' implicitly has an 'any' type.\n" +
+    '\n' +
+    '\x1B[7m149\x1B[0m     list: (req, res) => {\n' +
+    '\x1B[7m   \x1B[0m \x1B[91m                ~~~\x1B[0m\n' +
+    "\x1B[96msrc/start/app.ts\x1B[0m:\x1B[93m155\x1B[0m:\x1B[93m12\x1B[0m - \x1B[91merror\x1B[0m\x1B[90m TS7006: \x1B[0mParameter 'req' implicitly has an 'any' type.\n" +
+    '\n' +
+    '\x1B[7m155\x1B[0m     post: (req, res) => {\n' +
+    '\x1B[7m   \x1B[0m \x1B[91m           ~~~\x1B[0m\n' +
+    "\x1B[96msrc/start/app.ts\x1B[0m:\x1B[93m155\x1B[0m:\x1B[93m17\x1B[0m - \x1B[91merror\x1B[0m\x1B[90m TS7006: \x1B[0mParameter 'res' implicitly has an 'any' type.\n" +
+    '\n' +
+    '\x1B[7m155\x1B[0m     post: (req, res) => {\n' +
+    '\x1B[7m   \x1B[0m \x1B[91m                ~~~\x1B[0m\n' +
+    "\x1B[96msrc/start/app.ts\x1B[0m:\x1B[93m162\x1B[0m:\x1B[93m11\x1B[0m - \x1B[91merror\x1B[0m\x1B[90m TS7006: \x1B[0mParameter 'req' implicitly has an 'any' type.\n" +
+    '\n' +
+    '\x1B[7m162\x1B[0m     get: (req, res) => {\n' +
+    '\x1B[7m   \x1B[0m \x1B[91m          ~~~\x1B[0m\n' +
+    "\x1B[96msrc/start/app.ts\x1B[0m:\x1B[93m162\x1B[0m:\x1B[93m16\x1B[0m - \x1B[91merror\x1B[0m\x1B[90m TS7006: \x1B[0mParameter 'res' implicitly has an 'any' type.\n" +
+    '\n' +
+    '\x1B[7m162\x1B[0m     get: (req, res) => {\n' +
+    '\x1B[7m   \x1B[0m \x1B[91m               ~~~\x1B[0m\n' +
+    "\x1B[96msrc/start/app.ts\x1B[0m:\x1B[93m169\x1B[0m:\x1B[93m11\x1B[0m - \x1B[91merror\x1B[0m\x1B[90m TS7006: \x1B[0mParameter 'req' implicitly has an 'any' type.\n" +
+    '\n' +
+    '\x1B[7m169\x1B[0m     put: (req, res) => {\n' +
+    '\x1B[7m   \x1B[0m \x1B[91m          ~~~\x1B[0m\n' +
+    "\x1B[96msrc/start/app.ts\x1B[0m:\x1B[93m169\x1B[0m:\x1B[93m16\x1B[0m - \x1B[91merror\x1B[0m\x1B[90m TS7006: \x1B[0mParameter 'res' implicitly has an 'any' type.\n" +
+    '\n' +
+    '\x1B[7m169\x1B[0m     put: (req, res) => {\n' +
+    '\x1B[7m   \x1B[0m \x1B[91m               ~~~\x1B[0m\n' +
+    "\x1B[96msrc/start/app.ts\x1B[0m:\x1B[93m177\x1B[0m:\x1B[93m14\x1B[0m - \x1B[91merror\x1B[0m\x1B[90m TS7006: \x1B[0mParameter 'req' implicitly has an 'any' type.\n" +
+    '\n' +
+    '\x1B[7m177\x1B[0m     delete: (req, res) => {\n' +
+    '\x1B[7m   \x1B[0m \x1B[91m             ~~~\x1B[0m\n' +
+    "\x1B[96msrc/start/app.ts\x1B[0m:\x1B[93m177\x1B[0m:\x1B[93m19\x1B[0m - \x1B[91merror\x1B[0m\x1B[90m TS7006: \x1B[0mParameter 'res' implicitly has an 'any' type.\n" +
+    '\n' +
+    '\x1B[7m177\x1B[0m     delete: (req, res) => {\n' +
+    '\x1B[7m   \x1B[0m \x1B[91m                  ~~~\x1B[0m\n' +
+    "\x1B[96msrc/start/app.ts\x1B[0m:\x1B[93m186\x1B[0m:\x1B[93m5\x1B[0m - \x1B[91merror\x1B[0m\x1B[90m TS2552: \x1B[0mCannot find name 'validator'. Did you mean 'validate'?\n" +
+    '\n' +
+    '\x1B[7m186\x1B[0m     validator,\n' +
+    '\x1B[7m   \x1B[0m \x1B[91m    ~~~~~~~~~\x1B[0m\n' +
+    "\x1B[96msrc/start/app.ts\x1B[0m:\x1B[93m190\x1B[0m:\x1B[93m16\x1B[0m - \x1B[91merror\x1B[0m\x1B[90m TS2552: \x1B[0mCannot find name 'app'. Did you mean 'App'?\n" +
+    '\n' +
+    '\x1B[7m190\x1B[0m export default app.init()\n' +
+    '\x1B[7m   \x1B[0m \x1B[91m               ~~~\x1B[0m\n' +
+    '\x1B[96msrc/start/app.ts\x1B[0m:\x1B[93m146\x1B[0m:\x1B[93m1\x1B[0m - \x1B[91merror\x1B[0m\x1B[90m TS1434: \x1B[0mUnexpected keyword or identifier.\n' +
+    '\n' +
+    '\x1B[7m146\x1B[0m app.route<z.infer<typeof validator>>(\n' +
+    '\x1B[7m   \x1B[0m \x1B[91m~~~\x1B[0m\n' +
+    '\x1B[96msrc/start/app.ts\x1B[0m:\x1B[93m146\x1B[0m:\x1B[93m4\x1B[0m - \x1B[91merror\x1B[0m\x1B[90m TS1068: \x1B[0mUnexpected token. A constructor, method, accessor, or property was expected.\n' +
+    '\n' +
+    '\x1B[7m146\x1B[0m app.route<z.infer<typeof validator>>(\n' +
+    '\x1B[7m   \x1B[0m \x1B[91m   ~\x1B[0m\n' +
+    "\x1B[96msrc/start/app.ts\x1B[0m:\x1B[93m146\x1B[0m:\x1B[93m12\x1B[0m - \x1B[91merror\x1B[0m\x1B[90m TS1005: \x1B[0m',' expected.\n" +
+    '\n' +
+    '\x1B[7m146\x1B[0m app.route<z.infer<typeof validator>>(\n' +
+    '\x1B[7m   \x1B[0m \x1B[91m           ~\x1B[0m\n' +
+    "\x1B[96msrc/start/app.ts\x1B[0m:\x1B[93m146\x1B[0m:\x1B[93m18\x1B[0m - \x1B[91merror\x1B[0m\x1B[90m TS1005: \x1B[0m',' expected.\n" +
+    '\n' +
+    '\x1B[7m146\x1B[0m app.route<z.infer<typeof validator>>(\n' +
+    '\x1B[7m   \x1B[0m \x1B[91m                 ~\x1B[0m\n' +
+    '\x1B[96msrc/start/app.ts\x1B[0m:\x1B[93m146\x1B[0m:\x1B[93m36\x1B[0m - \x1B[91merror\x1B[0m\x1B[90m TS1109: \x1B[0mExpression expected.\n' +
+    '\n' +
+    '\x1B[7m146\x1B[0m app.route<z.infer<typeof validator>>(\n' +
+    '\x1B[7m   \x1B[0m \x1B[91m                                   ~\x1B[0m\n' +
+    '\n' +
+    'TSError: ⨯ Unable to compile TypeScript:\n' +
+    '\x1B[96msrc/start/app.ts\x1B[0m:\x1B[93m88\x1B[0m:\x1B[93m3\x1B[0m - \x1B[91merror\x1B[0m\x1B[90m TS2391: \x1B[0mFunction implementation is missing or not immediately following the declaration.\n' +
+    '\n' +
+    '\x1B[7m88\x1B[0m   route<T = any>(\n' +
+    '\x1B[7m  \x1B[0m \x1B[91m  ~~~~~\x1B[0m\n' +
+    "\x1B[96msrc/start/app.ts\x1B[0m:\x1B[93m146\x1B[0m:\x1B[93m1\x1B[0m - \x1B[91merror\x1B[0m\x1B[90m TS2300: \x1B[0mDuplicate identifier 'app'.\n" +
+    '\n' +
+    '\x1B[7m146\x1B[0m app.route<z.infer<typeof validator>>(\n' +
+    '\x1B[7m   \x1B[0m \x1B[91m~~~\x1B[0m\n' +
+    "\x1B[96msrc/start/app.ts\x1B[0m:\x1B[93m146\x1B[0m:\x1B[93m1\x1B[0m - \x1B[91merror\x1B[0m\x1B[90m TS2564: \x1B[0mProperty 'app' has no initializer and is not definitely assigned in the constructor.\n" +
+    '\n' +
+    '\x1B[7m146\x1B[0m app.route<z.infer<typeof validator>>(\n' +
+    '\x1B[7m   \x1B[0m \x1B[91m~~~\x1B[0m\n' +
+    "\x1B[96msrc/start/app.ts\x1B[0m:\x1B[93m146\x1B[0m:\x1B[93m1\x1B[0m - \x1B[91merror\x1B[0m\x1B[90m TS2717: \x1B[0mSubsequent property declarations must have the same type.  Property 'app' must be of type 'App', but here has type 'any'.\n" +
+    '\n' +
+    '\x1B[7m146\x1B[0m app.route<z.infer<typeof validator>>(\n' +
+    '\x1B[7m   \x1B[0m \x1B[91m~~~\x1B[0m\n' +
+    '\n' +
+    '  \x1B[96msrc/start/app.ts\x1B[0m:\x1B[93m142\x1B[0m:\x1B[93m7\x1B[0m\n' +
+    '    \x1B[7m142\x1B[0m const app = new App()\n' +
+    '    \x1B[7m   \x1B[0m \x1B[96m      ~~~\x1B[0m\n' +
+    "    'app' was also declared here.\n" +
+    '\x1B[96msrc/start/app.ts\x1B[0m:\x1B[93m146\x1B[0m:\x1B[93m5\x1B[0m - \x1B[91merror\x1B[0m\x1B[90m TS2394: \x1B[0mThis overload signature is not compatible with its implementation signature.\n' +
+    '\n' +
+    '\x1B[7m146\x1B[0m app.route<z.infer<typeof validator>>(\n' +
+    '\x1B[7m   \x1B[0m \x1B[91m    ~~~~~\x1B[0m\n' +
+    '\n' +
+    '  \x1B[96msrc/start/app.ts\x1B[0m:\x1B[93m88\x1B[0m:\x1B[93m3\x1B[0m\n' +
+    '    \x1B[7m88\x1B[0m   route<T = any>(\n' +
+    '    \x1B[7m  \x1B[0m \x1B[96m  ~~~~~\x1B[0m\n' +
+    '    The implementation signature is declared here.\n' +
+    "\x1B[96msrc/start/app.ts\x1B[0m:\x1B[93m146\x1B[0m:\x1B[93m5\x1B[0m - \x1B[91merror\x1B[0m\x1B[90m TS7010: \x1B[0m'route', which lacks return-type annotation, implicitly has an 'any' return type.\n" +
+    '\n' +
+    '\x1B[7m146\x1B[0m app.route<z.infer<typeof validator>>(\n' +
+    '\x1B[7m   \x1B[0m \x1B[91m    ~~~~~\x1B[0m\n' +
+    "\x1B[96msrc/start/app.ts\x1B[0m:\x1B[93m146\x1B[0m:\x1B[93m26\x1B[0m - \x1B[91merror\x1B[0m\x1B[90m TS2552: \x1B[0mCannot find name 'validator'. Did you mean 'validate'?\n" +
+    '\n' +
+    '\x1B[7m146\x1B[0m app.route<z.infer<typeof validator>>(\n' +
+    '\x1B[7m   \x1B[0m \x1B[91m                         ~~~~~~~~~\x1B[0m\n' +
+    "\x1B[96msrc/start/app.ts\x1B[0m:\x1B[93m149\x1B[0m:\x1B[93m12\x1B[0m - \x1B[91merror\x1B[0m\x1B[90m TS7006: \x1B[0mParameter 'req' implicitly has an 'any' type.\n" +
+    '\n' +
+    '\x1B[7m149\x1B[0m     list: (req, res) => {\n' +
+    '\x1B[7m   \x1B[0m \x1B[91m           ~~~\x1B[0m\n' +
+    "\x1B[96msrc/start/app.ts\x1B[0m:\x1B[93m149\x1B[0m:\x1B[93m17\x1B[0m - \x1B[91merror\x1B[0m\x1B[90m TS7006: \x1B[0mParameter 'res' implicitly has an 'any' type.\n" +
+    '\n' +
+    '\x1B[7m149\x1B[0m     list: (req, res) => {\n' +
+    '\x1B[7m   \x1B[0m \x1B[91m                ~~~\x1B[0m\n' +
+    "\x1B[96msrc/start/app.ts\x1B[0m:\x1B[93m155\x1B[0m:\x1B[93m12\x1B[0m - \x1B[91merror\x1B[0m\x1B[90m TS7006: \x1B[0mParameter 'req' implicitly has an 'any' type.\n" +
+    '\n' +
+    '\x1B[7m155\x1B[0m     post: (req, res) => {\n' +
+    '\x1B[7m   \x1B[0m \x1B[91m           ~~~\x1B[0m\n' +
+    "\x1B[96msrc/start/app.ts\x1B[0m:\x1B[93m155\x1B[0m:\x1B[93m17\x1B[0m - \x1B[91merror\x1B[0m\x1B[90m TS7006: \x1B[0mParameter 'res' implicitly has an 'any' type.\n" +
+    '\n' +
+    '\x1B[7m155\x1B[0m     post: (req, res) => {\n' +
+    '\x1B[7m   \x1B[0m \x1B[91m                ~~~\x1B[0m\n' +
+    "\x1B[96msrc/start/app.ts\x1B[0m:\x1B[93m162\x1B[0m:\x1B[93m11\x1B[0m - \x1B[91merror\x1B[0m\x1B[90m TS7006: \x1B[0mParameter 'req' implicitly has an 'any' type.\n" +
+    '\n' +
+    '\x1B[7m162\x1B[0m     get: (req, res) => {\n' +
+    '\x1B[7m   \x1B[0m \x1B[91m          ~~~\x1B[0m\n' +
+    "\x1B[96msrc/start/app.ts\x1B[0m:\x1B[93m162\x1B[0m:\x1B[93m16\x1B[0m - \x1B[91merror\x1B[0m\x1B[90m TS7006: \x1B[0mParameter 'res' implicitly has an 'any' type.\n" +
+    '\n' +
+    '\x1B[7m162\x1B[0m     get: (req, res) => {\n' +
+    '\x1B[7m   \x1B[0m \x1B[91m               ~~~\x1B[0m\n' +
+    "\x1B[96msrc/start/app.ts\x1B[0m:\x1B[93m169\x1B[0m:\x1B[93m11\x1B[0m - \x1B[91merror\x1B[0m\x1B[90m TS7006: \x1B[0mParameter 'req' implicitly has an 'any' type.\n" +
+    '\n' +
+    '\x1B[7m169\x1B[0m     put: (req, res) => {\n' +
+    '\x1B[7m   \x1B[0m \x1B[91m          ~~~\x1B[0m\n' +
+    "\x1B[96msrc/start/app.ts\x1B[0m:\x1B[93m169\x1B[0m:\x1B[93m16\x1B[0m - \x1B[91merror\x1B[0m\x1B[90m TS7006: \x1B[0mParameter 'res' implicitly has an 'any' type.\n" +
+    '\n' +
+    '\x1B[7m169\x1B[0m     put: (req, res) => {\n' +
+    '\x1B[7m   \x1B[0m \x1B[91m               ~~~\x1B[0m\n' +
+    "\x1B[96msrc/start/app.ts\x1B[0m:\x1B[93m177\x1B[0m:\x1B[93m14\x1B[0m - \x1B[91merror\x1B[0m\x1B[90m TS7006: \x1B[0mParameter 'req' implicitly has an 'any' type.\n" +
+    '\n' +
+    '\x1B[7m177\x1B[0m     delete: (req, res) => {\n' +
+    '\x1B[7m   \x1B[0m \x1B[91m             ~~~\x1B[0m\n' +
+    "\x1B[96msrc/start/app.ts\x1B[0m:\x1B[93m177\x1B[0m:\x1B[93m19\x1B[0m - \x1B[91merror\x1B[0m\x1B[90m TS7006: \x1B[0mParameter 'res' implicitly has an 'any' type.\n" +
+    '\n' +
+    '\x1B[7m177\x1B[0m     delete: (req, res) => {\n' +
+    '\x1B[7m   \x1B[0m \x1B[91m                  ~~~\x1B[0m\n' +
+    "\x1B[96msrc/start/app.ts\x1B[0m:\x1B[93m186\x1B[0m:\x1B[93m5\x1B[0m - \x1B[91merror\x1B[0m\x1B[90m TS2552: \x1B[0mCannot find name 'validator'. Did you mean 'validate'?\n" +
+    '\n' +
+    '\x1B[7m186\x1B[0m     validator,\n' +
+    '\x1B[7m   \x1B[0m \x1B[91m    ~~~~~~~~~\x1B[0m\n' +
+    '\x1B[96msrc/start/app.ts\x1B[0m:\x1B[93m190\x1B[0m:\x1B[93m16\x1B[0m - \x1B[91merror\x1B[0m\x1B[90m TS2552: \x1B[0mCannot find n'... 2201 more characters,
+  stack: 'TSError: ⨯ Unable to compile TypeScript:\n' +
+    '\x1B[96msrc/start/app.ts\x1B[0m:\x1B[93m88\x1B[0m:\x1B[93m3\x1B[0m - \x1B[91merror\x1B[0m\x1B[90m TS2391: \x1B[0mFunction implementation is missing or not immediately following the declaration.\n' +
+    '\n' +
+    '\x1B[7m88\x1B[0m   route<T = any>(\n' +
+    '\x1B[7m  \x1B[0m \x1B[91m  ~~~~~\x1B[0m\n' +
+    "\x1B[96msrc/start/app.ts\x1B[0m:\x1B[93m146\x1B[0m:\x1B[93m1\x1B[0m - \x1B[91merror\x1B[0m\x1B[90m TS2300: \x1B[0mDuplicate identifier 'app'.\n" +
+    '\n' +
+    '\x1B[7m146\x1B[0m app.route<z.infer<typeof validator>>(\n' +
+    '\x1B[7m   \x1B[0m \x1B[91m~~~\x1B[0m\n' +
+    "\x1B[96msrc/start/app.ts\x1B[0m:\x1B[93m146\x1B[0m:\x1B[93m1\x1B[0m - \x1B[91merror\x1B[0m\x1B[90m TS2564: \x1B[0mProperty 'app' has no initializer and is not definitely assigned in the constructor.\n" +
+    '\n' +
+    '\x1B[7m146\x1B[0m app.route<z.infer<typeof validator>>(\n' +
+    '\x1B[7m   \x1B[0m \x1B[91m~~~\x1B[0m\n' +
+    "\x1B[96msrc/start/app.ts\x1B[0m:\x1B[93m146\x1B[0m:\x1B[93m1\x1B[0m - \x1B[91merror\x1B[0m\x1B[90m TS2717: \x1B[0mSubsequent property declarations must have the same type.  Property 'app' must be of type 'App', but here has type 'any'.\n" +
+    '\n' +
+    '\x1B[7m146\x1B[0m app.route<z.infer<typeof validator>>(\n' +
+    '\x1B[7m   \x1B[0m \x1B[91m~~~\x1B[0m\n' +
+    '\n' +
+    '  \x1B[96msrc/start/app.ts\x1B[0m:\x1B[93m142\x1B[0m:\x1B[93m7\x1B[0m\n' +
+    '    \x1B[7m142\x1B[0m const app = new App()\n' +
+    '    \x1B[7m   \x1B[0m \x1B[96m      ~~~\x1B[0m\n' +
+    "    'app' was also declared here.\n" +
+    '\x1B[96msrc/start/app.ts\x1B[0m:\x1B[93m146\x1B[0m:\x1B[93m5\x1B[0m - \x1B[91merror\x1B[0m\x1B[90m TS2394: \x1B[0mThis overload signature is not compatible with its implementation signature.\n' +
+    '\n' +
+    '\x1B[7m146\x1B[0m app.route<z.infer<typeof validator>>(\n' +
+    '\x1B[7m   \x1B[0m \x1B[91m    ~~~~~\x1B[0m\n' +
+    '\n' +
+    '  \x1B[96msrc/start/app.ts\x1B[0m:\x1B[93m88\x1B[0m:\x1B[93m3\x1B[0m\n' +
+    '    \x1B[7m88\x1B[0m   route<T = any>(\n' +
+    '    \x1B[7m  \x1B[0m \x1B[96m  ~~~~~\x1B[0m\n' +
+    '    The implementation signature is declared here.\n' +
+    "\x1B[96msrc/start/app.ts\x1B[0m:\x1B[93m146\x1B[0m:\x1B[93m5\x1B[0m - \x1B[91merror\x1B[0m\x1B[90m TS7010: \x1B[0m'route', which lacks return-type annotation, implicitly has an 'any' return type.\n" +
+    '\n' +
+    '\x1B[7m146\x1B[0m app.route<z.infer<typeof validator>>(\n' +
+    '\x1B[7m   \x1B[0m \x1B[91m    ~~~~~\x1B[0m\n' +
+    "\x1B[96msrc/start/app.ts\x1B[0m:\x1B[93m146\x1B[0m:\x1B[93m26\x1B[0m - \x1B[91merror\x1B[0m\x1B[90m TS2552: \x1B[0mCannot find name 'validator'. Did you mean 'validate'?\n" +
+    '\n' +
+    '\x1B[7m146\x1B[0m app.route<z.infer<typeof validator>>(\n' +
+    '\x1B[7m   \x1B[0m \x1B[91m                         ~~~~~~~~~\x1B[0m\n' +
+    "\x1B[96msrc/start/app.ts\x1B[0m:\x1B[93m149\x1B[0m:\x1B[93m12\x1B[0m - \x1B[91merror\x1B[0m\x1B[90m TS7006: \x1B[0mParameter 'req' implicitly has an 'any' type.\n" +
+    '\n' +
+    '\x1B[7m149\x1B[0m     list: (req, res) => {\n' +
+    '\x1B[7m   \x1B[0m \x1B[91m           ~~~\x1B[0m\n' +
+    "\x1B[96msrc/start/app.ts\x1B[0m:\x1B[93m149\x1B[0m:\x1B[93m17\x1B[0m - \x1B[91merror\x1B[0m\x1B[90m TS7006: \x1B[0mParameter 'res' implicitly has an 'any' type.\n" +
+    '\n' +
+    '\x1B[7m149\x1B[0m     list: (req, res) => {\n' +
+    '\x1B[7m   \x1B[0m \x1B[91m                ~~~\x1B[0m\n' +
+    "\x1B[96msrc/start/app.ts\x1B[0m:\x1B[93m155\x1B[0m:\x1B[93m12\x1B[0m - \x1B[91merror\x1B[0m\x1B[90m TS7006: \x1B[0mParameter 'req' implicitly has an 'any' type.\n" +
+    '\n' +
+    '\x1B[7m155\x1B[0m     post: (req, res) => {\n' +
+    '\x1B[7m   \x1B[0m \x1B[91m           ~~~\x1B[0m\n' +
+    "\x1B[96msrc/start/app.ts\x1B[0m:\x1B[93m155\x1B[0m:\x1B[93m17\x1B[0m - \x1B[91merror\x1B[0m\x1B[90m TS7006: \x1B[0mParameter 'res' implicitly has an 'any' type.\n" +
+    '\n' +
+    '\x1B[7m155\x1B[0m     post: (req, res) => {\n' +
+    '\x1B[7m   \x1B[0m \x1B[91m                ~~~\x1B[0m\n' +
+    "\x1B[96msrc/start/app.ts\x1B[0m:\x1B[93m162\x1B[0m:\x1B[93m11\x1B[0m - \x1B[91merror\x1B[0m\x1B[90m TS7006: \x1B[0mParameter 'req' implicitly has an 'any' type.\n" +
+    '\n' +
+    '\x1B[7m162\x1B[0m     get: (req, res) => {\n' +
+    '\x1B[7m   \x1B[0m \x1B[91m          ~~~\x1B[0m\n' +
+    "\x1B[96msrc/start/app.ts\x1B[0m:\x1B[93m162\x1B[0m:\x1B[93m16\x1B[0m - \x1B[91merror\x1B[0m\x1B[90m TS7006: \x1B[0mParameter 'res' implicitly has an 'any' type.\n" +
+    '\n' +
+    '\x1B[7m162\x1B[0m     get: (req, res) => {\n' +
+    '\x1B[7m   \x1B[0m \x1B[91m               ~~~\x1B[0m\n' +
+    "\x1B[96msrc/start/app.ts\x1B[0m:\x1B[93m169\x1B[0m:\x1B[93m11\x1B[0m - \x1B[91merror\x1B[0m\x1B[90m TS7006: \x1B[0mParameter 'req' implicitly has an 'any' type.\n" +
+    '\n' +
+    '\x1B[7m169\x1B[0m     put: (req, res) => {\n' +
+    '\x1B[7m   \x1B[0m \x1B[91m          ~~~\x1B[0m\n' +
+    "\x1B[96msrc/start/app.ts\x1B[0m:\x1B[93m169\x1B[0m:\x1B[93m16\x1B[0m - \x1B[91merror\x1B[0m\x1B[90m TS7006: \x1B[0mParameter 'res' implicitly has an 'any' type.\n" +
+    '\n' +
+    '\x1B[7m169\x1B[0m     put: (req, res) => {\n' +
+    '\x1B[7m   \x1B[0m \x1B[91m               ~~~\x1B[0m\n' +
+    "\x1B[96msrc/start/app.ts\x1B[0m:\x1B[93m177\x1B[0m:\x1B[93m14\x1B[0m - \x1B[91merror\x1B[0m\x1B[90m TS7006: \x1B[0mParameter 'req' implicitly has an 'any' type.\n" +
+    '\n' +
+    '\x1B[7m177\x1B[0m     delete: (req, res) => {\n' +
+    '\x1B[7m   \x1B[0m \x1B[91m             ~~~\x1B[0m\n' +
+    "\x1B[96msrc/start/app.ts\x1B[0m:\x1B[93m177\x1B[0m:\x1B[93m19\x1B[0m - \x1B[91merror\x1B[0m\x1B[90m TS7006: \x1B[0mParameter 'res' implicitly has an 'any' type.\n" +
+    '\n' +
+    '\x1B[7m177\x1B[0m     delete: (req, res) => {\n' +
+    '\x1B[7m   \x1B[0m \x1B[91m                  ~~~\x1B[0m\n' +
+    "\x1B[96msrc/start/app.ts\x1B[0m:\x1B[93m186\x1B[0m:\x1B[93m5\x1B[0m - \x1B[91merror\x1B[0m\x1B[90m TS2552: \x1B[0mCannot find name 'validator'. Did you mean 'validate'?\n" +
+    '\n' +
+    '\x1B[7m186\x1B[0m     validator,\n' +
+    '\x1B[7m   \x1B[0m \x1B[91m    ~~~~~~~~~\x1B[0m\n' +
+    "\x1B[96msrc/start/app.ts\x1B[0m:\x1B[93m190\x1B[0m:\x1B[93m16\x1B[0m - \x1B[91merror\x1B[0m\x1B[90m TS2552: \x1B[0mCannot find name 'app'. Did you mean 'App'?\n" +
+    '\n' +
+    '\x1B[7m190\x1B[0m export default app.init()\n' +
+    '\x1B[7m   \x1B[0m \x1B[91m               ~~~\x1B[0m\n' +
+    '\x1B[96msrc/start/app.ts\x1B[0m:\x1B[93m146\x1B[0m:\x1B[93m1\x1B[0m - \x1B[91merror\x1B[0m\x1B[90m TS1434: \x1B[0mUnexpected keyword or identifier.\n' +
+    '\n' +
+    '\x1B[7m146\x1B[0m app.route<z.infer<typeof validator>>(\n' +
+    '\x1B[7m   \x1B[0m \x1B[91m~~~\x1B[0m\n' +
+    '\x1B[96msrc/start/app.ts\x1B[0m:\x1B[93m146\x1B[0m:\x1B[93m4\x1B[0m - \x1B[91merror\x1B[0m\x1B[90m TS1068: \x1B[0mUnexpected token. A constructor, method, accessor, or property was expected.\n' +
+    '\n' +
+    '\x1B[7m146\x1B[0m app.route<z.infer<typeof validator>>(\n' +
+    '\x1B[7m   \x1B[0m \x1B[91m   ~\x1B[0m\n' +
+    "\x1B[96msrc/start/app.ts\x1B[0m:\x1B[93m146\x1B[0m:\x1B[93m12\x1B[0m - \x1B[91merror\x1B[0m\x1B[90m TS1005: \x1B[0m',' expected.\n" +
+    '\n' +
+    '\x1B[7m146\x1B[0m app.route<z.infer<typeof validator>>(\n' +
+    '\x1B[7m   \x1B[0m \x1B[91m           ~\x1B[0m\n' +
+    "\x1B[96msrc/start/app.ts\x1B[0m:\x1B[93m146\x1B[0m:\x1B[93m18\x1B[0m - \x1B[91merror\x1B[0m\x1B[90m TS1005: \x1B[0m',' expected.\n" +
+    '\n' +
+    '\x1B[7m146\x1B[0m app.route<z.infer<typeof validator>>(\n' +
+    '\x1B[7m   \x1B[0m \x1B[91m                 ~\x1B[0m\n' +
+    '\x1B[96msrc/start/app.ts\x1B[0m:\x1B[93m146\x1B[0m:\x1B[93m36\x1B[0m - \x1B[91merror\x1B[0m\x1B[90m TS1109: \x1B[0mExpression expected.\n' +
+    '\n' +
+    '\x1B[7m146\x1B[0m app.route<z.infer<typeof validator>>(\n' +
+    '\x1B[7m   \x1B[0m \x1B[91m                                   ~\x1B[0m\n' +
+    '\n' +
+    '    at createTSError (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts:859:12)\n' +
+    '    at reportTSError (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts:863:19)\n' +
+    '    at getOutput (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts:1077:36)\n' +
+    '    at Object.compile (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts:1433:41)\n' +
+    '    at Module.m._compile (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts:1617:30)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1309:10)\n' +
+    '    at Object.require.extensions.<computed> [as .ts] (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts:1621:12)\n' +
+    '    at Module.load (node:internal/modules/cjs/loader:1113:32)\n' +
+    '    at Function.Module._load (node:internal/modules/cjs/loader:960:12)\n' +
+    '    at Module.require (node:internal/modules/cjs/loader:1137:19)',
+  exception: true,
+  date: 'Sun Aug 06 2023 04:57:22 GMT+0200 (Central European Summer Time)',
+  process: {
+    pid: 6744,
+    uid: 501,
+    gid: 20,
+    cwd: '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit',
+    execPath: '/opt/homebrew/Cellar/node/20.3.0/bin/node',
+    version: 'v20.3.0',
+    argv: [
+      '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/.bin/ts-node',
+      '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/src/server.ts'
+    ],
+    memoryUsage: {
+      rss: 341770240,
+      heapTotal: 231849984,
+      heapUsed: 208479488,
+      external: 25832672,
+      arrayBuffers: 23011743
+    }
+  },
+  os: {
+    loadavg: [ 1.087890625, 1.28955078125, 1.35498046875 ],
+    uptime: 1413450
+  },
+  trace: [
+    {
+      column: 12,
+      file: '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts',
+      function: 'createTSError',
+      line: 859,
+      method: null,
+      native: false
+    },
+    {
+      column: 19,
+      file: '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts',
+      function: 'reportTSError',
+      line: 863,
+      method: null,
+      native: false
+    },
+    {
+      column: 36,
+      file: '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts',
+      function: 'getOutput',
+      line: 1077,
+      method: null,
+      native: false
+    },
+    {
+      column: 41,
+      file: '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts',
+      function: 'Object.compile',
+      line: 1433,
+      method: 'compile',
+      native: false
+    },
+    {
+      column: 30,
+      file: '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts',
+      function: 'Module.m._compile',
+      line: 1617,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 10,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._extensions..js',
+      line: 1309,
+      method: '.js',
+      native: false
+    },
+    {
+      column: 12,
+      file: '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts',
+      function: 'Object.require.extensions.<computed> [as .ts]',
+      line: 1621,
+      method: 'ts]',
+      native: false
+    },
+    {
+      column: 32,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module.load',
+      line: 1113,
+      method: 'load',
+      native: false
+    },
+    {
+      column: 12,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._load',
+      line: 960,
+      method: '_load',
+      native: false
+    },
+    {
+      column: 19,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module.require',
+      line: 1137,
+      method: 'require',
+      native: false
+    }
+  ],
+  timestamp: '2023-08-06 04:57:22'
+}
+{
+  error: [96msrc/start/app.ts[0m:[93m88[0m:[93m3[0m - [91merror[0m[90m TS2391: [0mFunction implementation is missing or not immediately following the declaration.
+  
+  [7m88[0m   route<T = any>(
+  [7m  [0m [91m  ~~~~~[0m
+  [96msrc/start/app.ts[0m:[93m146[0m:[93m1[0m - [91merror[0m[90m TS2300: [0mDuplicate identifier 'app'.
+  
+  [7m146[0m app.route<z.infer<typeof validator>>(
+  [7m   [0m [91m~~~[0m
+  [96msrc/start/app.ts[0m:[93m146[0m:[93m1[0m - [91merror[0m[90m TS2564: [0mProperty 'app' has no initializer and is not definitely assigned in the constructor.
+  
+  [7m146[0m app.route<z.infer<typeof validator>>(
+  [7m   [0m [91m~~~[0m
+  [96msrc/start/app.ts[0m:[93m146[0m:[93m1[0m - [91merror[0m[90m TS2717: [0mSubsequent property declarations must have the same type.  Property 'app' must be of type 'App', but here has type 'any'.
+  
+  [7m146[0m app.route<z.infer<typeof validator>>(
+  [7m   [0m [91m~~~[0m
+  
+    [96msrc/start/app.ts[0m:[93m142[0m:[93m7[0m
+      [7m142[0m const app = new App()
+      [7m   [0m [96m      ~~~[0m
+      'app' was also declared here.
+  [96msrc/start/app.ts[0m:[93m146[0m:[93m5[0m - [91merror[0m[90m TS2394: [0mThis overload signature is not compatible with its implementation signature.
+  
+  [7m146[0m app.route<z.infer<typeof validator>>(
+  [7m   [0m [91m    ~~~~~[0m
+  
+    [96msrc/start/app.ts[0m:[93m88[0m:[93m3[0m
+      [7m88[0m   route<T = any>(
+      [7m  [0m [96m  ~~~~~[0m
+      The implementation signature is declared here.
+  [96msrc/start/app.ts[0m:[93m146[0m:[93m5[0m - [91merror[0m[90m TS7010: [0m'route', which lacks return-type annotation, implicitly has an 'any' return type.
+  
+  [7m146[0m app.route<z.infer<typeof validator>>(
+  [7m   [0m [91m    ~~~~~[0m
+  [96msrc/start/app.ts[0m:[93m146[0m:[93m26[0m - [91merror[0m[90m TS2552: [0mCannot find name 'validator'. Did you mean 'validate'?
+  
+  [7m146[0m app.route<z.infer<typeof validator>>(
+  [7m   [0m [91m                         ~~~~~~~~~[0m
+  [96msrc/start/app.ts[0m:[93m149[0m:[93m12[0m - [91merror[0m[90m TS7006: [0mParameter 'req' implicitly has an 'any' type.
+  
+  [7m149[0m     list: (req, res) => {
+  [7m   [0m [91m           ~~~[0m
+  [96msrc/start/app.ts[0m:[93m149[0m:[93m17[0m - [91merror[0m[90m TS7006: [0mParameter 'res' implicitly has an 'any' type.
+  
+  [7m149[0m     list: (req, res) => {
+  [7m   [0m [91m                ~~~[0m
+  [96msrc/start/app.ts[0m:[93m155[0m:[93m12[0m - [91merror[0m[90m TS7006: [0mParameter 'req' implicitly has an 'any' type.
+  
+  [7m155[0m     post: (req, res) => {
+  [7m   [0m [91m           ~~~[0m
+  [96msrc/start/app.ts[0m:[93m155[0m:[93m17[0m - [91merror[0m[90m TS7006: [0mParameter 'res' implicitly has an 'any' type.
+  
+  [7m155[0m     post: (req, res) => {
+  [7m   [0m [91m                ~~~[0m
+  [96msrc/start/app.ts[0m:[93m162[0m:[93m11[0m - [91merror[0m[90m TS7006: [0mParameter 'req' implicitly has an 'any' type.
+  
+  [7m162[0m     get: (req, res) => {
+  [7m   [0m [91m          ~~~[0m
+  [96msrc/start/app.ts[0m:[93m162[0m:[93m16[0m - [91merror[0m[90m TS7006: [0mParameter 'res' implicitly has an 'any' type.
+  
+  [7m162[0m     get: (req, res) => {
+  [7m   [0m [91m               ~~~[0m
+  [96msrc/start/app.ts[0m:[93m169[0m:[93m11[0m - [91merror[0m[90m TS7006: [0mParameter 'req' implicitly has an 'any' type.
+  
+  [7m169[0m     put: (req, res) => {
+  [7m   [0m [91m          ~~~[0m
+  [96msrc/start/app.ts[0m:[93m169[0m:[93m16[0m - [91merror[0m[90m TS7006: [0mParameter 'res' implicitly has an 'any' type.
+  
+  [7m169[0m     put: (req, res) => {
+  [7m   [0m [91m               ~~~[0m
+  [96msrc/start/app.ts[0m:[93m177[0m:[93m14[0m - [91merror[0m[90m TS7006: [0mParameter 'req' implicitly has an 'any' type.
+  
+  [7m177[0m     delete: (req, res) => {
+  [7m   [0m [91m             ~~~[0m
+  [96msrc/start/app.ts[0m:[93m177[0m:[93m19[0m - [91merror[0m[90m TS7006: [0mParameter 'res' implicitly has an 'any' type.
+  
+  [7m177[0m     delete: (req, res) => {
+  [7m   [0m [91m                  ~~~[0m
+  [96msrc/start/app.ts[0m:[93m186[0m:[93m5[0m - [91merror[0m[90m TS2552: [0mCannot find name 'validator'. Did you mean 'validate'?
+  
+  [7m186[0m     validator,
+  [7m   [0m [91m    ~~~~~~~~~[0m
+  [96msrc/start/app.ts[0m:[93m190[0m:[93m16[0m - [91merror[0m[90m TS2552: [0mCannot find name 'app'. Did you mean 'App'?
+  
+  [7m190[0m export default app.init()
+  [7m   [0m [91m               ~~~[0m
+  [96msrc/start/app.ts[0m:[93m146[0m:[93m1[0m - [91merror[0m[90m TS1434: [0mUnexpected keyword or identifier.
+  
+  [7m146[0m app.route<z.infer<typeof validator>>(
+  [7m   [0m [91m~~~[0m
+  [96msrc/start/app.ts[0m:[93m146[0m:[93m4[0m - [91merror[0m[90m TS1068: [0mUnexpected token. A constructor, method, accessor, or property was expected.
+  
+  [7m146[0m app.route<z.infer<typeof validator>>(
+  [7m   [0m [91m   ~[0m
+  [96msrc/start/app.ts[0m:[93m146[0m:[93m12[0m - [91merror[0m[90m TS1005: [0m',' expected.
+  
+  [7m146[0m app.route<z.infer<typeof validator>>(
+  [7m   [0m [91m           ~[0m
+  [96msrc/start/app.ts[0m:[93m146[0m:[93m18[0m - [91merror[0m[90m TS1005: [0m',' expected.
+  
+  [7m146[0m app.route<z.infer<typeof validator>>(
+  [7m   [0m [91m                 ~[0m
+  [96msrc/start/app.ts[0m:[93m146[0m:[93m36[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+  
+  [7m146[0m app.route<z.infer<typeof validator>>(
+  [7m   [0m [91m                                   ~[0m
+  ,
+  level: 'error',
+  message: 'uncaughtException: ⨯ Unable to compile TypeScript:\n' +
+    '\x1B[96msrc/start/app.ts\x1B[0m:\x1B[93m88\x1B[0m:\x1B[93m3\x1B[0m - \x1B[91merror\x1B[0m\x1B[90m TS2391: \x1B[0mFunction implementation is missing or not immediately following the declaration.\n' +
+    '\n' +
+    '\x1B[7m88\x1B[0m   route<T = any>(\n' +
+    '\x1B[7m  \x1B[0m \x1B[91m  ~~~~~\x1B[0m\n' +
+    "\x1B[96msrc/start/app.ts\x1B[0m:\x1B[93m146\x1B[0m:\x1B[93m1\x1B[0m - \x1B[91merror\x1B[0m\x1B[90m TS2300: \x1B[0mDuplicate identifier 'app'.\n" +
+    '\n' +
+    '\x1B[7m146\x1B[0m app.route<z.infer<typeof validator>>(\n' +
+    '\x1B[7m   \x1B[0m \x1B[91m~~~\x1B[0m\n' +
+    "\x1B[96msrc/start/app.ts\x1B[0m:\x1B[93m146\x1B[0m:\x1B[93m1\x1B[0m - \x1B[91merror\x1B[0m\x1B[90m TS2564: \x1B[0mProperty 'app' has no initializer and is not definitely assigned in the constructor.\n" +
+    '\n' +
+    '\x1B[7m146\x1B[0m app.route<z.infer<typeof validator>>(\n' +
+    '\x1B[7m   \x1B[0m \x1B[91m~~~\x1B[0m\n' +
+    "\x1B[96msrc/start/app.ts\x1B[0m:\x1B[93m146\x1B[0m:\x1B[93m1\x1B[0m - \x1B[91merror\x1B[0m\x1B[90m TS2717: \x1B[0mSubsequent property declarations must have the same type.  Property 'app' must be of type 'App', but here has type 'any'.\n" +
+    '\n' +
+    '\x1B[7m146\x1B[0m app.route<z.infer<typeof validator>>(\n' +
+    '\x1B[7m   \x1B[0m \x1B[91m~~~\x1B[0m\n' +
+    '\n' +
+    '  \x1B[96msrc/start/app.ts\x1B[0m:\x1B[93m142\x1B[0m:\x1B[93m7\x1B[0m\n' +
+    '    \x1B[7m142\x1B[0m const app = new App()\n' +
+    '    \x1B[7m   \x1B[0m \x1B[96m      ~~~\x1B[0m\n' +
+    "    'app' was also declared here.\n" +
+    '\x1B[96msrc/start/app.ts\x1B[0m:\x1B[93m146\x1B[0m:\x1B[93m5\x1B[0m - \x1B[91merror\x1B[0m\x1B[90m TS2394: \x1B[0mThis overload signature is not compatible with its implementation signature.\n' +
+    '\n' +
+    '\x1B[7m146\x1B[0m app.route<z.infer<typeof validator>>(\n' +
+    '\x1B[7m   \x1B[0m \x1B[91m    ~~~~~\x1B[0m\n' +
+    '\n' +
+    '  \x1B[96msrc/start/app.ts\x1B[0m:\x1B[93m88\x1B[0m:\x1B[93m3\x1B[0m\n' +
+    '    \x1B[7m88\x1B[0m   route<T = any>(\n' +
+    '    \x1B[7m  \x1B[0m \x1B[96m  ~~~~~\x1B[0m\n' +
+    '    The implementation signature is declared here.\n' +
+    "\x1B[96msrc/start/app.ts\x1B[0m:\x1B[93m146\x1B[0m:\x1B[93m5\x1B[0m - \x1B[91merror\x1B[0m\x1B[90m TS7010: \x1B[0m'route', which lacks return-type annotation, implicitly has an 'any' return type.\n" +
+    '\n' +
+    '\x1B[7m146\x1B[0m app.route<z.infer<typeof validator>>(\n' +
+    '\x1B[7m   \x1B[0m \x1B[91m    ~~~~~\x1B[0m\n' +
+    "\x1B[96msrc/start/app.ts\x1B[0m:\x1B[93m146\x1B[0m:\x1B[93m26\x1B[0m - \x1B[91merror\x1B[0m\x1B[90m TS2552: \x1B[0mCannot find name 'validator'. Did you mean 'validate'?\n" +
+    '\n' +
+    '\x1B[7m146\x1B[0m app.route<z.infer<typeof validator>>(\n' +
+    '\x1B[7m   \x1B[0m \x1B[91m                         ~~~~~~~~~\x1B[0m\n' +
+    "\x1B[96msrc/start/app.ts\x1B[0m:\x1B[93m149\x1B[0m:\x1B[93m12\x1B[0m - \x1B[91merror\x1B[0m\x1B[90m TS7006: \x1B[0mParameter 'req' implicitly has an 'any' type.\n" +
+    '\n' +
+    '\x1B[7m149\x1B[0m     list: (req, res) => {\n' +
+    '\x1B[7m   \x1B[0m \x1B[91m           ~~~\x1B[0m\n' +
+    "\x1B[96msrc/start/app.ts\x1B[0m:\x1B[93m149\x1B[0m:\x1B[93m17\x1B[0m - \x1B[91merror\x1B[0m\x1B[90m TS7006: \x1B[0mParameter 'res' implicitly has an 'any' type.\n" +
+    '\n' +
+    '\x1B[7m149\x1B[0m     list: (req, res) => {\n' +
+    '\x1B[7m   \x1B[0m \x1B[91m                ~~~\x1B[0m\n' +
+    "\x1B[96msrc/start/app.ts\x1B[0m:\x1B[93m155\x1B[0m:\x1B[93m12\x1B[0m - \x1B[91merror\x1B[0m\x1B[90m TS7006: \x1B[0mParameter 'req' implicitly has an 'any' type.\n" +
+    '\n' +
+    '\x1B[7m155\x1B[0m     post: (req, res) => {\n' +
+    '\x1B[7m   \x1B[0m \x1B[91m           ~~~\x1B[0m\n' +
+    "\x1B[96msrc/start/app.ts\x1B[0m:\x1B[93m155\x1B[0m:\x1B[93m17\x1B[0m - \x1B[91merror\x1B[0m\x1B[90m TS7006: \x1B[0mParameter 'res' implicitly has an 'any' type.\n" +
+    '\n' +
+    '\x1B[7m155\x1B[0m     post: (req, res) => {\n' +
+    '\x1B[7m   \x1B[0m \x1B[91m                ~~~\x1B[0m\n' +
+    "\x1B[96msrc/start/app.ts\x1B[0m:\x1B[93m162\x1B[0m:\x1B[93m11\x1B[0m - \x1B[91merror\x1B[0m\x1B[90m TS7006: \x1B[0mParameter 'req' implicitly has an 'any' type.\n" +
+    '\n' +
+    '\x1B[7m162\x1B[0m     get: (req, res) => {\n' +
+    '\x1B[7m   \x1B[0m \x1B[91m          ~~~\x1B[0m\n' +
+    "\x1B[96msrc/start/app.ts\x1B[0m:\x1B[93m162\x1B[0m:\x1B[93m16\x1B[0m - \x1B[91merror\x1B[0m\x1B[90m TS7006: \x1B[0mParameter 'res' implicitly has an 'any' type.\n" +
+    '\n' +
+    '\x1B[7m162\x1B[0m     get: (req, res) => {\n' +
+    '\x1B[7m   \x1B[0m \x1B[91m               ~~~\x1B[0m\n' +
+    "\x1B[96msrc/start/app.ts\x1B[0m:\x1B[93m169\x1B[0m:\x1B[93m11\x1B[0m - \x1B[91merror\x1B[0m\x1B[90m TS7006: \x1B[0mParameter 'req' implicitly has an 'any' type.\n" +
+    '\n' +
+    '\x1B[7m169\x1B[0m     put: (req, res) => {\n' +
+    '\x1B[7m   \x1B[0m \x1B[91m          ~~~\x1B[0m\n' +
+    "\x1B[96msrc/start/app.ts\x1B[0m:\x1B[93m169\x1B[0m:\x1B[93m16\x1B[0m - \x1B[91merror\x1B[0m\x1B[90m TS7006: \x1B[0mParameter 'res' implicitly has an 'any' type.\n" +
+    '\n' +
+    '\x1B[7m169\x1B[0m     put: (req, res) => {\n' +
+    '\x1B[7m   \x1B[0m \x1B[91m               ~~~\x1B[0m\n' +
+    "\x1B[96msrc/start/app.ts\x1B[0m:\x1B[93m177\x1B[0m:\x1B[93m14\x1B[0m - \x1B[91merror\x1B[0m\x1B[90m TS7006: \x1B[0mParameter 'req' implicitly has an 'any' type.\n" +
+    '\n' +
+    '\x1B[7m177\x1B[0m     delete: (req, res) => {\n' +
+    '\x1B[7m   \x1B[0m \x1B[91m             ~~~\x1B[0m\n' +
+    "\x1B[96msrc/start/app.ts\x1B[0m:\x1B[93m177\x1B[0m:\x1B[93m19\x1B[0m - \x1B[91merror\x1B[0m\x1B[90m TS7006: \x1B[0mParameter 'res' implicitly has an 'any' type.\n" +
+    '\n' +
+    '\x1B[7m177\x1B[0m     delete: (req, res) => {\n' +
+    '\x1B[7m   \x1B[0m \x1B[91m                  ~~~\x1B[0m\n' +
+    "\x1B[96msrc/start/app.ts\x1B[0m:\x1B[93m186\x1B[0m:\x1B[93m5\x1B[0m - \x1B[91merror\x1B[0m\x1B[90m TS2552: \x1B[0mCannot find name 'validator'. Did you mean 'validate'?\n" +
+    '\n' +
+    '\x1B[7m186\x1B[0m     validator,\n' +
+    '\x1B[7m   \x1B[0m \x1B[91m    ~~~~~~~~~\x1B[0m\n' +
+    "\x1B[96msrc/start/app.ts\x1B[0m:\x1B[93m190\x1B[0m:\x1B[93m16\x1B[0m - \x1B[91merror\x1B[0m\x1B[90m TS2552: \x1B[0mCannot find name 'app'. Did you mean 'App'?\n" +
+    '\n' +
+    '\x1B[7m190\x1B[0m export default app.init()\n' +
+    '\x1B[7m   \x1B[0m \x1B[91m               ~~~\x1B[0m\n' +
+    '\x1B[96msrc/start/app.ts\x1B[0m:\x1B[93m146\x1B[0m:\x1B[93m1\x1B[0m - \x1B[91merror\x1B[0m\x1B[90m TS1434: \x1B[0mUnexpected keyword or identifier.\n' +
+    '\n' +
+    '\x1B[7m146\x1B[0m app.route<z.infer<typeof validator>>(\n' +
+    '\x1B[7m   \x1B[0m \x1B[91m~~~\x1B[0m\n' +
+    '\x1B[96msrc/start/app.ts\x1B[0m:\x1B[93m146\x1B[0m:\x1B[93m4\x1B[0m - \x1B[91merror\x1B[0m\x1B[90m TS1068: \x1B[0mUnexpected token. A constructor, method, accessor, or property was expected.\n' +
+    '\n' +
+    '\x1B[7m146\x1B[0m app.route<z.infer<typeof validator>>(\n' +
+    '\x1B[7m   \x1B[0m \x1B[91m   ~\x1B[0m\n' +
+    "\x1B[96msrc/start/app.ts\x1B[0m:\x1B[93m146\x1B[0m:\x1B[93m12\x1B[0m - \x1B[91merror\x1B[0m\x1B[90m TS1005: \x1B[0m',' expected.\n" +
+    '\n' +
+    '\x1B[7m146\x1B[0m app.route<z.infer<typeof validator>>(\n' +
+    '\x1B[7m   \x1B[0m \x1B[91m           ~\x1B[0m\n' +
+    "\x1B[96msrc/start/app.ts\x1B[0m:\x1B[93m146\x1B[0m:\x1B[93m18\x1B[0m - \x1B[91merror\x1B[0m\x1B[90m TS1005: \x1B[0m',' expected.\n" +
+    '\n' +
+    '\x1B[7m146\x1B[0m app.route<z.infer<typeof validator>>(\n' +
+    '\x1B[7m   \x1B[0m \x1B[91m                 ~\x1B[0m\n' +
+    '\x1B[96msrc/start/app.ts\x1B[0m:\x1B[93m146\x1B[0m:\x1B[93m36\x1B[0m - \x1B[91merror\x1B[0m\x1B[90m TS1109: \x1B[0mExpression expected.\n' +
+    '\n' +
+    '\x1B[7m146\x1B[0m app.route<z.infer<typeof validator>>(\n' +
+    '\x1B[7m   \x1B[0m \x1B[91m                                   ~\x1B[0m\n' +
+    '\n' +
+    'TSError: ⨯ Unable to compile TypeScript:\n' +
+    '\x1B[96msrc/start/app.ts\x1B[0m:\x1B[93m88\x1B[0m:\x1B[93m3\x1B[0m - \x1B[91merror\x1B[0m\x1B[90m TS2391: \x1B[0mFunction implementation is missing or not immediately following the declaration.\n' +
+    '\n' +
+    '\x1B[7m88\x1B[0m   route<T = any>(\n' +
+    '\x1B[7m  \x1B[0m \x1B[91m  ~~~~~\x1B[0m\n' +
+    "\x1B[96msrc/start/app.ts\x1B[0m:\x1B[93m146\x1B[0m:\x1B[93m1\x1B[0m - \x1B[91merror\x1B[0m\x1B[90m TS2300: \x1B[0mDuplicate identifier 'app'.\n" +
+    '\n' +
+    '\x1B[7m146\x1B[0m app.route<z.infer<typeof validator>>(\n' +
+    '\x1B[7m   \x1B[0m \x1B[91m~~~\x1B[0m\n' +
+    "\x1B[96msrc/start/app.ts\x1B[0m:\x1B[93m146\x1B[0m:\x1B[93m1\x1B[0m - \x1B[91merror\x1B[0m\x1B[90m TS2564: \x1B[0mProperty 'app' has no initializer and is not definitely assigned in the constructor.\n" +
+    '\n' +
+    '\x1B[7m146\x1B[0m app.route<z.infer<typeof validator>>(\n' +
+    '\x1B[7m   \x1B[0m \x1B[91m~~~\x1B[0m\n' +
+    "\x1B[96msrc/start/app.ts\x1B[0m:\x1B[93m146\x1B[0m:\x1B[93m1\x1B[0m - \x1B[91merror\x1B[0m\x1B[90m TS2717: \x1B[0mSubsequent property declarations must have the same type.  Property 'app' must be of type 'App', but here has type 'any'.\n" +
+    '\n' +
+    '\x1B[7m146\x1B[0m app.route<z.infer<typeof validator>>(\n' +
+    '\x1B[7m   \x1B[0m \x1B[91m~~~\x1B[0m\n' +
+    '\n' +
+    '  \x1B[96msrc/start/app.ts\x1B[0m:\x1B[93m142\x1B[0m:\x1B[93m7\x1B[0m\n' +
+    '    \x1B[7m142\x1B[0m const app = new App()\n' +
+    '    \x1B[7m   \x1B[0m \x1B[96m      ~~~\x1B[0m\n' +
+    "    'app' was also declared here.\n" +
+    '\x1B[96msrc/start/app.ts\x1B[0m:\x1B[93m146\x1B[0m:\x1B[93m5\x1B[0m - \x1B[91merror\x1B[0m\x1B[90m TS2394: \x1B[0mThis overload signature is not compatible with its implementation signature.\n' +
+    '\n' +
+    '\x1B[7m146\x1B[0m app.route<z.infer<typeof validator>>(\n' +
+    '\x1B[7m   \x1B[0m \x1B[91m    ~~~~~\x1B[0m\n' +
+    '\n' +
+    '  \x1B[96msrc/start/app.ts\x1B[0m:\x1B[93m88\x1B[0m:\x1B[93m3\x1B[0m\n' +
+    '    \x1B[7m88\x1B[0m   route<T = any>(\n' +
+    '    \x1B[7m  \x1B[0m \x1B[96m  ~~~~~\x1B[0m\n' +
+    '    The implementation signature is declared here.\n' +
+    "\x1B[96msrc/start/app.ts\x1B[0m:\x1B[93m146\x1B[0m:\x1B[93m5\x1B[0m - \x1B[91merror\x1B[0m\x1B[90m TS7010: \x1B[0m'route', which lacks return-type annotation, implicitly has an 'any' return type.\n" +
+    '\n' +
+    '\x1B[7m146\x1B[0m app.route<z.infer<typeof validator>>(\n' +
+    '\x1B[7m   \x1B[0m \x1B[91m    ~~~~~\x1B[0m\n' +
+    "\x1B[96msrc/start/app.ts\x1B[0m:\x1B[93m146\x1B[0m:\x1B[93m26\x1B[0m - \x1B[91merror\x1B[0m\x1B[90m TS2552: \x1B[0mCannot find name 'validator'. Did you mean 'validate'?\n" +
+    '\n' +
+    '\x1B[7m146\x1B[0m app.route<z.infer<typeof validator>>(\n' +
+    '\x1B[7m   \x1B[0m \x1B[91m                         ~~~~~~~~~\x1B[0m\n' +
+    "\x1B[96msrc/start/app.ts\x1B[0m:\x1B[93m149\x1B[0m:\x1B[93m12\x1B[0m - \x1B[91merror\x1B[0m\x1B[90m TS7006: \x1B[0mParameter 'req' implicitly has an 'any' type.\n" +
+    '\n' +
+    '\x1B[7m149\x1B[0m     list: (req, res) => {\n' +
+    '\x1B[7m   \x1B[0m \x1B[91m           ~~~\x1B[0m\n' +
+    "\x1B[96msrc/start/app.ts\x1B[0m:\x1B[93m149\x1B[0m:\x1B[93m17\x1B[0m - \x1B[91merror\x1B[0m\x1B[90m TS7006: \x1B[0mParameter 'res' implicitly has an 'any' type.\n" +
+    '\n' +
+    '\x1B[7m149\x1B[0m     list: (req, res) => {\n' +
+    '\x1B[7m   \x1B[0m \x1B[91m                ~~~\x1B[0m\n' +
+    "\x1B[96msrc/start/app.ts\x1B[0m:\x1B[93m155\x1B[0m:\x1B[93m12\x1B[0m - \x1B[91merror\x1B[0m\x1B[90m TS7006: \x1B[0mParameter 'req' implicitly has an 'any' type.\n" +
+    '\n' +
+    '\x1B[7m155\x1B[0m     post: (req, res) => {\n' +
+    '\x1B[7m   \x1B[0m \x1B[91m           ~~~\x1B[0m\n' +
+    "\x1B[96msrc/start/app.ts\x1B[0m:\x1B[93m155\x1B[0m:\x1B[93m17\x1B[0m - \x1B[91merror\x1B[0m\x1B[90m TS7006: \x1B[0mParameter 'res' implicitly has an 'any' type.\n" +
+    '\n' +
+    '\x1B[7m155\x1B[0m     post: (req, res) => {\n' +
+    '\x1B[7m   \x1B[0m \x1B[91m                ~~~\x1B[0m\n' +
+    "\x1B[96msrc/start/app.ts\x1B[0m:\x1B[93m162\x1B[0m:\x1B[93m11\x1B[0m - \x1B[91merror\x1B[0m\x1B[90m TS7006: \x1B[0mParameter 'req' implicitly has an 'any' type.\n" +
+    '\n' +
+    '\x1B[7m162\x1B[0m     get: (req, res) => {\n' +
+    '\x1B[7m   \x1B[0m \x1B[91m          ~~~\x1B[0m\n' +
+    "\x1B[96msrc/start/app.ts\x1B[0m:\x1B[93m162\x1B[0m:\x1B[93m16\x1B[0m - \x1B[91merror\x1B[0m\x1B[90m TS7006: \x1B[0mParameter 'res' implicitly has an 'any' type.\n" +
+    '\n' +
+    '\x1B[7m162\x1B[0m     get: (req, res) => {\n' +
+    '\x1B[7m   \x1B[0m \x1B[91m               ~~~\x1B[0m\n' +
+    "\x1B[96msrc/start/app.ts\x1B[0m:\x1B[93m169\x1B[0m:\x1B[93m11\x1B[0m - \x1B[91merror\x1B[0m\x1B[90m TS7006: \x1B[0mParameter 'req' implicitly has an 'any' type.\n" +
+    '\n' +
+    '\x1B[7m169\x1B[0m     put: (req, res) => {\n' +
+    '\x1B[7m   \x1B[0m \x1B[91m          ~~~\x1B[0m\n' +
+    "\x1B[96msrc/start/app.ts\x1B[0m:\x1B[93m169\x1B[0m:\x1B[93m16\x1B[0m - \x1B[91merror\x1B[0m\x1B[90m TS7006: \x1B[0mParameter 'res' implicitly has an 'any' type.\n" +
+    '\n' +
+    '\x1B[7m169\x1B[0m     put: (req, res) => {\n' +
+    '\x1B[7m   \x1B[0m \x1B[91m               ~~~\x1B[0m\n' +
+    "\x1B[96msrc/start/app.ts\x1B[0m:\x1B[93m177\x1B[0m:\x1B[93m14\x1B[0m - \x1B[91merror\x1B[0m\x1B[90m TS7006: \x1B[0mParameter 'req' implicitly has an 'any' type.\n" +
+    '\n' +
+    '\x1B[7m177\x1B[0m     delete: (req, res) => {\n' +
+    '\x1B[7m   \x1B[0m \x1B[91m             ~~~\x1B[0m\n' +
+    "\x1B[96msrc/start/app.ts\x1B[0m:\x1B[93m177\x1B[0m:\x1B[93m19\x1B[0m - \x1B[91merror\x1B[0m\x1B[90m TS7006: \x1B[0mParameter 'res' implicitly has an 'any' type.\n" +
+    '\n' +
+    '\x1B[7m177\x1B[0m     delete: (req, res) => {\n' +
+    '\x1B[7m   \x1B[0m \x1B[91m                  ~~~\x1B[0m\n' +
+    "\x1B[96msrc/start/app.ts\x1B[0m:\x1B[93m186\x1B[0m:\x1B[93m5\x1B[0m - \x1B[91merror\x1B[0m\x1B[90m TS2552: \x1B[0mCannot find name 'validator'. Did you mean 'validate'?\n" +
+    '\n' +
+    '\x1B[7m186\x1B[0m     validator,\n' +
+    '\x1B[7m   \x1B[0m \x1B[91m    ~~~~~~~~~\x1B[0m\n' +
+    '\x1B[96msrc/start/app.ts\x1B[0m:\x1B[93m190\x1B[0m:\x1B[93m16\x1B[0m - \x1B[91merror\x1B[0m\x1B[90m TS2552: \x1B[0mCannot find n'... 2201 more characters,
+  stack: 'TSError: ⨯ Unable to compile TypeScript:\n' +
+    '\x1B[96msrc/start/app.ts\x1B[0m:\x1B[93m88\x1B[0m:\x1B[93m3\x1B[0m - \x1B[91merror\x1B[0m\x1B[90m TS2391: \x1B[0mFunction implementation is missing or not immediately following the declaration.\n' +
+    '\n' +
+    '\x1B[7m88\x1B[0m   route<T = any>(\n' +
+    '\x1B[7m  \x1B[0m \x1B[91m  ~~~~~\x1B[0m\n' +
+    "\x1B[96msrc/start/app.ts\x1B[0m:\x1B[93m146\x1B[0m:\x1B[93m1\x1B[0m - \x1B[91merror\x1B[0m\x1B[90m TS2300: \x1B[0mDuplicate identifier 'app'.\n" +
+    '\n' +
+    '\x1B[7m146\x1B[0m app.route<z.infer<typeof validator>>(\n' +
+    '\x1B[7m   \x1B[0m \x1B[91m~~~\x1B[0m\n' +
+    "\x1B[96msrc/start/app.ts\x1B[0m:\x1B[93m146\x1B[0m:\x1B[93m1\x1B[0m - \x1B[91merror\x1B[0m\x1B[90m TS2564: \x1B[0mProperty 'app' has no initializer and is not definitely assigned in the constructor.\n" +
+    '\n' +
+    '\x1B[7m146\x1B[0m app.route<z.infer<typeof validator>>(\n' +
+    '\x1B[7m   \x1B[0m \x1B[91m~~~\x1B[0m\n' +
+    "\x1B[96msrc/start/app.ts\x1B[0m:\x1B[93m146\x1B[0m:\x1B[93m1\x1B[0m - \x1B[91merror\x1B[0m\x1B[90m TS2717: \x1B[0mSubsequent property declarations must have the same type.  Property 'app' must be of type 'App', but here has type 'any'.\n" +
+    '\n' +
+    '\x1B[7m146\x1B[0m app.route<z.infer<typeof validator>>(\n' +
+    '\x1B[7m   \x1B[0m \x1B[91m~~~\x1B[0m\n' +
+    '\n' +
+    '  \x1B[96msrc/start/app.ts\x1B[0m:\x1B[93m142\x1B[0m:\x1B[93m7\x1B[0m\n' +
+    '    \x1B[7m142\x1B[0m const app = new App()\n' +
+    '    \x1B[7m   \x1B[0m \x1B[96m      ~~~\x1B[0m\n' +
+    "    'app' was also declared here.\n" +
+    '\x1B[96msrc/start/app.ts\x1B[0m:\x1B[93m146\x1B[0m:\x1B[93m5\x1B[0m - \x1B[91merror\x1B[0m\x1B[90m TS2394: \x1B[0mThis overload signature is not compatible with its implementation signature.\n' +
+    '\n' +
+    '\x1B[7m146\x1B[0m app.route<z.infer<typeof validator>>(\n' +
+    '\x1B[7m   \x1B[0m \x1B[91m    ~~~~~\x1B[0m\n' +
+    '\n' +
+    '  \x1B[96msrc/start/app.ts\x1B[0m:\x1B[93m88\x1B[0m:\x1B[93m3\x1B[0m\n' +
+    '    \x1B[7m88\x1B[0m   route<T = any>(\n' +
+    '    \x1B[7m  \x1B[0m \x1B[96m  ~~~~~\x1B[0m\n' +
+    '    The implementation signature is declared here.\n' +
+    "\x1B[96msrc/start/app.ts\x1B[0m:\x1B[93m146\x1B[0m:\x1B[93m5\x1B[0m - \x1B[91merror\x1B[0m\x1B[90m TS7010: \x1B[0m'route', which lacks return-type annotation, implicitly has an 'any' return type.\n" +
+    '\n' +
+    '\x1B[7m146\x1B[0m app.route<z.infer<typeof validator>>(\n' +
+    '\x1B[7m   \x1B[0m \x1B[91m    ~~~~~\x1B[0m\n' +
+    "\x1B[96msrc/start/app.ts\x1B[0m:\x1B[93m146\x1B[0m:\x1B[93m26\x1B[0m - \x1B[91merror\x1B[0m\x1B[90m TS2552: \x1B[0mCannot find name 'validator'. Did you mean 'validate'?\n" +
+    '\n' +
+    '\x1B[7m146\x1B[0m app.route<z.infer<typeof validator>>(\n' +
+    '\x1B[7m   \x1B[0m \x1B[91m                         ~~~~~~~~~\x1B[0m\n' +
+    "\x1B[96msrc/start/app.ts\x1B[0m:\x1B[93m149\x1B[0m:\x1B[93m12\x1B[0m - \x1B[91merror\x1B[0m\x1B[90m TS7006: \x1B[0mParameter 'req' implicitly has an 'any' type.\n" +
+    '\n' +
+    '\x1B[7m149\x1B[0m     list: (req, res) => {\n' +
+    '\x1B[7m   \x1B[0m \x1B[91m           ~~~\x1B[0m\n' +
+    "\x1B[96msrc/start/app.ts\x1B[0m:\x1B[93m149\x1B[0m:\x1B[93m17\x1B[0m - \x1B[91merror\x1B[0m\x1B[90m TS7006: \x1B[0mParameter 'res' implicitly has an 'any' type.\n" +
+    '\n' +
+    '\x1B[7m149\x1B[0m     list: (req, res) => {\n' +
+    '\x1B[7m   \x1B[0m \x1B[91m                ~~~\x1B[0m\n' +
+    "\x1B[96msrc/start/app.ts\x1B[0m:\x1B[93m155\x1B[0m:\x1B[93m12\x1B[0m - \x1B[91merror\x1B[0m\x1B[90m TS7006: \x1B[0mParameter 'req' implicitly has an 'any' type.\n" +
+    '\n' +
+    '\x1B[7m155\x1B[0m     post: (req, res) => {\n' +
+    '\x1B[7m   \x1B[0m \x1B[91m           ~~~\x1B[0m\n' +
+    "\x1B[96msrc/start/app.ts\x1B[0m:\x1B[93m155\x1B[0m:\x1B[93m17\x1B[0m - \x1B[91merror\x1B[0m\x1B[90m TS7006: \x1B[0mParameter 'res' implicitly has an 'any' type.\n" +
+    '\n' +
+    '\x1B[7m155\x1B[0m     post: (req, res) => {\n' +
+    '\x1B[7m   \x1B[0m \x1B[91m                ~~~\x1B[0m\n' +
+    "\x1B[96msrc/start/app.ts\x1B[0m:\x1B[93m162\x1B[0m:\x1B[93m11\x1B[0m - \x1B[91merror\x1B[0m\x1B[90m TS7006: \x1B[0mParameter 'req' implicitly has an 'any' type.\n" +
+    '\n' +
+    '\x1B[7m162\x1B[0m     get: (req, res) => {\n' +
+    '\x1B[7m   \x1B[0m \x1B[91m          ~~~\x1B[0m\n' +
+    "\x1B[96msrc/start/app.ts\x1B[0m:\x1B[93m162\x1B[0m:\x1B[93m16\x1B[0m - \x1B[91merror\x1B[0m\x1B[90m TS7006: \x1B[0mParameter 'res' implicitly has an 'any' type.\n" +
+    '\n' +
+    '\x1B[7m162\x1B[0m     get: (req, res) => {\n' +
+    '\x1B[7m   \x1B[0m \x1B[91m               ~~~\x1B[0m\n' +
+    "\x1B[96msrc/start/app.ts\x1B[0m:\x1B[93m169\x1B[0m:\x1B[93m11\x1B[0m - \x1B[91merror\x1B[0m\x1B[90m TS7006: \x1B[0mParameter 'req' implicitly has an 'any' type.\n" +
+    '\n' +
+    '\x1B[7m169\x1B[0m     put: (req, res) => {\n' +
+    '\x1B[7m   \x1B[0m \x1B[91m          ~~~\x1B[0m\n' +
+    "\x1B[96msrc/start/app.ts\x1B[0m:\x1B[93m169\x1B[0m:\x1B[93m16\x1B[0m - \x1B[91merror\x1B[0m\x1B[90m TS7006: \x1B[0mParameter 'res' implicitly has an 'any' type.\n" +
+    '\n' +
+    '\x1B[7m169\x1B[0m     put: (req, res) => {\n' +
+    '\x1B[7m   \x1B[0m \x1B[91m               ~~~\x1B[0m\n' +
+    "\x1B[96msrc/start/app.ts\x1B[0m:\x1B[93m177\x1B[0m:\x1B[93m14\x1B[0m - \x1B[91merror\x1B[0m\x1B[90m TS7006: \x1B[0mParameter 'req' implicitly has an 'any' type.\n" +
+    '\n' +
+    '\x1B[7m177\x1B[0m     delete: (req, res) => {\n' +
+    '\x1B[7m   \x1B[0m \x1B[91m             ~~~\x1B[0m\n' +
+    "\x1B[96msrc/start/app.ts\x1B[0m:\x1B[93m177\x1B[0m:\x1B[93m19\x1B[0m - \x1B[91merror\x1B[0m\x1B[90m TS7006: \x1B[0mParameter 'res' implicitly has an 'any' type.\n" +
+    '\n' +
+    '\x1B[7m177\x1B[0m     delete: (req, res) => {\n' +
+    '\x1B[7m   \x1B[0m \x1B[91m                  ~~~\x1B[0m\n' +
+    "\x1B[96msrc/start/app.ts\x1B[0m:\x1B[93m186\x1B[0m:\x1B[93m5\x1B[0m - \x1B[91merror\x1B[0m\x1B[90m TS2552: \x1B[0mCannot find name 'validator'. Did you mean 'validate'?\n" +
+    '\n' +
+    '\x1B[7m186\x1B[0m     validator,\n' +
+    '\x1B[7m   \x1B[0m \x1B[91m    ~~~~~~~~~\x1B[0m\n' +
+    "\x1B[96msrc/start/app.ts\x1B[0m:\x1B[93m190\x1B[0m:\x1B[93m16\x1B[0m - \x1B[91merror\x1B[0m\x1B[90m TS2552: \x1B[0mCannot find name 'app'. Did you mean 'App'?\n" +
+    '\n' +
+    '\x1B[7m190\x1B[0m export default app.init()\n' +
+    '\x1B[7m   \x1B[0m \x1B[91m               ~~~\x1B[0m\n' +
+    '\x1B[96msrc/start/app.ts\x1B[0m:\x1B[93m146\x1B[0m:\x1B[93m1\x1B[0m - \x1B[91merror\x1B[0m\x1B[90m TS1434: \x1B[0mUnexpected keyword or identifier.\n' +
+    '\n' +
+    '\x1B[7m146\x1B[0m app.route<z.infer<typeof validator>>(\n' +
+    '\x1B[7m   \x1B[0m \x1B[91m~~~\x1B[0m\n' +
+    '\x1B[96msrc/start/app.ts\x1B[0m:\x1B[93m146\x1B[0m:\x1B[93m4\x1B[0m - \x1B[91merror\x1B[0m\x1B[90m TS1068: \x1B[0mUnexpected token. A constructor, method, accessor, or property was expected.\n' +
+    '\n' +
+    '\x1B[7m146\x1B[0m app.route<z.infer<typeof validator>>(\n' +
+    '\x1B[7m   \x1B[0m \x1B[91m   ~\x1B[0m\n' +
+    "\x1B[96msrc/start/app.ts\x1B[0m:\x1B[93m146\x1B[0m:\x1B[93m12\x1B[0m - \x1B[91merror\x1B[0m\x1B[90m TS1005: \x1B[0m',' expected.\n" +
+    '\n' +
+    '\x1B[7m146\x1B[0m app.route<z.infer<typeof validator>>(\n' +
+    '\x1B[7m   \x1B[0m \x1B[91m           ~\x1B[0m\n' +
+    "\x1B[96msrc/start/app.ts\x1B[0m:\x1B[93m146\x1B[0m:\x1B[93m18\x1B[0m - \x1B[91merror\x1B[0m\x1B[90m TS1005: \x1B[0m',' expected.\n" +
+    '\n' +
+    '\x1B[7m146\x1B[0m app.route<z.infer<typeof validator>>(\n' +
+    '\x1B[7m   \x1B[0m \x1B[91m                 ~\x1B[0m\n' +
+    '\x1B[96msrc/start/app.ts\x1B[0m:\x1B[93m146\x1B[0m:\x1B[93m36\x1B[0m - \x1B[91merror\x1B[0m\x1B[90m TS1109: \x1B[0mExpression expected.\n' +
+    '\n' +
+    '\x1B[7m146\x1B[0m app.route<z.infer<typeof validator>>(\n' +
+    '\x1B[7m   \x1B[0m \x1B[91m                                   ~\x1B[0m\n' +
+    '\n' +
+    '    at createTSError (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts:859:12)\n' +
+    '    at reportTSError (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts:863:19)\n' +
+    '    at getOutput (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts:1077:36)\n' +
+    '    at Object.compile (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts:1433:41)\n' +
+    '    at Module.m._compile (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts:1617:30)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1309:10)\n' +
+    '    at Object.require.extensions.<computed> [as .ts] (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts:1621:12)\n' +
+    '    at Module.load (node:internal/modules/cjs/loader:1113:32)\n' +
+    '    at Function.Module._load (node:internal/modules/cjs/loader:960:12)\n' +
+    '    at Module.require (node:internal/modules/cjs/loader:1137:19)',
+  exception: true,
+  date: 'Sun Aug 06 2023 04:57:22 GMT+0200 (Central European Summer Time)',
+  process: {
+    pid: 6744,
+    uid: 501,
+    gid: 20,
+    cwd: '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit',
+    execPath: '/opt/homebrew/Cellar/node/20.3.0/bin/node',
+    version: 'v20.3.0',
+    argv: [
+      '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/.bin/ts-node',
+      '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/src/server.ts'
+    ],
+    memoryUsage: {
+      rss: 341770240,
+      heapTotal: 231849984,
+      heapUsed: 208479488,
+      external: 25832672,
+      arrayBuffers: 23011743
+    }
+  },
+  os: {
+    loadavg: [ 1.087890625, 1.28955078125, 1.35498046875 ],
+    uptime: 1413450
+  },
+  trace: [
+    {
+      column: 12,
+      file: '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts',
+      function: 'createTSError',
+      line: 859,
+      method: null,
+      native: false
+    },
+    {
+      column: 19,
+      file: '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts',
+      function: 'reportTSError',
+      line: 863,
+      method: null,
+      native: false
+    },
+    {
+      column: 36,
+      file: '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts',
+      function: 'getOutput',
+      line: 1077,
+      method: null,
+      native: false
+    },
+    {
+      column: 41,
+      file: '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts',
+      function: 'Object.compile',
+      line: 1433,
+      method: 'compile',
+      native: false
+    },
+    {
+      column: 30,
+      file: '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts',
+      function: 'Module.m._compile',
+      line: 1617,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 10,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._extensions..js',
+      line: 1309,
+      method: '.js',
+      native: false
+    },
+    {
+      column: 12,
+      file: '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts',
+      function: 'Object.require.extensions.<computed> [as .ts]',
+      line: 1621,
+      method: 'ts]',
+      native: false
+    },
+    {
+      column: 32,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module.load',
+      line: 1113,
+      method: 'load',
+      native: false
+    },
+    {
+      column: 12,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._load',
+      line: 960,
+      method: '_load',
+      native: false
+    },
+    {
+      column: 19,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module.require',
+      line: 1137,
+      method: 'require',
+      native: false
+    }
+  ],
+  timestamp: '2023-08-06 04:57:22'
+}

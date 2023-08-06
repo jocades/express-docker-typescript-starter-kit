@@ -24,3 +24,13 @@ router.put('/:id/join', [validateId, auth], joinGroup)
 router.put('/:id/leave', [validateId, auth], leaveGroup)
 
 export default router
+
+import { app } from '../framework/app'
+
+app.route('/groups', {
+  list: listGroups,
+  post: createGroup,
+  get: handler.getOne(Group),
+  put: handler.updateOne(Group),
+  delete: handler.deleteOne(Group),
+})
