@@ -3,4 +3,4 @@ coverage/
 package-lock.json
 .env
 /data/
-# docker-compose.yml
+.DS_Store
