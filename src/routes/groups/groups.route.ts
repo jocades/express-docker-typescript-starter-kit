@@ -1,7 +1,6 @@
-import { Router } from 'express'
+import { app } from '../../framework/app'
 import Group, { groupBody } from '../../models/group.model'
-import { auth, validate, validateId } from '../../middleware'
-import handler from '../../lib/controller-factory'
+import { auth, validateId } from '../../middleware'
 import {
   joinGroup,
   leaveGroup,
@@ -9,28 +8,24 @@ import {
   createGroup,
 } from './groups.controller'
 
-const router = Router()
-
-router.get('/', listGroups)
-router.post('/', validate(groupBody), createGroup)
-
-router
-  .route('/:id')
-  .get(validateId, handler.getOne(Group))
-  .put([validateId, validate(groupBody)], handler.updateOne(Group))
-  .delete(validateId, handler.deleteOne(Group))
-
-router.put('/:id/join', [validateId, auth], joinGroup)
-router.put('/:id/leave', [validateId, auth], leaveGroup)
-
-export default router
-
-import { app } from '../../framework/app'
-
-app.route('/groups', {
-  list: listGroups,
-  post: createGroup,
-  get: handler.getOne(Group),
-  put: handler.updateOne(Group),
-  delete: handler.deleteOne(Group),
-})
+app.route(
+  '/groups',
+  {
+    model: Group,
+    validator: groupBody,
+  },
+  {
+    list: listGroups,
+    createOne: createGroup,
+  },
+  {
+    '/:id/join': {
+      put: joinGroup,
+      middleware: [validateId, auth],
+    },
+    '/:id/leave': {
+      put: leaveGroup,
+      middleware: [validateId, auth],
+    },
+  }
+)

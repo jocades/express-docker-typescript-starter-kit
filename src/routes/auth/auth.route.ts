@@ -1,4 +1,4 @@
-import { Router } from 'express'
+import { app } from '../../framework/app'
 import {
   registerUser,
   loginUser,
@@ -6,11 +6,10 @@ import {
   refreshUser,
 } from './auth.controller'
 
-const router = Router()
-
-router.post('/', loginUser)
-router.post('/register', registerUser)
-router.post('/logout', logoutUser)
-router.post('/refresh', refreshUser)
-
-export default router
+app.useRouter('/auth', (router) => {
+  router.post('/', loginUser)
+  router.post('/register', registerUser)
+  router.post('/logout', logoutUser)
+  router.post('/refresh', refreshUser)
+  return router
+})

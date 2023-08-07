@@ -1,6 +1,6 @@
 import request from 'supertest'
-import app from '../../../src/start/app'
-import db from '../../../src/start/db'
+import app from '../../../src/app'
+import db from '../../../src/app/db'
 import Group from '../../../src/models/group.model'
 import { Types } from 'mongoose'
 

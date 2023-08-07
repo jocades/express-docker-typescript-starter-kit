@@ -3,7 +3,7 @@ import bcrypt from 'bcrypt'
 import jwt from 'jsonwebtoken'
 import _ from 'lodash'
 import { decrypt } from '../../utils/hash'
-import User, { validateUser } from '../../models/user.model'
+import User, { validateCredentials } from '../../models/user.model'
 
 type ReqHandler = RequestHandler<{}, {}, Credentials & Tokens>
 
@@ -12,7 +12,7 @@ const sendMsg = (res: Response, message: string) =>
 
 export const registerUser: ReqHandler = async (req, res) => {
   const { email, password } = req.body
-  const { error } = validateUser(email, password)
+  const { error } = validateCredentials(email, password)
   if (error) return sendMsg(res, error.details[0].message)
 
   let user = await User.findOne({ email })
@@ -28,7 +28,7 @@ export const registerUser: ReqHandler = async (req, res) => {
 
 export const loginUser: ReqHandler = async (req, res) => {
   const { email, password } = req.body
-  const { error } = validateUser(email, password)
+  const { error } = validateCredentials(email, password)
   if (error) return sendMsg(res, error.details[0].message)
 
   const user = await User.findOne({ email })

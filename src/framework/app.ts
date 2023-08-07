@@ -4,25 +4,38 @@ import helmet from 'helmet'
 import morgan from 'morgan'
 import { z, AnyZodObject } from 'zod'
 import { Model } from 'mongoose'
-import handler from '../lib/controller-factory'
 
-import { auth, error, validate, validateId } from '../middleware'
+import handler from '../lib/controller-factory'
+import Contact from '../models/contact.model'
+import { error, validate, validateId } from '../middleware'
+import { ServerError } from '../lib/errors'
 
 interface Handlers<T> {
-  list?: RequestHandler | RequestHandler[]
-  post?: RequestHandler<{}, {}, T> | RequestHandler<{}, {}, T>[]
-  get?: RequestHandler<{ id: string }> | RequestHandler<{ id: string }>[]
-  put?: RequestHandler<{ id: string }, {}, T> | RequestHandler<{ id: string }>[]
-  patch?:
+  list: RequestHandler | RequestHandler[]
+  createOne: RequestHandler<{}, {}, T> | RequestHandler<{}, {}, T>[]
+  getOne: RequestHandler<{ id: string }> | RequestHandler<{ id: string }>[]
+  updateOne:
     | RequestHandler<{ id: string }, {}, T>
     | RequestHandler<{ id: string }>[]
-  delete?: RequestHandler<{ id: string }> | RequestHandler<{ id: string }>[]
+  deleteOne: RequestHandler<{ id: string }> | RequestHandler<{ id: string }>[]
 }
 
-type RouteHandler = Handlers<any>
-// & Partial<Record<string, RequestHandler | RequestHandler[]>>
+type CustomMethod = 'list' | 'createOne' | 'getOne' | 'updateOne' | 'deleteOne'
+type HTTPMethod = 'get' | 'post' | 'put' | 'patch' | 'delete'
+type Method = HTTPMethod | CustomMethod
 
-type CustomMethod = 'list' | 'post' | 'get' | 'put' | 'patch' | 'delete'
+type CustomHandlers = {
+  [key: string]: {
+    get?: RequestHandler | RequestHandler[]
+    post?: RequestHandler | RequestHandler[]
+    put?: RequestHandler | RequestHandler[]
+    patch?: RequestHandler | RequestHandler[]
+    delete?: RequestHandler | RequestHandler[]
+    middleware?: RequestHandler | RequestHandler[]
+  }
+}
+
+type RouteHandler<T> = Partial<Handlers<T>>
 
 interface HandlerOptions {
   middleware?: RequestHandler | RequestHandler[]
@@ -66,137 +79,190 @@ class App {
     this._app.use(error)
   }
 
-  route<T = any>(
+  addRouter(endpoint: string, router: Router) {
+    this._routers.push(Router().use(endpoint, router))
+  }
+
+  useRouter(endpoint: string, cb: (router: Router) => Router) {
+    this._routers.push(Router().use(endpoint, cb(Router())))
+  }
+
+  route<T = unknown>(
     endpoint: string,
-    routeHandler: RouteHandler,
-    options: HandlerOptions = {}
+    options: HandlerOptions = {},
+    commonHandlers: RouteHandler<T> = {},
+    customHandlers: CustomHandlers = {}
   ) {
     const router = Router()
 
+    // Custom
+    for (const [path, handlers] of Object.entries(customHandlers)) {
+      let middleware: RequestHandler[] | RequestHandler = []
+
+      for (const [method, handler] of Object.entries(handlers)) {
+        if (method === 'middleware') {
+          middleware = handler
+          continue
+        }
+        router[method as HTTPMethod](`${endpoint}${path}`, middleware, handler)
+      }
+    }
+
+    // Common
     if (!options.middleware) {
       options.middleware = (req, res, next) => next()
     }
 
     router.use(endpoint, options.middleware)
 
-    if (routeHandler.list) {
-      router.get(endpoint, routeHandler.list)
+    if (commonHandlers.list) {
+      router.get(endpoint, commonHandlers.list)
     } else {
       if (!options.model) {
-        throw new Error('Model is required for list route')
+        router.get(endpoint, (req, res) => {
+          res.json({
+            method: req.method,
+            path: req.path,
+          })
+        })
+      } else {
+        router.get(endpoint, handler.list(options.model))
       }
-      router.get(endpoint, handler.list(options.model))
     }
 
-    if (routeHandler.post) {
+    if (commonHandlers.createOne) {
       if (!options.validator) {
-        router.post(endpoint, routeHandler.post)
+        router.post(endpoint, commonHandlers.createOne)
       } else {
         router.post(
-          `${endpoint}/:id`,
+          endpoint,
           validate(options.validator),
-          routeHandler.post
+          commonHandlers.createOne
         )
       }
     } else {
       if (!options.model) {
-        throw new Error('Model is required for post route')
-      }
-      if (!options.validator) {
-        router.post(endpoint, handler.createOne(options.model))
+        router.post(endpoint, (req, res) => {
+          res.json({
+            method: req.method,
+            path: req.path,
+            body: req.body,
+          })
+        })
       } else {
-        router.post(
-          `${endpoint}/:id`,
-          validate(options.validator),
-          handler.createOne(options.model)
-        )
+        if (!options.validator) {
+          router.post(endpoint, handler.createOne(options.model))
+        } else {
+          router.post(
+            endpoint,
+            validate(options.validator),
+            handler.createOne(options.model)
+          )
+        }
       }
     }
 
-    if (routeHandler.get) {
-      router.get(`${endpoint}/:id`, validateId, routeHandler.get)
+    if (commonHandlers.getOne) {
+      router.get(`${endpoint}/:id`, validateId, commonHandlers.getOne)
+    } else {
+      if (!options.model) {
+        router.get(`${endpoint}/:id`, (req, res) => {
+          res.json({
+            method: req.method,
+            path: req.path,
+            params: req.params,
+          })
+        })
+      } else {
+        router.get(`${endpoint}/:id`, validateId, handler.getOne(options.model))
+      }
     }
 
-    if (routeHandler.put) {
+    if (commonHandlers.updateOne) {
       if (!options.validator) {
-        router.put(`${endpoint}/:id`, routeHandler.put)
+        router.put(`${endpoint}/:id`, validateId, commonHandlers.updateOne)
       } else {
         router.put(
           `${endpoint}/:id`,
           validateId,
-          validate(options.validator),
-          routeHandler.put
+          validate(options.validator.partial()),
+          commonHandlers.updateOne
         )
+      }
+    } else {
+      if (!options.model) {
+        router.put(`${endpoint}/:id`, (req, res) => {
+          res.json({
+            method: req.method,
+            path: req.path,
+            params: req.params,
+            body: req.body,
+          })
+        })
+      } else {
+        if (!options.validator) {
+          router.put(
+            `${endpoint}/:id`,
+            validateId,
+            handler.updateOne(options.model)
+          )
+        } else {
+          router.put(
+            `${endpoint}/:id`,
+            validateId,
+            validate(options.validator.partial()),
+            handler.updateOne(options.model)
+          )
+        }
       }
     }
 
-    if (routeHandler.patch) {
-      if (!options.validator) {
-        router.patch(`${endpoint}/:id`, routeHandler.patch)
+    if (commonHandlers.deleteOne) {
+      router.delete(`${endpoint}/:id`, validateId, commonHandlers.deleteOne)
+    } else {
+      if (!options.model) {
+        router.delete(`${endpoint}/:id`, (req, res) => {
+          res.json({
+            method: req.method,
+            path: req.path,
+            params: req.params,
+          })
+        })
       } else {
-        router.patch(
+        router.delete(
           `${endpoint}/:id`,
           validateId,
-          validate(options.validator),
-          routeHandler.patch
+          handler.deleteOne(options.model)
         )
       }
-    }
-
-    if (routeHandler.delete) {
-      router.delete(`${endpoint}/:id`, validateId, routeHandler.delete)
     }
 
     this._routers.push(router)
+
+    return router
   }
 }
 
 export const app = new App()
 
-const validator = z.object({ name: z.string().min(3).max(255) })
+const contactSchema = z.object({ name: z.string().min(3).max(255) })
 
-app.route<z.infer<typeof validator>>(
-  '/contacts',
+app.route(
+  '/ping',
   {
-    list: (req, res) => {
-      res.json({
-        method: req.method,
-        path: req.path,
-      })
-    },
-    post: (req, res) => {
-      res.json({
-        method: req.method,
-        path: req.path,
-        body: req.body,
-      })
-    },
-    get: (req, res) => {
-      res.json({
-        method: req.method,
-        path: req.path,
-        params: req.params,
-      })
-    },
-    put: (req, res) => {
-      res.json({
-        method: req.method,
-        path: req.path,
-        params: req.params,
-        body: req.body,
-      })
-    },
-    delete: (req, res) => {
-      res.json({
-        method: req.method,
-        path: req.path,
-        params: req.params,
-      })
-    },
+    validator: contactSchema,
   },
   {
-    validator,
+    list: (req, res) => res.send('list'),
+  },
+  {
+    '/test/1': {
+      get: (req, res) => res.send('test 1'),
+    },
+    '/error/1': {
+      get: (req, res) => {
+        throw new ServerError('Fuuuuuuuuuuu!', 418) // 418 -> I'm a teapot
+      },
+    },
   }
 )
-
-export default App

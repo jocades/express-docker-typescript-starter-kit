@@ -1,6 +1,6 @@
 import request from 'supertest'
-import app from '../../../src/start/app'
-import db from '../../../src/start/db'
+import app from '../../../src/app'
+import db from '../../../src/app/db'
 // import User from '../../../src/models/user'
 
 describe('auth middleware', () => {
@@ -14,7 +14,8 @@ describe('auth middleware', () => {
 
   let token: string
 
-  const exec = () => request(app).get('/api/users/me').set('Authorization', token)
+  const exec = () =>
+    request(app).get('/api/users/me').set('Authorization', token)
 
   it('should return 401 if no token is provided', async () => {
     token = ''
