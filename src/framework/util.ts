@@ -24,7 +24,7 @@ export function setupCommonHandlers(
   options: AppRouteOptions
 ) {
   if (!options.middleware) {
-    options.middleware = (req, res, next) => next()
+    options.middleware = next
   }
 
   router.use(endpoint, options.middleware)

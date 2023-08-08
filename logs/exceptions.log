@@ -17730,3 +17730,311 @@
   ],
   timestamp: '2023-08-08 03:18:20'
 }
+{
+  error: [96msrc/framework/app.ts[0m:[93m106[0m:[93m7[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+  
+  [7m106[0m       }
+  [7m   [0m [91m      ~[0m
+  ,
+  level: 'error',
+  message: 'uncaughtException: ⨯ Unable to compile TypeScript:\n' +
+    '\x1B[96msrc/framework/app.ts\x1B[0m:\x1B[93m106\x1B[0m:\x1B[93m7\x1B[0m - \x1B[91merror\x1B[0m\x1B[90m TS1109: \x1B[0mExpression expected.\n' +
+    '\n' +
+    '\x1B[7m106\x1B[0m       }\n' +
+    '\x1B[7m   \x1B[0m \x1B[91m      ~\x1B[0m\n' +
+    '\n' +
+    'TSError: ⨯ Unable to compile TypeScript:\n' +
+    '\x1B[96msrc/framework/app.ts\x1B[0m:\x1B[93m106\x1B[0m:\x1B[93m7\x1B[0m - \x1B[91merror\x1B[0m\x1B[90m TS1109: \x1B[0mExpression expected.\n' +
+    '\n' +
+    '\x1B[7m106\x1B[0m       }\n' +
+    '\x1B[7m   \x1B[0m \x1B[91m      ~\x1B[0m\n' +
+    '\n' +
+    '    at createTSError (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts:859:12)\n' +
+    '    at reportTSError (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts:863:19)\n' +
+    '    at getOutput (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts:1077:36)\n' +
+    '    at Object.compile (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts:1433:41)\n' +
+    '    at Module.m._compile (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts:1617:30)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1309:10)\n' +
+    '    at Object.require.extensions.<computed> [as .ts] (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts:1621:12)\n' +
+    '    at Module.load (node:internal/modules/cjs/loader:1113:32)\n' +
+    '    at Function.Module._load (node:internal/modules/cjs/loader:960:12)\n' +
+    '    at Module.require (node:internal/modules/cjs/loader:1137:19)',
+  stack: 'TSError: ⨯ Unable to compile TypeScript:\n' +
+    '\x1B[96msrc/framework/app.ts\x1B[0m:\x1B[93m106\x1B[0m:\x1B[93m7\x1B[0m - \x1B[91merror\x1B[0m\x1B[90m TS1109: \x1B[0mExpression expected.\n' +
+    '\n' +
+    '\x1B[7m106\x1B[0m       }\n' +
+    '\x1B[7m   \x1B[0m \x1B[91m      ~\x1B[0m\n' +
+    '\n' +
+    '    at createTSError (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts:859:12)\n' +
+    '    at reportTSError (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts:863:19)\n' +
+    '    at getOutput (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts:1077:36)\n' +
+    '    at Object.compile (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts:1433:41)\n' +
+    '    at Module.m._compile (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts:1617:30)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1309:10)\n' +
+    '    at Object.require.extensions.<computed> [as .ts] (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts:1621:12)\n' +
+    '    at Module.load (node:internal/modules/cjs/loader:1113:32)\n' +
+    '    at Function.Module._load (node:internal/modules/cjs/loader:960:12)\n' +
+    '    at Module.require (node:internal/modules/cjs/loader:1137:19)',
+  exception: true,
+  date: 'Tue Aug 08 2023 11:36:23 GMT+0200 (Central European Summer Time)',
+  process: {
+    pid: 73906,
+    uid: 501,
+    gid: 20,
+    cwd: '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit',
+    execPath: '/opt/homebrew/Cellar/node/20.3.0/bin/node',
+    version: 'v20.3.0',
+    argv: [
+      '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/.bin/ts-node',
+      '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/src/server.ts'
+    ],
+    memoryUsage: {
+      rss: 351174656,
+      heapTotal: 241549312,
+      heapUsed: 218546232,
+      external: 25806668,
+      arrayBuffers: 22985739
+    }
+  },
+  os: {
+    loadavg: [ 2.44580078125, 1.94580078125, 1.755859375 ],
+    uptime: 1610192
+  },
+  trace: [
+    {
+      column: 12,
+      file: '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts',
+      function: 'createTSError',
+      line: 859,
+      method: null,
+      native: false
+    },
+    {
+      column: 19,
+      file: '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts',
+      function: 'reportTSError',
+      line: 863,
+      method: null,
+      native: false
+    },
+    {
+      column: 36,
+      file: '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts',
+      function: 'getOutput',
+      line: 1077,
+      method: null,
+      native: false
+    },
+    {
+      column: 41,
+      file: '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts',
+      function: 'Object.compile',
+      line: 1433,
+      method: 'compile',
+      native: false
+    },
+    {
+      column: 30,
+      file: '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts',
+      function: 'Module.m._compile',
+      line: 1617,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 10,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._extensions..js',
+      line: 1309,
+      method: '.js',
+      native: false
+    },
+    {
+      column: 12,
+      file: '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts',
+      function: 'Object.require.extensions.<computed> [as .ts]',
+      line: 1621,
+      method: 'ts]',
+      native: false
+    },
+    {
+      column: 32,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module.load',
+      line: 1113,
+      method: 'load',
+      native: false
+    },
+    {
+      column: 12,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._load',
+      line: 960,
+      method: '_load',
+      native: false
+    },
+    {
+      column: 19,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module.require',
+      line: 1137,
+      method: 'require',
+      native: false
+    }
+  ],
+  timestamp: '2023-08-08 11:36:23'
+}
+{
+  error: [96msrc/framework/app.ts[0m:[93m106[0m:[93m7[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+  
+  [7m106[0m       }
+  [7m   [0m [91m      ~[0m
+  ,
+  level: 'error',
+  message: 'uncaughtException: ⨯ Unable to compile TypeScript:\n' +
+    '\x1B[96msrc/framework/app.ts\x1B[0m:\x1B[93m106\x1B[0m:\x1B[93m7\x1B[0m - \x1B[91merror\x1B[0m\x1B[90m TS1109: \x1B[0mExpression expected.\n' +
+    '\n' +
+    '\x1B[7m106\x1B[0m       }\n' +
+    '\x1B[7m   \x1B[0m \x1B[91m      ~\x1B[0m\n' +
+    '\n' +
+    'TSError: ⨯ Unable to compile TypeScript:\n' +
+    '\x1B[96msrc/framework/app.ts\x1B[0m:\x1B[93m106\x1B[0m:\x1B[93m7\x1B[0m - \x1B[91merror\x1B[0m\x1B[90m TS1109: \x1B[0mExpression expected.\n' +
+    '\n' +
+    '\x1B[7m106\x1B[0m       }\n' +
+    '\x1B[7m   \x1B[0m \x1B[91m      ~\x1B[0m\n' +
+    '\n' +
+    '    at createTSError (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts:859:12)\n' +
+    '    at reportTSError (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts:863:19)\n' +
+    '    at getOutput (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts:1077:36)\n' +
+    '    at Object.compile (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts:1433:41)\n' +
+    '    at Module.m._compile (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts:1617:30)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1309:10)\n' +
+    '    at Object.require.extensions.<computed> [as .ts] (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts:1621:12)\n' +
+    '    at Module.load (node:internal/modules/cjs/loader:1113:32)\n' +
+    '    at Function.Module._load (node:internal/modules/cjs/loader:960:12)\n' +
+    '    at Module.require (node:internal/modules/cjs/loader:1137:19)',
+  stack: 'TSError: ⨯ Unable to compile TypeScript:\n' +
+    '\x1B[96msrc/framework/app.ts\x1B[0m:\x1B[93m106\x1B[0m:\x1B[93m7\x1B[0m - \x1B[91merror\x1B[0m\x1B[90m TS1109: \x1B[0mExpression expected.\n' +
+    '\n' +
+    '\x1B[7m106\x1B[0m       }\n' +
+    '\x1B[7m   \x1B[0m \x1B[91m      ~\x1B[0m\n' +
+    '\n' +
+    '    at createTSError (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts:859:12)\n' +
+    '    at reportTSError (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts:863:19)\n' +
+    '    at getOutput (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts:1077:36)\n' +
+    '    at Object.compile (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts:1433:41)\n' +
+    '    at Module.m._compile (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts:1617:30)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1309:10)\n' +
+    '    at Object.require.extensions.<computed> [as .ts] (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts:1621:12)\n' +
+    '    at Module.load (node:internal/modules/cjs/loader:1113:32)\n' +
+    '    at Function.Module._load (node:internal/modules/cjs/loader:960:12)\n' +
+    '    at Module.require (node:internal/modules/cjs/loader:1137:19)',
+  exception: true,
+  date: 'Tue Aug 08 2023 11:36:23 GMT+0200 (Central European Summer Time)',
+  process: {
+    pid: 73906,
+    uid: 501,
+    gid: 20,
+    cwd: '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit',
+    execPath: '/opt/homebrew/Cellar/node/20.3.0/bin/node',
+    version: 'v20.3.0',
+    argv: [
+      '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/.bin/ts-node',
+      '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/src/server.ts'
+    ],
+    memoryUsage: {
+      rss: 351174656,
+      heapTotal: 241549312,
+      heapUsed: 218546232,
+      external: 25806668,
+      arrayBuffers: 22985739
+    }
+  },
+  os: {
+    loadavg: [ 2.44580078125, 1.94580078125, 1.755859375 ],
+    uptime: 1610192
+  },
+  trace: [
+    {
+      column: 12,
+      file: '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts',
+      function: 'createTSError',
+      line: 859,
+      method: null,
+      native: false
+    },
+    {
+      column: 19,
+      file: '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts',
+      function: 'reportTSError',
+      line: 863,
+      method: null,
+      native: false
+    },
+    {
+      column: 36,
+      file: '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts',
+      function: 'getOutput',
+      line: 1077,
+      method: null,
+      native: false
+    },
+    {
+      column: 41,
+      file: '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts',
+      function: 'Object.compile',
+      line: 1433,
+      method: 'compile',
+      native: false
+    },
+    {
+      column: 30,
+      file: '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts',
+      function: 'Module.m._compile',
+      line: 1617,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 10,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._extensions..js',
+      line: 1309,
+      method: '.js',
+      native: false
+    },
+    {
+      column: 12,
+      file: '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts',
+      function: 'Object.require.extensions.<computed> [as .ts]',
+      line: 1621,
+      method: 'ts]',
+      native: false
+    },
+    {
+      column: 32,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module.load',
+      line: 1113,
+      method: 'load',
+      native: false
+    },
+    {
+      column: 12,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._load',
+      line: 960,
+      method: '_load',
+      native: false
+    },
+    {
+      column: 19,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module.require',
+      line: 1137,
+      method: 'require',
+      native: false
+    }
+  ],
+  timestamp: '2023-08-08 11:36:23'
+}

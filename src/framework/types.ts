@@ -7,8 +7,8 @@ export interface CommonHandlers<T> {
   create?: RequestHandler<{}, {}, T> | RequestHandler<{}, {}, T>[]
   read?: RequestHandler<{ id: string }> | RequestHandler<{ id: string }>[]
   update?:
-    | RequestHandler<{ id: string }, {}, T>
-    | RequestHandler<{ id: string }>[]
+    | RequestHandler<{ id: string }, {}, Partial<T>>
+    | RequestHandler<{ id: string }, {}, Partial<T>>[]
   delete?: RequestHandler<{ id: string }> | RequestHandler<{ id: string }>[]
 }
 
@@ -21,8 +21,8 @@ export type CustomHandlers = Record<
 >
 
 export interface AppRouteOptions {
-  middleware?: RequestHandler | RequestHandler[]
-  validator?: AnyZodObject
   model?: Model<any>
-  methods?: ('list' | 'create' | 'read' | 'update' | 'delete' | 'all' | '*')[]
+  methods?: (CommonMethod | 'all' | '*')[]
+  validator?: AnyZodObject
+  middleware?: RequestHandler | RequestHandler[]
 }
