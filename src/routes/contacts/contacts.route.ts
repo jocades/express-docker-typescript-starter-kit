@@ -5,5 +5,5 @@ import Contact, { contactBody } from '../../models/contact.model'
 app.route('/contacts', {
   model: Contact,
   validator: contactBody,
-  middleware: [auth],
+  // middleware: [auth],
 })

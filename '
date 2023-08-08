@@ -1,0 +1,188 @@
+import { Router, type RequestHandler } from 'express'
+import handler from '../lib/controller-factory'
+import { validate, validateId } from '../middleware'
+import {
+  AppRouteOptions,
+  CustomHandlers,
+  HTTPMethod,
+  CommonMethod,
+  CommonHandlers,
+} from './types'
+
+const map = {
+  list: setupListHandler,
+  create: setupCreateHandler,
+  read: setupReadHandler,
+  update: setupUpdateHandler,
+  delete: setupDeleteHandler,
+}
+
+export function setupCommonHandlers(
+  endpoint: string,
+  router: Router,
+  handlers: CommonHandlers<any>,
+  options: AppRouteOptions
+) {
+  if (!options.middleware) {
+    options.middleware = (req, res, next) => next()
+  }
+
+  router.use(endpoint, options.middleware)
+
+  if (
+    !options.methods ||
+    options.methods.includes('all') ||
+    options.methods.includes('*')
+  ) {
+    options.methods = ['list', 'create', 'read', 'update', 'delete']
+  }
+
+  for (const method of options.methods) {
+    const handler = handlers[method as CommonMethod] as RequestHandler
+    map[method as CommonMethod](endpoint, router, handler, options)
+  }
+}
+
+export function setupCustomHandlers(
+  ep: string,
+  router: Router,
+  customHandlers: CustomHandlers
+) {
+  for (const [path, handlers] of Object.entries(customHandlers)) {
+    let middleware: RequestHandler | RequestHandler[] = []
+
+    for (const [method, handler] of Object.entries(handlers)) {
+      if (method === 'middleware') {
+        middleware = handler
+        continue
+      }
+      router[method as HTTPMethod](ep + path, middleware, handler)
+    }
+  }
+}
+
+const exampleRoute: RequestHandler = (req, res) => {
+  res.json({
+    method: req.method,
+    path: req.path,
+    params: req.params,
+    query: req.query,
+    body: req.body,
+  })
+}
+
+const next: RequestHandler = (req, res, next) => next()
+
+function setupListHandler(
+  ep: string,
+  router: Router,
+  listHandler?: RequestHandler,
+  options: AppRouteOptions = {}
+) {
+  if (listHandler) {
+    router.get(ep, listHandler)
+  } else {
+    if (!options.model) {
+      router.get(ep, exampleRoute)
+    } else {
+      router.get(ep, handler.list(options.model))
+    }
+  }
+}
+
+function setupCreateHandler(
+  ep: string,
+  router: Router,
+  createHandler?: RequestHandler,
+  options: AppRouteOptions = {}
+) {
+  if (createHandler)
+    router.post(
+      ep,
+      options.validator ? validate(options.validator) : next,
+      createHandler
+    )
+  else
+    router.post(
+      ep,
+      options.validator ? validate(options.validator) : next,
+      options.model ? handler.createOne(options.model) : exampleRoute
+    )
+}
+
+function setupReadHandler(
+  ep: string,
+  router: Router,
+  readHandler?: RequestHandler,
+  options: AppRouteOptions = {}
+) {
+  if (readHandler) {
+    router.get(`${ep}/:id`, validateId, readHandler)
+  } else {
+    if (!options.model) {
+      router.get(`${ep}/:id`, exampleRoute)
+    } else {
+      router.get(`${ep}/:id`, validateId, handler.getOne(options.model))
+    }
+  }
+}
+
+function setupUpdateHandler(
+  ep: string,
+  router: Router,
+  updateHandler?: RequestHandler,
+  options: AppRouteOptions = {}
+) {
+  if (updateHandler) {
+    if (!options.validator) {
+      router.put(`${ep}/:id`, validateId, updateHandler)
+    } else {
+      router.put(
+        `${ep}/:id`,
+        validateId,
+        validate(options.validator.partial()),
+        updateHandler
+      )
+    }
+  } else {
+    if (!options.model) {
+      if (!options.validator) {
+        router.put(`${ep}/:id`, exampleRoute)
+      } else {
+        router.put(
+          `${ep}/:id`,
+          validate(options.validator.partial()),
+          exampleRoute
+        )
+      }
+    } else {
+      if (!options.validator) {
+        router.put(`${ep}/:id`, validateId, handler.updateOne(options.model))
+      } else {
+        router.put(
+          `${ep}/:id`,
+          validateId,
+          validate(options.validator.partial()),
+          handler.updateOne(options.model)
+        )
+      }
+    }
+  }
+}
+
+function setupDeleteHandler(
+  ep: string,
+  router: Router,
+  deleteHandler?: RequestHandler,
+  options: AppRouteOptions = {}
+) {
+  if (deleteHandler) {
+    router.delete(`${ep}/:id`, validateId, deleteHandler)
+  } else {
+    if (!options.model) {
+      router.delete(`${ep}/:id`, exampleRoute)
+    } else {
+      router.delete(`${ep}/:id`, validateId, handler.deleteOne(options.model))
+    }
+  }
+}

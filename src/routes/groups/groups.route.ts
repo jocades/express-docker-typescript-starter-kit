@@ -16,16 +16,16 @@ app.route(
   },
   {
     list: listGroups,
-    createOne: createGroup,
+    create: createGroup,
   },
   {
     '/:id/join': {
-      put: joinGroup,
       middleware: [validateId, auth],
+      put: joinGroup,
     },
     '/:id/leave': {
-      put: leaveGroup,
       middleware: [validateId, auth],
+      put: leaveGroup,
     },
   }
 )

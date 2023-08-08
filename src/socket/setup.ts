@@ -25,6 +25,11 @@ export function initializeSocket(server: Server) {
       logger.info(`There are ${io.engine.clientsCount} clients connected.`)
     })
 
+    socket.on('disconnect', () => {
+      logger.warn(`Client ${socket.data.user._id} disconnected.`)
+      logger.info(`There are ${io.engine.clientsCount} clients connected.`)
+    })
+
     socket.on('ping', (_, res) => {
       res({ ok: true, data: { message: 'pong!' } })
       socket.emit('pong', { message: 'pong!' })
