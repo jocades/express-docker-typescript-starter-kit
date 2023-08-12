@@ -26,6 +26,34 @@ export const registerUser: ReqHandler = async (req, res) => {
   res.status(201).send(_.pick(user, ['_id', 'email']))
 }
 
+export const thirdPartyLogin: RequestHandler = async (req, res) => {
+  const { email, name, provider, providerId } = req.body
+  console.log('body', req.body)
+
+  let user = await User.findOne({ email })
+  if (user) {
+    const tokens = await user.login()
+    return res.send({
+      id: user._id,
+      email: user.email,
+      access: tokens.access,
+    })
+  }
+
+  const [firstName, lastName] = name.split(' ')
+
+  user = new User({ email, firstName, lastName, provider, providerId })
+  await user.save()
+
+  const tokens = await user.login()
+
+  res.send({
+    id: user._id,
+    email: user.email,
+    access: tokens.access,
+  })
+}
+
 export const loginUser: ReqHandler = async (req, res) => {
   const { email, password } = req.body
   const { error } = validateCredentials(email, password)
@@ -39,7 +67,11 @@ export const loginUser: ReqHandler = async (req, res) => {
 
   const tokens = await user.login()
 
-  res.send(tokens) // Remember this is for a mobile app.
+  res.send({
+    id: user._id,
+    email: user.email,
+    access: tokens.access,
+  })
 }
 
 const refreshSecret = process.env.JWT_R_SECRET as string

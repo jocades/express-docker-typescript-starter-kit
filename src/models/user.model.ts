@@ -10,9 +10,13 @@ type UserDoc = Model<IUser, {}, IUserMethods>
 const userSchema = new Schema<IUser, UserDoc, IUserMethods>(
   {
     email: { type: String, required: true, unique: true },
-    password: { type: String, required: true },
+    password: { type: String, min: 5, max: 255, required: false },
     firstName: String,
     lastName: String,
+
+    // @ts-ignore
+    provider: String,
+    providerId: Number,
 
     isAdmin: { type: Boolean, default: false },
     // auth: [{ type: String, default: [] }],
