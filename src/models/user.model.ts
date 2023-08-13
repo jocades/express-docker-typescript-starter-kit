@@ -16,7 +16,7 @@ const userSchema = new Schema<IUser, UserDoc, IUserMethods>(
 
     // @ts-ignore
     provider: String,
-    providerId: Number,
+    providerId: String,
 
     isAdmin: { type: Boolean, default: false },
     // auth: [{ type: String, default: [] }],

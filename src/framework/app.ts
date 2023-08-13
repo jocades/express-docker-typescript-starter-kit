@@ -85,15 +85,7 @@ class App {
   }
 }
 
-export const app = new App({
-  prefix: '/api',
-  middleware: [
-    (req, res, next) => {
-      console.log('mw')
-      next()
-    },
-  ],
-})
+export const app = new App({ prefix: '/api' })
 
 const exampleBody = z.object({ name: z.string().min(3).max(255) })
 type Body = z.infer<typeof exampleBody>

@@ -6,6 +6,7 @@ import {
   leaveGroup,
   listGroups,
   createGroup,
+  listGroupsByUser,
 } from './groups.controller'
 
 app.route(
@@ -16,9 +17,13 @@ app.route(
   },
   {
     list: listGroups,
-    create: createGroup,
+    create: [auth, createGroup],
   },
   {
+    '/me': {
+      middleware: [auth],
+      get: listGroupsByUser,
+    },
     '/:id/join': {
       middleware: [validateId, auth],
       put: joinGroup,

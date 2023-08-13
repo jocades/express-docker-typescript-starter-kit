@@ -57,12 +57,24 @@ export const listGroups: RequestHandler[] = [
   },
 ]
 
+export const listGroupsByUser: RequestHandler = async (req, res) => {
+  if (req.query.order === 'updated') {
+    const groups = await Group.find({ members: req.user._id }).sort({
+      updatedAt: -1,
+    })
+    return res.send(groups)
+  }
+
+  const groups = await Group.find({ members: req.user._id })
+  res.send(groups)
+}
+
 export const createGroup: RequestHandler = async (req, res) => {
   const location = req.body.location
     ? { type: 'Point', coordinates: req.body.location }
     : undefined
 
-  const group = new Group({ ...req.body, location })
+  const group = new Group({ ...req.body, location, members: [req.user._id] })
   await group.save()
 
   res.send(group)

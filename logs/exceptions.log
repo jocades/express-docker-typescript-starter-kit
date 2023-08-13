@@ -18038,3 +18038,1261 @@
   ],
   timestamp: '2023-08-08 11:36:23'
 }
+{
+  error: MongoServerError: Executor error during getMore :: caused by :: Change stream was configured to require a pre-image for all update, delete and replace events, but no pre-image optime was recorded for event: {_id: {_data: "8264D8F486000000022B022C0100296E5A1004639AB4FA13584FCC8A3C28D8F736035146645F6964006464D8F42B47946EE8246D58A60004"}, operationType: "update", clusterTime: Timestamp(1691939974, 2), ns: {db: "express-ts", coll: "groups"}, documentKey: {_id: 64d8f42b47946ee8246d58a6}, updateDescription: {updatedFields: {members.1: 64ccdd03350a678d988bb17b}, removedFields: [], truncatedArrays: []}}
+      at Connection.onMessage (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongodb/src/cmap/connection.ts:413:18)
+      at MessageStream.<anonymous> (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongodb/src/cmap/connection.ts:243:56)
+      at MessageStream.emit (node:events:514:28)
+      at MessageStream.emit (node:domain:489:12)
+      at processIncomingData (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongodb/src/cmap/message_stream.ts:193:12)
+      at MessageStream._write (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongodb/src/cmap/message_stream.ts:74:5)
+      at writeOrBuffer (node:internal/streams/writable:399:12)
+      at _write (node:internal/streams/writable:340:10)
+      at MessageStream.Writable.write (node:internal/streams/writable:344:10)
+      at Socket.ondata (node:internal/streams/readable:785:22) {
+    ok: 0,
+    code: 51770,
+    codeName: 'Location51770',
+    '$clusterTime': {
+      clusterTime: new Timestamp({ t: 1691939974, i: 2 }),
+      signature: {
+        hash: Binary.createFromBase64("AAAAAAAAAAAAAAAAAAAAAAAAAAA=", 0),
+        keyId: 0
+      }
+    },
+    operationTime: new Timestamp({ t: 1691939974, i: 2 }),
+    [Symbol(errorLabels)]: Set(0) {}
+  },
+  level: 'error',
+  message: 'uncaughtException: Executor error during getMore :: caused by :: Change stream was configured to require a pre-image for all update, delete and replace events, but no pre-image optime was recorded for event: {_id: {_data: "8264D8F486000000022B022C0100296E5A1004639AB4FA13584FCC8A3C28D8F736035146645F6964006464D8F42B47946EE8246D58A60004"}, operationType: "update", clusterTime: Timestamp(1691939974, 2), ns: {db: "express-ts", coll: "groups"}, documentKey: {_id: 64d8f42b47946ee8246d58a6}, updateDescription: {updatedFields: {members.1: 64ccdd03350a678d988bb17b}, removedFields: [], truncatedArrays: []}}\n' +
+    'MongoServerError: Executor error during getMore :: caused by :: Change stream was configured to require a pre-image for all update, delete and replace events, but no pre-image optime was recorded for event: {_id: {_data: "8264D8F486000000022B022C0100296E5A1004639AB4FA13584FCC8A3C28D8F736035146645F6964006464D8F42B47946EE8246D58A60004"}, operationType: "update", clusterTime: Timestamp(1691939974, 2), ns: {db: "express-ts", coll: "groups"}, documentKey: {_id: 64d8f42b47946ee8246d58a6}, updateDescription: {updatedFields: {members.1: 64ccdd03350a678d988bb17b}, removedFields: [], truncatedArrays: []}}\n' +
+    '    at Connection.onMessage (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongodb/src/cmap/connection.ts:413:18)\n' +
+    '    at MessageStream.<anonymous> (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongodb/src/cmap/connection.ts:243:56)\n' +
+    '    at MessageStream.emit (node:events:514:28)\n' +
+    '    at MessageStream.emit (node:domain:489:12)\n' +
+    '    at processIncomingData (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongodb/src/cmap/message_stream.ts:193:12)\n' +
+    '    at MessageStream._write (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongodb/src/cmap/message_stream.ts:74:5)\n' +
+    '    at writeOrBuffer (node:internal/streams/writable:399:12)\n' +
+    '    at _write (node:internal/streams/writable:340:10)\n' +
+    '    at MessageStream.Writable.write (node:internal/streams/writable:344:10)\n' +
+    '    at Socket.ondata (node:internal/streams/readable:785:22)',
+  stack: 'MongoServerError: Executor error during getMore :: caused by :: Change stream was configured to require a pre-image for all update, delete and replace events, but no pre-image optime was recorded for event: {_id: {_data: "8264D8F486000000022B022C0100296E5A1004639AB4FA13584FCC8A3C28D8F736035146645F6964006464D8F42B47946EE8246D58A60004"}, operationType: "update", clusterTime: Timestamp(1691939974, 2), ns: {db: "express-ts", coll: "groups"}, documentKey: {_id: 64d8f42b47946ee8246d58a6}, updateDescription: {updatedFields: {members.1: 64ccdd03350a678d988bb17b}, removedFields: [], truncatedArrays: []}}\n' +
+    '    at Connection.onMessage (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongodb/src/cmap/connection.ts:413:18)\n' +
+    '    at MessageStream.<anonymous> (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongodb/src/cmap/connection.ts:243:56)\n' +
+    '    at MessageStream.emit (node:events:514:28)\n' +
+    '    at MessageStream.emit (node:domain:489:12)\n' +
+    '    at processIncomingData (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongodb/src/cmap/message_stream.ts:193:12)\n' +
+    '    at MessageStream._write (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongodb/src/cmap/message_stream.ts:74:5)\n' +
+    '    at writeOrBuffer (node:internal/streams/writable:399:12)\n' +
+    '    at _write (node:internal/streams/writable:340:10)\n' +
+    '    at MessageStream.Writable.write (node:internal/streams/writable:344:10)\n' +
+    '    at Socket.ondata (node:internal/streams/readable:785:22)',
+  exception: true,
+  date: 'Sun Aug 13 2023 17:19:34 GMT+0200 (Central European Summer Time)',
+  process: {
+    pid: 86102,
+    uid: 501,
+    gid: 20,
+    cwd: '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit',
+    execPath: '/opt/homebrew/Cellar/node/20.5.1/bin/node',
+    version: 'v20.5.1',
+    argv: [
+      '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/.bin/ts-node',
+      '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/src/server.ts'
+    ],
+    memoryUsage: {
+      rss: 409960448,
+      heapTotal: 272842752,
+      heapUsed: 264180072,
+      external: 42651078,
+      arrayBuffers: 39729477
+    }
+  },
+  os: {
+    loadavg: [ 2.3134765625, 1.66845703125, 1.6083984375 ],
+    uptime: 235173
+  },
+  trace: [
+    {
+      column: 18,
+      file: '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongodb/src/cmap/connection.ts',
+      function: 'Connection.onMessage',
+      line: 413,
+      method: 'onMessage',
+      native: false
+    },
+    {
+      column: 56,
+      file: '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongodb/src/cmap/connection.ts',
+      function: null,
+      line: 243,
+      method: null,
+      native: false
+    },
+    {
+      column: 28,
+      file: 'node:events',
+      function: 'MessageStream.emit',
+      line: 514,
+      method: 'emit',
+      native: false
+    },
+    {
+      column: 12,
+      file: 'node:domain',
+      function: 'MessageStream.emit',
+      line: 489,
+      method: 'emit',
+      native: false
+    },
+    {
+      column: 12,
+      file: '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongodb/src/cmap/message_stream.ts',
+      function: 'processIncomingData',
+      line: 193,
+      method: null,
+      native: false
+    },
+    {
+      column: 5,
+      file: '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongodb/src/cmap/message_stream.ts',
+      function: 'MessageStream._write',
+      line: 74,
+      method: '_write',
+      native: false
+    },
+    {
+      column: 12,
+      file: 'node:internal/streams/writable',
+      function: 'writeOrBuffer',
+      line: 399,
+      method: null,
+      native: false
+    },
+    {
+      column: 10,
+      file: 'node:internal/streams/writable',
+      function: '_write',
+      line: 340,
+      method: null,
+      native: false
+    },
+    {
+      column: 10,
+      file: 'node:internal/streams/writable',
+      function: 'MessageStream.Writable.write',
+      line: 344,
+      method: 'write',
+      native: false
+    },
+    {
+      column: 22,
+      file: 'node:internal/streams/readable',
+      function: 'Socket.ondata',
+      line: 785,
+      method: 'ondata',
+      native: false
+    }
+  ],
+  timestamp: '2023-08-13 17:19:34'
+}
+{
+  error: MongoServerError: Executor error during getMore :: caused by :: Change stream was configured to require a pre-image for all update, delete and replace events, but no pre-image optime was recorded for event: {_id: {_data: "8264D8F486000000022B022C0100296E5A1004639AB4FA13584FCC8A3C28D8F736035146645F6964006464D8F42B47946EE8246D58A60004"}, operationType: "update", clusterTime: Timestamp(1691939974, 2), ns: {db: "express-ts", coll: "groups"}, documentKey: {_id: 64d8f42b47946ee8246d58a6}, updateDescription: {updatedFields: {members.1: 64ccdd03350a678d988bb17b}, removedFields: [], truncatedArrays: []}}
+      at Connection.onMessage (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongodb/src/cmap/connection.ts:413:18)
+      at MessageStream.<anonymous> (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongodb/src/cmap/connection.ts:243:56)
+      at MessageStream.emit (node:events:514:28)
+      at MessageStream.emit (node:domain:489:12)
+      at processIncomingData (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongodb/src/cmap/message_stream.ts:193:12)
+      at MessageStream._write (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongodb/src/cmap/message_stream.ts:74:5)
+      at writeOrBuffer (node:internal/streams/writable:399:12)
+      at _write (node:internal/streams/writable:340:10)
+      at MessageStream.Writable.write (node:internal/streams/writable:344:10)
+      at Socket.ondata (node:internal/streams/readable:785:22) {
+    ok: 0,
+    code: 51770,
+    codeName: 'Location51770',
+    '$clusterTime': {
+      clusterTime: new Timestamp({ t: 1691939974, i: 2 }),
+      signature: {
+        hash: Binary.createFromBase64("AAAAAAAAAAAAAAAAAAAAAAAAAAA=", 0),
+        keyId: 0
+      }
+    },
+    operationTime: new Timestamp({ t: 1691939974, i: 2 }),
+    [Symbol(errorLabels)]: Set(0) {}
+  },
+  level: 'error',
+  message: 'uncaughtException: Executor error during getMore :: caused by :: Change stream was configured to require a pre-image for all update, delete and replace events, but no pre-image optime was recorded for event: {_id: {_data: "8264D8F486000000022B022C0100296E5A1004639AB4FA13584FCC8A3C28D8F736035146645F6964006464D8F42B47946EE8246D58A60004"}, operationType: "update", clusterTime: Timestamp(1691939974, 2), ns: {db: "express-ts", coll: "groups"}, documentKey: {_id: 64d8f42b47946ee8246d58a6}, updateDescription: {updatedFields: {members.1: 64ccdd03350a678d988bb17b}, removedFields: [], truncatedArrays: []}}\n' +
+    'MongoServerError: Executor error during getMore :: caused by :: Change stream was configured to require a pre-image for all update, delete and replace events, but no pre-image optime was recorded for event: {_id: {_data: "8264D8F486000000022B022C0100296E5A1004639AB4FA13584FCC8A3C28D8F736035146645F6964006464D8F42B47946EE8246D58A60004"}, operationType: "update", clusterTime: Timestamp(1691939974, 2), ns: {db: "express-ts", coll: "groups"}, documentKey: {_id: 64d8f42b47946ee8246d58a6}, updateDescription: {updatedFields: {members.1: 64ccdd03350a678d988bb17b}, removedFields: [], truncatedArrays: []}}\n' +
+    '    at Connection.onMessage (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongodb/src/cmap/connection.ts:413:18)\n' +
+    '    at MessageStream.<anonymous> (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongodb/src/cmap/connection.ts:243:56)\n' +
+    '    at MessageStream.emit (node:events:514:28)\n' +
+    '    at MessageStream.emit (node:domain:489:12)\n' +
+    '    at processIncomingData (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongodb/src/cmap/message_stream.ts:193:12)\n' +
+    '    at MessageStream._write (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongodb/src/cmap/message_stream.ts:74:5)\n' +
+    '    at writeOrBuffer (node:internal/streams/writable:399:12)\n' +
+    '    at _write (node:internal/streams/writable:340:10)\n' +
+    '    at MessageStream.Writable.write (node:internal/streams/writable:344:10)\n' +
+    '    at Socket.ondata (node:internal/streams/readable:785:22)',
+  stack: 'MongoServerError: Executor error during getMore :: caused by :: Change stream was configured to require a pre-image for all update, delete and replace events, but no pre-image optime was recorded for event: {_id: {_data: "8264D8F486000000022B022C0100296E5A1004639AB4FA13584FCC8A3C28D8F736035146645F6964006464D8F42B47946EE8246D58A60004"}, operationType: "update", clusterTime: Timestamp(1691939974, 2), ns: {db: "express-ts", coll: "groups"}, documentKey: {_id: 64d8f42b47946ee8246d58a6}, updateDescription: {updatedFields: {members.1: 64ccdd03350a678d988bb17b}, removedFields: [], truncatedArrays: []}}\n' +
+    '    at Connection.onMessage (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongodb/src/cmap/connection.ts:413:18)\n' +
+    '    at MessageStream.<anonymous> (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongodb/src/cmap/connection.ts:243:56)\n' +
+    '    at MessageStream.emit (node:events:514:28)\n' +
+    '    at MessageStream.emit (node:domain:489:12)\n' +
+    '    at processIncomingData (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongodb/src/cmap/message_stream.ts:193:12)\n' +
+    '    at MessageStream._write (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongodb/src/cmap/message_stream.ts:74:5)\n' +
+    '    at writeOrBuffer (node:internal/streams/writable:399:12)\n' +
+    '    at _write (node:internal/streams/writable:340:10)\n' +
+    '    at MessageStream.Writable.write (node:internal/streams/writable:344:10)\n' +
+    '    at Socket.ondata (node:internal/streams/readable:785:22)',
+  exception: true,
+  date: 'Sun Aug 13 2023 17:19:34 GMT+0200 (Central European Summer Time)',
+  process: {
+    pid: 86102,
+    uid: 501,
+    gid: 20,
+    cwd: '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit',
+    execPath: '/opt/homebrew/Cellar/node/20.5.1/bin/node',
+    version: 'v20.5.1',
+    argv: [
+      '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/.bin/ts-node',
+      '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/src/server.ts'
+    ],
+    memoryUsage: {
+      rss: 409960448,
+      heapTotal: 272842752,
+      heapUsed: 264180072,
+      external: 42651078,
+      arrayBuffers: 39729477
+    }
+  },
+  os: {
+    loadavg: [ 2.3134765625, 1.66845703125, 1.6083984375 ],
+    uptime: 235173
+  },
+  trace: [
+    {
+      column: 18,
+      file: '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongodb/src/cmap/connection.ts',
+      function: 'Connection.onMessage',
+      line: 413,
+      method: 'onMessage',
+      native: false
+    },
+    {
+      column: 56,
+      file: '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongodb/src/cmap/connection.ts',
+      function: null,
+      line: 243,
+      method: null,
+      native: false
+    },
+    {
+      column: 28,
+      file: 'node:events',
+      function: 'MessageStream.emit',
+      line: 514,
+      method: 'emit',
+      native: false
+    },
+    {
+      column: 12,
+      file: 'node:domain',
+      function: 'MessageStream.emit',
+      line: 489,
+      method: 'emit',
+      native: false
+    },
+    {
+      column: 12,
+      file: '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongodb/src/cmap/message_stream.ts',
+      function: 'processIncomingData',
+      line: 193,
+      method: null,
+      native: false
+    },
+    {
+      column: 5,
+      file: '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongodb/src/cmap/message_stream.ts',
+      function: 'MessageStream._write',
+      line: 74,
+      method: '_write',
+      native: false
+    },
+    {
+      column: 12,
+      file: 'node:internal/streams/writable',
+      function: 'writeOrBuffer',
+      line: 399,
+      method: null,
+      native: false
+    },
+    {
+      column: 10,
+      file: 'node:internal/streams/writable',
+      function: '_write',
+      line: 340,
+      method: null,
+      native: false
+    },
+    {
+      column: 10,
+      file: 'node:internal/streams/writable',
+      function: 'MessageStream.Writable.write',
+      line: 344,
+      method: 'write',
+      native: false
+    },
+    {
+      column: 22,
+      file: 'node:internal/streams/readable',
+      function: 'Socket.ondata',
+      line: 785,
+      method: 'ondata',
+      native: false
+    }
+  ],
+  timestamp: '2023-08-13 17:19:34'
+}
+{
+  error: MongoServerError: Executor error during getMore :: caused by :: Change stream was configured to require a pre-image for all update, delete and replace events, but no pre-image optime was recorded for event: {_id: {_data: "8264D8F4A8000000022B022C0100296E5A1004639AB4FA13584FCC8A3C28D8F736035146645F6964006464D8F42B47946EE8246D58A60004"}, operationType: "update", clusterTime: Timestamp(1691940008, 2), ns: {db: "express-ts", coll: "groups"}, documentKey: {_id: 64d8f42b47946ee8246d58a6}, updateDescription: {updatedFields: {name: "Mutual", updatedAt: 2023-08-13T15:20:08.505Z}, removedFields: [], truncatedArrays: []}}
+      at Connection.onMessage (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongodb/src/cmap/connection.ts:413:18)
+      at MessageStream.<anonymous> (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongodb/src/cmap/connection.ts:243:56)
+      at MessageStream.emit (node:events:514:28)
+      at MessageStream.emit (node:domain:489:12)
+      at processIncomingData (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongodb/src/cmap/message_stream.ts:193:12)
+      at MessageStream._write (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongodb/src/cmap/message_stream.ts:74:5)
+      at writeOrBuffer (node:internal/streams/writable:399:12)
+      at _write (node:internal/streams/writable:340:10)
+      at MessageStream.Writable.write (node:internal/streams/writable:344:10)
+      at Socket.ondata (node:internal/streams/readable:785:22) {
+    ok: 0,
+    code: 51770,
+    codeName: 'Location51770',
+    '$clusterTime': {
+      clusterTime: new Timestamp({ t: 1691940008, i: 2 }),
+      signature: {
+        hash: Binary.createFromBase64("AAAAAAAAAAAAAAAAAAAAAAAAAAA=", 0),
+        keyId: 0
+      }
+    },
+    operationTime: new Timestamp({ t: 1691940008, i: 2 }),
+    [Symbol(errorLabels)]: Set(0) {}
+  },
+  level: 'error',
+  message: 'uncaughtException: Executor error during getMore :: caused by :: Change stream was configured to require a pre-image for all update, delete and replace events, but no pre-image optime was recorded for event: {_id: {_data: "8264D8F4A8000000022B022C0100296E5A1004639AB4FA13584FCC8A3C28D8F736035146645F6964006464D8F42B47946EE8246D58A60004"}, operationType: "update", clusterTime: Timestamp(1691940008, 2), ns: {db: "express-ts", coll: "groups"}, documentKey: {_id: 64d8f42b47946ee8246d58a6}, updateDescription: {updatedFields: {name: "Mutual", updatedAt: 2023-08-13T15:20:08.505Z}, removedFields: [], truncatedArrays: []}}\n' +
+    'MongoServerError: Executor error during getMore :: caused by :: Change stream was configured to require a pre-image for all update, delete and replace events, but no pre-image optime was recorded for event: {_id: {_data: "8264D8F4A8000000022B022C0100296E5A1004639AB4FA13584FCC8A3C28D8F736035146645F6964006464D8F42B47946EE8246D58A60004"}, operationType: "update", clusterTime: Timestamp(1691940008, 2), ns: {db: "express-ts", coll: "groups"}, documentKey: {_id: 64d8f42b47946ee8246d58a6}, updateDescription: {updatedFields: {name: "Mutual", updatedAt: 2023-08-13T15:20:08.505Z}, removedFields: [], truncatedArrays: []}}\n' +
+    '    at Connection.onMessage (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongodb/src/cmap/connection.ts:413:18)\n' +
+    '    at MessageStream.<anonymous> (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongodb/src/cmap/connection.ts:243:56)\n' +
+    '    at MessageStream.emit (node:events:514:28)\n' +
+    '    at MessageStream.emit (node:domain:489:12)\n' +
+    '    at processIncomingData (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongodb/src/cmap/message_stream.ts:193:12)\n' +
+    '    at MessageStream._write (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongodb/src/cmap/message_stream.ts:74:5)\n' +
+    '    at writeOrBuffer (node:internal/streams/writable:399:12)\n' +
+    '    at _write (node:internal/streams/writable:340:10)\n' +
+    '    at MessageStream.Writable.write (node:internal/streams/writable:344:10)\n' +
+    '    at Socket.ondata (node:internal/streams/readable:785:22)',
+  stack: 'MongoServerError: Executor error during getMore :: caused by :: Change stream was configured to require a pre-image for all update, delete and replace events, but no pre-image optime was recorded for event: {_id: {_data: "8264D8F4A8000000022B022C0100296E5A1004639AB4FA13584FCC8A3C28D8F736035146645F6964006464D8F42B47946EE8246D58A60004"}, operationType: "update", clusterTime: Timestamp(1691940008, 2), ns: {db: "express-ts", coll: "groups"}, documentKey: {_id: 64d8f42b47946ee8246d58a6}, updateDescription: {updatedFields: {name: "Mutual", updatedAt: 2023-08-13T15:20:08.505Z}, removedFields: [], truncatedArrays: []}}\n' +
+    '    at Connection.onMessage (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongodb/src/cmap/connection.ts:413:18)\n' +
+    '    at MessageStream.<anonymous> (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongodb/src/cmap/connection.ts:243:56)\n' +
+    '    at MessageStream.emit (node:events:514:28)\n' +
+    '    at MessageStream.emit (node:domain:489:12)\n' +
+    '    at processIncomingData (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongodb/src/cmap/message_stream.ts:193:12)\n' +
+    '    at MessageStream._write (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongodb/src/cmap/message_stream.ts:74:5)\n' +
+    '    at writeOrBuffer (node:internal/streams/writable:399:12)\n' +
+    '    at _write (node:internal/streams/writable:340:10)\n' +
+    '    at MessageStream.Writable.write (node:internal/streams/writable:344:10)\n' +
+    '    at Socket.ondata (node:internal/streams/readable:785:22)',
+  exception: true,
+  date: 'Sun Aug 13 2023 17:20:08 GMT+0200 (Central European Summer Time)',
+  process: {
+    pid: 86879,
+    uid: 501,
+    gid: 20,
+    cwd: '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit',
+    execPath: '/opt/homebrew/Cellar/node/20.5.1/bin/node',
+    version: 'v20.5.1',
+    argv: [
+      '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/.bin/ts-node',
+      '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/src/server.ts'
+    ],
+    memoryUsage: {
+      rss: 408174592,
+      heapTotal: 270483456,
+      heapUsed: 262435384,
+      external: 42610506,
+      arrayBuffers: 39704818
+    }
+  },
+  os: { loadavg: [ 1.8642578125, 1.625, 1.5927734375 ], uptime: 235207 },
+  trace: [
+    {
+      column: 18,
+      file: '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongodb/src/cmap/connection.ts',
+      function: 'Connection.onMessage',
+      line: 413,
+      method: 'onMessage',
+      native: false
+    },
+    {
+      column: 56,
+      file: '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongodb/src/cmap/connection.ts',
+      function: null,
+      line: 243,
+      method: null,
+      native: false
+    },
+    {
+      column: 28,
+      file: 'node:events',
+      function: 'MessageStream.emit',
+      line: 514,
+      method: 'emit',
+      native: false
+    },
+    {
+      column: 12,
+      file: 'node:domain',
+      function: 'MessageStream.emit',
+      line: 489,
+      method: 'emit',
+      native: false
+    },
+    {
+      column: 12,
+      file: '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongodb/src/cmap/message_stream.ts',
+      function: 'processIncomingData',
+      line: 193,
+      method: null,
+      native: false
+    },
+    {
+      column: 5,
+      file: '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongodb/src/cmap/message_stream.ts',
+      function: 'MessageStream._write',
+      line: 74,
+      method: '_write',
+      native: false
+    },
+    {
+      column: 12,
+      file: 'node:internal/streams/writable',
+      function: 'writeOrBuffer',
+      line: 399,
+      method: null,
+      native: false
+    },
+    {
+      column: 10,
+      file: 'node:internal/streams/writable',
+      function: '_write',
+      line: 340,
+      method: null,
+      native: false
+    },
+    {
+      column: 10,
+      file: 'node:internal/streams/writable',
+      function: 'MessageStream.Writable.write',
+      line: 344,
+      method: 'write',
+      native: false
+    },
+    {
+      column: 22,
+      file: 'node:internal/streams/readable',
+      function: 'Socket.ondata',
+      line: 785,
+      method: 'ondata',
+      native: false
+    }
+  ],
+  timestamp: '2023-08-13 17:20:08'
+}
+{
+  error: MongoServerError: Executor error during getMore :: caused by :: Change stream was configured to require a pre-image for all update, delete and replace events, but no pre-image optime was recorded for event: {_id: {_data: "8264D8F4A8000000022B022C0100296E5A1004639AB4FA13584FCC8A3C28D8F736035146645F6964006464D8F42B47946EE8246D58A60004"}, operationType: "update", clusterTime: Timestamp(1691940008, 2), ns: {db: "express-ts", coll: "groups"}, documentKey: {_id: 64d8f42b47946ee8246d58a6}, updateDescription: {updatedFields: {name: "Mutual", updatedAt: 2023-08-13T15:20:08.505Z}, removedFields: [], truncatedArrays: []}}
+      at Connection.onMessage (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongodb/src/cmap/connection.ts:413:18)
+      at MessageStream.<anonymous> (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongodb/src/cmap/connection.ts:243:56)
+      at MessageStream.emit (node:events:514:28)
+      at MessageStream.emit (node:domain:489:12)
+      at processIncomingData (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongodb/src/cmap/message_stream.ts:193:12)
+      at MessageStream._write (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongodb/src/cmap/message_stream.ts:74:5)
+      at writeOrBuffer (node:internal/streams/writable:399:12)
+      at _write (node:internal/streams/writable:340:10)
+      at MessageStream.Writable.write (node:internal/streams/writable:344:10)
+      at Socket.ondata (node:internal/streams/readable:785:22) {
+    ok: 0,
+    code: 51770,
+    codeName: 'Location51770',
+    '$clusterTime': {
+      clusterTime: new Timestamp({ t: 1691940008, i: 2 }),
+      signature: {
+        hash: Binary.createFromBase64("AAAAAAAAAAAAAAAAAAAAAAAAAAA=", 0),
+        keyId: 0
+      }
+    },
+    operationTime: new Timestamp({ t: 1691940008, i: 2 }),
+    [Symbol(errorLabels)]: Set(0) {}
+  },
+  level: 'error',
+  message: 'uncaughtException: Executor error during getMore :: caused by :: Change stream was configured to require a pre-image for all update, delete and replace events, but no pre-image optime was recorded for event: {_id: {_data: "8264D8F4A8000000022B022C0100296E5A1004639AB4FA13584FCC8A3C28D8F736035146645F6964006464D8F42B47946EE8246D58A60004"}, operationType: "update", clusterTime: Timestamp(1691940008, 2), ns: {db: "express-ts", coll: "groups"}, documentKey: {_id: 64d8f42b47946ee8246d58a6}, updateDescription: {updatedFields: {name: "Mutual", updatedAt: 2023-08-13T15:20:08.505Z}, removedFields: [], truncatedArrays: []}}\n' +
+    'MongoServerError: Executor error during getMore :: caused by :: Change stream was configured to require a pre-image for all update, delete and replace events, but no pre-image optime was recorded for event: {_id: {_data: "8264D8F4A8000000022B022C0100296E5A1004639AB4FA13584FCC8A3C28D8F736035146645F6964006464D8F42B47946EE8246D58A60004"}, operationType: "update", clusterTime: Timestamp(1691940008, 2), ns: {db: "express-ts", coll: "groups"}, documentKey: {_id: 64d8f42b47946ee8246d58a6}, updateDescription: {updatedFields: {name: "Mutual", updatedAt: 2023-08-13T15:20:08.505Z}, removedFields: [], truncatedArrays: []}}\n' +
+    '    at Connection.onMessage (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongodb/src/cmap/connection.ts:413:18)\n' +
+    '    at MessageStream.<anonymous> (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongodb/src/cmap/connection.ts:243:56)\n' +
+    '    at MessageStream.emit (node:events:514:28)\n' +
+    '    at MessageStream.emit (node:domain:489:12)\n' +
+    '    at processIncomingData (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongodb/src/cmap/message_stream.ts:193:12)\n' +
+    '    at MessageStream._write (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongodb/src/cmap/message_stream.ts:74:5)\n' +
+    '    at writeOrBuffer (node:internal/streams/writable:399:12)\n' +
+    '    at _write (node:internal/streams/writable:340:10)\n' +
+    '    at MessageStream.Writable.write (node:internal/streams/writable:344:10)\n' +
+    '    at Socket.ondata (node:internal/streams/readable:785:22)',
+  stack: 'MongoServerError: Executor error during getMore :: caused by :: Change stream was configured to require a pre-image for all update, delete and replace events, but no pre-image optime was recorded for event: {_id: {_data: "8264D8F4A8000000022B022C0100296E5A1004639AB4FA13584FCC8A3C28D8F736035146645F6964006464D8F42B47946EE8246D58A60004"}, operationType: "update", clusterTime: Timestamp(1691940008, 2), ns: {db: "express-ts", coll: "groups"}, documentKey: {_id: 64d8f42b47946ee8246d58a6}, updateDescription: {updatedFields: {name: "Mutual", updatedAt: 2023-08-13T15:20:08.505Z}, removedFields: [], truncatedArrays: []}}\n' +
+    '    at Connection.onMessage (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongodb/src/cmap/connection.ts:413:18)\n' +
+    '    at MessageStream.<anonymous> (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongodb/src/cmap/connection.ts:243:56)\n' +
+    '    at MessageStream.emit (node:events:514:28)\n' +
+    '    at MessageStream.emit (node:domain:489:12)\n' +
+    '    at processIncomingData (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongodb/src/cmap/message_stream.ts:193:12)\n' +
+    '    at MessageStream._write (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongodb/src/cmap/message_stream.ts:74:5)\n' +
+    '    at writeOrBuffer (node:internal/streams/writable:399:12)\n' +
+    '    at _write (node:internal/streams/writable:340:10)\n' +
+    '    at MessageStream.Writable.write (node:internal/streams/writable:344:10)\n' +
+    '    at Socket.ondata (node:internal/streams/readable:785:22)',
+  exception: true,
+  date: 'Sun Aug 13 2023 17:20:08 GMT+0200 (Central European Summer Time)',
+  process: {
+    pid: 86879,
+    uid: 501,
+    gid: 20,
+    cwd: '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit',
+    execPath: '/opt/homebrew/Cellar/node/20.5.1/bin/node',
+    version: 'v20.5.1',
+    argv: [
+      '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/.bin/ts-node',
+      '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/src/server.ts'
+    ],
+    memoryUsage: {
+      rss: 408174592,
+      heapTotal: 270483456,
+      heapUsed: 262435384,
+      external: 42610506,
+      arrayBuffers: 39704818
+    }
+  },
+  os: { loadavg: [ 1.8642578125, 1.625, 1.5927734375 ], uptime: 235207 },
+  trace: [
+    {
+      column: 18,
+      file: '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongodb/src/cmap/connection.ts',
+      function: 'Connection.onMessage',
+      line: 413,
+      method: 'onMessage',
+      native: false
+    },
+    {
+      column: 56,
+      file: '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongodb/src/cmap/connection.ts',
+      function: null,
+      line: 243,
+      method: null,
+      native: false
+    },
+    {
+      column: 28,
+      file: 'node:events',
+      function: 'MessageStream.emit',
+      line: 514,
+      method: 'emit',
+      native: false
+    },
+    {
+      column: 12,
+      file: 'node:domain',
+      function: 'MessageStream.emit',
+      line: 489,
+      method: 'emit',
+      native: false
+    },
+    {
+      column: 12,
+      file: '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongodb/src/cmap/message_stream.ts',
+      function: 'processIncomingData',
+      line: 193,
+      method: null,
+      native: false
+    },
+    {
+      column: 5,
+      file: '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/mongodb/src/cmap/message_stream.ts',
+      function: 'MessageStream._write',
+      line: 74,
+      method: '_write',
+      native: false
+    },
+    {
+      column: 12,
+      file: 'node:internal/streams/writable',
+      function: 'writeOrBuffer',
+      line: 399,
+      method: null,
+      native: false
+    },
+    {
+      column: 10,
+      file: 'node:internal/streams/writable',
+      function: '_write',
+      line: 340,
+      method: null,
+      native: false
+    },
+    {
+      column: 10,
+      file: 'node:internal/streams/writable',
+      function: 'MessageStream.Writable.write',
+      line: 344,
+      method: 'write',
+      native: false
+    },
+    {
+      column: 22,
+      file: 'node:internal/streams/readable',
+      function: 'Socket.ondata',
+      line: 785,
+      method: 'ondata',
+      native: false
+    }
+  ],
+  timestamp: '2023-08-13 17:20:08'
+}
+{
+  error: Error: Cannot find module '@/app/db'
+  Require stack:
+  - /Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/src/server.ts
+      at Function.Module._resolveFilename (node:internal/modules/cjs/loader:1048:15)
+      at Function.Module._resolveFilename.sharedData.moduleResolveFilenameHook.installedValue [as _resolveFilename] (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/@cspotcode/source-map-support/source-map-support.js:811:30)
+      at Function.Module._load (node:internal/modules/cjs/loader:901:27)
+      at Module.require (node:internal/modules/cjs/loader:1115:19)
+      at require (node:internal/modules/helpers:130:18)
+      at Object.<anonymous> (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/src/server.ts:4:1)
+      at Module._compile (node:internal/modules/cjs/loader:1233:14)
+      at Module.m._compile (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts:1618:23)
+      at Module._extensions..js (node:internal/modules/cjs/loader:1287:10)
+      at Object.require.extensions.<computed> [as .ts] (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts:1621:12) {
+    code: 'MODULE_NOT_FOUND',
+    requireStack: [
+      '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/src/server.ts'
+    ]
+  },
+  level: 'error',
+  message: "uncaughtException: Cannot find module '@/app/db'\n" +
+    'Require stack:\n' +
+    '- /Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/src/server.ts\n' +
+    "Error: Cannot find module '@/app/db'\n" +
+    'Require stack:\n' +
+    '- /Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/src/server.ts\n' +
+    '    at Function.Module._resolveFilename (node:internal/modules/cjs/loader:1048:15)\n' +
+    '    at Function.Module._resolveFilename.sharedData.moduleResolveFilenameHook.installedValue [as _resolveFilename] (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/@cspotcode/source-map-support/source-map-support.js:811:30)\n' +
+    '    at Function.Module._load (node:internal/modules/cjs/loader:901:27)\n' +
+    '    at Module.require (node:internal/modules/cjs/loader:1115:19)\n' +
+    '    at require (node:internal/modules/helpers:130:18)\n' +
+    '    at Object.<anonymous> (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/src/server.ts:4:1)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1233:14)\n' +
+    '    at Module.m._compile (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts:1618:23)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1287:10)\n' +
+    '    at Object.require.extensions.<computed> [as .ts] (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts:1621:12)',
+  stack: "Error: Cannot find module '@/app/db'\n" +
+    'Require stack:\n' +
+    '- /Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/src/server.ts\n' +
+    '    at Function.Module._resolveFilename (node:internal/modules/cjs/loader:1048:15)\n' +
+    '    at Function.Module._resolveFilename.sharedData.moduleResolveFilenameHook.installedValue [as _resolveFilename] (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/@cspotcode/source-map-support/source-map-support.js:811:30)\n' +
+    '    at Function.Module._load (node:internal/modules/cjs/loader:901:27)\n' +
+    '    at Module.require (node:internal/modules/cjs/loader:1115:19)\n' +
+    '    at require (node:internal/modules/helpers:130:18)\n' +
+    '    at Object.<anonymous> (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/src/server.ts:4:1)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1233:14)\n' +
+    '    at Module.m._compile (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts:1618:23)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1287:10)\n' +
+    '    at Object.require.extensions.<computed> [as .ts] (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts:1621:12)',
+  exception: true,
+  date: 'Sun Aug 13 2023 23:41:15 GMT+0200 (Central European Summer Time)',
+  process: {
+    pid: 53828,
+    uid: 501,
+    gid: 20,
+    cwd: '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit',
+    execPath: '/opt/homebrew/Cellar/node/20.5.1/bin/node',
+    version: 'v20.5.1',
+    argv: [
+      '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/.bin/ts-node',
+      '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/src/server.ts'
+    ],
+    memoryUsage: {
+      rss: 345505792,
+      heapTotal: 224526336,
+      heapUsed: 194727976,
+      external: 24710573,
+      arrayBuffers: 21817083
+    }
+  },
+  os: {
+    loadavg: [ 1.17138671875, 1.494140625, 1.9033203125 ],
+    uptime: 258074
+  },
+  trace: [
+    {
+      column: 15,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._resolveFilename',
+      line: 1048,
+      method: '_resolveFilename',
+      native: false
+    },
+    {
+      column: 30,
+      file: '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/@cspotcode/source-map-support/source-map-support.js',
+      function: 'Module._resolveFilename.sharedData.moduleResolveFilenameHook.installedValue [as _resolveFilename]',
+      line: 811,
+      method: 'installedValue [as _resolveFilename]',
+      native: false
+    },
+    {
+      column: 27,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._load',
+      line: 901,
+      method: '_load',
+      native: false
+    },
+    {
+      column: 19,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module.require',
+      line: 1115,
+      method: 'require',
+      native: false
+    },
+    {
+      column: 18,
+      file: 'node:internal/modules/helpers',
+      function: 'require',
+      line: 130,
+      method: null,
+      native: false
+    },
+    {
+      column: 1,
+      file: '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/src/server.ts',
+      function: null,
+      line: 4,
+      method: null,
+      native: false
+    },
+    {
+      column: 14,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._compile',
+      line: 1233,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 23,
+      file: '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts',
+      function: 'Module.m._compile',
+      line: 1618,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 10,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._extensions..js',
+      line: 1287,
+      method: '.js',
+      native: false
+    },
+    {
+      column: 12,
+      file: '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts',
+      function: 'Object.require.extensions.<computed> [as .ts]',
+      line: 1621,
+      method: 'ts]',
+      native: false
+    }
+  ],
+  timestamp: '2023-08-13 23:41:15'
+}
+{
+  error: Error: Cannot find module '@/app/db'
+  Require stack:
+  - /Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/src/server.ts
+      at Function.Module._resolveFilename (node:internal/modules/cjs/loader:1048:15)
+      at Function.Module._resolveFilename.sharedData.moduleResolveFilenameHook.installedValue [as _resolveFilename] (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/@cspotcode/source-map-support/source-map-support.js:811:30)
+      at Function.Module._load (node:internal/modules/cjs/loader:901:27)
+      at Module.require (node:internal/modules/cjs/loader:1115:19)
+      at require (node:internal/modules/helpers:130:18)
+      at Object.<anonymous> (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/src/server.ts:4:1)
+      at Module._compile (node:internal/modules/cjs/loader:1233:14)
+      at Module.m._compile (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts:1618:23)
+      at Module._extensions..js (node:internal/modules/cjs/loader:1287:10)
+      at Object.require.extensions.<computed> [as .ts] (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts:1621:12) {
+    code: 'MODULE_NOT_FOUND',
+    requireStack: [
+      '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/src/server.ts'
+    ]
+  },
+  level: 'error',
+  message: "uncaughtException: Cannot find module '@/app/db'\n" +
+    'Require stack:\n' +
+    '- /Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/src/server.ts\n' +
+    "Error: Cannot find module '@/app/db'\n" +
+    'Require stack:\n' +
+    '- /Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/src/server.ts\n' +
+    '    at Function.Module._resolveFilename (node:internal/modules/cjs/loader:1048:15)\n' +
+    '    at Function.Module._resolveFilename.sharedData.moduleResolveFilenameHook.installedValue [as _resolveFilename] (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/@cspotcode/source-map-support/source-map-support.js:811:30)\n' +
+    '    at Function.Module._load (node:internal/modules/cjs/loader:901:27)\n' +
+    '    at Module.require (node:internal/modules/cjs/loader:1115:19)\n' +
+    '    at require (node:internal/modules/helpers:130:18)\n' +
+    '    at Object.<anonymous> (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/src/server.ts:4:1)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1233:14)\n' +
+    '    at Module.m._compile (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts:1618:23)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1287:10)\n' +
+    '    at Object.require.extensions.<computed> [as .ts] (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts:1621:12)',
+  stack: "Error: Cannot find module '@/app/db'\n" +
+    'Require stack:\n' +
+    '- /Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/src/server.ts\n' +
+    '    at Function.Module._resolveFilename (node:internal/modules/cjs/loader:1048:15)\n' +
+    '    at Function.Module._resolveFilename.sharedData.moduleResolveFilenameHook.installedValue [as _resolveFilename] (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/@cspotcode/source-map-support/source-map-support.js:811:30)\n' +
+    '    at Function.Module._load (node:internal/modules/cjs/loader:901:27)\n' +
+    '    at Module.require (node:internal/modules/cjs/loader:1115:19)\n' +
+    '    at require (node:internal/modules/helpers:130:18)\n' +
+    '    at Object.<anonymous> (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/src/server.ts:4:1)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1233:14)\n' +
+    '    at Module.m._compile (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts:1618:23)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1287:10)\n' +
+    '    at Object.require.extensions.<computed> [as .ts] (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts:1621:12)',
+  exception: true,
+  date: 'Sun Aug 13 2023 23:41:15 GMT+0200 (Central European Summer Time)',
+  process: {
+    pid: 53828,
+    uid: 501,
+    gid: 20,
+    cwd: '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit',
+    execPath: '/opt/homebrew/Cellar/node/20.5.1/bin/node',
+    version: 'v20.5.1',
+    argv: [
+      '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/.bin/ts-node',
+      '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/src/server.ts'
+    ],
+    memoryUsage: {
+      rss: 345505792,
+      heapTotal: 224526336,
+      heapUsed: 194727976,
+      external: 24710573,
+      arrayBuffers: 21817083
+    }
+  },
+  os: {
+    loadavg: [ 1.17138671875, 1.494140625, 1.9033203125 ],
+    uptime: 258074
+  },
+  trace: [
+    {
+      column: 15,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._resolveFilename',
+      line: 1048,
+      method: '_resolveFilename',
+      native: false
+    },
+    {
+      column: 30,
+      file: '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/@cspotcode/source-map-support/source-map-support.js',
+      function: 'Module._resolveFilename.sharedData.moduleResolveFilenameHook.installedValue [as _resolveFilename]',
+      line: 811,
+      method: 'installedValue [as _resolveFilename]',
+      native: false
+    },
+    {
+      column: 27,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._load',
+      line: 901,
+      method: '_load',
+      native: false
+    },
+    {
+      column: 19,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module.require',
+      line: 1115,
+      method: 'require',
+      native: false
+    },
+    {
+      column: 18,
+      file: 'node:internal/modules/helpers',
+      function: 'require',
+      line: 130,
+      method: null,
+      native: false
+    },
+    {
+      column: 1,
+      file: '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/src/server.ts',
+      function: null,
+      line: 4,
+      method: null,
+      native: false
+    },
+    {
+      column: 14,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._compile',
+      line: 1233,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 23,
+      file: '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts',
+      function: 'Module.m._compile',
+      line: 1618,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 10,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._extensions..js',
+      line: 1287,
+      method: '.js',
+      native: false
+    },
+    {
+      column: 12,
+      file: '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts',
+      function: 'Object.require.extensions.<computed> [as .ts]',
+      line: 1621,
+      method: 'ts]',
+      native: false
+    }
+  ],
+  timestamp: '2023-08-13 23:41:15'
+}
+{
+  error: Error: Cannot find module '@/app/db'
+  Require stack:
+  - /Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/src/server.ts
+      at Function.Module._resolveFilename (node:internal/modules/cjs/loader:1048:15)
+      at Function.Module._resolveFilename.sharedData.moduleResolveFilenameHook.installedValue [as _resolveFilename] (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/@cspotcode/source-map-support/source-map-support.js:811:30)
+      at Function.Module._load (node:internal/modules/cjs/loader:901:27)
+      at Module.require (node:internal/modules/cjs/loader:1115:19)
+      at require (node:internal/modules/helpers:130:18)
+      at Object.<anonymous> (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/src/server.ts:4:1)
+      at Module._compile (node:internal/modules/cjs/loader:1233:14)
+      at Module.m._compile (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts:1618:23)
+      at Module._extensions..js (node:internal/modules/cjs/loader:1287:10)
+      at Object.require.extensions.<computed> [as .ts] (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts:1621:12) {
+    code: 'MODULE_NOT_FOUND',
+    requireStack: [
+      '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/src/server.ts'
+    ]
+  },
+  level: 'error',
+  message: "uncaughtException: Cannot find module '@/app/db'\n" +
+    'Require stack:\n' +
+    '- /Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/src/server.ts\n' +
+    "Error: Cannot find module '@/app/db'\n" +
+    'Require stack:\n' +
+    '- /Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/src/server.ts\n' +
+    '    at Function.Module._resolveFilename (node:internal/modules/cjs/loader:1048:15)\n' +
+    '    at Function.Module._resolveFilename.sharedData.moduleResolveFilenameHook.installedValue [as _resolveFilename] (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/@cspotcode/source-map-support/source-map-support.js:811:30)\n' +
+    '    at Function.Module._load (node:internal/modules/cjs/loader:901:27)\n' +
+    '    at Module.require (node:internal/modules/cjs/loader:1115:19)\n' +
+    '    at require (node:internal/modules/helpers:130:18)\n' +
+    '    at Object.<anonymous> (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/src/server.ts:4:1)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1233:14)\n' +
+    '    at Module.m._compile (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts:1618:23)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1287:10)\n' +
+    '    at Object.require.extensions.<computed> [as .ts] (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts:1621:12)',
+  stack: "Error: Cannot find module '@/app/db'\n" +
+    'Require stack:\n' +
+    '- /Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/src/server.ts\n' +
+    '    at Function.Module._resolveFilename (node:internal/modules/cjs/loader:1048:15)\n' +
+    '    at Function.Module._resolveFilename.sharedData.moduleResolveFilenameHook.installedValue [as _resolveFilename] (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/@cspotcode/source-map-support/source-map-support.js:811:30)\n' +
+    '    at Function.Module._load (node:internal/modules/cjs/loader:901:27)\n' +
+    '    at Module.require (node:internal/modules/cjs/loader:1115:19)\n' +
+    '    at require (node:internal/modules/helpers:130:18)\n' +
+    '    at Object.<anonymous> (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/src/server.ts:4:1)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1233:14)\n' +
+    '    at Module.m._compile (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts:1618:23)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1287:10)\n' +
+    '    at Object.require.extensions.<computed> [as .ts] (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts:1621:12)',
+  exception: true,
+  date: 'Sun Aug 13 2023 23:41:29 GMT+0200 (Central European Summer Time)',
+  process: {
+    pid: 54359,
+    uid: 501,
+    gid: 20,
+    cwd: '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit',
+    execPath: '/opt/homebrew/Cellar/node/20.5.1/bin/node',
+    version: 'v20.5.1',
+    argv: [
+      '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/.bin/ts-node',
+      '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/src/server.ts'
+    ],
+    memoryUsage: {
+      rss: 339902464,
+      heapTotal: 224788480,
+      heapUsed: 195607352,
+      external: 24718805,
+      arrayBuffers: 21817123
+    }
+  },
+  os: {
+    loadavg: [ 1.30517578125, 1.50341796875, 1.89892578125 ],
+    uptime: 258088
+  },
+  trace: [
+    {
+      column: 15,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._resolveFilename',
+      line: 1048,
+      method: '_resolveFilename',
+      native: false
+    },
+    {
+      column: 30,
+      file: '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/@cspotcode/source-map-support/source-map-support.js',
+      function: 'Module._resolveFilename.sharedData.moduleResolveFilenameHook.installedValue [as _resolveFilename]',
+      line: 811,
+      method: 'installedValue [as _resolveFilename]',
+      native: false
+    },
+    {
+      column: 27,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._load',
+      line: 901,
+      method: '_load',
+      native: false
+    },
+    {
+      column: 19,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module.require',
+      line: 1115,
+      method: 'require',
+      native: false
+    },
+    {
+      column: 18,
+      file: 'node:internal/modules/helpers',
+      function: 'require',
+      line: 130,
+      method: null,
+      native: false
+    },
+    {
+      column: 1,
+      file: '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/src/server.ts',
+      function: null,
+      line: 4,
+      method: null,
+      native: false
+    },
+    {
+      column: 14,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._compile',
+      line: 1233,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 23,
+      file: '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts',
+      function: 'Module.m._compile',
+      line: 1618,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 10,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._extensions..js',
+      line: 1287,
+      method: '.js',
+      native: false
+    },
+    {
+      column: 12,
+      file: '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts',
+      function: 'Object.require.extensions.<computed> [as .ts]',
+      line: 1621,
+      method: 'ts]',
+      native: false
+    }
+  ],
+  timestamp: '2023-08-13 23:41:29'
+}
+{
+  error: Error: Cannot find module '@/app/db'
+  Require stack:
+  - /Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/src/server.ts
+      at Function.Module._resolveFilename (node:internal/modules/cjs/loader:1048:15)
+      at Function.Module._resolveFilename.sharedData.moduleResolveFilenameHook.installedValue [as _resolveFilename] (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/@cspotcode/source-map-support/source-map-support.js:811:30)
+      at Function.Module._load (node:internal/modules/cjs/loader:901:27)
+      at Module.require (node:internal/modules/cjs/loader:1115:19)
+      at require (node:internal/modules/helpers:130:18)
+      at Object.<anonymous> (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/src/server.ts:4:1)
+      at Module._compile (node:internal/modules/cjs/loader:1233:14)
+      at Module.m._compile (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts:1618:23)
+      at Module._extensions..js (node:internal/modules/cjs/loader:1287:10)
+      at Object.require.extensions.<computed> [as .ts] (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts:1621:12) {
+    code: 'MODULE_NOT_FOUND',
+    requireStack: [
+      '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/src/server.ts'
+    ]
+  },
+  level: 'error',
+  message: "uncaughtException: Cannot find module '@/app/db'\n" +
+    'Require stack:\n' +
+    '- /Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/src/server.ts\n' +
+    "Error: Cannot find module '@/app/db'\n" +
+    'Require stack:\n' +
+    '- /Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/src/server.ts\n' +
+    '    at Function.Module._resolveFilename (node:internal/modules/cjs/loader:1048:15)\n' +
+    '    at Function.Module._resolveFilename.sharedData.moduleResolveFilenameHook.installedValue [as _resolveFilename] (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/@cspotcode/source-map-support/source-map-support.js:811:30)\n' +
+    '    at Function.Module._load (node:internal/modules/cjs/loader:901:27)\n' +
+    '    at Module.require (node:internal/modules/cjs/loader:1115:19)\n' +
+    '    at require (node:internal/modules/helpers:130:18)\n' +
+    '    at Object.<anonymous> (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/src/server.ts:4:1)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1233:14)\n' +
+    '    at Module.m._compile (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts:1618:23)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1287:10)\n' +
+    '    at Object.require.extensions.<computed> [as .ts] (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts:1621:12)',
+  stack: "Error: Cannot find module '@/app/db'\n" +
+    'Require stack:\n' +
+    '- /Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/src/server.ts\n' +
+    '    at Function.Module._resolveFilename (node:internal/modules/cjs/loader:1048:15)\n' +
+    '    at Function.Module._resolveFilename.sharedData.moduleResolveFilenameHook.installedValue [as _resolveFilename] (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/@cspotcode/source-map-support/source-map-support.js:811:30)\n' +
+    '    at Function.Module._load (node:internal/modules/cjs/loader:901:27)\n' +
+    '    at Module.require (node:internal/modules/cjs/loader:1115:19)\n' +
+    '    at require (node:internal/modules/helpers:130:18)\n' +
+    '    at Object.<anonymous> (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/src/server.ts:4:1)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1233:14)\n' +
+    '    at Module.m._compile (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts:1618:23)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1287:10)\n' +
+    '    at Object.require.extensions.<computed> [as .ts] (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts:1621:12)',
+  exception: true,
+  date: 'Sun Aug 13 2023 23:41:29 GMT+0200 (Central European Summer Time)',
+  process: {
+    pid: 54359,
+    uid: 501,
+    gid: 20,
+    cwd: '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit',
+    execPath: '/opt/homebrew/Cellar/node/20.5.1/bin/node',
+    version: 'v20.5.1',
+    argv: [
+      '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/.bin/ts-node',
+      '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/src/server.ts'
+    ],
+    memoryUsage: {
+      rss: 339902464,
+      heapTotal: 224788480,
+      heapUsed: 195607352,
+      external: 24718805,
+      arrayBuffers: 21817123
+    }
+  },
+  os: {
+    loadavg: [ 1.30517578125, 1.50341796875, 1.89892578125 ],
+    uptime: 258088
+  },
+  trace: [
+    {
+      column: 15,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._resolveFilename',
+      line: 1048,
+      method: '_resolveFilename',
+      native: false
+    },
+    {
+      column: 30,
+      file: '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/@cspotcode/source-map-support/source-map-support.js',
+      function: 'Module._resolveFilename.sharedData.moduleResolveFilenameHook.installedValue [as _resolveFilename]',
+      line: 811,
+      method: 'installedValue [as _resolveFilename]',
+      native: false
+    },
+    {
+      column: 27,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._load',
+      line: 901,
+      method: '_load',
+      native: false
+    },
+    {
+      column: 19,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module.require',
+      line: 1115,
+      method: 'require',
+      native: false
+    },
+    {
+      column: 18,
+      file: 'node:internal/modules/helpers',
+      function: 'require',
+      line: 130,
+      method: null,
+      native: false
+    },
+    {
+      column: 1,
+      file: '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/src/server.ts',
+      function: null,
+      line: 4,
+      method: null,
+      native: false
+    },
+    {
+      column: 14,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._compile',
+      line: 1233,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 23,
+      file: '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts',
+      function: 'Module.m._compile',
+      line: 1618,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 10,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._extensions..js',
+      line: 1287,
+      method: '.js',
+      native: false
+    },
+    {
+      column: 12,
+      file: '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/ts-node/src/index.ts',
+      function: 'Object.require.extensions.<computed> [as .ts]',
+      line: 1621,
+      method: 'ts]',
+      native: false
+    }
+  ],
+  timestamp: '2023-08-13 23:41:29'
+}

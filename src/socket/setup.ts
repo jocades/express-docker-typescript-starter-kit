@@ -35,10 +35,6 @@ export function initializeSocket(server: Server) {
       res({ ok: true, data: { message: 'pong!' } })
       socket.emit('pong', { message: 'pong!' })
     })
-
-    const groups = await Group.find({ members: socket.data.user._id })
-    console.log('user groups', groups.length)
-    // groups.forEach((group) => socket.join(`group:${group._id}`))
   })
 
   return io

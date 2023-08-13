@@ -15,6 +15,7 @@ app.route(
       middleware: [auth],
       get: getUser,
       put: updateUser,
+      delete: deleteUser,
     },
   }
 )
