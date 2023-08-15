@@ -1,7 +1,7 @@
 import { Db, Document, MongoClient } from 'mongodb'
 import { type SocketServer } from '.'
 import logger from '../logger'
-import Group, { IGroup } from '../models/group.model'
+import { IGroup } from '../models/group.model'
 
 const MONGODB_URI = 'mongodb://localhost:27017'
 

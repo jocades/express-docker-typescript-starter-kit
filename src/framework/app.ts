@@ -115,7 +115,7 @@ app.route<Body>(
 )
 
 app.route(
-  '/works',
+  '/ping',
   { methods: ['*'] },
   {
     update: (req, res) => {

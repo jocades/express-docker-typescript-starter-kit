@@ -1,4 +1,5 @@
 import { Schema, model, Model } from 'mongoose'
+const { ObjectId } = Schema.Types
 import jwt from 'jsonwebtoken'
 import Joi from 'joi'
 import { encrypt } from '../utils/hash'
@@ -14,12 +15,12 @@ const userSchema = new Schema<IUser, UserDoc, IUserMethods>(
     firstName: String,
     lastName: String,
 
-    // @ts-ignore
     provider: String,
     providerId: String,
 
     isAdmin: { type: Boolean, default: false },
-    // auth: [{ type: String, default: [] }],
+    //@ts-ignore
+    friends: [{ type: ObjectId, ref: 'User', default: [] }],
   },
   { timestamps: true }
 )

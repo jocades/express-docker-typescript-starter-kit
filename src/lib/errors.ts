@@ -10,6 +10,18 @@ export class ServerError extends Error {
   }
 }
 
+export class BadRequest extends Error {
+  message = 'Bad request'
+  code = 400
+
+  constructor(message?: string, code?: number) {
+    super()
+    if (message) this.message = message
+    if (code) this.code = code
+    this.name = 'BadRequest'
+  }
+}
+
 export class NotFoundError extends Error {
   message = 'Not found'
   code = 404

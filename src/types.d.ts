@@ -45,6 +45,9 @@ interface IUser extends BaseModel {
   lastName: string
   isAdmin: boolean
   auth: Hash[]
+  provider: string
+  providerId: string
+  friends: string[]
 }
 
 interface IUserMethods {
@@ -52,5 +55,8 @@ interface IUserMethods {
   genRToken: () => Tokens['refresh']
   login: () => Promise<{ access: string }>
   logout: (rToken: Tokens['refresh']) => Promise<string>
-  refresh: (rToken: Tokens['refresh'], cb: (err?: Error, tokens?: Tokens) => void) => void
+  refresh: (
+    rToken: Tokens['refresh'],
+    cb: (err?: Error, tokens?: Tokens) => void
+  ) => void
 }

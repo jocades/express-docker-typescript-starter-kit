@@ -3,7 +3,9 @@ import User from '../../models/user.model'
 import { notFound, response } from '../../lib/controller-factory'
 
 export const getUser: RequestHandler = async (req, res) => {
-  const user = await User.findById(req.user._id).select('-password -auth')
+  const user = await User.findById(req.user._id)
+    .select('-password -auth')
+    .populate('friends', '_id firstName lastName')
   response(res, user)
 }
 
