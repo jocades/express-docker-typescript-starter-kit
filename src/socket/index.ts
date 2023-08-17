@@ -4,6 +4,7 @@ import {
 } from 'socket.io'
 import { type DefaultEventsMap } from 'socket.io/dist/typed-events'
 import { type ChangeStreamDocument } from 'mongodb'
+import { Move } from 'chess.js'
 
 type SocketOkResponse<T> = { ok: true; data?: T }
 type SocketErrorResponse = { ok: false; data?: { message: string } }
@@ -11,8 +12,13 @@ type SocketErrorResponse = { ok: false; data?: { message: string } }
 // prettier-ignore
 export type SocketResponse<T = unknown> = (res: SocketOkResponse<T> | SocketErrorResponse) => void
 
-export type Move = { from: string; to: string }
 export type Color = 'w' | 'b'
+export type EndReason =
+  | 'checkmate'
+  | 'draw'
+  | 'stalemate'
+  | 'threefoldRepetition'
+  | 'insufficientMaterial'
 
 interface ClientToServerEvents {
   ping: (data: any, res: SocketResponse) => void
@@ -39,6 +45,7 @@ interface ServerToClientEvents {
   'chess:join': (data: { room: string }) => void
   'chess:move': (data: Move) => void
   'chess:resign': (data: { room: string; winner: string }) => void
+  'chess:gameover': (data: { room: string; state: EndReason }) => void
 
   'groups:change': (data: ChangeStreamDocument) => void
 }

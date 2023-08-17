@@ -23892,3 +23892,205 @@
   ],
   timestamp: '2023-08-15 22:24:21'
 }
+{
+  error: TypeError: Cannot destructure property 'engine' of 'games.get(...)' as it is undefined.
+      at Socket.<anonymous> (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/src/socket/chess.ts:59:13)
+      at Socket.emit (node:events:514:28)
+      at Socket.emit (node:domain:489:12)
+      at Socket.emitUntyped (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/socket.io/dist/typed-events.js:69:22)
+      at /Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/socket.io/dist/socket.js:703:39
+      at processTicksAndRejections (node:internal/process/task_queues:77:11),
+  level: 'error',
+  message: "uncaughtException: Cannot destructure property 'engine' of 'games.get(...)' as it is undefined.\n" +
+    "TypeError: Cannot destructure property 'engine' of 'games.get(...)' as it is undefined.\n" +
+    '    at Socket.<anonymous> (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/src/socket/chess.ts:59:13)\n' +
+    '    at Socket.emit (node:events:514:28)\n' +
+    '    at Socket.emit (node:domain:489:12)\n' +
+    '    at Socket.emitUntyped (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/socket.io/dist/typed-events.js:69:22)\n' +
+    '    at /Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/socket.io/dist/socket.js:703:39\n' +
+    '    at processTicksAndRejections (node:internal/process/task_queues:77:11)',
+  stack: "TypeError: Cannot destructure property 'engine' of 'games.get(...)' as it is undefined.\n" +
+    '    at Socket.<anonymous> (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/src/socket/chess.ts:59:13)\n' +
+    '    at Socket.emit (node:events:514:28)\n' +
+    '    at Socket.emit (node:domain:489:12)\n' +
+    '    at Socket.emitUntyped (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/socket.io/dist/typed-events.js:69:22)\n' +
+    '    at /Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/socket.io/dist/socket.js:703:39\n' +
+    '    at processTicksAndRejections (node:internal/process/task_queues:77:11)',
+  exception: true,
+  date: 'Thu Aug 17 2023 02:02:08 GMT+0200 (Central European Summer Time)',
+  process: {
+    pid: 43673,
+    uid: 501,
+    gid: 20,
+    cwd: '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit',
+    execPath: '/opt/homebrew/Cellar/node/20.5.1/bin/node',
+    version: 'v20.5.1',
+    argv: [
+      '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/.bin/ts-node',
+      '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/src/server.ts'
+    ],
+    memoryUsage: {
+      rss: 423444480,
+      heapTotal: 280379392,
+      heapUsed: 271915544,
+      external: 42641684,
+      arrayBuffers: 39735757
+    }
+  },
+  os: {
+    loadavg: [ 3.10498046875, 2.70751953125, 2.49658203125 ],
+    uptime: 525727
+  },
+  trace: [
+    {
+      column: 13,
+      file: '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/src/socket/chess.ts',
+      function: null,
+      line: 59,
+      method: null,
+      native: false
+    },
+    {
+      column: 28,
+      file: 'node:events',
+      function: 'Socket.emit',
+      line: 514,
+      method: 'emit',
+      native: false
+    },
+    {
+      column: 12,
+      file: 'node:domain',
+      function: 'Socket.emit',
+      line: 489,
+      method: 'emit',
+      native: false
+    },
+    {
+      column: 22,
+      file: '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/socket.io/dist/typed-events.js',
+      function: 'Socket.emitUntyped',
+      line: 69,
+      method: 'emitUntyped',
+      native: false
+    },
+    {
+      column: 39,
+      file: '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/socket.io/dist/socket.js',
+      function: null,
+      line: 703,
+      method: null,
+      native: false
+    },
+    {
+      column: 11,
+      file: 'node:internal/process/task_queues',
+      function: 'processTicksAndRejections',
+      line: 77,
+      method: null,
+      native: false
+    }
+  ],
+  timestamp: '2023-08-17 02:02:08'
+}
+{
+  error: TypeError: Cannot destructure property 'engine' of 'games.get(...)' as it is undefined.
+      at Socket.<anonymous> (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/src/socket/chess.ts:59:13)
+      at Socket.emit (node:events:514:28)
+      at Socket.emit (node:domain:489:12)
+      at Socket.emitUntyped (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/socket.io/dist/typed-events.js:69:22)
+      at /Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/socket.io/dist/socket.js:703:39
+      at processTicksAndRejections (node:internal/process/task_queues:77:11),
+  level: 'error',
+  message: "uncaughtException: Cannot destructure property 'engine' of 'games.get(...)' as it is undefined.\n" +
+    "TypeError: Cannot destructure property 'engine' of 'games.get(...)' as it is undefined.\n" +
+    '    at Socket.<anonymous> (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/src/socket/chess.ts:59:13)\n' +
+    '    at Socket.emit (node:events:514:28)\n' +
+    '    at Socket.emit (node:domain:489:12)\n' +
+    '    at Socket.emitUntyped (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/socket.io/dist/typed-events.js:69:22)\n' +
+    '    at /Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/socket.io/dist/socket.js:703:39\n' +
+    '    at processTicksAndRejections (node:internal/process/task_queues:77:11)',
+  stack: "TypeError: Cannot destructure property 'engine' of 'games.get(...)' as it is undefined.\n" +
+    '    at Socket.<anonymous> (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/src/socket/chess.ts:59:13)\n' +
+    '    at Socket.emit (node:events:514:28)\n' +
+    '    at Socket.emit (node:domain:489:12)\n' +
+    '    at Socket.emitUntyped (/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/socket.io/dist/typed-events.js:69:22)\n' +
+    '    at /Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/socket.io/dist/socket.js:703:39\n' +
+    '    at processTicksAndRejections (node:internal/process/task_queues:77:11)',
+  exception: true,
+  date: 'Thu Aug 17 2023 02:02:08 GMT+0200 (Central European Summer Time)',
+  process: {
+    pid: 43673,
+    uid: 501,
+    gid: 20,
+    cwd: '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit',
+    execPath: '/opt/homebrew/Cellar/node/20.5.1/bin/node',
+    version: 'v20.5.1',
+    argv: [
+      '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/.bin/ts-node',
+      '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/src/server.ts'
+    ],
+    memoryUsage: {
+      rss: 423444480,
+      heapTotal: 280379392,
+      heapUsed: 271915544,
+      external: 42641684,
+      arrayBuffers: 39735757
+    }
+  },
+  os: {
+    loadavg: [ 3.10498046875, 2.70751953125, 2.49658203125 ],
+    uptime: 525727
+  },
+  trace: [
+    {
+      column: 13,
+      file: '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/src/socket/chess.ts',
+      function: null,
+      line: 59,
+      method: null,
+      native: false
+    },
+    {
+      column: 28,
+      file: 'node:events',
+      function: 'Socket.emit',
+      line: 514,
+      method: 'emit',
+      native: false
+    },
+    {
+      column: 12,
+      file: 'node:domain',
+      function: 'Socket.emit',
+      line: 489,
+      method: 'emit',
+      native: false
+    },
+    {
+      column: 22,
+      file: '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/socket.io/dist/typed-events.js',
+      function: 'Socket.emitUntyped',
+      line: 69,
+      method: 'emitUntyped',
+      native: false
+    },
+    {
+      column: 39,
+      file: '/Users/j0rdi/Desktop/dev/express-docker-typescript-starter-kit/node_modules/socket.io/dist/socket.js',
+      function: null,
+      line: 703,
+      method: null,
+      native: false
+    },
+    {
+      column: 11,
+      file: 'node:internal/process/task_queues',
+      function: 'processTicksAndRejections',
+      line: 77,
+      method: null,
+      native: false
+    }
+  ],
+  timestamp: '2023-08-17 02:02:08'
+}

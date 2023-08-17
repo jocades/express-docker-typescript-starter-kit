@@ -35,6 +35,13 @@ export const gameSchema = new Schema(
     time: { type: Number, default: 0 },
     increment: { type: Number, default: 0 },
     rated: { type: Boolean, default: false },
+    moves: [
+      {
+        san: String,
+        stamp: Number,
+        time: Number,
+      },
+    ],
   },
   { timestamps: true }
 )
