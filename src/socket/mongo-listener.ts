@@ -27,8 +27,6 @@ export function groupsListener(db: Db, io: SocketServer) {
   })
 
   groupsStream.on('change', async (change) => {
-    console.log(change)
-
     let group: IGroup | null = null
 
     if (change.operationType === 'insert' || change.operationType === 'update')

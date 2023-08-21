@@ -1,6 +1,5 @@
 import express, { Router, type Application, type RequestHandler } from 'express'
 import { z, type AnyZodObject } from 'zod'
-import _ from 'lodash'
 
 import cors from 'cors'
 import helmet from 'helmet'

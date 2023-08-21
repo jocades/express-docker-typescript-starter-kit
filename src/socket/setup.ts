@@ -3,8 +3,6 @@ import jwt from 'jsonwebtoken'
 
 import logger from '../logger'
 import { SocketServer } from '.'
-import Group from '../models/group.model'
-import { chessSocketEvents } from './chess'
 
 export function initializeSocket(server: Server) {
   const io = new SocketServer(server, {
@@ -39,8 +37,6 @@ export function initializeSocket(server: Server) {
       res({ ok: true, data: { message: 'pong!' } })
       socket.emit('pong', { message: 'pong!' })
     })
-
-    chessSocketEvents(io, socket)
   })
 
   return io
