@@ -36,6 +36,10 @@ interface ClientToServerEvents {
     res: SocketResponse
   ) => void
   'chess:resign': (data: { room: string }, res?: SocketResponse) => void
+  'chess:reload': (
+    data: { room: string },
+    res: SocketResponse<{ fen: string; pgn: string }>
+  ) => void
 }
 
 interface ServerToClientEvents {

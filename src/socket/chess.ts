@@ -9,20 +9,19 @@ const chessRoom = (id: string) => `chess:room:${id}`
 
 interface ActiveGame extends IGame {
   engine: Chess
-  startTime: number
   moves: { san: string; stamp: number; time?: number }[]
 }
 
 const games = new Map<string, ActiveGame>()
 
 function checkState(engine: Chess): EndReason | undefined {
-  if (!engine.isGameOver()) return
-
-  if (engine.isCheckmate()) return 'checkmate'
-  else if (engine.isDraw()) return 'draw'
-  else if (engine.isStalemate()) return 'stalemate'
-  else if (engine.isThreefoldRepetition()) return 'threefoldRepetition'
-  else if (engine.isInsufficientMaterial()) return 'insufficientMaterial'
+  if (engine.isGameOver()) {
+    if (engine.isCheckmate()) return 'checkmate'
+    else if (engine.isDraw()) return 'draw'
+    else if (engine.isStalemate()) return 'stalemate'
+    else if (engine.isThreefoldRepetition()) return 'threefoldRepetition'
+    else if (engine.isInsufficientMaterial()) return 'insufficientMaterial'
+  }
 }
 
 export function chessSocketEvents(io: SocketServer, socket: Socket) {
@@ -44,7 +43,6 @@ export function chessSocketEvents(io: SocketServer, socket: Socket) {
 
     games.set(room, {
       engine: new Chess(),
-      startTime: Date.now(),
       moves: [],
       white,
       black,
@@ -54,7 +52,35 @@ export function chessSocketEvents(io: SocketServer, socket: Socket) {
     io.to(chessRoom(room)).emit('chess:join', { room })
   })
 
-  socket.on('chess:move', ({ room, move }, res) => {
+  // handle when one player disconnects (reloads the page or something)
+  // make him join the room again
+  socket.on('chess:reload', async ({ room }, res) => {
+    const roomSize = await io.in(chessRoom(room)).fetchSockets()
+    console.log('reloaded', roomSize.length)
+    const activeGame = games.get(room)
+    if (!activeGame) {
+      res?.({ ok: false, data: { message: 'No active game' } })
+      return
+    }
+
+    socket.join(chessRoom(room))
+    // io.in(user(activeGame.white)).socketsJoin(chessRoom(room))
+
+    res?.({
+      ok: true,
+      data: {
+        fen: activeGame.engine.fen(),
+        pgn: activeGame.engine.pgn(),
+      },
+    })
+
+    const rs = await io.in(chessRoom(room)).fetchSockets()
+    console.log('reloaded', rs.length)
+  })
+
+  socket.on('chess:move', async ({ room, move }, res) => {
+    const roomSize = await io.in(chessRoom(room)).fetchSockets()
+    console.log('room size', roomSize.length)
     const { engine, moves } = games.get(room)!
     const madeMove = engine.move(move)
 
@@ -65,15 +91,37 @@ export function chessSocketEvents(io: SocketServer, socket: Socket) {
     moves.push({ san: madeMove.san, stamp: Date.now(), time })
     console.log(moves)
 
-    res?.({ ok: true })
-
     const state = checkState(engine)
     if (state) {
       io.to(chessRoom(room)).emit('chess:gameover', { room, state })
+      const activeGame = games.get(room)!
+      const winner =
+        state === 'checkmate'
+          ? engine.turn() === 'w'
+            ? 'black'
+            : 'white'
+          : 'draw'
+
+      const game = new Game({
+        white: activeGame.white,
+        black: activeGame.black,
+        winner,
+        fen: engine.fen(),
+        pgn: engine.pgn(),
+        status: 'finished',
+        endReason: state,
+        moves: activeGame.moves,
+      })
+      await game.save()
+      games.delete(room)
+      console.log('active games', games.size)
+      res?.({ ok: true })
       return
     }
 
+    res?.({ ok: true })
     socket.to(chessRoom(room)).emit('chess:move', move)
+    console.log('active games', games.size)
   })
 
   socket.on('chess:resign', async ({ room }, res) => {
