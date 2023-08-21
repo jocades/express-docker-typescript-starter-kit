@@ -1,4 +1,4 @@
-import { app } from '../../framework/app'
+import { app } from '../../framework'
 import {
   registerUser,
   loginUser,

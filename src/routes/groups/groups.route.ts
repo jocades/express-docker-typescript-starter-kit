@@ -1,4 +1,4 @@
-import { app } from '../../framework/app'
+import { app } from '../../framework'
 import Group, { groupBody } from '../../models/group.model'
 import { auth, validateId } from '../../middleware'
 import {

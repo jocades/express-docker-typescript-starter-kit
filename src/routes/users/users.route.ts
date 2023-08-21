@@ -1,4 +1,4 @@
-import { app } from '../../framework/app'
+import { app } from '../../framework'
 import { auth, admin } from '../../middleware'
 import { getUser, updateUser, deleteUser } from './users.controller'
 import User from '../../models/user.model'

@@ -1,3 +1,13 @@
+declare namespace NodeJS {
+  export interface ProcessEnv {
+    NODE_ENV: 'development' | 'production' | 'test'
+    PORT: string
+    JWT_A_SECRET: string
+    DB_URL: string
+    DB_NAME: string
+  }
+}
+
 declare namespace Express {
   export interface Request {
     user: UserPayload

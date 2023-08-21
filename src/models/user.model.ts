@@ -19,7 +19,6 @@ const userSchema = new Schema<IUser, UserDoc, IUserMethods>(
     providerId: String,
 
     isAdmin: { type: Boolean, default: false },
-    //@ts-ignore
     friends: [{ type: ObjectId, ref: 'User', default: [] }],
   },
   { timestamps: true }

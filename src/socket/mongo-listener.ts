@@ -2,17 +2,16 @@ import { Db, Document, MongoClient } from 'mongodb'
 import { type SocketServer } from '.'
 import logger from '../logger'
 import { IGroup } from '../models/group.model'
-
-const MONGODB_URI = 'mongodb://localhost:27017'
+import { DB_NAME, DB_URL } from '../config/consts'
 
 export async function mongoDBListener(io: SocketServer) {
-  const client = new MongoClient(MONGODB_URI)
+  const client = new MongoClient(DB_URL)
 
   try {
     await client.connect()
     logger.info('MongoDB listener connected')
 
-    const db = client.db('express-ts')
+    const db = client.db(DB_NAME)
 
     groupsListener(db, io)
   } catch (err) {
