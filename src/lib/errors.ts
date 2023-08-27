@@ -1,59 +1,25 @@
-export class ServerError extends Error {
-  message = 'Internal server error'
-  code = 500
+function createError(name: string, defaultMsg: string, defaultCode: number) {
+  return class extends Error {
+    message = defaultMsg
+    code = defaultCode
 
-  constructor(message?: string, code?: number) {
-    super()
-    if (message) this.message = message
-    if (code) this.code = code
-    this.name = 'ServerError'
+    constructor(message?: string, code?: number) {
+      super()
+      if (message) this.message = message
+      if (code) this.code = code
+      this.name = name
+    }
   }
 }
 
-export class BadRequest extends Error {
-  message = 'Bad request'
-  code = 400
+// prettier-ignore
+export const ServerError = createError('ServerError', 'Internal server error', 500)
 
-  constructor(message?: string, code?: number) {
-    super()
-    if (message) this.message = message
-    if (code) this.code = code
-    this.name = 'BadRequest'
-  }
-}
+export const BadRequest = createError('BadRequest', 'Bad request', 400)
 
-export class NotFoundError extends Error {
-  message = 'Not found'
-  code = 404
+export const NotFoundError = createError('NotFoundError', 'Not found', 404)
 
-  constructor(message?: string, code?: number) {
-    super()
-    if (message) this.message = message
-    if (code) this.code = code
-    this.name = 'NotFoundError'
-  }
-}
+// prettier-ignore
+export const UnauthorizedError = createError('UnauthorizedError', 'Unauthorized', 401)
 
-export class UnauthorizedError extends Error {
-  message = 'Unauthorized'
-  code = 401
-
-  constructor(message?: string, code?: number) {
-    super()
-    if (message) this.message = message
-    if (code) this.code = code
-    this.name = 'UnauthorizedError'
-  }
-}
-
-export class ForbiddenError extends Error {
-  message = 'Forbidden'
-  code = 403
-
-  constructor(message?: string, code?: number) {
-    super()
-    if (message) this.message = message
-    if (code) this.code = code
-    this.name = 'ForbiddenError'
-  }
-}
+export const ForbiddenError = createError('ForbiddenError', 'Forbidden', 403)

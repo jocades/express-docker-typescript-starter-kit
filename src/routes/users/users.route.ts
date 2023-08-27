@@ -26,7 +26,7 @@ app.route(
         if (!recipient) throw new BadRequest('Invalid recipient ID.')
 
         if (user.friends.includes(req.body.recipientId)) {
-          return res.status(400).json({ message: 'Friend already added.' })
+          throw new BadRequest('Friend already added.')
         }
 
         await user.updateOne({ $push: { friends: recipient._id } })

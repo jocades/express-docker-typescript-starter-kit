@@ -1,4 +1,6 @@
+import { z } from 'zod'
 import { app } from '../../framework'
+import { validate } from '../../middleware'
 import {
   registerUser,
   loginUser,
@@ -7,11 +9,16 @@ import {
   thirdPartyLogin,
 } from './auth.controller'
 
-app.useRouter('/auth', (router) => {
-  router.post('/login', loginUser)
-  router.post('/login/third-party', thirdPartyLogin)
-  router.post('/register', registerUser)
-  router.post('/logout', logoutUser)
-  router.post('/refresh', refreshUser)
-  return router
+const credentials = z.object({
+  email: z.string().email(),
+  password: z.string().min(5),
+})
+
+app.useRouter('/auth', (r) => {
+  r.post('/login', validate(credentials), loginUser)
+  r.post('/login/third-party', thirdPartyLogin)
+  r.post('/register', validate(credentials), registerUser)
+  r.post('/logout', logoutUser)
+  r.post('/refresh', refreshUser)
+  return r
 })
