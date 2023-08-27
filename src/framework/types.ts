@@ -29,6 +29,6 @@ export interface AppRouteOptions {
     title?: string
     description?: string
     tags?: string[]
-    body?: Record<string, any>
+    body?: AnyZodObject
   }
 }

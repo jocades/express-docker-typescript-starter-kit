@@ -1,7 +1,6 @@
 import { Schema, model, Model } from 'mongoose'
 const { ObjectId } = Schema.Types
 import jwt from 'jsonwebtoken'
-import Joi from 'joi'
 import { encrypt } from '../utils/hash'
 import { z } from 'zod'
 
@@ -71,15 +70,6 @@ userSchema.methods.refresh = async function (rToken, cb) {
 }
 
 export default model<IUser, UserDoc>('User', userSchema)
-
-export const validateCredentials = (email: string, password: string) => {
-  const schema = Joi.object({
-    email: Joi.string().email().required(),
-    password: Joi.string().min(5).max(255).required(),
-  })
-
-  return schema.validate({ email, password })
-}
 
 export const userBody = z.object({
   email: z.string().email(),

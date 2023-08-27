@@ -1,22 +1,18 @@
-import { Response, RequestHandler } from 'express'
+import { RequestHandler } from 'express'
 import bcrypt from 'bcrypt'
 import jwt from 'jsonwebtoken'
 import { decrypt } from '../../utils/hash'
-import User, { validateCredentials } from '../../models/user.model'
+import User from '../../models/user.model'
 import { pick } from '../../utils/funcs'
+import { BadRequest } from '../../lib/errors'
 
 type ReqHandler = RequestHandler<{}, {}, Credentials & Tokens>
 
-const sendMsg = (res: Response, message: string) =>
-  res.status(400).send({ message })
-
 export const registerUser: ReqHandler = async (req, res) => {
   const { email, password } = req.body
-  const { error } = validateCredentials(email, password)
-  if (error) return sendMsg(res, error.details[0].message)
 
   let user = await User.findOne({ email })
-  if (user) return sendMsg(res, 'User already registered.')
+  if (user) throw new BadRequest('User already registered.')
 
   const hashed = await bcrypt.hash(password, 10)
 
@@ -56,14 +52,12 @@ export const thirdPartyLogin: RequestHandler = async (req, res) => {
 
 export const loginUser: ReqHandler = async (req, res) => {
   const { email, password } = req.body
-  const { error } = validateCredentials(email, password)
-  if (error) return sendMsg(res, error.details[0].message)
 
   const user = await User.findOne({ email })
-  if (!user) return sendMsg(res, 'Invalid email or password.')
+  if (!user) throw new BadRequest('Invalid email or password.')
 
   const valid = await bcrypt.compare(password, user.password)
-  if (!valid) return sendMsg(res, 'Invalid email or password.')
+  if (!valid) throw new BadRequest('Invalid email or password.')
 
   const tokens = await user.login()
 

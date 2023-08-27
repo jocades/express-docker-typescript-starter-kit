@@ -59,7 +59,6 @@ class App {
 
   addRouter(router: Router) {
     this._routers.push(router)
-    addDocs(router)
   }
 
   useRouter(
@@ -68,7 +67,7 @@ class App {
     options?: AppRouteOptions
   ) {
     const router = cb(Router())
-    addDocs(router, options)
+    addDocs(router, options, endpoint)
     this._routers.push(Router().use(endpoint, router))
   }
 
@@ -93,9 +92,6 @@ class App {
   }
 
   generateDocs() {
-    /* const spec = generateDocSpec(this._routers)
-    console.log(JSON.stringify(spec, null, 2))
-    return spec */
     console.log(Object.keys(docs.paths))
     return docs
   }
@@ -124,7 +120,7 @@ app.route<Body>(
     },
     '/error': {
       get: (req, res) => {
-        throw new ServerError('Fuuuuuuuuuuu!', 418) // 418 -> I'm a teapot
+        throw new ServerError('Fuuuuuuuuuuu!', 418)
       },
     },
   }

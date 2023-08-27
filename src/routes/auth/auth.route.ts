@@ -22,10 +22,7 @@ app.useRouter(
   {
     docs: {
       tags: ['Auth'],
-      body: {
-        email: { example: 'user1@m.com' },
-        password: { example: '123456' },
-      },
+      body: credentials,
     },
   }
 )
