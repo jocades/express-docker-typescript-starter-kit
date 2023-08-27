@@ -23,8 +23,6 @@ export const listGroups: RequestHandler[] = [
   async (req, res) => {
     const { lat, long, maxDistance, order } = req.query
 
-    console.log(req.query)
-
     if (lat && long) {
       const groups = await Group.find({
         location: {

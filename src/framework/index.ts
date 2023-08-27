@@ -1,5 +1,5 @@
 import express, { Router, type Application, type RequestHandler } from 'express'
-import { z, type AnyZodObject } from 'zod'
+import { z } from 'zod'
 
 import cors from 'cors'
 import helmet from 'helmet'
@@ -10,7 +10,7 @@ import { ServerError } from '../lib/errors'
 import { AppRouteOptions, CommonHandlers, CustomHandlers } from './types'
 import { setupCommonHandlers, setupCustomHandlers } from './util'
 
-interface AppParams {
+interface AppOptions {
   prefix?: string
   middleware?: RequestHandler[]
   routers?: Router[]
@@ -22,7 +22,7 @@ class App {
   public middleware: RequestHandler[]
   private _routers: Router[]
 
-  constructor({ prefix = '', middleware = [], routers = [] }: AppParams = {}) {
+  constructor({ prefix = '', middleware = [], routers = [] }: AppOptions = {}) {
     this._app = express()
     this.prefix = prefix
     this._routers = routers
@@ -97,9 +97,6 @@ app.route<Body>(
   },
   {
     list: (req, res) => res.json([{ _id: '1', name: 'John Doe' }]),
-    update: (req, res) => {
-      req.body.name
-    },
   },
   {
     '/me': {
@@ -109,26 +106,6 @@ app.route<Body>(
       get: (req, res) => {
         throw new ServerError('Fuuuuuuuuuuu!', 418) // 418 -> I'm a teapot
       },
-    },
-  }
-)
-
-app.route(
-  '/ping',
-  { methods: ['*'] },
-  {
-    update: (req, res) => {
-      req.body.name
-    },
-  },
-  {
-    '/test': {
-      middleware: (req, res, next) => {
-        console.log('mw')
-        next()
-      },
-      get: (req, res) => res.send('test'),
-      put: (req, res) => res.send('test'),
     },
   }
 )

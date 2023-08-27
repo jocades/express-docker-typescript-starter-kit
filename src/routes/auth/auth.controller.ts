@@ -1,9 +1,9 @@
 import { Response, RequestHandler } from 'express'
 import bcrypt from 'bcrypt'
 import jwt from 'jsonwebtoken'
-import _ from 'lodash'
 import { decrypt } from '../../utils/hash'
 import User, { validateCredentials } from '../../models/user.model'
+import { pick } from '../../utils/funcs'
 
 type ReqHandler = RequestHandler<{}, {}, Credentials & Tokens>
 
@@ -23,7 +23,7 @@ export const registerUser: ReqHandler = async (req, res) => {
   user = new User({ email, password: hashed })
   await user.save()
 
-  res.status(201).send(_.pick(user, ['_id', 'email']))
+  res.status(201).send(pick(user, ['_id', 'email']))
 }
 
 export const thirdPartyLogin: RequestHandler = async (req, res) => {

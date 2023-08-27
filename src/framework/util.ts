@@ -9,7 +9,7 @@ import {
   CommonHandlers,
 } from './types'
 
-const map = {
+const map: Record<CommonMethod, Function> = {
   list: setupListHandler,
   create: setupCreateHandler,
   read: setupReadHandler,

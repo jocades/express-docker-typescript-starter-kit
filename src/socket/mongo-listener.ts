@@ -1,8 +1,9 @@
-import { Db, Document, MongoClient } from 'mongodb'
+import { Db, MongoClient } from 'mongodb'
 import { type SocketServer } from '.'
 import logger from '../logger'
 import { IGroup } from '../models/group.model'
 import { DB_NAME, DB_URL } from '../config/consts'
+import { userId } from './util'
 
 export async function mongoDBListener(io: SocketServer) {
   const client = new MongoClient(DB_URL)
@@ -39,7 +40,7 @@ export function groupsListener(db: Db, io: SocketServer) {
     const groupMembers = group.members.map((m) => m.toString())
 
     for (const socket of sockets) {
-      if (groupMembers.includes(socket.data.user._id)) {
+      if (groupMembers.includes(userId(socket))) {
         socket.emit('groups:change', change)
       }
     }

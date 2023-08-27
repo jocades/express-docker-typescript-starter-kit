@@ -1,10 +1,10 @@
 import {
   Server as BaseSocketServer,
   type Socket as BaseSocket,
+  type RemoteSocket as BaseRemoteSocket,
 } from 'socket.io'
 import { type DefaultEventsMap } from 'socket.io/dist/typed-events'
 import { type ChangeStreamDocument } from 'mongodb'
-import { Move } from 'chess.js'
 
 type SocketOkResponse<T> = { ok: true; data?: T }
 type SocketErrorResponse = { ok: false; data?: { message: string } }
@@ -12,26 +12,27 @@ type SocketErrorResponse = { ok: false; data?: { message: string } }
 // prettier-ignore
 export type SocketResponse<T = unknown> = (res: SocketOkResponse<T> | SocketErrorResponse) => void
 
-export type Color = 'w' | 'b'
-export type EndReason =
-  | 'checkmate'
-  | 'draw'
-  | 'stalemate'
-  | 'threefoldRepetition'
-  | 'insufficientMaterial'
-
-interface ClientToServerEvents {
+export interface ClientToServerEvents {
   ping: (data: any, res: SocketResponse) => void
 }
 
-interface ServerToClientEvents {
+export interface ServerToClientEvents {
   pong: (data: { message: string }) => void
   'groups:change': (data: ChangeStreamDocument) => void
 }
 
-interface SocketData {
+export interface SocketData {
   user: UserPayload
 }
+
+export type Socket = BaseSocket<
+  ClientToServerEvents,
+  ServerToClientEvents,
+  DefaultEventsMap,
+  SocketData
+>
+
+export type RemoteSocket = BaseRemoteSocket<ServerToClientEvents, SocketData>
 
 export class SocketServer extends BaseSocketServer<
   ClientToServerEvents,
