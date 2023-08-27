@@ -3,23 +3,10 @@ import { z } from 'zod'
 import Group from '../../models/group.model'
 import { notFound } from '../../lib/controller-factory'
 import { parseQuery } from '../../middleware'
-
-const coord = z
-  .string()
-  .regex(/^[-+]?([1-8]?\d(\.\d+)?|90(\.0+)?)$/)
-  .transform(Number)
-
-const querySchema = z
-  .object({
-    lat: coord,
-    long: coord,
-    maxDistance: z.string().regex(/^\d+$/).transform(Number),
-    order: z.enum(['created', 'updated']),
-  })
-  .partial()
+import { listGroupsQuery } from './groups.defs'
 
 export const listGroups: RequestHandler[] = [
-  parseQuery(querySchema),
+  parseQuery(listGroupsQuery),
   async (req, res) => {
     const { lat, long, maxDistance, order } = req.query
 

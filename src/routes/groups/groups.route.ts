@@ -14,6 +14,7 @@ app.route(
   {
     model: Group,
     validator: groupBody,
+    docs: { tags: ['Groups'] },
   },
   {
     list: listGroups,

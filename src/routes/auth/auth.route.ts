@@ -1,6 +1,6 @@
-import { z } from 'zod'
 import { app } from '../../framework'
 import { validate } from '../../middleware'
+import { credentials } from './auth.defs'
 import {
   registerUser,
   loginUser,
@@ -9,16 +9,23 @@ import {
   thirdPartyLogin,
 } from './auth.controller'
 
-const credentials = z.object({
-  email: z.string().email(),
-  password: z.string().min(5),
-})
-
-app.useRouter('/auth', (r) => {
-  r.post('/login', validate(credentials), loginUser)
-  r.post('/login/third-party', thirdPartyLogin)
-  r.post('/register', validate(credentials), registerUser)
-  r.post('/logout', logoutUser)
-  r.post('/refresh', refreshUser)
-  return r
-})
+app.useRouter(
+  '/auth',
+  (r) => {
+    r.post('/login', validate(credentials), loginUser)
+    r.post('/login/third-party', thirdPartyLogin)
+    r.post('/register', validate(credentials), registerUser)
+    r.post('/logout', logoutUser)
+    r.post('/refresh', refreshUser)
+    return r
+  },
+  {
+    docs: {
+      tags: ['Auth'],
+      body: {
+        email: { example: 'user1@m.com' },
+        password: { example: '123456' },
+      },
+    },
+  }
+)

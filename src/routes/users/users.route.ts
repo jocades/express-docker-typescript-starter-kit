@@ -9,6 +9,7 @@ app.route(
   {
     model: User,
     middleware: [auth, admin],
+    docs: { tags: ['Users'] },
   },
   {},
   {

@@ -96,7 +96,7 @@ class App {
     /* const spec = generateDocSpec(this._routers)
     console.log(JSON.stringify(spec, null, 2))
     return spec */
-    console.log(Object.keys(docs.paths))
+    console.log(Object.keys(docs.paths).includes('/auth/login'))
     return docs
   }
 }

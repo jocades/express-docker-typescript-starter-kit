@@ -25,4 +25,10 @@ export interface AppRouteOptions {
   methods?: (CommonMethod | 'all' | '*')[]
   validator?: AnyZodObject
   middleware?: RequestHandler | RequestHandler[]
+  docs?: {
+    title?: string
+    description?: string
+    tags?: string[]
+    body?: Record<string, any>
+  }
 }
