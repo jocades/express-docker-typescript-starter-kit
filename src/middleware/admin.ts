@@ -1,7 +1,12 @@
 import { RequestHandler } from 'express'
+import { Forbidden } from '../lib/errors'
 
 const admin: RequestHandler = (req, res, next) => {
-  if (!req.user.isAdmin) return res.status(403).send('Access denied.')
+  if (!req.user.isAdmin) {
+    throw new Forbidden(
+      'Forbidden. You are not authorized to access this resource'
+    )
+  }
   next()
 }
 

@@ -7,7 +7,7 @@ import morgan from 'morgan'
 
 import { error } from '../middleware'
 import { ServerError } from '../lib/errors'
-import { AppRouteOptions, CommonHandlers, CustomHandlers } from './types'
+import { AppRouteOptions, CommonHandlers, CustomHandlers, Docs } from './types'
 import { setupCommonHandlers, setupCustomHandlers } from './util'
 import { addDocs, docs } from './auto-docs'
 
@@ -64,10 +64,10 @@ class App {
   useRouter(
     endpoint: string,
     cb: (router: Router) => Router,
-    options?: AppRouteOptions
+    docOptions?: Pick<AppRouteOptions, 'docs'>
   ) {
     const router = cb(Router())
-    addDocs(router, options, endpoint)
+    addDocs(router, docOptions)
     this._routers.push(Router().use(endpoint, router))
   }
 

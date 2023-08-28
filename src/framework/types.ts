@@ -20,15 +20,17 @@ export type CustomHandlers = Record<
   Partial<Record<HTTPMethod | 'middleware', RequestHandler | RequestHandler[]>>
 >
 
+export interface Docs {
+  title?: string
+  description?: string
+  tags?: string[]
+  body?: AnyZodObject
+}
+
 export interface AppRouteOptions {
   model?: Model<any>
   methods?: (CommonMethod | 'all' | '*')[]
   validator?: AnyZodObject
   middleware?: RequestHandler | RequestHandler[]
-  docs?: {
-    title?: string
-    description?: string
-    tags?: string[]
-    body?: AnyZodObject
-  }
+  docs?: Docs
 }
