@@ -1,6 +1,6 @@
 import { app } from '../../framework'
 import Group, { groupBody } from '../../models/group.model'
-import { auth, validateId } from '../../middleware'
+import { auth, parseQuery, validateId } from '../../middleware'
 import {
   joinGroup,
   leaveGroup,
@@ -8,6 +8,7 @@ import {
   createGroup,
   listGroupsByUser,
 } from './groups.controller'
+import { listGroupsQuery } from './groups.defs'
 
 app.route(
   '/groups',
@@ -17,7 +18,7 @@ app.route(
     docs: { tags: ['Groups'] },
   },
   {
-    list: listGroups,
+    list: [parseQuery(listGroupsQuery), listGroups],
     create: [auth, createGroup],
   },
   {

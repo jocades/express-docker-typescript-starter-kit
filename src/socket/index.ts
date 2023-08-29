@@ -7,7 +7,7 @@ import { type DefaultEventsMap } from 'socket.io/dist/typed-events'
 import { type ChangeStreamDocument } from 'mongodb'
 
 type SocketOkResponse<T> = { ok: true; data?: T }
-type SocketErrorResponse = { ok: false; data?: { message: string } }
+type SocketErrorResponse = { ok: false; data?: { msg: string } }
 
 // prettier-ignore
 export type SocketResponse<T = unknown> = (res: SocketOkResponse<T> | SocketErrorResponse) => void
@@ -17,7 +17,7 @@ export interface ClientToServerEvents {
 }
 
 export interface ServerToClientEvents {
-  pong: (data: { message: string }) => void
+  pong: (data: { msg: string }) => void
   'groups:change': (data: ChangeStreamDocument) => void
 }
 

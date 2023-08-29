@@ -1,5 +1,7 @@
 import express, { Router, type Application, type RequestHandler } from 'express'
-import { AnyZodObject, z } from 'zod'
+import swagger from 'swagger-ui-express'
+import { z } from 'zod'
+import fs from 'fs'
 
 import cors from 'cors'
 import helmet from 'helmet'
@@ -8,7 +10,7 @@ import morgan from 'morgan'
 import { error } from '../middleware'
 import { ServerError } from '../lib/errors'
 import { AppRouteOptions, CommonHandlers, CustomHandlers, Docs } from './types'
-import { setupCommonHandlers, setupCustomHandlers } from './util'
+import { setupCommonHandlers, setupCustomHandlers } from './functions'
 import { addDocs, docs } from './auto-docs'
 
 interface AppOptions {
@@ -19,13 +21,13 @@ interface AppOptions {
 
 class App {
   private _app: Application
-  public prefix: string
+  private _prefix: string
   public middleware: RequestHandler[]
   private _routers: Router[]
 
   constructor({ prefix = '', middleware = [], routers = [] }: AppOptions = {}) {
     this._app = express()
-    this.prefix = prefix
+    this._prefix = prefix
     this._routers = routers
     this.middleware = [
       cors(),
@@ -38,9 +40,19 @@ class App {
     ]
   }
 
-  init() {
+  async init() {
+    for (const dir of fs.readdirSync('src/routes')) {
+      if (!dir.includes('.')) {
+        for (const file of fs.readdirSync(`src/routes/${dir}`)) {
+          if (file.endsWith('.route.ts')) {
+            await import(`../routes/${dir}/${file}`)
+          }
+        }
+      }
+    }
     this._setupMiddleware()
     this._setupRoutes()
+    this._setupDocs()
     return this._app
   }
 
@@ -52,13 +64,22 @@ class App {
 
   private _setupRoutes() {
     for (const router of this._routers) {
-      this._app.use(this.prefix, router)
+      this._app.use(this._prefix, router)
     }
     this._app.use(error)
   }
 
-  addRouter(router: Router) {
-    this._routers.push(router)
+  private _setupDocs() {
+    console.log(Object.keys(docs.paths))
+    this._app.use(
+      this._prefix + '/docs',
+      swagger.serve,
+      swagger.setup(docs, {
+        customCss: '.swagger-ui .topbar { display: none }',
+        customSiteTitle: 'API Docs',
+        customfavIcon: 'src/public/favicon.ico',
+      })
+    )
   }
 
   useRouter(
@@ -67,7 +88,7 @@ class App {
     docOptions?: Pick<AppRouteOptions, 'docs'>
   ) {
     const router = cb(Router())
-    addDocs(router, docOptions)
+    addDocs(router, docOptions, endpoint)
     this._routers.push(Router().use(endpoint, router))
   }
 
@@ -89,11 +110,6 @@ class App {
     setupCommonHandlers(endpoint, router, commonRoutes, options)
     addDocs(router, options)
     this._routers.push(router)
-  }
-
-  generateDocs() {
-    console.log(Object.keys(docs.paths))
-    return docs
   }
 }
 

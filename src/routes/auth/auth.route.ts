@@ -1,13 +1,7 @@
 import { app } from '../../framework'
 import { validate } from '../../middleware'
 import { credentials } from './auth.defs'
-import {
-  registerUser,
-  loginUser,
-  logoutUser,
-  refreshUser,
-  thirdPartyLogin,
-} from './auth.controller'
+import { registerUser, loginUser, thirdPartyLogin } from './auth.controller'
 
 app.useRouter(
   '/auth',
@@ -15,8 +9,6 @@ app.useRouter(
     r.post('/login', validate(credentials), loginUser)
     r.post('/login/third-party', thirdPartyLogin)
     r.post('/register', validate(credentials), registerUser)
-    r.post('/logout', logoutUser)
-    r.post('/refresh', refreshUser)
     return r
   },
   {

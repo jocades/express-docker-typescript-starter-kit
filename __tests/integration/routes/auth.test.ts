@@ -56,13 +56,13 @@ describe(endpoint, () => {
       expect(res.status).toBe(400)
     })
 
-    it('should return 400 and a declarative message if user already exists', async () => {
+    it('should return 400 and a declarative msg if user already exists', async () => {
       const user = new User({ email, password })
       await user.save()
       const res = await exec()
 
       expect(res.status).toBe(400)
-      expect(res.body).toHaveProperty('message', 'User already registered.')
+      expect(res.body).toHaveProperty('msg', 'User already registered.')
     })
   })
 
@@ -93,7 +93,7 @@ describe(endpoint, () => {
       const res = await exec()
 
       expect(res.status).toBe(400)
-      expect(res.body).toHaveProperty('message', 'Invalid email or password.')
+      expect(res.body).toHaveProperty('msg', 'Invalid email or password.')
     })
 
     it('should return 400 if passwords do not match', async () => {
@@ -103,7 +103,7 @@ describe(endpoint, () => {
       const res = await exec()
 
       expect(res.status).toBe(400)
-      expect(res.body).toHaveProperty('message', 'Invalid email or password.')
+      expect(res.body).toHaveProperty('msg', 'Invalid email or password.')
     })
 
     // Commented out because it works when testing manually but not with Jest.

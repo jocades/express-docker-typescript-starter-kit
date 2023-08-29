@@ -19,7 +19,7 @@ export const registerUser: ReqHandler = async (req, res) => {
   user = new User({ email, password: hashed })
   await user.save()
 
-  res.status(201).send(pick(user, ['_id', 'email']))
+  return res.status(201).send(pick(user, ['_id', 'email']))
 }
 
 export const thirdPartyLogin: RequestHandler = async (req, res) => {
@@ -28,11 +28,11 @@ export const thirdPartyLogin: RequestHandler = async (req, res) => {
 
   let user = await User.findOne({ email })
   if (user) {
-    const tokens = await user.login()
-    return res.send({
+    const token = user.generateToken()
+    return res.json({
       id: user._id,
       email: user.email,
-      access: tokens.access,
+      access: token,
     })
   }
 
@@ -41,12 +41,12 @@ export const thirdPartyLogin: RequestHandler = async (req, res) => {
   user = new User({ email, firstName, lastName, provider, providerId })
   await user.save()
 
-  const tokens = await user.login()
+  const token = user.generateToken()
 
-  res.send({
+  return res.json({
     id: user._id,
     email: user.email,
-    access: tokens.access,
+    access: token,
   })
 }
 
@@ -59,58 +59,11 @@ export const loginUser: ReqHandler = async (req, res) => {
   const valid = await bcrypt.compare(password, user.password)
   if (!valid) throw new BadRequest('Invalid email or password.')
 
-  const tokens = await user.login()
+  const token = user.generateToken()
 
-  res.send({
+  return res.json({
     id: user._id,
     email: user.email,
-    access: tokens.access,
+    access: token,
   })
 }
-
-const refreshSecret = process.env.JWT_R_SECRET as string
-
-export const logoutUser: ReqHandler = async (req, res) => {
-  try {
-    const refresh = decrypt(JSON.parse(req.body.refresh))
-    const decoded = jwt.verify(refresh, refreshSecret) as UserPayload
-    const user = await User.findById(decoded._id)
-    if (!user) return res.status(400).send('Bad request.')
-
-    await user.logout(req.body.refresh)
-
-    res.sendStatus(204)
-  } catch (err: any) {
-    res.status(400).send(err.message)
-  }
-}
-
-export const refreshUser: ReqHandler = async (req, res) => {
-  try {
-    const refresh = decrypt(JSON.parse(req.body.refresh))
-    const decoded = jwt.verify(refresh, refreshSecret) as UserPayload
-
-    const user = await User.findById(decoded._id)
-    if (!user) return res.status(403).send('Access denied.')
-
-    user.refresh(req.body.refresh, (err, tokens) => {
-      if (err) return res.status(403).send(err.message)
-      res.send(tokens)
-    })
-  } catch (err: any) {
-    res.status(403).send('Access denied.')
-  }
-}
-
-// In login and others:
-// This would be for a cookie-based auth system typical for web browsers:
-// const { access, refresh } = await user.login()
-
-// res.cookie('refresh', refresh, {
-//   httpOnly: true,
-//   sameSite: 'none',
-//   secure: true,
-//   maxAge: 1000 * 60 * 60 * 24 * 7,
-// })
-
-// res.send({ access })

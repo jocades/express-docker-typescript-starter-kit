@@ -1,13 +1,30 @@
 import { Schema, model, Model } from 'mongoose'
 const { ObjectId } = Schema.Types
 import jwt from 'jsonwebtoken'
-import { encrypt } from '../utils/hash'
 import { z } from 'zod'
+import { JWT_A_SECRET } from '../config/consts'
 
-// Types in types.d.ts
-type UserDoc = Model<IUser, {}, IUserMethods>
+interface IUser extends MongoDocument {
+  email: string
+  password: string
+  firstName: string
+  lastName: string
+  isAdmin: boolean
+  auth: Hash[]
+  provider: string
+  providerId: string
+  friends: string[]
+}
 
-const userSchema = new Schema<IUser, UserDoc, IUserMethods>(
+interface IUserMethods {
+  generateToken: () => string
+}
+
+export type UserDoc = IUser & Document
+
+type UserModel = Model<IUser, {}, IUserMethods>
+
+const userSchema = new Schema<IUser, UserModel, IUserMethods>(
   {
     email: { type: String, required: true, unique: true },
     password: { type: String, min: 5, max: 255, required: false },
@@ -23,53 +40,13 @@ const userSchema = new Schema<IUser, UserDoc, IUserMethods>(
   { timestamps: true }
 )
 
-const accessSecret = process.env.JWT_A_SECRET as string
-const refreshSecret = process.env.JWT_R_SECRET as string
-
-userSchema.methods.genAToken = function () {
-  return jwt.sign({ _id: this._id, isAdmin: this.isAdmin }, accessSecret)
+userSchema.methods = {
+  generateToken: function () {
+    return jwt.sign({ _id: this._id, isAdmin: this.isAdmin }, JWT_A_SECRET)
+  },
 }
 
-userSchema.methods.genRToken = function () {
-  const refreshToken = jwt.sign({ _id: this._id }, refreshSecret, {
-    expiresIn: '30d',
-  })
-  return JSON.stringify(encrypt(refreshToken))
-}
-
-userSchema.methods.login = async function () {
-  const user = this
-  const access = user.genAToken()
-  // const refresh = user.genRToken()
-  // token rotation
-  /* if (user.auth.length >= 5) user.auth.shift()
-  user.auth.push(refresh)
-  await user.save() */
-  return { access }
-}
-
-userSchema.methods.logout = async function (rToken) {
-  const user = this
-  const i = user.auth.indexOf(rToken)
-  if (i === -1) throw new Error('Invalid refresh token.')
-  user.auth.splice(i, 1)
-  await user.save()
-  return `User ${user._id} logged out.`
-}
-
-// callback, just for fun
-userSchema.methods.refresh = async function (rToken, cb) {
-  const user = this
-  const i = user.auth.indexOf(rToken)
-  if (i === -1) return cb(new Error('Invalid refresh token.'))
-  const access = user.genAToken()
-  const refresh = user.genRToken()
-  user.auth[i] = refresh
-  await user.save()
-  return cb(undefined, { access, refresh })
-}
-
-export default model<IUser, UserDoc>('User', userSchema)
+export default model<IUser, UserModel>('User', userSchema)
 
 export const userBody = z.object({
   email: z.string().email(),

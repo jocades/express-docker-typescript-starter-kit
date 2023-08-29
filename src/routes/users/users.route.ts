@@ -22,18 +22,35 @@ app.route(
     '/add': {
       middleware: [auth],
       post: async (req, res) => {
-        const user = (await User.findById(req.user._id))!
+        const sender = (await User.findById(req.user._id))!
         const recipient = await User.findById(req.body.recipientId)
         if (!recipient) throw new BadRequest('Invalid recipient ID.')
 
-        if (user.friends.includes(req.body.recipientId)) {
+        if (sender.friends.includes(req.body.recipientId)) {
           throw new BadRequest('Friend already added.')
         }
 
-        await user.updateOne({ $push: { friends: recipient._id } })
-        await recipient.updateOne({ $push: { friends: user._id } })
+        await sender.updateOne({ $push: { friends: recipient._id } })
+        await recipient.updateOne({ $push: { friends: sender._id } })
 
-        res.json({ message: 'Friend added.' })
+        return res.json({ msg: 'Friend added.' })
+      },
+    },
+    '/remove': {
+      middleware: [auth],
+      post: async (req, res) => {
+        const sender = (await User.findById(req.user._id))!
+        const recipient = await User.findById(req.body.recipientId)
+        if (!recipient) throw new BadRequest('Invalid recipient ID.')
+
+        if (!sender.friends.includes(req.body.recipientId)) {
+          throw new BadRequest('Friend not found.')
+        }
+
+        await sender.updateOne({ $pull: { friends: recipient._id } })
+        await recipient.updateOne({ $pull: { friends: sender._id } })
+
+        return res.json({ msg: 'Friend removed.' })
       },
     },
   }

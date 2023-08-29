@@ -5,7 +5,7 @@ import { z } from 'zod'
 // Not recommended to extend from the mongoose Document interface
 // https://mongoosejs.com/docs/typescript/statics-and-methods.html
 
-export interface IGroup extends BaseModel {
+export interface IGroup extends MongoDocument {
   name: string
   description: string
   privacy: 'public' | 'private'
@@ -18,9 +18,11 @@ interface IGroupMethods {
   removeMember: (userId: string) => Promise<string>
 }
 
-type GroupDoc = Model<IGroup, {}, IGroupMethods>
+export type GroupDoc = IGroup & IGroupMethods
 
-const groupSchema = new Schema<IGroup, GroupDoc, IGroupMethods>(
+type GroupModel = Model<IGroup, {}, IGroupMethods>
+
+const groupSchema = new Schema<IGroup, GroupModel, IGroupMethods>(
   {
     name: { type: String, required: true },
     description: String,
@@ -37,21 +39,22 @@ const groupSchema = new Schema<IGroup, GroupDoc, IGroupMethods>(
 // https://docs.mongodb.com/manual/geospatial-queries/
 groupSchema.index({ location: '2dsphere' })
 
-groupSchema.methods.addMember = async function (userId) {
-  if (this.members.includes(userId)) return 'Already a member'
-  this.members.push(userId)
-  await this.save()
-  return `Joined group ${this.name}`
+groupSchema.methods = {
+  addMember: async function (userId) {
+    if (this.members.includes(userId)) return 'Already a member'
+    this.members.push(userId)
+    await this.save()
+    return `Joined group ${this.name}`
+  },
+  removeMember: async function (userId) {
+    if (!this.members.includes(userId)) return 'Not a member'
+    this.members.pull(userId)
+    await this.save()
+    return `Left group ${this.name}`
+  },
 }
 
-groupSchema.methods.removeMember = async function (userId) {
-  if (!this.members.includes(userId)) return 'Not a member'
-  this.members.pull(userId)
-  await this.save()
-  return `Left group ${this.name}`
-}
-
-export default model<IGroup, GroupDoc>('Group', groupSchema)
+export default model<IGroup, GroupModel>('Group', groupSchema)
 
 export const groupBody = z.object({
   name: z.string().max(255),

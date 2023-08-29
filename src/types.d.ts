@@ -42,31 +42,8 @@ type ILocation = {
 
 // --- Models --- //
 
-interface BaseModel {
+interface MongoDocument {
   createdAt: Date
   updadetAt: Date
   location: any
-}
-
-interface IUser extends BaseModel {
-  email: string
-  password: string
-  firstName: string
-  lastName: string
-  isAdmin: boolean
-  auth: Hash[]
-  provider: string
-  providerId: string
-  friends: string[]
-}
-
-interface IUserMethods {
-  genAToken: () => Tokens['access']
-  genRToken: () => Tokens['refresh']
-  login: () => Promise<{ access: string }>
-  logout: (rToken: Tokens['refresh']) => Promise<string>
-  refresh: (
-    rToken: Tokens['refresh'],
-    cb: (err?: Error, tokens?: Tokens) => void
-  ) => void
 }

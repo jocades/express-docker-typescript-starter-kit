@@ -12,7 +12,7 @@ type ReqHandler = (Model: Model<any, {}, any>) => RequestHandler
 export const notFound = (res: Response, doc?: string) => {
   return res
     .status(404)
-    .send({ message: `No ${doc ?? 'object'} found with the given ID.` })
+    .send({ msg: `No ${doc ?? 'object'} found with the given ID.` })
 }
 
 export const response: IResponse = (res, query, props) => {

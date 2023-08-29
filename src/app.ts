@@ -3,13 +3,13 @@ import yaml from 'js-yaml'
 import fs from 'fs'
 
 import { app } from './framework'
-import './routes'
+// import './routes'
 
 app.route('/ping')
 
 const docs = yaml.load(fs.readFileSync(__dirname + '/docs.yaml', 'utf8')) as any
 
-const spec = app.generateDocs()
+/* const spec = app.generateDocs()
 
 app.useRouter('/docs', (r) => {
   r.use('/', swagger.serve)
@@ -22,6 +22,6 @@ app.useRouter('/docs', (r) => {
     })
   )
   return r
-})
+}) */
 
 export default app.init()

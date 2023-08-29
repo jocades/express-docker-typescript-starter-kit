@@ -34,8 +34,8 @@ export function initializeSocket(server: Server) {
     })
 
     socket.on('ping', (_, res) => {
-      res({ ok: true, data: { message: 'pong!' } })
-      socket.emit('pong', { message: 'pong!' })
+      res({ ok: true, data: { msg: 'pong!' } })
+      socket.emit('pong', { msg: 'pong!' })
     })
   })
 
