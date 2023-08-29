@@ -1,7 +1,7 @@
 import request from 'supertest'
-import app from '../../../src/start/app'
-import db from '../../../src/start/db'
-import User from '../../../src/models/user'
+import app from '../../../src/app'
+import db from '../../../src/app/db'
+import User from '../../../src/models/user.model'
 
 const endpoint = '/api/auth'
 
@@ -24,7 +24,8 @@ describe(endpoint, () => {
       password = '123456'
     })
 
-    const exec = () => request(app).post(`${endpoint}/register`).send({ email, password })
+    const exec = () =>
+      request(app).post(`${endpoint}/register`).send({ email, password })
 
     it('should create the user if the email and password are valid', async () => {
       await exec()
@@ -55,13 +56,13 @@ describe(endpoint, () => {
       expect(res.status).toBe(400)
     })
 
-    it('should return 400 and a declarative message if user already exists', async () => {
+    it('should return 400 and a declarative msg if user already exists', async () => {
       const user = new User({ email, password })
       await user.save()
       const res = await exec()
 
       expect(res.status).toBe(400)
-      expect(res.body).toHaveProperty('message', 'User already registered.')
+      expect(res.body).toHaveProperty('msg', 'User already registered.')
     })
   })
 
@@ -92,7 +93,7 @@ describe(endpoint, () => {
       const res = await exec()
 
       expect(res.status).toBe(400)
-      expect(res.body).toHaveProperty('message', 'Invalid email or password.')
+      expect(res.body).toHaveProperty('msg', 'Invalid email or password.')
     })
 
     it('should return 400 if passwords do not match', async () => {
@@ -102,7 +103,7 @@ describe(endpoint, () => {
       const res = await exec()
 
       expect(res.status).toBe(400)
-      expect(res.body).toHaveProperty('message', 'Invalid email or password.')
+      expect(res.body).toHaveProperty('msg', 'Invalid email or password.')
     })
 
     // Commented out because it works when testing manually but not with Jest.
@@ -129,7 +130,9 @@ describe(endpoint, () => {
       const user = new User({ email, password, auth: rToken })
       await user.save()
 
-      const res = await request(app).post(`${endpoint}/refresh`).send({ refresh: 'x' })
+      const res = await request(app)
+        .post(`${endpoint}/refresh`)
+        .send({ refresh: 'x' })
 
       expect(res.status).toBe(403)
     })

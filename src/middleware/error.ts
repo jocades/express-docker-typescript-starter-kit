@@ -1,9 +1,9 @@
 import { ErrorRequestHandler } from 'express'
-import logger from '../logger'
 
 const error: ErrorRequestHandler = (err, _req, res, _next) => {
-  logger.error('Internal server error', err)
-  res.status(500).send({ message: 'Something went wrong.' })
+  return res
+    .status(err.code ?? 500)
+    .send({ msg: err.message ?? 'Internal Server Error' })
 }
 
 export default error

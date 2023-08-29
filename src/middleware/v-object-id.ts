@@ -1,9 +1,10 @@
 import { RequestHandler } from 'express'
 import { Types } from 'mongoose'
+import { NotFound } from '../lib/errors'
 
 const validateObjectId: RequestHandler = (req, res, next) => {
   if (!Types.ObjectId.isValid(req.params.id)) {
-    return res.status(404).send('Invalid object ID.')
+    throw new NotFound('Invalid ID')
   }
   next()
 }

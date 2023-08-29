@@ -1,6 +1,6 @@
 import { Types } from 'mongoose'
 import { auth } from '../../../src/middleware'
-import User from '../../../src/models/user'
+import User from '../../../src/models/user.model'
 
 describe('auth middleware', () => {
   it('should populate req.user with the payload of a valid JWT', () => {

@@ -1,3 +1,13 @@
+declare namespace NodeJS {
+  export interface ProcessEnv {
+    NODE_ENV: 'development' | 'production' | 'test'
+    PORT: string
+    JWT_A_SECRET: string
+    DB_URL: string
+    DB_NAME: string
+  }
+}
+
 declare namespace Express {
   export interface Request {
     user: UserPayload
@@ -32,25 +42,8 @@ type ILocation = {
 
 // --- Models --- //
 
-interface BaseModel {
+interface MongoDocument {
   createdAt: Date
   updadetAt: Date
   location: any
-}
-
-interface IUser extends BaseModel {
-  email: string
-  password: string
-  firstName: string
-  lastName: string
-  isAdmin: boolean
-  auth: Hash[]
-}
-
-interface IUserMethods {
-  genAToken: () => Tokens['access']
-  genRToken: () => Tokens['refresh']
-  login: () => Promise<Tokens>
-  logout: (rToken: Tokens['refresh']) => Promise<string>
-  refresh: (rToken: Tokens['refresh'], cb: (err?: Error, tokens?: Tokens) => void) => void
 }

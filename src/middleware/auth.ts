@@ -1,14 +1,14 @@
 import { RequestHandler } from 'express'
 import jwt from 'jsonwebtoken'
-
-const accessSecret = process.env.JWT_A_SECRET as string
+import { JWT_A_SECRET } from '../config/consts'
+import { Unauthorized } from '../lib/errors'
 
 const auth: RequestHandler = (req, res, next) => {
   const token = req.header('Authorization')
-  if (!token) return res.status(401).send('Unauthorized, no token provided.')
+  if (!token) throw new Unauthorized('Unauthorized, no token provided.')
 
-  jwt.verify(token, accessSecret, (err, decoded) => {
-    if (err) return res.status(401).send(`Unauthorized, ${err.message}.`)
+  jwt.verify(token, JWT_A_SECRET, (err, decoded) => {
+    if (err) throw new Unauthorized(`Unauthorized, ${err.message}.`)
 
     req.user = decoded as UserPayload
     next()

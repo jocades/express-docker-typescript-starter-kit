@@ -1,3 +1,3 @@
-export { default as authR } from './auth.routes'
-export { default as userR } from './user.routes'
-export { default as groupR } from './group.routes'
+import './auth/auth.route'
+import './users/users.route'
+import './groups/groups.route'

@@ -1,15 +1,17 @@
-version: '3'
+version: '3.8'
 
 # MongoDB for development
 services:
   db:
-    image: mongo
-    container_name: mongo-dev
+    image: mongo:5
+    container_name: mongodev
     restart: always
     networks:
       - dev-network
     volumes:
       - data-dev:/data/db
+    command: [“--replSet”, “rs0”, “--bind_ip_all”]
+    # entrypoint: [“/usr/bin/mongod”, “--bind_ip_all”, “--replSet”, “dbrs”]
     ports:
       - '27017:27017'
 

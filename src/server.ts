@@ -1,13 +1,22 @@
-import './start/env'
-import './start/config'
-import db from './start/db'
-import app from './start/app'
+import './config/env'
+import './config/events'
+import db from './config/database'
+import http from 'http'
 import logger from './logger'
+import { initializeSocket } from './socket/setup'
+import { mongoDBListener } from './socket/mongo-listener'
+import { app } from './framework'
 
-const PORT = process.env.PORT || 8000
+app.init().then((app) => {
+  const server = http.createServer(app)
+  const PORT = process.env.PORT || 8000
 
-db.safeConnect().then(() => {
-  app.listen(PORT, () => {
-    logger.info(`﬉ Listening on http://localhost:${PORT}`)
+  db.safeConnect().then(() => {
+    server.listen(PORT, () => {
+      const io = initializeSocket(server)
+      mongoDBListener(io)
+
+      logger.info(` Listening on http://localhost:${PORT}`)
+    })
   })
 })

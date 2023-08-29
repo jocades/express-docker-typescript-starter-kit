@@ -1,4 +1,4 @@
-import User from '../../../src/models/user'
+import User from '../../../src/models/user.model'
 import { Types } from 'mongoose'
 import jwt from 'jsonwebtoken'
 import { decrypt } from '../../../src/utils/hash'

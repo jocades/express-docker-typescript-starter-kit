@@ -1,5 +1,5 @@
 import logger from '../logger'
-import db from './db'
+import db from './database'
 
 // https://www.npmjs.com/package/express-async-errors
 import 'express-async-errors' // no declaration file available
