@@ -12,6 +12,7 @@ import { ServerError } from '../lib/errors'
 import { AppRouteOptions, CommonHandlers, CustomHandlers, Docs } from './types'
 import { setupCommonHandlers, setupCustomHandlers } from './functions'
 import { addDocs, docs } from './auto-docs'
+import { NodeEnv, NODE_ENV } from '../config/consts'
 
 interface AppOptions {
   prefix?: string
@@ -20,22 +21,21 @@ interface AppOptions {
 }
 
 class App {
-  private _app: Application
-  private _prefix: string
-  public middleware: RequestHandler[]
-  private _routers: Router[]
+  #app: Application
+  #prefix: string
+  #middleware: RequestHandler[]
+  #routers: Router[]
 
   constructor({ prefix = '', middleware = [], routers = [] }: AppOptions = {}) {
-    this._app = express()
-    this._prefix = prefix
-    this._routers = routers
-    this.middleware = [
+    this.#app = express()
+    this.#prefix = prefix
+    this.#routers = routers
+    this.#middleware = [
       cors(),
       helmet(),
       express.json(),
       express.static('src/public'),
       express.urlencoded({ extended: true }),
-      this._app.get('env').includes('dev') && morgan('dev'),
       ...middleware,
     ]
   }
@@ -53,26 +53,34 @@ class App {
     this._setupMiddleware()
     this._setupRoutes()
     this._setupDocs()
-    return this._app
+    return this.#app
   }
 
   private _setupMiddleware() {
-    for (const mw of this.middleware) {
-      this._app.use(mw)
+    if (NODE_ENV === NodeEnv.PROD) {
+      this.#middleware.push(morgan('combined'))
+    }
+
+    if (NODE_ENV === NodeEnv.DEV) {
+      this.#middleware.push(morgan('dev'))
+    }
+
+    for (const mw of this.#middleware) {
+      this.#app.use(mw)
     }
   }
 
   private _setupRoutes() {
-    for (const router of this._routers) {
-      this._app.use(this._prefix, router)
+    for (const router of this.#routers) {
+      this.#app.use(this.#prefix, router)
     }
-    this._app.use(error)
+    this.#app.use(error)
   }
 
   private _setupDocs() {
     console.log(Object.keys(docs.paths))
-    this._app.use(
-      this._prefix + '/docs',
+    this.#app.use(
+      this.#prefix + '/docs',
       swagger.serve,
       swagger.setup(docs, {
         customCss: '.swagger-ui .topbar { display: none }',
@@ -82,14 +90,38 @@ class App {
     )
   }
 
+  /**
+   * Add middleware to the express app
+   * @param middleware - Middleware to add
+   * @example
+   * app.addMiddleware((req, res, next) => {
+   *  console.log('Hello')
+   *  next()
+   * })
+   */
+  addMiddleware(middleware: RequestHandler) {
+    this.#middleware.push(middleware)
+  }
+
+  /**
+   * Create a route using the express router
+   * @param endpoint - Route endpoint
+   * @param cb - Callback to create the router
+   * @param docOptions - Route options
+   * @example
+   * app.useRouter('/example', (r) => {
+   *  r.get('/', (req, res) => res.send('Hello'))
+   * })
+   */
   useRouter(
     endpoint: string,
-    cb: (router: Router) => Router,
+    cb: (router: Router) => void,
     docOptions?: Pick<AppRouteOptions, 'docs'>
   ) {
-    const router = cb(Router())
+    const router = Router()
+    cb(router)
     addDocs(router, docOptions, endpoint)
-    this._routers.push(Router().use(endpoint, router))
+    this.#routers.push(Router().use(endpoint, router))
   }
 
   /**
@@ -109,7 +141,7 @@ class App {
     setupCustomHandlers(endpoint, router, customRoutes)
     setupCommonHandlers(endpoint, router, commonRoutes, options)
     addDocs(router, options)
-    this._routers.push(router)
+    this.#routers.push(router)
   }
 }
 

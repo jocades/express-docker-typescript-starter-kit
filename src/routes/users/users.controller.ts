@@ -1,5 +1,5 @@
 import { RequestHandler } from 'express'
-import User from '../../models/user.model'
+import { User } from '../../models/user.model'
 import { response } from '../../lib/controller-factory'
 import { NotFound } from '../../lib/errors'
 

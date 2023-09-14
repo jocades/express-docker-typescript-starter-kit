@@ -54,9 +54,9 @@ groupSchema.methods = {
   },
 }
 
-export default model<IGroup, GroupModel>('Group', groupSchema)
+export const Group = model<IGroup, GroupModel>('Group', groupSchema)
 
-export const groupBody = z.object({
+export const groupDto = z.object({
   name: z.string().max(255),
   description: z.string().max(255),
   privacy: z.enum(['public', 'private']).optional(),

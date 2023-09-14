@@ -1,4 +1,4 @@
-import './config/env'
+import '@/config/env'
 import './config/events'
 import db from './config/database'
 import http from 'http'

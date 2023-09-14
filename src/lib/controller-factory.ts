@@ -7,7 +7,7 @@ type IResponse = (
   props?: object
 ) => Response
 
-type ReqHandler = (Model: Model<any, {}, any>) => RequestHandler
+type ReqHandler = (Model: Model<any>) => RequestHandler
 
 export const notFound = (res: Response, doc?: string) => {
   return res

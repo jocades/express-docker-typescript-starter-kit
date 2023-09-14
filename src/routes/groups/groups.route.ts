@@ -1,5 +1,5 @@
-import { app } from '../../framework'
-import Group, { groupBody } from '../../models/group.model'
+import { app } from '@/framework'
+import { Group, groupDto } from '@/models/group.model'
 import { auth, parseQuery, validateId } from '../../middleware'
 import {
   joinGroup,
@@ -14,7 +14,7 @@ app.route(
   '/groups',
   {
     model: Group,
-    validator: groupBody,
+    validator: groupDto,
     docs: { tags: ['Groups'] },
   },
   {

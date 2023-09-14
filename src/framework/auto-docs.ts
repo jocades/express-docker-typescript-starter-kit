@@ -2,20 +2,6 @@ import { Router } from 'express'
 import { AppRouteOptions, HTTPMethod } from './types'
 import { extendApi, generateSchema } from '@anatine/zod-openapi'
 
-interface Layer {
-  __handle: Function
-  name: string
-  params: any
-  path: string
-  keys: any[]
-  regexp: RegExp
-  route?: {
-    path: string
-    stack: Layer[]
-    methods: Record<HTTPMethod, boolean>
-  }
-}
-
 export const docs: Record<string, any> = {
   openapi: '3.0.0',
   info: {
@@ -130,5 +116,19 @@ export function addDocs(
         },
       }
     }
+  }
+}
+
+interface Layer {
+  __handle: Function
+  name: string
+  params: any
+  path: string
+  keys: any[]
+  regexp: RegExp
+  route?: {
+    path: string
+    stack: Layer[]
+    methods: Record<HTTPMethod, boolean>
   }
 }

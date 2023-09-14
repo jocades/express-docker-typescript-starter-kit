@@ -1,6 +1,6 @@
 import { RequestHandler } from 'express'
-import Group from '../../models/group.model'
-import { notFound } from '../../lib/controller-factory'
+import { Group } from '../../models/group.model'
+import { NotFound } from '../../lib/errors'
 
 export const listGroups: RequestHandler = async (req, res) => {
   const { lat, long, maxDistance, order } = req.query
@@ -61,7 +61,7 @@ export const createGroup: RequestHandler = async (req, res) => {
 
 export const joinGroup: RequestHandler = async (req, res) => {
   const group = await Group.findById(req.params.id)
-  if (!group) return notFound(res, 'group')
+  if (!group) throw new NotFound('Group not found')
 
   const msg = await group.addMember(req.user._id)
 
@@ -70,8 +70,7 @@ export const joinGroup: RequestHandler = async (req, res) => {
 
 export const leaveGroup: RequestHandler = async (req, res) => {
   const group = await Group.findById(req.params.id)
-  if (!group) return notFound(res, 'group')
-
+  if (!group) throw new NotFound('Group not found')
   const msg = await group.removeMember(req.user._id)
 
   return res.json({ msg })

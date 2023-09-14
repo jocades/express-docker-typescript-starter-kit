@@ -1,11 +1,11 @@
 import { connect, set, connection } from 'mongoose'
 import logger from '../logger'
-import { dbName, dbURL } from './consts'
+import { config } from './consts'
 
 const connectDB = async () => {
   try {
     set('strictQuery', false)
-    const db = await connect(dbURL, { dbName })
+    const db = await connect(config.dbURL, { dbName: config.dbName })
     logger.info(` Connected to MongoDB/${db.connection.name}`)
   } catch (err) {
     logger.error('Failed connecting to MongoDB', err)

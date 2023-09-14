@@ -2,7 +2,7 @@ import { RequestHandler } from 'express'
 import bcrypt from 'bcrypt'
 import jwt from 'jsonwebtoken'
 import { decrypt } from '../../utils/hash'
-import User from '../../models/user.model'
+import { User } from '../../models/user.model'
 import { pick } from '../../utils/funcs'
 import { BadRequest } from '../../lib/errors'
 
@@ -56,7 +56,7 @@ export const loginUser: ReqHandler = async (req, res) => {
   const user = await User.findOne({ email })
   if (!user) throw new BadRequest('Invalid email or password.')
 
-  const valid = await bcrypt.compare(password, user.password)
+  const valid = await bcrypt.compare(password, user.password!)
   if (!valid) throw new BadRequest('Invalid email or password.')
 
   const token = user.generateToken()

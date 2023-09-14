@@ -9,7 +9,6 @@ app.useRouter(
     r.post('/login', validate(credentials), loginUser)
     r.post('/login/third-party', thirdPartyLogin)
     r.post('/register', validate(credentials), registerUser)
-    return r
   },
   {
     docs: {
