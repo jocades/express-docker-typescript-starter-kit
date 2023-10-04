@@ -82,9 +82,9 @@ export function addDocs(
 
         if (body)
           requestBody.content['application/json'].schema = generateSchema(body)
-        else if (options.validator) {
+        else if (options.body) {
           requestBody.content['application/json'].schema = generateSchema(
-            options.validator
+            options.body
           )
         }
       }

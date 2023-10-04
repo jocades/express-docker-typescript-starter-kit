@@ -1,4 +1,4 @@
-import { app } from '@/framework'
+import { ajo } from '@/ajo'
 import { Group, groupDto } from '@/models/group.model'
 import { auth, parseQuery, validateId } from '../../middleware'
 import {
@@ -10,11 +10,11 @@ import {
 } from './groups.controller'
 import { listGroupsQuery } from './groups.defs'
 
-app.route(
+ajo.route(
   '/groups',
   {
     model: Group,
-    validator: groupDto,
+    body: groupDto,
     docs: { tags: ['Groups'] },
   },
   {

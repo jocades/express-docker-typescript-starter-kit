@@ -5,9 +5,9 @@ import http from 'http'
 import logger from './logger'
 import { initializeSocket } from './socket/setup'
 import { mongoDBListener } from './socket/mongo-listener'
-import { app } from './framework'
+import { ajo } from './ajo'
 
-app.init().then((app) => {
+ajo.init().then((app) => {
   const server = http.createServer(app)
   const PORT = process.env.PORT || 8000
 

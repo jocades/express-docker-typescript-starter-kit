@@ -1,6 +1,6 @@
 import express, { Router, type Application, type RequestHandler } from 'express'
 import swagger from 'swagger-ui-express'
-import { z } from 'zod'
+import { AnyZodObject, z } from 'zod'
 import fs from 'fs'
 
 import cors from 'cors'
@@ -20,7 +20,7 @@ interface AppOptions {
   routers?: Router[]
 }
 
-class App {
+class Ajo {
   #app: Application
   #prefix: string
   #middleware: RequestHandler[]
@@ -94,7 +94,7 @@ class App {
    * Add middleware to the express app
    * @param middleware - Middleware to add
    * @example
-   * app.addMiddleware((req, res, next) => {
+   * ajo.addMiddleware((req, res, next) => {
    *  console.log('Hello')
    *  next()
    * })
@@ -109,7 +109,7 @@ class App {
    * @param cb - Callback to create the router
    * @param docOptions - Route options
    * @example
-   * app.useRouter('/example', (r) => {
+   * ajo.useRouter('/example', (r) => {
    *  r.get('/', (req, res) => res.send('Hello'))
    * })
    */
@@ -131,9 +131,9 @@ class App {
    * @param commonRoutes - Common CRUD handlers (list, create, read, update, delete)
    * @param customRoutes - Custom handlers (get, post, put, patch, delete). Middleware, if used, must be set before the handlers
    */
-  route<T = any>(
+  route<T extends AnyZodObject>(
     endpoint: string,
-    options: AppRouteOptions = {},
+    options: AppRouteOptions<T> = {},
     commonRoutes: CommonHandlers<T> = {},
     customRoutes: CustomHandlers = {}
   ) {
@@ -145,15 +145,12 @@ class App {
   }
 }
 
-export const app = new App({ prefix: '/api' })
+export const ajo = new Ajo({ prefix: '/api' })
 
-const exampleBody = z.object({ name: z.string().min(3).max(255) })
-type Body = z.infer<typeof exampleBody>
-
-app.route<Body>(
+ajo.route(
   '/example',
   {
-    validator: exampleBody,
+    body: z.object({ name: z.string().min(3).max(255) }),
     methods: ['*'],
     docs: {
       title: 'Example',
@@ -161,7 +158,14 @@ app.route<Body>(
       tags: ['Ex'],
     },
   },
-  {},
+  {
+    create: (req, res) => {
+      req.body.name
+    },
+    update: (req, res) => {
+      req.body.name
+    },
+  },
   {
     '/me': {
       get: (req, res) => res.send('No conflict with /:id'),

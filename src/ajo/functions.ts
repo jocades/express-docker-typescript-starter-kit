@@ -82,12 +82,12 @@ function setupCreateHandler(
   createHandler
     ? router.post(
         ep,
-        options.validator ? validate(options.validator) : next,
+        options.body ? validate(options.body) : next,
         createHandler
       )
     : router.post(
         ep,
-        options.validator ? validate(options.validator) : next,
+        options.body ? validate(options.body) : next,
         options.model ? handler.createOne(options.model) : exampleRoute
       )
 }
@@ -118,13 +118,13 @@ function setupUpdateHandler(
     ? router.put(
         `${ep}/:id`,
         validateId,
-        options.validator ? validate(options.validator.partial()) : next,
+        options.body ? validate(options.body.partial()) : next,
         updateHandler
       )
     : router.put(
         `${ep}/:id`,
         options.model ? validateId : next,
-        options.validator ? validate(options.validator.partial()) : next,
+        options.body ? validate(options.body.partial()) : next,
         options.model ? handler.updateOne(options.model) : exampleRoute
       )
 }

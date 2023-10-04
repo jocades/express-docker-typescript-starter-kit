@@ -1,9 +1,9 @@
-import { app } from '../../framework'
+import { ajo } from '../../ajo'
 import { validate } from '../../middleware'
 import { credentials } from './auth.defs'
 import { registerUser, loginUser, thirdPartyLogin } from './auth.controller'
 
-app.useRouter(
+ajo.useRouter(
   '/auth',
   (r) => {
     r.post('/login', validate(credentials), loginUser)

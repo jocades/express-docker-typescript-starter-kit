@@ -1,10 +1,10 @@
-import { app } from '../../framework'
+import { ajo } from '../../ajo'
 import { auth, admin } from '../../middleware'
 import { getUser, updateUser, deleteUser } from './users.controller'
 import { User } from '../../models/user.model'
 import { BadRequest } from '../../lib/errors'
 
-app.route(
+ajo.route(
   '/users',
   {
     model: User,
